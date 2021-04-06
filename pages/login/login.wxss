@@ -1,0 +1,12 @@
+.container {
+  height: 100%;
+  width: 100%;
+}
+.container .banner_item {
+  background-color: #ccc;
+  text-align: center;
+}
+.container .cast button {
+  width: 65%;
+  height: 200rpx;
+}
