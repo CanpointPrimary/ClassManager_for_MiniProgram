@@ -4,7 +4,7 @@
   position: relative;
 }
 .container .banner_item {
-  background-color: #ccc;
+  background-color: lightgreen;
   text-align: center;
 }
 .container .cast {
@@ -24,4 +24,5 @@
   width: 100%;
   bottom: 30rpx;
   color: #02a8db;
+  font-size: 30rpx;
 }

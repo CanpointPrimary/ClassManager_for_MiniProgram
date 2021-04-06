@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/login/userInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "全品慧点作业",
+    "navigationBarTextStyle": "black"
+},
+"networkTimeout": {
+    "request": 200000,
+    "connectSocket": 200000,
+    "uploadFile": 200000,
+    "downloadFile": 200000
+},
+"style": "v2",
+"sitemapLocation": "sitemap.json"
+}
