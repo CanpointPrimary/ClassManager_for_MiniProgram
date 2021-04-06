@@ -1,6 +1,8 @@
 /**app.wxss**/
 .container {
-  width: 0;
   padding: 0;
   box-sizing: border-box;
+}
+page{
+  height: 100%;
 }
