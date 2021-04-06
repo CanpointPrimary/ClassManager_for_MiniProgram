@@ -15,6 +15,9 @@
     "uploadFile": 200000,
     "downloadFile": 200000
 },
+"useExtendedLib": {
+  "weui": true
+},
 "style": "v2",
 "sitemapLocation": "sitemap.json"
 }
