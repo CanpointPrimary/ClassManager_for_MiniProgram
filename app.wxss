@@ -1,8 +1,5 @@
 /**app.wxss**/
-.container {
-  padding: 0;
-  box-sizing: border-box;
-}
+@import  'lib/iconfont.wxss';
 
 page {
   height: 100%;

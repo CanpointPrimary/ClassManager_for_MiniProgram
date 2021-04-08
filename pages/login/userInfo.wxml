@@ -5,6 +5,7 @@
       <view class="picker_title">老师姓名</view>
       <input type="text" placeholder="如何称呼您" value="{{realName}}" bindinput="bindKeyInput"></input>
     </view>
+    <!-- 学科选择 -->
     <view class="selection">
       <view class="picker_title">学科</view>
       <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="subject">
