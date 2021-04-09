@@ -1,0 +1,35 @@
+{
+  "name": "classmanager_for_miniprogram",
+  "version": "1.0.0",
+  "description": "Canpoint Primary Department Class Management System",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "commitizen": "^4.2.3",
+    "husky": "^6.0.0"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
+    "miniprogram-automator": "^0.10.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zannian/ClassManager_for_MiniProgram.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zannian/ClassManager_for_MiniProgram/issues"
+  },
+  "homepage": "https://github.com/zannian/ClassManager_for_MiniProgram#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

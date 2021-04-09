@@ -1,0 +1,26 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <!-- 轮播图 -->
+  <view class="banner">
+    <swiper class="top_banner" indicator-dots autoplay circular>
+      <swiper-item class="banner_item">轮播图</swiper-item>
+      <swiper-item class="banner_item">轮播图</swiper-item>
+      <swiper-item class="banner_item">轮播图</swiper-item>
+      <swiper-item class="banner_item">轮播图</swiper-item>
+    </swiper>
+  </view>
+  <!-- 如果没有用户信息 -->
+  <view class="cast" wx:if="{{!userInfo}}">
+    <button class="teacher" type="primary" plain="true" bindtap="getUserProfile">我是老师</button>
+    <button class="student" type="primary" plain="true" bindtap="getUserProfile">我是学生/家长</button>
+  </view>
+  <!-- 如果有用户信息 -->
+  <view class="cast" wx:else>
+    <button class="teacher" type="primary" plain="true">我是老师</button>
+    <button class="student" type="primary" plain="true">我是学生/家长</button>
+  </view>
+  <!-- 点击跳转到介绍界面 -->
+  <view class="desc">
+  <text>如何使用慧点作业?></text>
+  </view>
+</view>
