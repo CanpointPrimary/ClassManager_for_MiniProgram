@@ -7,13 +7,14 @@ Page({
   data: {
     realName: '李老师',
     menuList: [],
+    isHeadTeacher: true,
     isToDo: true
   },
-changeTab(e){
-  this.setData({
-    isToDo : e.target.dataset.istodo
-  }) 
-},
+  changeTab(e) {
+    this.setData({
+      isToDo: e.target.dataset.istodo
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

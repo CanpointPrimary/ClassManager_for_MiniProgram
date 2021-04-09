@@ -4,23 +4,23 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    propA: Boolean
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    statusBarHeight:0,
+    statusBarHeight: 0,
     realName: '李老师'
+
   },
-  attached(){
+  attached() {
     wx.getSystemInfo({
       success: (res) => {
         this.setData({
           statusBarHeight: res.statusBarHeight
         })
-        console.log(res.statusBarHeight);
       },
     })
   },
