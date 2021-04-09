@@ -18,7 +18,7 @@
 }
 .container .switchClass view .btnCopy {
   font-size: 22rpx;
-  border: 1px solid #a8a8a8;
+  box-shadow: 0 -1px 1px -1px #a8a8a8, 1px 0 1px -1px #a8a8a8, 0 1px 1px -1px #a8a8a8, -1px 0 1px -1px #a8a8a8;
   color: #a8a8a8;
   padding: 0 18rpx;
   margin-left: 10rpx;
@@ -79,4 +79,21 @@
   right: 60rpx;
   font-size: 45px;
   color: #add8e6;
+}
+.container .joinClass {
+  padding-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100rpx;
+}
+.container .joinClass .btnJoin {
+  margin-top: 40rpx;
+  border-radius: 30rpx;
+  line-height: 130rpx;
+  color: #fff;
+  height: 130rpx;
+  width: 300rpx;
+  text-align: center;
+  background-color: #add8e6;
 }

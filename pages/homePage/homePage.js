@@ -9,16 +9,16 @@ Page({
     menuList: [],
     isTourist: true,
     isToDo: true,
-    hasClass: true,
-    classInfo:{
+    hasClass: false,
+    classInfo: {
       name: '1年级2班',
       code: '234234CSwe'
     }
   },
-  copyCode(){
+  copyCode() {
     wx.setClipboardData({
       data: this.data.classInfo.code,
-      success: (res)=> {
+      success: (res) => {
         wx.showToast({
           title: '已复制班级码到剪贴板',
           icon: 'none',
@@ -44,8 +44,54 @@ Page({
         this.setData({
           menuList: data.menu
         })
+      },
+      fail: () => {
+        this.setData({
+          menuList: [{
+              "id": 0,
+              "list": "作业",
+              "className": "icon-zuoye"
+            },
+            {
+              "id": 1,
+              "list": "通知",
+              "className": "icon-tongzhi"
+            },
+            {
+              "id": 2,
+              "list": "打卡",
+              "className": "icon-daka"
+            },
+            {
+              "id": 3,
+              "list": "接龙",
+              "className": "icon-jielong"
+            },
+            {
+              "id": 4,
+              "list": "问卷",
+              "className": "icon-ziyuan"
+            },
+            {
+              "id": 5,
+              "list": "成绩",
+              "className": "icon-chengji"
+            },
+            {
+              "id": 6,
+              "list": "请假",
+              "className": "icon-qingjia"
+            },
+            {
+              "id": 7,
+              "list": "班级空间",
+              "className": "icon-banjixinxi"
+            }
+          ]
+        })
       }
     })
+
   },
 
   /**
