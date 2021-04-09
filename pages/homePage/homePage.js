@@ -7,8 +7,25 @@ Page({
   data: {
     realName: '李老师',
     menuList: [],
-    isHeadTeacher: true,
-    isToDo: true
+    isTourist: true,
+    isToDo: true,
+    hasClass: true,
+    classInfo:{
+      name: '1年级2班',
+      code: '234234CSwe'
+    }
+  },
+  copyCode(){
+    wx.setClipboardData({
+      data: this.data.classInfo.code,
+      success: (res)=> {
+        wx.showToast({
+          title: '已复制班级码到剪贴板',
+          icon: 'none',
+          duration: 2000
+        })
+      }
+    })
   },
   changeTab(e) {
     this.setData({
