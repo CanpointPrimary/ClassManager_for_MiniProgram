@@ -17,7 +17,6 @@ Component({
   lifetimes: {
     attached: function () {
       // 在组件实例进入页面节点树时执行
-      console.log('xuanran');
 
     },
     detached: function () {
@@ -43,6 +42,9 @@ Component({
       }], 100, () => {
         this.setData({
           isShow: false
+        })
+        this.getTabBar().setData({
+          tabBarShow:true
         })
       })
 

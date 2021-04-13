@@ -1,6 +1,7 @@
 // components/tabBar/index.js
 Component({
   data: {
+    tabBarShow:true,
     selected: 0,
     color: "#000000",
     selectedColor: "#7fcf01",

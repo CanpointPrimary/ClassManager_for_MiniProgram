@@ -12,7 +12,7 @@
 }
 
 .title {
-  height: 80rpx;
+  height: 60rpx;
   /* padding: 0 20rpx; */
   display: flex;
   justify-content: space-between;

@@ -33,6 +33,9 @@ Page({
     this.setData({
       showInviteDialog: true
     })
+    this.getTabBar().setData({
+      tabBarShow:false
+    })
   },
   changeTab(e) {
     this.setData({
