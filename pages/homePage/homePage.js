@@ -9,11 +9,13 @@ Page({
     menuList: [],
     isTourist: true,
     isToDo: true,
-    hasClass: false,
+    hasClass: true,
+    showInviteDialog: false,
     classInfo: {
       name: '1年级2班',
       code: '234234CSwe'
-    }
+    },
+ 
   },
   copyCode() {
     wx.setClipboardData({
@@ -27,6 +29,11 @@ Page({
       }
     })
   },
+  invite() {
+    this.setData({
+      showInviteDialog: true
+    })
+  },
   changeTab(e) {
     this.setData({
       isToDo: e.target.dataset.istodo
@@ -35,7 +42,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad:  function (options) {
+  onLoad: function (options) {
     wx.request({
       url: 'http://canpoint/api/menu',
       success: ({

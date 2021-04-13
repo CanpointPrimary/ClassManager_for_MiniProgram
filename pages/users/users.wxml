@@ -1,2 +1,8 @@
 <!--pages/users/users.wxml-->
-<text>pages/users/users.wxml</text>
+<view class="container">
+  <view class="card">
+  </view>
+  <my-cells>
+    <my-cell></my-cell>
+  </my-cells>
+</view>

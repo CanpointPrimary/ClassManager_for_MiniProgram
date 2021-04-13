@@ -1,0 +1,13 @@
+<!--components/inviteDialog.wxml-->
+<view class="container" wx:if="{{isShow}}">
+  <view class="title"><text>邀请</text>
+    <mp-icon type="field" icon="close" color="black" size="{{18}}" bindtap="closeDialog"></mp-icon>
+  </view>
+  <view class="body">
+    <view class="ways"><text>方式一：复制链接到班级群</text></view>
+    <view class="ways"><text>方式二：通过二维码邀请</text></view>
+    <view class="ways"><text>方式三：通过班级口令邀请</text></view>
+  </view>
+</view>
+<view class="mask" wx:if="{{isShow}}" bindtap="closeDialog">
+</view>
