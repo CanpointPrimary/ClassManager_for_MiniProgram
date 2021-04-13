@@ -10,29 +10,33 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "全品慧点作业",
     "navigationBarTextStyle": "black"
-},
-"networkTimeout": {
+  },
+  "networkTimeout": {
     "request": 200000,
     "connectSocket": 200000,
     "uploadFile": 200000,
     "downloadFile": 200000
-},
-"useExtendedLib": {
-  "weui": true
-},
-"tabBar": {
-  "list": [{
-    "pagePath": "pages/homePage/homePage",
-    "text": "首页",
-    "iconPath": "./static/icon/home.png",
-    "selectedIconPath": "./static/icon/homeSelect.png"
-  },{
-    "pagePath": "pages/users/users",
-    "text": "个人中心",
-    "iconPath": "./static/icon/user.png",
-    "selectedIconPath": "./static/icon/userSelect.png"
-  }]
-},
-"style": "v2",
-"sitemapLocation": "sitemap.json"
+  },
+  "useExtendedLib": {
+    "weui": true
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#7fcf01",
+    "backgroundColor": "#fff",
+    "list": [{
+      "pagePath": "pages/homePage/homePage",
+      "text": "首页",
+      "iconPath": "./static/icon/home.png",
+      "selectedIconPath": "./static/icon/homeSelect.png"
+    }, {
+      "pagePath": "pages/users/users",
+      "text": "个人中心",
+      "iconPath": "./static/icon/user.png",
+      "selectedIconPath": "./static/icon/userSelect.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
 }
