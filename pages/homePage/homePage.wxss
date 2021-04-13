@@ -74,8 +74,8 @@
   border-bottom: 2px solid orange;
 }
 .container .toDo .addToDo {
-  position: absolute;
-  bottom: 60rpx;
+  position: fixed;
+  bottom: 160rpx;
   right: 60rpx;
   font-size: 45px;
   color: #add8e6;
