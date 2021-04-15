@@ -1,1 +1,10 @@
-/* pages/users/users.wxss */
+.container {
+  padding-top: 8px;
+  background-color: #f3f4f3;
+  height: 100%;
+}
+.container .card {
+  height: 200rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}

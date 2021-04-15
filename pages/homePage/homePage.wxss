@@ -3,6 +3,47 @@
   height: 100%;
   position: relative;
 }
+.container .switchClass {
+  padding: 0 2%;
+}
+.container .switchClass view {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.container .switchClass view text {
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+}
+.container .switchClass view .btnCopy {
+  font-size: 22rpx;
+  box-shadow: 0 -1px 1px -1px #a8a8a8, 1px 0 1px -1px #a8a8a8, 0 1px 1px -1px #a8a8a8, -1px 0 1px -1px #a8a8a8;
+  color: #a8a8a8;
+  padding: 0 18rpx;
+  margin-left: 10rpx;
+  line-height: 30rpx;
+  border-radius: 18rpx;
+}
+.container .switchClass view .invite {
+  position: absolute;
+  right: 0;
+  color: #fff;
+  padding: 0 10rpx;
+  line-height: 30rpx;
+  border-radius: 18rpx;
+  font-size: 22rpx;
+  background-color: #7fcf01;
+}
+.container .switchClass view .btn {
+  margin-left: 8rpx;
+  font-size: 36rpx;
+  color: #a8a8a8;
+}
+.container .switchClass view .btn text {
+  font-size: 24rpx;
+  margin-left: 8rpx;
+}
 .container .menu {
   height: 300rpx;
   display: flex;
@@ -33,9 +74,26 @@
   border-bottom: 2px solid orange;
 }
 .container .toDo .addToDo {
-  position: absolute;
-  bottom: 60rpx;
+  position: fixed;
+  bottom: 160rpx;
   right: 60rpx;
   font-size: 45px;
   color: #add8e6;
+}
+.container .joinClass {
+  padding-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100rpx;
+}
+.container .joinClass .btnJoin {
+  margin-top: 40rpx;
+  border-radius: 30rpx;
+  line-height: 130rpx;
+  color: #fff;
+  height: 130rpx;
+  width: 300rpx;
+  text-align: center;
+  background-color: #add8e6;
 }

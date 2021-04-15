@@ -6,5 +6,5 @@ page {
 }
 .container{
   box-sizing: border-box;
-  padding: 2%;
+  /* padding: 2%; */
 }

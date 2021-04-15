@@ -1,2 +1,17 @@
 <!--pages/users/users.wxml-->
-<text>pages/users/users.wxml</text>
+<view class="container">
+  <view class="card">
+  </view>
+  <mp-cells>
+    <mp-cell ext-class="cell" value="邀请班级成员加入" link hover bindtap="invite"></mp-cell>
+    <mp-cell ext-class="cell" link hover>添加到桌面</mp-cell>
+    <mp-cell ext-class="cell" link hover>加入官方交流群</mp-cell>
+    <mp-cell ext-class="cell" link hover>班级信息订阅</mp-cell>
+    <mp-cell ext-class="cell" link hover>慧点实验室</mp-cell>
+  </mp-cells>
+  <mp-cells>
+    <mp-cell value="帮助&反馈" hover></mp-cell>
+    <mp-cell value="清理缓存" hover></mp-cell>
+  </mp-cells>
+  <invite-dialog isShow="{{showInviteDialog}}" wx:if="{{showInviteDialog}}"></invite-dialog>
+</view>

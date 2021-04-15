@@ -1,11 +1,22 @@
 <!--pages/homePage/homePage.wxml-->
 <view class="container">
   <!-- 自定义navTitle -->
-  <view><navBar prop-a="{{dataFieldA}}"></navBar></view>
+  <view>
+    <navBar prop-a="{{isTourist}}"></navBar>
+  </view>
   <!-- 主体 -->
+  <inviteDialog isShow="{{showInviteDialog}}" wx:if="{{showInviteDialog}}"></inviteDialog>
   <view class="main">
+    <!-- 切换班级 -->
+    <view wx:if="{{hasClass}}" class="switchClass">
+      <view><text>班级名称：{{classInfo.name}}</text><text class="btn icon-switch iconfont"><text>切换班级</text></text></view>
+      <view><text>班级码：{{classInfo.code}}</text><text class="btnCopy" bindtap="copyCode">复制</text><text class="invite"
+          bindtap="invite">邀请学生/老师</text></view>
+    </view>
+
+
     <!-- menu栏 -->
-    <view class="menu" >
+    <view class="menu">
       <view class="menuItem" wx:for="{{menuList}}" wx:key="id">
         <view class="iconfont {{item.className}}">
         </view>
@@ -13,21 +24,23 @@
       </view>
     </view>
     <!-- if班主任 -->
-      <!-- 待办 -->
-      <view class="toDo">
-        <view class="tabTop">
-          <text class="{{isToDo? 'tab_active' : ''}}" bindtap="changeTab"
-          data-isToDo='{{true}}'>待办</text>
-          <text class="{{!isToDo? 'tab_active' : ''}}" bindtap="changeTab" data-isToDo='{{false}}'>已办</text>
-        </view>
-        <view class="list" wx:if="{{!todolist}}">
-          暂无发布信息,快去发布吧
-        </view>
-        <view class="addToDo iconfont icon-tianjia"></view>
+    <!-- 待办 -->
+    <view class="toDo" wx:if="{{hasClass}}">
+      <view class="tabTop">
+        <text class="{{isToDo? 'tab_active' : ''}}" bindtap="changeTab" data-isToDo='{{true}}'>待办</text>
+        <text class="{{!isToDo? 'tab_active' : ''}}" bindtap="changeTab" data-isToDo='{{false}}'>已办</text>
       </view>
+      <view class="list" wx:if="{{!todolist}}">
+        暂无发布信息,快去发布吧
+      </view>
+      <view class="addToDo iconfont icon-tianjia"></view>
+    </view>
     <!-- else -->
     <!-- 加入班级 -->
-
+    <view wx:else class="joinClass">
+      <view class="msg">您还没有加入班级哦</view>
+      <view class="btnJoin">加入班级</view>
+    </view>
     <!-- tabBar -->
   </view>
 </view>
