@@ -4,8 +4,17 @@ Page({
   /**
    * 页面的初始数据
    */
-  data: {},
-
+  data: {
+    showInviteDialog:false
+  },
+  invite() {
+    this.setData({
+      showInviteDialog: true
+    })
+    this.getTabBar().setData({
+      tabBarShow:false
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

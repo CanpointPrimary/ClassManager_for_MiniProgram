@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "mp-cells": "weui-miniprogram/cells/cells",
-    "mp-cell": "weui-miniprogram/cell/cell"
+    "mp-cell": "weui-miniprogram/cell/cell",
+    "invite-dialog":"/components/inviteDialog/inviteDialog"
   },
   "navigationBarTitleText": "个人中心",
   "navigationBarBackgroundColor": "#add8e6"
