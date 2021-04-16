@@ -5,7 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-    showInviteDialog:false
+    showInviteDialog:false,
+    isShowAdd:false
+  },
+  addToDesk(){
+    this.setData({
+      isShowAdd: true
+    })
+    this.getTabBar().setData({
+      tabBarShow:false
+    })
+  },
+  closeAdd(){
+    this.setData({
+      isShowAdd: false
+    })
+    this.getTabBar().setData({
+      tabBarShow:true
+    })
   },
   invite() {
     this.setData({

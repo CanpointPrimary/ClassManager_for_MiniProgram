@@ -21,6 +21,12 @@
         {
           "name": "pages/homePage/homePage",
           "pathName": "pages/homePage/homePage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/users/users",
+          "pathName": "pages/users/users",
           "scene": null
         }
       ]
