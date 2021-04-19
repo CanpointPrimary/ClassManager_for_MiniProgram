@@ -1,0 +1,36 @@
+.container {
+  height: 100%;
+  width: 100%;
+  padding-top: 6%;
+}
+.container input {
+  border-bottom: 1px solid #666666;
+  font-size: 30rpx;
+}
+.container .submit {
+  height: 100rpx;
+  width: 65%;
+  font-size: 40rpx;
+  line-height: 100rpx;
+  margin: 0 auto;
+  margin-top: 500rpx;
+  text-align: center;
+  border-radius: 50rpx;
+  color: #fff;
+  background-color: #6eca6e;
+}
+.container .selection {
+  margin-bottom: 30rpx;
+}
+.container .selection .picker_title {
+  margin-bottom: 10rpx;
+  font-size: 40rpx;
+}
+.container .selection picker {
+  position: relative;
+}
+.container .selection picker .icon-arrow {
+  position: absolute;
+  right: 10rpx;
+  top: 7rpx;
+}

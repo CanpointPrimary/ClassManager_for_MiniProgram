@@ -1,0 +1,7 @@
+<!--components/navigationBar.wxml-->
+<view class="navigation" style="height: {{statusBarHeight+48}}px; padding-top:{{statusBarHeight}}px;">
+  <view class="avatar">
+    <image src="/static/icon/user.png"></image>
+  </view> <text>{{realName}}</text><text wx:if="{{!isTourist}}"><text
+      class="iconfont icon-switch"></text><text>学生</text></text>
+</view>
