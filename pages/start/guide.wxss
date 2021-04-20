@@ -1,0 +1,22 @@
+/* pages/start/guide.wxss */
+page { --btn_color: skyblue; } 
+.container{
+  height: 100%;
+  width: 100%;
+}
+swiper{
+  height: 100%;
+  width: 100%;
+}
+swiper-item{
+  padding-top: 50%;
+  text-align: center;
+}
+swiper-item button{
+  height: 130rpx;
+  width: 300rpx;
+  background-color: var(--btn_color);
+  color: #fff;
+  line-height: 130rpx;
+  margin-bottom: 30rpx;
+}

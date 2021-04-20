@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/start/poster",
+    "pages/start/guide",
     "pages/login/login",
     "pages/login/userInfo",
     "pages/homePage/homePage",

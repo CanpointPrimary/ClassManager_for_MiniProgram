@@ -27,6 +27,12 @@
         {
           "name": "pages/users/users",
           "pathName": "pages/users/users",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/start/guide",
+          "pathName": "pages/start/guide",
           "scene": null
         }
       ]

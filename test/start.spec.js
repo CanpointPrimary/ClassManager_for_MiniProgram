@@ -37,18 +37,18 @@ describe('打开小程序流程测试', () => {
   // 本地是否有记录的判断
   it('本地是否有该数据', async () => {
     let classInfo = await page.data('currentClass')
-     if(classInfo == {}){
-        // 本地无数据是否正确跳转到引导页
+    if (classInfo == {}) {
+      // 本地无数据是否正确跳转到引导页
       let guide = await miniProgram.currentPage()
-        expect(guide.url).toBe('/pages/start/guide');
-        // 引导页是否正确渲染
-        let swipers = guide.$$('swiperItem')
-        expect(swipers.length).toBe(await guide.data('guideList').length);
-         // 第三页的身份选择按键是否渲染
-         // 点击按键之后是否正确跳转，本地是否缓存对应数据
-     }else{
+      expect(guide.url).toBe('/pages/start/guide');
+      // 引导页是否正确渲染
+      let swipers = guide.$$('swiperItem')
+      expect(swipers.length).toBe(await guide.data('guideList').length);
+      // 第三页的身份选择按键是否渲染
+      // 点击按键之后是否正确跳转，本地是否缓存对应数据
+    } else {
       expect(await miniProgram.currentPage().url).toBe('/pages/homePage/homePage');
-     }
+    }
   });
 
 });
