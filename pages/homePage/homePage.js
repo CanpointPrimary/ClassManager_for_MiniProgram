@@ -34,7 +34,7 @@ Page({
       showInviteDialog: true
     })
     this.getTabBar().setData({
-      tabBarShow:false
+      tabBarShow: false
     })
   },
   changeTab(e) {
@@ -46,8 +46,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let app = getApp()
     wx.request({
-      url: 'http://canpoint/api/menu',
+      url: app.globalData.baseUrl + 'api/menu',
       success: ({
         data
       }) => {
@@ -117,11 +118,11 @@ Page({
    */
   onShow: function () {
     if (typeof this.getTabBar === 'function' &&
-        this.getTabBar()) {
-        this.getTabBar().setData({
-          selected: 0
-        })
-      }
+      this.getTabBar()) {
+      this.getTabBar().setData({
+        selected: 0
+      })
+    }
   },
 
   /**

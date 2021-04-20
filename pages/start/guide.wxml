@@ -1,10 +1,10 @@
 <!--pages/start/guide.wxml-->
 <view class="container">
-<swiper indicator-dots="true">
-<swiper-item wx:for="{{3}}">特色{{item}}</swiper-item>
-<swiper-item>
-  <button>老师</button>
-  <button>学生/家长</button>
-</swiper-item>
-</swiper>
+  <swiper indicator-dots="true">
+    <swiper-item wx:for="{{3}}">特色{{item}}</swiper-item>
+    <swiper-item>
+      <button>老师</button>
+      <button>学生/家长</button>
+    </swiper-item>
+  </swiper>
 </view>

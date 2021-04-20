@@ -12,8 +12,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let app = getApp()
     wx.request({
-      url: 'http://canpoint/api/start',
+      url: app.globalData.baseUrl + 'api/start',
       success: ({
         data
       }) => {
@@ -21,10 +22,10 @@ Page({
           postSrc: data.src
         })
         setTimeout(() => {
-          wx.navigateTo({
+          wx.reLaunch({
             url: './guide',
           })
-        }, 5000)
+        }, 3000)
       }
     })
   },
