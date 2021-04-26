@@ -44,7 +44,7 @@ Component({
           isShow: false
         })
         this.getTabBar().setData({
-          tabBarShow:true
+          tabBarShow: true
         })
       })
 

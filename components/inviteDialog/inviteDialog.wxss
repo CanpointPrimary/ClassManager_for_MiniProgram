@@ -1,47 +1,48 @@
 /* components/inviteDialog.wxss */
 .container {
-  height: 600rpx;
-  width: 100%;
-  border-radius: 20rpx 20rpx 0 0;
-  position: fixed;
-  bottom: 0;
-  background-color: #fff;
-  z-index: 999;
-  padding: 2%;
-  box-sizing: border-box;
+    height: 600rpx;
+    width: 100%;
+    border-radius: 20rpx 20rpx 0 0;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 999;
+    padding: 2%;
+    box-sizing: border-box;
 }
 
 .title {
-  height: 60rpx;
-  /* padding: 0 20rpx; */
-  display: flex;
-  justify-content: space-between;
+    height: 60rpx;
+    /* padding: 0 20rpx; */
+    display: flex;
+    justify-content: space-between;
 }
 
 .mask {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 2;
-  opacity: 0;
-  top: 0;
-  background-color: rgb(58, 58, 58);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    opacity: 0;
+    top: 0;
+    background-color: rgb(58, 58, 58);
 }
 
 .ways {
-  height: 130rpx;
-  /* width: 96%; */
-  box-shadow:  2px -2px 2px 1px rgb(202, 202, 202);
-  box-sizing: border-box;
-  border-radius: 10rpx;
-  background-color: rgb(202, 202, 202);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    height: 130rpx;
+    /* width: 96%; */
+    box-shadow: 2px -2px 2px 1px rgb(202, 202, 202);
+    box-sizing: border-box;
+    border-radius: 10rpx;
+    background-color: rgb(202, 202, 202);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.body{
-  display: flex;
-  height: 500rpx;
-  justify-content: space-around;
-  flex-direction: column;
+
+.body {
+    display: flex;
+    height: 500rpx;
+    justify-content: space-around;
+    flex-direction: column;
 }

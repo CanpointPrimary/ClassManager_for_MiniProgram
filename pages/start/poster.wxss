@@ -1,12 +1,13 @@
 /* pages/start/poster.wxss */
 .container {
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(to right, #56ccf2, #2f81ed);
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #56ccf2, #2f81ed);
 }
-.poster{
-  background: no-repeat center 30%;
-  background-size: 40%;
-  height: 100%;
-  /* width: 50%; */
+
+.poster {
+    background: no-repeat center 30%;
+    background-size: 40%;
+    height: 100%;
+    /* width: 50%; */
 }
