@@ -14,7 +14,19 @@ Page({
   onLoad: function (options) {
 
   },
-
+  selectId(e) {
+    wx.setStorage({
+      data: {
+        identity: e.target.dataset.id
+      },
+      key: 'currentUser',
+      success: () => {
+        wx.switchTab({
+          url: '/pages/homePage/homePage',
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

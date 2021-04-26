@@ -3,8 +3,8 @@
   <swiper indicator-dots="true">
     <swiper-item wx:for="{{3}}">特色{{item}}</swiper-item>
     <swiper-item>
-      <button>老师</button>
-      <button>学生/家长</button>
+      <button data-id="teacher" bindtap="selectId">老师</button>
+      <button data-id="student" bindtap="selectId">学生/家长</button>
     </swiper-item>
   </swiper>
 </view>
