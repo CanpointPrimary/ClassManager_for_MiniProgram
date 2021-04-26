@@ -31,8 +31,18 @@ Page({
           }
         })
         setTimeout(() => {
-          wx.reLaunch({
-            url: './guide',
+          wx.getStorage({
+            key: 'currentUser',
+            success: () => {
+              wx.switchTab({
+                url: '/pages/homePage/homePage',
+              })
+            },
+            fail: () => {
+              wx.reLaunch({
+                url: './guide',
+              })
+            }
           })
         }, 3000)
       }
