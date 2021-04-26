@@ -21,6 +21,15 @@ Page({
         this.setData({
           postSrc: data.src
         })
+        wx.login({
+          success: (res) => {
+            // 先保存接口后修改
+            wx.setStorage({
+              data: res.code,
+              key: 'code',
+            })
+          }
+        })
         setTimeout(() => {
           wx.reLaunch({
             url: './guide',
