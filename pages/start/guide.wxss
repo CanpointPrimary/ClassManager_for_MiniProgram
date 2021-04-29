@@ -1,0 +1,94 @@
+/* pages/start/guide.wxss */
+page {
+    --btn_color: skyblue;
+    height: 100%;
+    position: relative;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+swiper {
+    height: 95%;
+    width: 100%;
+}
+
+swiper-item {
+    padding-top: 25%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+swiper-item .desc .desc_title {
+    padding-top: 70rpx;
+    font-size: 48rpx;
+    font-weight: bold;
+    color: #1d1d1d;
+}
+
+swiper-item .desc .desc_body {
+    font-size: 28rpx;
+    color: #333333;
+}
+
+swiper-item .selection {
+    padding: 0 30rpx;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+swiper-item .selection .title {
+    font-size: 36rpx;
+    color: #1d1d1d;
+    font-weight: bold;
+}
+
+swiper-item .selection .titleDesc {
+    font-size: 26rpx;
+    color: #333333;
+}
+
+swiper-item .selection .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 338rpx;
+    margin-top: 40rpx;
+    border-radius: 30rpx;
+    box-shadow: 0rpx 0rpx 6rpx 0rpx rgba(0, 0, 0, 0.16);
+}
+
+swiper-item .selection .btn:active {
+    background: #e2e8f1;
+}
+
+.id {
+    margin-right: 80rpx;
+    width: 192rpx;
+}
+
+.id .idCh {
+    font-size: 48rpx;
+    line-height: 67rpx;
+    font-weight: bold;
+    color: #1d1d1d;
+}
+
+.id .idEn {
+    font-size: 32rpx;
+    color: #999;
+}
+
+.btn image {
+    width: 262rpx;
+}
+
+.help {
+    position: absolute;
+    bottom: 10rpx;
+    text-align: center;
+    color: #ff7058;
+    width: 100%;
+}

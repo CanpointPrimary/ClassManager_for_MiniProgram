@@ -1,49 +1,55 @@
-// pages/users/users.js
+// pages/start/guide.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    showInviteDialog: false,
-    isShowAdd: false
+    // 这只是是用来看效果的假数据
+    guideList: [{
+      id: 0,
+      descTitle: '分层作业',
+      descBody: '针对不同学生，作业分层发布'
+    }, {
+      id: 1,
+      descTitle: '学科融合',
+      descBody: '多学科融合，全方位提升学生成绩'
+    }, {
+      id: 2,
+      descTitle: '自动批改',
+      descBody: 'AI自动批改，提升老师批改效率'
+    }],
+    isDotsShow: true
   },
-  addToDesk() {
-    this.setData({
-      isShowAdd: true
-    })
-    this.getTabBar().setData({
-      tabBarShow: false
-    })
-  },
-  closeAdd() {
-    this.setData({
-      isShowAdd: false
-    })
-    this.getTabBar().setData({
-      tabBarShow: true
-    })
-  },
-  invite() {
-    this.setData({
-      showInviteDialog: true
-    })
-    this.getTabBar().setData({
-      tabBarShow: false
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
 
   },
-
+  currentChange(e) {
+    this.setData({
+      isDotsShow: e.detail.current === 3 ? false : true
+    })
+  },
+  selectId(e) {
+    wx.setStorage({
+      data: {
+        identity: e.target.dataset.id
+      },
+      key: 'currentUser',
+      success: () => {
+        wx.switchTab({
+          url: '/pages/homePage/homePage',
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
 
   },
 
@@ -51,12 +57,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    if (typeof this.getTabBar === 'function' &&
-      this.getTabBar()) {
-      this.getTabBar().setData({
-        selected: 1
-      })
-    }
+
   },
 
   /**

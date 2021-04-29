@@ -1,0 +1,5 @@
+<!--pages/start/poster.wxml-->
+<view class="container">
+    <view class="poster" style="background-image: url('{{postSrc}}')">
+    </view>
+</view>
