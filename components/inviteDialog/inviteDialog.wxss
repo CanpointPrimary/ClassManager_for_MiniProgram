@@ -13,7 +13,6 @@
 
 .title {
     height: 60rpx;
-    /* padding: 0 20rpx; */
     display: flex;
     justify-content: space-between;
 }
@@ -30,7 +29,6 @@
 
 .ways {
     height: 130rpx;
-    /* width: 96%; */
     box-shadow: 2px -2px 2px 1px rgb(202, 202, 202);
     box-sizing: border-box;
     border-radius: 10rpx;
