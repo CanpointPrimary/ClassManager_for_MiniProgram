@@ -11,17 +11,8 @@
 
     <view class="main">
 
-        <!-- 切换班级start -->
-        <view wx:if="{{hasClass}}" class="switchClass">
-            <view>
-                <text>班级名称：{{classInfo.name}}</text><text class="btn icon-switch iconfont"><text>切换班级</text></text>
-            </view>
-            <view>
-                <text>班级码：{{classInfo.code}}</text><text class="btnCopy" bindtap="copyCode">复制</text>
-                <text class="invite" bindtap="invite">邀请学生/老师</text>
-            </view>
-        </view>
-        <!-- 切换班级end -->
+        <!-- 身份卡片 -->
+        <id-card></id-card>
 
         <!-- menu栏 -->
         <view class="menu">
