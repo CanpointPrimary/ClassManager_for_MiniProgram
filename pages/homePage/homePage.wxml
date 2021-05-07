@@ -3,7 +3,7 @@
 
     <!-- 自定义navTitle -->
     <view>
-        <navBar isTourist="{{isTourist}}"></navBar>
+        <navBar><text>慧点小学</text></navBar>
     </view>
 
     <!-- 主体 -->

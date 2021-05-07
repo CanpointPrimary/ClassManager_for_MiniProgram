@@ -1,7 +1,7 @@
 // components/tabBar/index.js
 Component({
   data: {
-    tabBarShow:true,
+    tabBarShow: true,
     selected: 0,
     color: "#000000",
     selectedColor: "#7fcf01",
@@ -17,13 +17,14 @@ Component({
       selectedIconPath: "/static/icon/userSelect.png"
     }]
   },
-  attached() {
-  },
+  attached() {},
   methods: {
     switchTab(e) {
       const data = e.currentTarget.dataset
       const url = data.path
-      wx.switchTab({url})
+      wx.switchTab({
+        url
+      })
       this.setData({
         selected: data.index
       })
