@@ -1,7 +1,7 @@
 <!--components/idCard/idCard.wxml-->
 <view class="idCard">
     <view class="idInfo">
-        <view class="id_avatar"></view>
+        <image class="id_avatar" mode="scaleToFill" src="/static/avatar.png"></image>
         <view class="id_info">
             <view class="name">游客老师</view>
             <view class="classInfo">

@@ -3,18 +3,18 @@ Component({
   data: {
     tabBarShow: true,
     selected: 0,
-    color: "#000000",
-    selectedColor: "#7fcf01",
+    color: "#666",
+    selectedColor: "#39519b",
     list: [{
       pagePath: "/pages/homePage/homePage",
       text: "首页",
-      iconPath: "/static/icon/home.png",
-      selectedIconPath: "/static/icon/homeSelect.png"
+      iconPath: "/static/icon/tab_shouye_nor.svg",
+      selectedIconPath: "/static/icon/tab_shouye_sel.svg"
     }, {
       pagePath: "/pages/users/users",
       text: "个人中心",
-      iconPath: "/static/icon/user.png",
-      selectedIconPath: "/static/icon/userSelect.png"
+      iconPath: "/static/icon/tab_zhongxin_nor.svg",
+      selectedIconPath: "/static/icon/tab_zhongxin_sel.svg"
     }]
   },
   attached() {},

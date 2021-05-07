@@ -13,7 +13,6 @@
   width: 88rpx;
   height: 88rpx;
   border-radius: 50%;
-  background-color: skyblue;
   margin-right: 13rpx;
 }
 .idCard .idInfo .id_info {
@@ -27,7 +26,7 @@
   font-weight: bold;
 }
 .idCard .idInfo .id_info .classInfo {
-  font-size: 20rpx;
+  font-size: 24rpx;
   line-height: 30rpx;
   display: flex;
 }
@@ -35,8 +34,8 @@
   color: #666666;
 }
 .idCard .idInfo .id_info .classInfo .switchIcon {
-  height: 30rpx;
-  width: 30rpx;
+  height: 32rpx;
+  width: 32rpx;
   margin: 0 0 0 3rpx;
 }
 .idCard .idInfo .id_info .classInfo .btnSwitch {
@@ -45,8 +44,9 @@
 .idCard .invite {
   background-color: #1e50a2;
   color: #fff;
-  line-height: 30rpx;
-  font-size: 20rpx;
+  line-height: 36rpx;
+  font-size: 24rpx;
   padding: 0 16rpx;
-  border-radius: 15rpx;
+  border-radius: 18rpx;
+  z-index: 2;
 }

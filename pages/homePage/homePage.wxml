@@ -6,6 +6,9 @@
         <navBar><text>慧点小学</text></navBar>
     </view>
 
+    <!-- 背景图片 -->
+    <image class="bdSunsine" mode="scaleToFill" src="/static/ss.svg"></image>
+
     <!-- 主体 -->
     <inviteDialog isShow="{{showInviteDialog}}" wx:if="{{showInviteDialog}}"></inviteDialog>
 
@@ -31,7 +34,7 @@
             <view class="list" wx:if="{{!todolist}}">
                 暂无发布信息,快去发布吧
             </view>
-            <view class="addToDo iconfont icon-tianjia"></view>
+            <image class="addToDo" mode="scaleToFill" src="/static/icon/add.svg"></image>
         </view>
         <!-- else -->
         <!-- 加入班级 -->
