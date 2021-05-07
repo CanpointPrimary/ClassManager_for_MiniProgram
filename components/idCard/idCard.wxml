@@ -1,2 +1,16 @@
 <!--components/idCard/idCard.wxml-->
-<text>components/idCard/idCard.wxml</text>
+<view class="idCard">
+    <view class="idInfo">
+        <view class="id_avatar"></view>
+        <view class="id_info">
+            <view class="name">游客老师</view>
+            <view class="classInfo">
+                <text class="className">体验班级</text>
+                <image class="switchIcon" mode="aspectFit" src="/static/icon/switch.svg"></image>
+                <text class="btnSwitch">切换</text>
+            </view>
+        </view>
+    </view>
+    <view class="invite">邀请老师/学生</view>
+    <view class="userInfo" wx:if="{{false}}">个人信息</view>
+</view>

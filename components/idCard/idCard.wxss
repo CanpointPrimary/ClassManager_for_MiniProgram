@@ -1,1 +1,52 @@
-/* components/idCard/idCard.wxss */
+.idCard {
+  padding: 0 38rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 44rpx;
+}
+.idCard .idInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.idCard .idInfo .id_avatar {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  background-color: skyblue;
+  margin-right: 13rpx;
+}
+.idCard .idInfo .id_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.idCard .idInfo .id_info .name {
+  font-size: 32rpx;
+  line-height: 48rpx;
+  font-weight: bold;
+}
+.idCard .idInfo .id_info .classInfo {
+  font-size: 20rpx;
+  line-height: 30rpx;
+  display: flex;
+}
+.idCard .idInfo .id_info .classInfo .className {
+  color: #666666;
+}
+.idCard .idInfo .id_info .classInfo .switchIcon {
+  height: 30rpx;
+  width: 30rpx;
+  margin: 0 0 0 3rpx;
+}
+.idCard .idInfo .id_info .classInfo .btnSwitch {
+  color: #1e50a2;
+}
+.idCard .invite {
+  background-color: #1e50a2;
+  color: #fff;
+  line-height: 30rpx;
+  font-size: 20rpx;
+  padding: 0 16rpx;
+  border-radius: 15rpx;
+}
