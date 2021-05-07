@@ -49,12 +49,25 @@
   background-color: #fff;
   margin-top: 10rpx;
 }
+.container .toDo .tabTop {
+  padding-top: 18rpx;
+  display: flex;
+  justify-content: space-around;
+}
 .container .toDo .tabTop text {
+  text-align: center;
+  display: block;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #999;
+  line-height: 62rpx;
+  width: 158rpx;
   margin-left: 20rpx;
   padding: 5rpx;
 }
 .container .toDo .tabTop .tab_active {
-  border-bottom: 2px solid orange;
+  color: #000;
+  border-bottom: 6rpx solid #1e50a2;
 }
 .container .toDo .addToDo {
   position: fixed;
@@ -63,6 +76,12 @@
   height: 100rpx;
   width: 100rpx;
   color: #add8e6;
+}
+.container .toDo .noList {
+  padding-top: 20%;
+  text-align: center;
+  font-size: 26rpx;
+  color: #999;
 }
 .container .joinClass {
   padding-top: 30rpx;

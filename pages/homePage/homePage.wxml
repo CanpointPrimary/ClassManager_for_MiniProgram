@@ -31,7 +31,7 @@
                 <text class="{{isToDo? 'tab_active' : ''}}" bindtap="changeTab" data-isToDo='{{true}}'>待办</text>
                 <text class="{{!isToDo? 'tab_active' : ''}}" bindtap="changeTab" data-isToDo='{{false}}'>已办</text>
             </view>
-            <view class="list" wx:if="{{!todolist}}">
+            <view class="noList" wx:if="{{!todolist}}">
                 暂无发布信息,快去发布吧
             </view>
             <image class="addToDo" mode="scaleToFill" src="/static/icon/add.svg"></image>
