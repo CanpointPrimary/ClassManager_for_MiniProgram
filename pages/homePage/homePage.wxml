@@ -30,7 +30,7 @@
             <view class="tabTop">
                 <text class="{{isToDo? 'tab_active' : ''}}" bindtap="changeTab" data-isToDo='{{true}}'>待办</text>
                 <text class="{{!isToDo? 'tab_active' : ''}}" bindtap="changeTab" data-isToDo='{{false}}'>已办</text>
-                <view class="underline"></view>
+                <view class="underline" style="left:{{left}}"></view>
             </view>
 
             <view class="noList" wx:if="{{!todolist}}">
