@@ -1,6 +1,12 @@
 <!--pages/users/users.wxml-->
 <view class="container">
+
+    <!-- 背景图片 -->
+    <image class="bdSunsine" mode="scaleToFill" src="/static/ss.svg"></image>
+
+    <nav-bar>个人中心</nav-bar>
     <view class="card">
+        <id-card></id-card>
     </view>
     <view class="mask" wx:if="{{isShowAdd}}" bindtap="closeAdd">
         <view class="arrow icon-tr-arrow iconfont"></view>
