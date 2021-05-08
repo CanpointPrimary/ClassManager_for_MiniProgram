@@ -80,6 +80,7 @@
 .container .toDo .addToDo {
   position: fixed;
   bottom: 160rpx;
+  margin-bottom: env(safe-area-inset-bottom);
   right: 60rpx;
   height: 100rpx;
   width: 100rpx;
