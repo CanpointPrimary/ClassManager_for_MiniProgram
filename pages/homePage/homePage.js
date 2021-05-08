@@ -38,6 +38,24 @@ Page({
     })
   },
   changeTab(e) {
+    if (this.data.isToDo !== e.target.dataset.istodo) {
+      this.animate('.underline', [{
+          left: this.data.isToDo ? '15%' : '65%',
+          scaleX: 1,
+          // ease: 'ease-in'
+        },
+        {
+          left: this.data.isToDo ? '50%' : '30%',
+          scaleX: 1.75,
+          ease: 'ease-in'
+        },
+        {
+          left: this.data.isToDo ? '65%' : '15%',
+          scaleX: 1,
+          ease: 'ease-out'
+        },
+      ], 200)
+    }
     this.setData({
       isToDo: e.target.dataset.istodo
     })
