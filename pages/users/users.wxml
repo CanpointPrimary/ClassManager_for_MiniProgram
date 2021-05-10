@@ -2,27 +2,35 @@
 <view class="container">
 
     <!-- 背景图片 -->
-    <image class="bdSunsine" mode="scaleToFill" src="/static/ss.svg"></image>
+    <image class="bdSunsine" mode="aspectFit" src="/static/ss.svg"></image>
 
+    <!-- 个人中心nav栏 -->
     <nav-bar>个人中心</nav-bar>
+
+    <!-- 身份卡片 -->
     <view class="card">
         <id-card></id-card>
     </view>
+
+    <!-- 添加到桌面蒙版 -->
     <view class="mask" wx:if="{{isShowAdd}}" bindtap="closeAdd">
         <view class="arrow icon-tr-arrow iconfont"></view>
         <view class="desc">点击胶囊添加小程序到桌面吧！</view>
     </view>
-    <mp-cells>
-        <mp-cell ext-class="cell" value="邀请班级成员加入" link hover bindtap="invite"></mp-cell>
-        <mp-cell ext-class="cell" link hover bindtap="addToDesk">添加到桌面</mp-cell>
-        <mp-cell ext-class="cell" link hover>加入官方交流群</mp-cell>
-        <mp-cell ext-class="cell" link hover>班级信息订阅</mp-cell>
-        <mp-cell ext-class="cell" link hover>慧点实验室</mp-cell>
+
+    <!-- 上部cell -->
+    <mp-cells ext-class="cellsTop cells">
+        <mp-cell icon="/static/userIcon/invite.svg" ext-class="cell" value="邀请班级成员加入" link hover bindtap="invite">
+        </mp-cell>
+        <mp-cell icon="/static/userIcon/add.svg" ext-class="cell" link hover bindtap="addToDesk">添加到桌面</mp-cell>
+        <mp-cell icon="/static/userIcon/subscribe.svg" ext-class="cell" link hover>班级信息订阅</mp-cell>
+        <mp-cell icon="/static/userIcon/lab.svg" ext-class="cell" link hover>慧点实验室</mp-cell>
     </mp-cells>
 
-    <mp-cells>
-        <mp-cell value="帮助&反馈" hover></mp-cell>
-        <mp-cell value="清理缓存" hover></mp-cell>
+    <mp-cells ext-class="cellsBot cells">
+        <mp-cell icon="/static/userIcon/help.svg" value="帮助&反馈" hover ext-class="cell"></mp-cell>
+        <mp-cell icon="/static/userIcon/clear.svg" value="清理缓存" hover ext-class="cell"></mp-cell>
     </mp-cells>
     <invite-dialog isShow="{{showInviteDialog}}" wx:if="{{showInviteDialog}}"></invite-dialog>
+    <view class="fillBd"></view>
 </view>
