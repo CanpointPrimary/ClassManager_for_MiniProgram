@@ -29,14 +29,14 @@ Component({
   methods: {
     closeDialog() {
       this.animate(".container", [{
-        height: "600rpx",
+        height: "460rpx",
         ease: 'ease-in'
       }, {
         height: '0rpx',
         ease: 'ease-out'
       }], 100, () => {})
       this.animate(".mask", [{
-        opacity: 0.6
+        opacity: 0.5
       }, {
         opacity: 0
       }], 100, () => {
@@ -56,13 +56,13 @@ Component({
         this.animate(".mask", [{
           opacity: 0
         }, {
-          opacity: 0.6
+          opacity: 0.5
         }], 100, () => {})
         this.animate(".container", [{
           height: 0,
           ease: 'ease-in'
         }, {
-          height: '600rpx',
+          height: '460rpx',
           ease: 'ease-out'
         }], 100, () => {})
       }

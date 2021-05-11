@@ -22,9 +22,7 @@ Component({
       selectedIconPath: "/static/icon/tab_zhongxin_sel.svg"
     }]
   },
-  attached() {
-    console.log(this.data.selected);
-  },
+  attached() {},
   methods: {
     switchTab(e) {
       const data = e.currentTarget.dataset
