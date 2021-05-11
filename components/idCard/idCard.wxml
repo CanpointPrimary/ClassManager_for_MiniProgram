@@ -11,6 +11,8 @@
             </view>
         </view>
     </view>
-    <view class="invite" bindtap="handleTap">邀请老师<text>/</text>学生</view>
+    <view class="invite" bindtap="handleTap">
+        <image src="/static/icon/invite.svg"></image>
+    </view>
     <view class="userInfo" wx:if="{{false}}">个人信息</view>
 </view>

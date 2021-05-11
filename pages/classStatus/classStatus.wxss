@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   position: relative;
+  margin-bottom: 20rpx;
 }
 .container .tabbar .tab_item {
   color: #999;
@@ -17,10 +18,63 @@
 }
 .container .tabbar .underline {
   width: 66rpx;
-  height: 6rpx;
-  border-radius: 6rpx;
+  height: 4rpx;
+  border-radius: 4rpx;
   background-color: #1e50a2;
   position: absolute;
   bottom: 0;
   left: 52rpx;
+  box-sizing: border-box;
+}
+.container .main .tea_hd {
+  padding-left: 30rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 48rpx;
+  margin-bottom: 19rpx;
+  color: #1d1d1d;
+  display: flex;
+  align-items: center;
+}
+.container .main .tea_hd text {
+  padding-left: 10rpx;
+  color: #999;
+  font-weight: normal;
+  font-size: 22rpx;
+}
+.container .main scroll-view {
+  height: 262rpx;
+  width: 100%;
+  white-space: nowrap;
+}
+.container .main scroll-view .tea_card {
+  display: inline-block;
+  text-align: center;
+  width: 210rpx;
+  height: 262rpx;
+  margin-left: 30rpx;
+  background-color: #edf6fd;
+  border-radius: 20rpx;
+}
+.container .main scroll-view .tea_card .inner {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.container .main scroll-view .tea_card .inner .avatar {
+  height: 126rpx;
+  width: 126rpx;
+}
+.container .main scroll-view .tea_card .inner .teaName {
+  padding-top: 7rpx;
+  line-height: 36rpx;
+  font-size: 26rpx;
+  color: #333;
+}
+.container .main scroll-view .tea_card .inner .teaSubject {
+  line-height: 30rpx;
+  font-size: 22rpx;
+  color: #666;
 }

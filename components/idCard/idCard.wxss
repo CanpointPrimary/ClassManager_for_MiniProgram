@@ -42,15 +42,9 @@
   color: #1e50a2;
 }
 .idCard .invite {
-  background-color: #1e50a2;
-  color: #fff;
-  line-height: 36rpx;
-  font-size: 24rpx;
-  padding: 0 16rpx;
-  border-radius: 18rpx;
   z-index: 2;
 }
-.idCard .invite text {
-  vertical-align: top;
-  font-size: 21rpx;
+.idCard .invite image {
+  height: 38rpx;
+  width: 174rpx;
 }

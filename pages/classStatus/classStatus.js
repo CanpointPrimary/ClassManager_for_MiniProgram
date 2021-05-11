@@ -5,7 +5,28 @@ Page({
      * 页面的初始数据
      */
     data: {
-        current: 0
+        current: 0,
+        teaList: [{
+            tName: '李老师',
+            subject: '语文',
+            isHeadTeacher: true,
+            avaSrc: '/static/avatar.png'
+        }, {
+            tName: '刘老师',
+            subject: '英语',
+            isHeadTeacher: false,
+            avaSrc: '/static/avatar.png'
+        }, {
+            tName: '孙老师',
+            subject: '数学',
+            isHeadTeacher: false,
+            avaSrc: '/static/avatar.png'
+        }, {
+            tName: '赵老师',
+            subject: '美术',
+            isHeadTeacher: false,
+            avaSrc: '/static/avatar.png'
+        }, ]
     },
     changetab(e) {
         let data = e.target.dataset
@@ -15,10 +36,12 @@ Page({
                 width: '66rpx'
             }, {
                 width: '242rpx',
-                left: '52rpx'
+                left: '52rpx',
+                ease: 'ease-out'
             }, {
                 width: '66rpx',
-                left: this.data.current ? '52rpx' : '224rpx'
+                left: this.data.current ? '52rpx' : '224rpx',
+                ease: 'ease-out'
             }], 200)
         }
         this.setData({

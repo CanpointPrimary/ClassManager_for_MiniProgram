@@ -12,6 +12,7 @@
 .tabBd {
     display: block;
     width: 100%;
+    height: 47rpx;
     position: absolute;
     bottom: 0;
     margin-bottom: env(safe-area-inset-bottom);
