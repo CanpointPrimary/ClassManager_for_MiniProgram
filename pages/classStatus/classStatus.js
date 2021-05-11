@@ -7,7 +7,24 @@ Page({
     data: {
         current: 0
     },
+    changetab(e) {
+        let data = e.target.dataset
 
+        if (!this.data.current == data.index) {
+            this.animate('.underline', [{
+                width: '66rpx'
+            }, {
+                width: '242rpx',
+                left: '52rpx'
+            }, {
+                width: '66rpx',
+                left: this.data.current ? '52rpx' : '224rpx'
+            }], 200)
+        }
+        this.setData({
+            current: data.index
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
