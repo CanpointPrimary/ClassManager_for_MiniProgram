@@ -50,3 +50,7 @@
   border-radius: 18rpx;
   z-index: 2;
 }
+.idCard .invite text {
+  vertical-align: top;
+  font-size: 21rpx;
+}
