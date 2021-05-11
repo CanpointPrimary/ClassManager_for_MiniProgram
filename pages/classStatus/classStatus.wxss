@@ -1,1 +1,26 @@
-/* pages/classStatus/classStatus.wxss */
+.container {
+  height: 100%;
+}
+.container .tabbar {
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.container .tabbar .tab_item {
+  color: #999;
+  font-size: 28rpx;
+  margin: 0 30rpx;
+}
+.container .tabbar .tab_active {
+  color: #1d1d1d;
+}
+.container .tabbar .underline {
+  width: 66rpx;
+  height: 6rpx;
+  border-radius: 6rpx;
+  background-color: #1e50a2;
+  position: absolute;
+  bottom: 0;
+  left: 52rpx;
+}

@@ -1,2 +1,12 @@
 <!--pages/classStatus/classStatus.wxml-->
-<text>pages/classStatus/classStatus.wxml</text>
+<view class="container">
+    <!-- 顶部栏模块 -->
+    <nav-bar>学情</nav-bar>
+
+    <!-- tabbar -->
+    <view class="tabbar">
+        <view class="tab_item {{current === 0? 'tab_active' : ''}}" bindtap="changetab" data-index='{{0}}'>班级成员</view>
+        <view class="tab_item {{current === 1? 'tab_active' : ''}}" bindtap="changetab" data-index='{{1}}'>审核记录</view>
+        <view class="underline"></view>
+    </view>
+</view>
