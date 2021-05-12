@@ -30,20 +30,14 @@
     "backgroundColor": "#fff",
     "list": [{
         "pagePath": "pages/homePage/homePage",
-        "text": "首页",
-        "iconPath": "./static/icon/home.png",
-        "selectedIconPath": "./static/icon/homeSelect.png"
+        "text": "首页"
       },
       {
         "pagePath": "pages/classStatus/classStatus",
-        "text": "学情",
-        "iconPath": "./static/icon/home.png",
-        "selectedIconPath": "./static/icon/homeSelect.png"
+        "text": "学情"
       }, {
         "pagePath": "pages/users/users",
-        "text": "个人中心",
-        "iconPath": "./static/icon/user.png",
-        "selectedIconPath": "./static/icon/userSelect.png"
+        "text": "个人中心"
       }
     ]
   },

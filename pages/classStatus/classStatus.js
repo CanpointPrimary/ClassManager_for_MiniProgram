@@ -6,6 +6,39 @@ Page({
      */
     data: {
         current: 0,
+        stuList: [{
+            name: '李小明',
+            relation: '本人',
+            avaSrc: '/static/avatar.png'
+        }, {
+            name: '李白',
+            relation: '本人',
+            avaSrc: '/static/avatar.png'
+        }, {
+            name: '李自成',
+            relation: '本人',
+            avaSrc: '/static/avatar.png'
+        }, {
+            name: '刘德华',
+            relation: '本人',
+            avaSrc: '/static/avatar.png'
+        }, {
+            name: '孙悟空',
+            relation: '本人',
+            avaSrc: '/static/avatar.png'
+        }, {
+            name: '钱多多',
+            relation: '本人',
+            avaSrc: '/static/avatar.png'
+        }, {
+            name: '梅本事',
+            relation: '本人',
+            avaSrc: '/static/avatar.png'
+        }, {
+            name: '吴用功',
+            relation: '本人',
+            avaSrc: '/static/avatar.png'
+        }, ],
         teaList: [{
             tName: '李老师',
             subject: '语文',
@@ -59,7 +92,18 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
+        const tab = this.getTabBar().createSelectorQuery()
+        const page = wx.createSelectorQuery()
+        page.select('.stuScroll').boundingClientRect((res) => {
+            this.setData({
+                scrollTop: res.top
+            })
+        }).exec()
+        tab.select('.tab-bar').boundingClientRect((res) => {
+            this.setData({
+                tabTop: res.top
+            })
+        }).exec()
     },
 
     /**

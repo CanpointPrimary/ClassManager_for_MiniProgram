@@ -14,10 +14,11 @@
     <view class="main" wx:if="{{current === 0}}">
 
         <!-- 老师列表 -->
-        <view class="teaList">
-            <view class="tea_hd">老师{{teaList.length}}人<text>（点击头像可编辑老师信息）</text></view>
-            <scroll-view scroll-x enhanced show-scrollbar="{{false}}">
-                <view class="tea_card" wx:for="{{teaList}}">
+        <view class="memList">
+            <view class="mem_hd">老师{{teaList.length}}人<text>（点击头像可编辑老师信息）</text>
+            </view>
+            <scroll-view scroll-x enhanced show-scrollbar="{{false}}" class="teaScroll">
+                <view class="tea_card" wx:for="{{teaList}}" wx:key="id">
                     <view class="inner">
                         <image class="avatar" src="{{item.avaSrc}}"></image>
                         <view class="teaName">{{item.tName}}</view>
@@ -26,8 +27,35 @@
                 </view>
             </scroll-view>
         </view>
-        <view class="search"></view>
-        <view class="stuList"></view>
+
+        <!-- 搜索栏 -->
+        <view class="search">
+            <view class="sear_bd">
+                <image src="/static/icon/search.svg" class="icon_search"></image>
+                <input type="search" class="input" placeholder="查找学生" placeholder-class="placeholder"></input>
+            </view>
+            <view class="group">
+                <image src="/static/icon/group.svg" class="icon_group"></image>
+                <view>小组</view>
+            </view>
+        </view>
+        <view class="memList stu">
+            <view class="mem_hd">学生{{stuList.length}}人</view>
+            <scroll-view scroll-y class="stuScroll" style="height:{{tabTop-scrollTop}}px;">
+                <view class="stu_card" wx:for="{{stuList}}" wx:key="id">
+                    <view class="stu_bd">
+                        <image class="avatar" src="{{item.avaSrc}}"></image>
+                        <view class="info">
+                            <view class="name">{{item.name}}</view>
+                            <view class="relation">{{item.relation}}</view>
+                        </view>
+                    </view>
+                    <view class="arrow">
+                        <image src="/static/icon/arrow.svg"></image>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
     </view>
     <view class="main" wx:if="{{current === 1}}">
         审核
