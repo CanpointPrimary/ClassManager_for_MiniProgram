@@ -6,5 +6,5 @@
         <view class=".cover-view" style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</view>
     </view>
     <view class="safeBottom"></view>
-    <image class="tabBd" src="/static/tab_bg_bolang.svg"></image>
+    <image class="tabBd" src="/static/tabBg.svg"></image>
 </view>

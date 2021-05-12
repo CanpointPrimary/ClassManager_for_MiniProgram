@@ -2,7 +2,7 @@
 <view class="container">
 
     <!-- 背景图片 -->
-    <image class="bdSunsine" mode="aspectFit" src="/static/ss.svg"></image>
+    <image class="bdSunsine" mode="aspectFit" src="/static/sunsine.svg"></image>
 
     <!-- 个人中心nav栏 -->
     <nav-bar>个人中心</nav-bar>

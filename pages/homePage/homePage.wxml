@@ -7,7 +7,7 @@
     </view>
 
     <!-- 背景图片 -->
-    <image class="bdSunsine" mode="scaleToFill" src="/static/ss.svg"></image>
+    <image class="bdSunsine" mode="scaleToFill" src="/static/sunsine.svg"></image>
 
     <!-- 主体 -->
     <inviteDialog isShow="{{showInviteDialog}}" wx:if="{{showInviteDialog}}"></inviteDialog>
