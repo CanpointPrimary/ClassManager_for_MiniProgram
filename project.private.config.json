@@ -1,41 +1,48 @@
 {
-  "setting": {},
-  "condition": {
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "gamePlugin": {
-      "list": []
-    },
-    "miniprogram": {
-      "list": [
-        {
-          "name": "pages/login/userInfo",
-          "pathName": "pages/login/userInfo",
-          "query": "",
-          "scene": null
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
         },
-        {
-          "name": "pages/homePage/homePage",
-          "pathName": "pages/homePage/homePage",
-          "query": "",
-          "scene": null
+        "game": {
+            "list": []
         },
-        {
-          "name": "pages/users/users",
-          "pathName": "pages/users/users",
-          "query": "",
-          "scene": null
+        "gamePlugin": {
+            "list": []
         },
-        {
-          "name": "pages/start/guide",
-          "pathName": "pages/start/guide",
-          "scene": null
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/login/userInfo",
+                    "pathName": "pages/login/userInfo",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/homePage/homePage",
+                    "pathName": "pages/homePage/homePage",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/users/users",
+                    "pathName": "pages/users/users",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/start/guide",
+                    "pathName": "pages/start/guide",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/classStatus/classStatus",
+                    "pathName": "pages/classStatus/classStatus",
+                    "query": "",
+                    "scene": null
+                }
+            ]
         }
-      ]
     }
-  }
 }

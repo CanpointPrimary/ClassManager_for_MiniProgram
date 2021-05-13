@@ -1,46 +1,75 @@
 /* components/inviteDialog.wxss */
 .container {
-    height: 600rpx;
     width: 100%;
-    border-radius: 20rpx 20rpx 0 0;
     position: fixed;
     bottom: 0;
-    background-color: #fff;
     z-index: 999;
-    padding: 2%;
     box-sizing: border-box;
-}
-
-.title {
-    height: 60rpx;
-    display: flex;
-    justify-content: space-between;
 }
 
 .mask {
     position: absolute;
     height: 100%;
     width: 100%;
-    z-index: 2;
-    opacity: 0;
+    z-index: 3;
+    opacity: .5;
     top: 0;
-    background-color: rgb(58, 58, 58);
+    background-color: #1d1d1d;
 }
 
 .ways {
-    height: 130rpx;
-    box-shadow: 2px -2px 2px 1px rgb(202, 202, 202);
+    height: 103rpx;
+    background: #fff;
+    color: #1d1d1d;
+    font-size: 28rpx;
     box-sizing: border-box;
-    border-radius: 10rpx;
-    background-color: rgb(202, 202, 202);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    /* margin-bottom: 2rpx; */
+}
+
+.underline {
+    width: 90%;
+    height: 1rpx;
+    background-color: #eeecec;
+    margin: 0 auto;
+}
+
+.cancel {
+    color: #1e50a2;
+    border-radius: 44rpx;
+    height: 88rpx;
+    width: 690rpx;
+    margin: 16rpx auto;
+    font-size: 28rpx;
+    line-height: 88rpx;
+    /* font-weight: bold; */
+    /* height: 120rpx; */
+    /* margin-top: 5rpx; */
+    text-align: center;
+    /* line-height: 120rpx; */
+}
+
+.ways:active,
+.cancel:active {
+    background: #f1f1f1;
+}
+
+
+.ways image {
+    width: 72rpx;
+    height: 72rpx;
+    position: absolute;
+    left: 60rpx;
 }
 
 .body {
     display: flex;
-    height: 500rpx;
     justify-content: space-around;
     flex-direction: column;
+    padding-top: 30rpx;
+    background-color: #fff;
+    border-radius: 20rpx 20rpx 0 0;
 }

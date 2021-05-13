@@ -8,6 +8,7 @@ Page({
     realName: '李老师',
     menuList: [],
     isTourist: true,
+    left: '15%',
     isToDo: true,
     hasClass: true,
     showInviteDialog: false,
@@ -38,8 +39,24 @@ Page({
     })
   },
   changeTab(e) {
+    if (this.data.isToDo !== e.target.dataset.istodo) {
+      this.animate('.underline', [{
+          scaleX: 1,
+          opacity: 1
+        },
+        {
+          scaleX: 1.15,
+          opacity: .7
+        },
+        {
+          scaleX: 1,
+          opacity: 1
+        },
+      ], 200)
+    }
     this.setData({
-      isToDo: e.target.dataset.istodo
+      isToDo: e.target.dataset.istodo,
+      left: e.target.dataset.istodo ? '15%' : '65%'
     })
   },
   /**

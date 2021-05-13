@@ -1,0 +1,35 @@
+<!--pages/classStatus/classStatus.wxml-->
+<view class="container">
+    <!-- 顶部栏模块 -->
+    <nav-bar>学情</nav-bar>
+
+    <!-- tabbar -->
+    <view class="tabbar">
+        <view class="tab_item {{current === 0? 'tab_active' : ''}}" bindtap="changetab" data-index='{{0}}'>班级成员</view>
+        <view class="tab_item {{current === 1? 'tab_active' : ''}}" bindtap="changetab" data-index='{{1}}'>审核记录</view>
+        <view class="underline"></view>
+    </view>
+
+    <!-- 班级成员 -->
+    <view class="main" wx:if="{{current === 0}}">
+
+        <!-- 老师列表 -->
+        <view class="teaList">
+            <view class="tea_hd">老师{{teaList.length}}人<text>（点击头像可编辑老师信息）</text></view>
+            <scroll-view scroll-x enhanced show-scrollbar="{{false}}">
+                <view class="tea_card" wx:for="{{teaList}}">
+                    <view class="inner">
+                        <image class="avatar" src="{{item.avaSrc}}"></image>
+                        <view class="teaName">{{item.tName}}</view>
+                        <view class="teaSubject">{{item.subject}}</view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+        <view class="search"></view>
+        <view class="stuList"></view>
+    </view>
+    <view class="main" wx:if="{{current === 1}}">
+        审核
+    </view>
+</view>

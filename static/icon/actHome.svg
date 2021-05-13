@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="矩形_272" data-name="矩形 272" width="48" height="48" transform="translate(481.247 335.865)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="tab-shouye-sel" transform="translate(-164 -1248)">
+    <g id="首页选中状态" transform="translate(-317.247 912.135)">
+      <g id="组_329" data-name="组 329" opacity="0.2">
+        <g id="组_328" data-name="组 328">
+          <g id="组_327" data-name="组 327" clip-path="url(#clip-path)">
+            <rect id="矩形_271" data-name="矩形 271" width="47" height="47" transform="translate(481.747 336.365)" fill="none"/>
+            <path id="路径_148" data-name="路径 148" d="M528.247,382.865h-46v-46h46Zm1-47h-48v48h48Z" fill="none"/>
+          </g>
+        </g>
+      </g>
+      <g id="组_330" data-name="组 330">
+        <rect id="矩形_273" data-name="矩形 273" width="7.16" height="9.859" transform="translate(501.438 359.868)" fill="#ff7058" opacity="0.35"/>
+        <rect id="矩形_274" data-name="矩形 274" width="20.25" height="16.324" transform="translate(495.122 355.492)" fill="none" stroke="#1e50a2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <rect id="矩形_275" data-name="矩形 275" width="34.296" height="3.318" transform="translate(488.099 371.817)" fill="none" stroke="#1e50a2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="路径_149" data-name="路径 149" d="M490.3,358.513l15.97-13.918,13.918,15.97" fill="none" stroke="#1e50a2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <rect id="矩形_276" data-name="矩形 276" width="4.486" height="8.465" transform="translate(499.741 359.422)" fill="none" stroke="#1e50a2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+    <g id="小装饰" transform="translate(-186 5)">
+      <path id="多边形_1" data-name="多边形 1" d="M1.5,0,3,3,1.5,6,0,3Z" transform="translate(383 1249)" fill="#1e50a2" opacity="0.74"/>
+      <path id="多边形_2" data-name="多边形 2" d="M2,0l.5,1.488,1.5.04-1.191.96L3.236,4,2,3.106.764,4l.427-1.512L0,1.528l1.5-.04Z" transform="translate(370 1247)" fill="#1e50a2"/>
+      <path id="多边形_3" data-name="多边形 3" d="M3,0l.75,2.231L6,2.292,4.214,3.731,4.854,6,3,4.658,1.146,6l.641-2.269L0,2.292l2.25-.06Z" transform="translate(390 1266)" fill="#1e50a2" opacity="0.47"/>
+      <path id="多边形_5" data-name="多边形 5" d="M3,0l.75,2.231L6,2.292,4.214,3.731,4.854,6,3,4.658,1.146,6l.641-2.269L0,2.292l2.25-.06Z" transform="translate(377 1262)" fill="#1e50a2"/>
+      <path id="多边形_4" data-name="多边形 4" d="M2,0l.5,1.488,1.5.04-1.191.96L3.236,4,2,3.106.764,4l.427-1.512L0,1.528l1.5-.04Z" transform="translate(390 1255)" fill="#1e50a2" opacity="0.18"/>
+    </g>
+  </g>
+</svg>

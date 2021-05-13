@@ -1,38 +1,72 @@
 .container {
-    position: relative;
-    padding-top: 8px;
-    background-color: #f3f4f3;
-    height: 100%;
+  position: relative;
+  background-color: #dce9fe;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-
-.container .card {
-    height: 200rpx;
-    background-color: #fff;
-    border-radius: 20rpx;
+.container .fillBd {
+  flex: 1;
+  background-color: #fff;
 }
-
+.container .cellsTop {
+  border-radius: 40rpx 40rpx 0 0;
+  padding-top: 30rpx;
+  background-color: #fff;
+}
+.container .cellsTop .weui-cells::before {
+  display: none;
+}
+.container .cellsBot {
+  margin-top: 10rpx;
+}
+.container .cellsBot .weui-cells::after {
+  display: none;
+}
+.container .cells .cell {
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  box-sizing: border-box;
+}
+.container .cells .cell .weui-cell__hd {
+  display: flex;
+  align-items: center;
+}
+.container .cells .cell .weui-cell__hd image {
+  height: 43rpx;
+  width: 43rpx;
+  margin: 0 25rpx;
+}
+.container .cells .weui-cells {
+  margin-top: 0;
+}
+.container .bdSunsine {
+  position: absolute;
+  right: -56px;
+  top: 0;
+  z-index: 0;
+}
 .container .mask {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    z-index: 2;
-    background-color: #444444c5;
-    color: #fff;
-    font-weight: bolder;
-    font-size: 20px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+  background-color: #444444c5;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 20px;
 }
-
 .container .mask .arrow {
-    position: absolute;
-    right: 80px;
-    font-size: 30px;
+  position: absolute;
+  right: 80px;
+  font-size: 30px;
 }
-
 .container .mask .desc {
-    line-height: 50px;
-    text-align: center;
-    width: 60%;
-    margin: 0 auto;
-    margin-top: 30%;
+  line-height: 50px;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 30%;
 }

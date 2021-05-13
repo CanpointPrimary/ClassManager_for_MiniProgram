@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "navBar": "/components/navigationBar/navigationBar",
-    "inviteDialog":"/components/inviteDialog/inviteDialog"
+    "inviteDialog": "/components/inviteDialog/inviteDialog",
+    "id-card": "/components/idCard/idCard"
   },
   "navigationStyle": "custom"
 }
