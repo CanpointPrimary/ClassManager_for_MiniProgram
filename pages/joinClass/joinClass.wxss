@@ -19,6 +19,10 @@
   height: 54rpx;
   padding-top: 45rpx;
 }
+.container .tabbar .tab_active {
+  color: #1d1d1d;
+  font-weight: bolder;
+}
 .container .tabbar .tab_item {
   flex: 1;
   text-align: center;
@@ -33,7 +37,7 @@
   background-color: #2d9e64;
   position: absolute;
   bottom: 0;
-  left: 478rpx;
+  left: 103rpx;
 }
 .container .form {
   width: 690rpx;
@@ -44,6 +48,7 @@
   padding: 0 50rpx;
   box-sizing: border-box;
   padding-bottom: 40rpx;
+  margin-bottom: 154rpx;
 }
 .container .form .how {
   height: 28rpx;
@@ -82,4 +87,15 @@
 }
 .container .form .form_item .form_title text {
   line-height: 54rpx;
+}
+.container .btn {
+  width: 245rpx;
+  height: 74rpx;
+  background-color: #2d9e64;
+  border-radius: 37rpx;
+  font-size: 30rpx;
+  line-height: 74rpx;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 auto;
 }

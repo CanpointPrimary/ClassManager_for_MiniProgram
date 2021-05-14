@@ -6,7 +6,8 @@
     "pages/login/userInfo",
     "pages/homePage/homePage",
     "pages/classStatus/classStatus",
-    "pages/users/users"
+    "pages/users/users",
+    "pages/joinClass/joinClass"
   ],
   "window": {
     "backgroundTextStyle": "light",

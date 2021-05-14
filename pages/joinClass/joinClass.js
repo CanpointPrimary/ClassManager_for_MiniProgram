@@ -6,6 +6,7 @@ Page({
      */
     data: {
         index: -1,
+        current: 0,
         realName: '',
         array: [{
                 id: 0,
@@ -34,6 +35,12 @@ Page({
     bindKeyInput: function (e) {
         this.setData({
             realName: e.detail.value
+        })
+    },
+    changetab(e) {
+        let data = e.target.dataset
+        this.setData({
+            current: data.index
         })
     },
     /**
