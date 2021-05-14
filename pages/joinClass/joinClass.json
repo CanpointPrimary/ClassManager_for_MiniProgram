@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "nav-bar": "/components/navigationBar/navigationBar"
+  },
+  "navigationBarTitleText": "完善信息",
+  "navigationBarBackgroundColor": "#eaf5ef"
+}
