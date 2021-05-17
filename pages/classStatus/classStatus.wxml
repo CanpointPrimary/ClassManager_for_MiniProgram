@@ -100,7 +100,6 @@
                                 <text>审核人：</text>{{item.cName+'老师'}}
                             </view>
                         </view>
-
                     </view>
                     <view class="result" style="color:{{item.pass?'#999':'#FF8080'}};">{{item.pass?'通过':'未通过'}}</view>
                 </view>

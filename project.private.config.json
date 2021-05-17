@@ -47,6 +47,12 @@
                     "pathName": "pages/joinClass/joinClass",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/help/help",
+                    "pathName": "pages/help/help",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

@@ -1,0 +1,67 @@
+.container {
+  height: 100%;
+  box-sizing: border-box;
+}
+.container .tabbar {
+  padding: 30rpx 30rpx 0;
+  height: 56rpx;
+  display: flex;
+  position: relative;
+}
+.container .tabbar .tab_item {
+  margin-right: 50rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+.container .tabbar .tab_active {
+  color: #1d1d1d;
+}
+.container .tabbar .underline {
+  width: 64rpx;
+  height: 4rpx;
+  border-radius: 4rpx;
+  background-color: #1e50a2;
+  position: absolute;
+  bottom: 0;
+  left: 54rpx;
+}
+.container .cells {
+  padding: 30rpx;
+}
+.container .cells .cell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 103rpx;
+  border-bottom: 1px solid #eeecec;
+}
+.container .btnBottom {
+  height: 88rpx;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.container .btnBottom .cut {
+  height: 88rpx;
+  width: 1rpx;
+  background-color: #b8b8b8b2;
+  transform: scaleX(0.5);
+}
+.container .btnBottom .btn_item {
+  background-color: #f3f6fa;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 24rpx;
+}
+.container .btnBottom .btn_item image {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 10rpx;
+}
+.container .btnBottom .btn_item:active {
+  background-color: #e8edf6;
+}
