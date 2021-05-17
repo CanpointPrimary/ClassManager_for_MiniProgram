@@ -4,13 +4,12 @@
   "description": "Canpoint Primary Department Class Management System",
   "main": "app.js",
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "test": "test"
   },
-  "dependencies": {
-    "commitizen": "^4.2.3",
-    "husky": "^6.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
     "miniprogram-automator": "^0.10.0"
   },

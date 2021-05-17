@@ -1,0 +1,101 @@
+.container {
+  height: 100%;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNzUwIiBoZWlnaHQ9IjE1MDAiIHZpZXdCb3g9IjAgMCA3NTAgMTUwMCI+PGRlZnM+PGNsaXBQYXRoIGlkPSJhIj48cmVjdCB3aWR0aD0iNzUwIiBoZWlnaHQ9IjE1MDAiIGZpbGw9IiNmZmYiLz48L2NsaXBQYXRoPjwvZGVmcz48ZyBjbGlwLXBhdGg9InVybCgjYSkiPjxyZWN0IHdpZHRoPSI3NTAiIGhlaWdodD0iMTUwNiIgZmlsbD0iI2VhZjVlZiIvPjxjaXJjbGUgY3g9IjY3IiBjeT0iNjciIHI9IjY3IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2NTMgNzc0KSIgZmlsbD0iI2Q5ZWRlMyIgb3BhY2l0eT0iMC4zNSIvPjxjaXJjbGUgY3g9IjI3OCIgY3k9IjI3OCIgcj0iMjc4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtOTAgMTE3OCkiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuMjkiLz48Y2lyY2xlIGN4PSIxNjUiIGN5PSIxNjUiIHI9IjE2NSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE2NSAxMDM0KSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC4xNyIvPjxjaXJjbGUgY3g9IjMyNiIgY3k9IjMyNiIgcj0iMzI2IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNDIgMTE1MykiIGZpbGw9IiMyZDllNjQiIG9wYWNpdHk9IjAuMDkiLz48L2c+PC9zdmc+') bottom center no-repeat;
+  background-size: cover;
+}
+.container .inviter {
+  height: 33rpx;
+  padding-top: 16rpx;
+  font-size: 26rpx;
+  line-height: 33rpx;
+  color: #666;
+  padding-left: 30rpx;
+}
+.container .tabbar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: relative;
+  height: 54rpx;
+  padding-top: 45rpx;
+}
+.container .tabbar .tab_active {
+  color: #1d1d1d;
+  font-weight: bolder;
+}
+.container .tabbar .tab_item {
+  flex: 1;
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 50rpx;
+  color: #333;
+}
+.container .tabbar .underline {
+  height: 4rpx;
+  border-radius: 2rpx;
+  width: 168rpx;
+  background-color: #2d9e64;
+  position: absolute;
+  bottom: 0;
+  left: 103rpx;
+}
+.container .form {
+  width: 690rpx;
+  background-color: #ffffff;
+  border-radius: 40rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  padding: 0 50rpx;
+  box-sizing: border-box;
+  padding-bottom: 40rpx;
+  margin-bottom: 154rpx;
+}
+.container .form .how {
+  height: 28rpx;
+  font-size: 22rpx;
+  color: #1e50a2;
+  padding-top: 12rpx;
+  text-align: right;
+}
+.container .form .phoneNumber {
+  position: relative;
+}
+.container .form .phoneNumber .getNumber {
+  position: absolute;
+  right: 0;
+  line-height: 45rpx;
+  font-size: 22rpx;
+  color: #1e50a2;
+}
+.container .form .form_item {
+  height: 54rpx;
+  border-bottom: solid 1rpx #eeecec;
+  padding-top: 40rpx;
+  display: flex;
+  align-items: center;
+}
+.container .form .form_item input {
+  width: 300rpx;
+  font-size: 26rpx;
+}
+.container .form .form_item .form_title {
+  width: 112rpx;
+  margin-right: 20rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  height: 54rpx;
+}
+.container .form .form_item .form_title text {
+  line-height: 54rpx;
+}
+.container .btn {
+  width: 245rpx;
+  height: 74rpx;
+  background-color: #2d9e64;
+  border-radius: 37rpx;
+  font-size: 30rpx;
+  line-height: 74rpx;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 auto;
+}

@@ -41,6 +41,12 @@
                     "pathName": "pages/classStatus/classStatus",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/joinClass/joinClass",
+                    "pathName": "pages/joinClass/joinClass",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

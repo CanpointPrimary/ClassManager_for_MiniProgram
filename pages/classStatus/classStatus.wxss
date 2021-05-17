@@ -1,5 +1,7 @@
 .container {
-  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .container .tabbar {
   height: 80rpx;
@@ -26,7 +28,10 @@
   left: 52rpx;
   box-sizing: border-box;
 }
-.container .main .tea_hd {
+.container .main .memList {
+  margin-bottom: 32rpx;
+}
+.container .main .mem_hd {
   padding-left: 30rpx;
   font-size: 32rpx;
   font-weight: bold;
@@ -36,18 +41,18 @@
   display: flex;
   align-items: center;
 }
-.container .main .tea_hd text {
+.container .main .mem_hd text {
   padding-left: 10rpx;
   color: #999;
   font-weight: normal;
   font-size: 22rpx;
 }
-.container .main scroll-view {
+.container .main .teaScroll {
   height: 262rpx;
   width: 100%;
   white-space: nowrap;
 }
-.container .main scroll-view .tea_card {
+.container .main .teaScroll .tea_card {
   display: inline-block;
   text-align: center;
   width: 210rpx;
@@ -56,25 +61,216 @@
   background-color: #edf6fd;
   border-radius: 20rpx;
 }
-.container .main scroll-view .tea_card .inner {
+.container .main .teaScroll .tea_card .inner {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
 }
-.container .main scroll-view .tea_card .inner .avatar {
+.container .main .teaScroll .tea_card .inner .avatar {
   height: 126rpx;
   width: 126rpx;
 }
-.container .main scroll-view .tea_card .inner .teaName {
+.container .main .teaScroll .tea_card .inner .teaName {
   padding-top: 7rpx;
   line-height: 36rpx;
   font-size: 26rpx;
   color: #333;
 }
-.container .main scroll-view .tea_card .inner .teaSubject {
+.container .main .teaScroll .tea_card .inner .teaSubject {
   line-height: 30rpx;
   font-size: 22rpx;
   color: #666;
+}
+.container .main .search {
+  height: 98rpx;
+  background-color: #f1f1f1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  margin-bottom: 20rpx;
+}
+.container .main .search .sear_bd {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60rpx;
+  background: #fff;
+  width: 565rpx;
+  border-radius: 30rpx;
+  padding-left: 24rpx;
+  box-sizing: border-box;
+}
+.container .main .search .sear_bd input {
+  font-size: 24rpx;
+}
+.container .main .search .sear_bd .placeholder {
+  font-size: 24rpx;
+  color: #999;
+}
+.container .main .search .sear_bd .icon_search {
+  height: 34rpx;
+  width: 34rpx;
+  margin-right: 24rpx;
+}
+.container .main .search .group {
+  display: flex;
+  align-items: center;
+}
+.container .main .search .group .icon_group {
+  width: 48rpx;
+  height: 48rpx;
+}
+.container .main .search .group view {
+  padding-left: 8rpx;
+  font-size: 24rpx;
+  color: #1e50a2;
+}
+.container .main .check {
+  margin-top: 10rpx;
+  height: 78rpx;
+  background-color: #eeecec48;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  align-items: center;
+  color: #1d1d1d;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+  box-shadow: #b9b9b92f 0 0 2px 2px;
+}
+.container .main .check switch {
+  zoom: 0.78125;
+  padding-right: 20rpx;
+}
+.container .main .checkList {
+  margin-bottom: 30rpx;
+}
+.container .main .checkList .head {
+  padding-left: 30rpx;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+  font-weight: bold;
+}
+.container .main .checkList .body .item {
+  width: 690rpx;
+  height: 137rpx;
+  margin: 0 auto;
+  background-color: #f9e9dd8a;
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12rpx;
+}
+.container .main .checkList .body .item .info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .main .checkList .body .item .info .avatar {
+  margin: 0 30rpx;
+  width: 72rpx;
+  height: 72rpx;
+}
+.container .main .checkList .body .item .info .info_name {
+  color: #1d1d1d;
+  font-size: 32rpx;
+}
+.container .main .checkList .body .item .info .info_time {
+  color: #666;
+  font-size: 22rpx;
+}
+.container .main .checkList .body .item .info .info_time text {
+  color: #1e50a2;
+}
+.container .main .checkList .body .item .result {
+  font-size: 28rpx;
+  padding-right: 30rpx;
+  opacity: 0.8;
+}
+.container .main .checkList .body .item .btn {
+  display: flex;
+  font-size: 22rpx;
+  line-height: 48rpx;
+  text-align: center;
+}
+.container .main .checkList .body .item .btn .refuse {
+  width: 86rpx;
+  height: 46rpx;
+  box-sizing: border-box;
+  box-shadow: 0rpx 3rpx 6rpx 0rpx rgba(214, 135, 135, 0.5);
+  border-radius: 10rpx;
+  background: #ffffffad;
+  color: #eebd97;
+  margin-right: 20rpx;
+}
+.container .main .checkList .body .item .btn .refuse:active {
+  border: solid 1rpx #eebd97;
+}
+.container .main .checkList .body .item .btn .receive {
+  width: 88rpx;
+  height: 48rpx;
+  margin-right: 30rpx;
+  background-color: #E5975A;
+  border-radius: 10rpx;
+  color: #fff;
+  box-sizing: border-box;
+  box-shadow: 0rpx 3rpx 6rpx 0rpx rgba(214, 135, 135, 0.5);
+}
+.container .main .checkList .body .item .btn .receive:active {
+  border: solid 1rpx #eebd97;
+  background-color: #eebd97;
+}
+.container .main .checkList .body .hadCheck {
+  height: 148rpx;
+  background-color: #edf6fd;
+}
+.container .stuScroll {
+  height: 200rpx;
+}
+.container .stuScroll .stu_card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 690rpx;
+  height: 142rpx;
+  border-radius: 20rpx;
+  background-color: #fdeded;
+  margin: 0 auto;
+  margin-bottom: 10rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.container .stuScroll .stu_card:nth-child(even) {
+  background-color: #fffbef;
+}
+.container .stuScroll .stu_card .stu_bd {
+  width: 200rpx;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .stuScroll .stu_card .stu_bd .avatar {
+  width: 78rpx;
+  height: 78rpx;
+}
+.container .stuScroll .stu_card .stu_bd .info {
+  width: 100rpx;
+}
+.container .stuScroll .stu_card .stu_bd .info .name {
+  font-size: 30rpx;
+  color: #333;
+}
+.container .stuScroll .stu_card .stu_bd .info .relation {
+  color: #999;
+  font-size: 24rpx;
+}
+.container .stuScroll .stu_card .arrow image {
+  width: 20rpx;
+  height: 32rpx;
 }

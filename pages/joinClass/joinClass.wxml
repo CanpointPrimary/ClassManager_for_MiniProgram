@@ -1,0 +1,33 @@
+<!--pages/joinClass/joinClass.wxml-->
+<view class="container">
+    <view class="inviter">巫老师邀请您加入1年级2班（慧点小学）</view>
+    <view class="tabbar">
+        <view class="tab_item {{current === 0? 'tab_active' : ''}}" bindtap="changetab" data-index='{{0}}'>我是老师</view>
+        <view class="tab_item {{current === 1? 'tab_active' : ''}}" bindtap="changetab" data-index='{{1}}'>我是学生</view>
+        <view class="underline" style="left:{{current === 0?  103: 478}}rpx"></view>
+    </view>
+    <view class="form">
+        <view class="form_item">
+            <view class="form_title"><text>您的姓名</text></view><input type="text" placeholder="请输入姓名"></input>
+        </view>
+        <view class="form_item" wx:if="{{!current}}">
+            <view class="form_title"><text>任教科目</text></view>
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="subject">
+                <input type="text" placeholder="请选择任教科目" value="{{array[index].subject}}" disabled></input>
+            </picker>
+        </view>
+        <view class="form_item phoneNumber">
+            <view class="form_title"><text>电话号码</text></view>
+            <input type="text" placeholder="请输入号码"></input>
+            <view class="getNumber">获取本机号码</view>
+        </view>
+        <view class="form_item">
+            <view class="form_title">
+                <text>班级码</text>
+            </view>
+            <input type="text" placeholder="请输入班级码"></input>
+        </view>
+        <view class="how">如何获取班级码？</view>
+    </view>
+    <view class="btn">加入班级</view>
+</view>

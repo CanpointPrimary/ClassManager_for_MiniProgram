@@ -6,7 +6,7 @@
     <!-- tabbar -->
     <view class="tabbar">
         <view class="tab_item {{current === 0? 'tab_active' : ''}}" bindtap="changetab" data-index='{{0}}'>班级成员</view>
-        <view class="tab_item {{current === 1? 'tab_active' : ''}}" bindtap="changetab" data-index='{{1}}'>审核记录</view>
+        <view class="tab_item {{current === 1? 'tab_active' : ''}}" bindtap="changetab" data-index='{{1}}'>入班申请</view>
         <view class="underline"></view>
     </view>
 
@@ -14,22 +14,97 @@
     <view class="main" wx:if="{{current === 0}}">
 
         <!-- 老师列表 -->
-        <view class="teaList">
-            <view class="tea_hd">老师{{teaList.length}}人<text>（点击头像可编辑老师信息）</text></view>
-            <scroll-view scroll-x enhanced show-scrollbar="{{false}}">
-                <view class="tea_card" wx:for="{{teaList}}">
+        <view class="memList">
+            <view class="mem_hd">老师{{teaList.length}}人<text>（点击头像可编辑老师信息）</text>
+            </view>
+            <scroll-view scroll-x enhanced show-scrollbar="{{false}}" class="teaScroll">
+                <view class="tea_card" wx:for="{{teaList}}" wx:key="id">
                     <view class="inner">
                         <image class="avatar" src="{{item.avaSrc}}"></image>
-                        <view class="teaName">{{item.tName}}</view>
+                        <view class="teaName">{{item.rName}}</view>
                         <view class="teaSubject">{{item.subject}}</view>
                     </view>
                 </view>
             </scroll-view>
         </view>
-        <view class="search"></view>
-        <view class="stuList"></view>
+
+        <!-- 搜索栏 -->
+        <view class="search">
+            <view class="sear_bd">
+                <image src="/static/icon/search.svg" class="icon_search"></image>
+                <input type="search" class="input" placeholder="查找学生" placeholder-class="placeholder"></input>
+            </view>
+            <view class="group">
+                <image src="/static/icon/group.svg" class="icon_group"></image>
+                <view>小组</view>
+            </view>
+        </view>
+        <view class="memList stu">
+            <view class="mem_hd">学生{{stuList.length}}人</view>
+            <scroll-view scroll-y class="stuScroll" style="height:{{tabTop-scrollTop}}px;">
+                <view class="stu_card" wx:for="{{stuList}}" wx:key="id">
+                    <view class="stu_bd">
+                        <image class="avatar" src="{{item.avaSrc}}"></image>
+                        <view class="info">
+                            <view class="name">{{item.rName}}</view>
+                            <view class="relation">{{item.relation}}</view>
+                        </view>
+                    </view>
+                    <view class="arrow">
+                        <image src="/static/icon/arrow.svg"></image>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
     </view>
+
+    <!-- 审核记录 -->
     <view class="main" wx:if="{{current === 1}}">
-        审核
+        <view class="check">
+            <view>加入班级是否需要审核</view>
+            <switch color="#1e50a2"></switch>
+        </view>
+        <view class="checkList">
+            <view class="head">待审核</view>
+            <view class="body">
+                <view class="item" wx:for="{{checkList.preCheck}}">
+                    <view class="info">
+                        <image src="/static/avatar.png" class="avatar"></image>
+                        <view class="info_text">
+                            <view class="info_name">{{item.rName}}申请加入</view>
+                            <view class="info_time">
+                                {{item.rTime}}
+                            </view>
+                        </view>
+                    </view>
+                    <view class="btn">
+                        <view class="refuse">不通过</view>
+                        <view class="receive">通过</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <view class="checkList">
+            <view class="head">已审核</view>
+            <view class="body">
+                <view class="item hadCheck" wx:for="{{checkList.hadCheck}}">
+                    <view class="info">
+                        <image src="/static/avatar.png" class="avatar"></image>
+                        <view class="info_text">
+                            <view class="info_name">{{item.rName}}</view>
+                            <view class="info_time">
+                                {{item.rTime}}
+                            </view>
+                            <view class="info_time">
+                                <text>审核人：</text>{{item.cName+'老师'}}
+                            </view>
+                        </view>
+
+                    </view>
+                    <view class="result" style="color:{{item.pass?'#999':'#FF8080'}};">{{item.pass?'通过':'未通过'}}</view>
+                </view>
+            </view>
+        </view>
     </view>
 </view>
