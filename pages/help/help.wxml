@@ -5,7 +5,7 @@
         <view class="tab_item {{current === 1? 'tab_active' : ''}}" bindtap="changetab" data-index='{{1}}'>语音作业</view>
         <view class="underline"></view>
     </view>
-    <view class="cells">
+    <view class="cells" wx:if="{{current === 0}}">
         <view class="cell" wx:for="{{helpList}}" wx:key="id">
             <view class="value">{{item.value}}</view>
             <mp-icon icon="arrow" size="16" color="#999"></mp-icon>

@@ -28,7 +28,7 @@
     </mp-cells>
 
     <mp-cells ext-class="cellsBot cells">
-        <mp-cell icon="/static/userIcon/help.svg" value="帮助&反馈" hover ext-class="cell"></mp-cell>
+        <mp-cell icon="/static/userIcon/help.svg" value="帮助&反馈" hover ext-class="cell" bindtap="navToHelp"></mp-cell>
         <mp-cell icon="/static/userIcon/clear.svg" value="清理缓存" hover ext-class="cell"></mp-cell>
     </mp-cells>
     <invite-dialog isShow="{{showInviteDialog}}" wx:if="{{showInviteDialog}}"></invite-dialog>

@@ -8,6 +8,11 @@ Page({
     showInviteDialog: false,
     isShowAdd: false
   },
+  navToHelp() {
+    wx.navigateTo({
+      url: '/pages/help/help',
+    })
+  },
   addToDesk() {
     this.setData({
       isShowAdd: true
