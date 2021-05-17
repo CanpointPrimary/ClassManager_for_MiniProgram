@@ -12,7 +12,7 @@
         </view>
     </view>
     <view class="invite" bindtap="handleTap">
-        <image src="/static/icon/invite.svg"></image>
+        <image src="/static/icon/invite.svg" class="image"></image>
     </view>
     <view class="userInfo" wx:if="{{false}}">个人信息</view>
 </view>

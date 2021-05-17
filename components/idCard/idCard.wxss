@@ -44,7 +44,7 @@
 .idCard .invite {
   z-index: 2;
 }
-.idCard .invite image {
+.idCard .invite .image {
   height: 38rpx;
   width: 174rpx;
 }

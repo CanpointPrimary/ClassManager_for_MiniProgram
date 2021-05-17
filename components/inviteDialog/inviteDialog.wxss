@@ -58,7 +58,7 @@
 }
 
 
-.ways image {
+.ways .image {
     width: 72rpx;
     height: 72rpx;
     position: absolute;
