@@ -53,6 +53,18 @@
                     "pathName": "pages/help/help",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/help/feedback/feedback",
+                    "pathName": "pages/help/feedback/feedback",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/help/feedback/bug",
+                    "pathName": "pages/help/feedback/bug",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

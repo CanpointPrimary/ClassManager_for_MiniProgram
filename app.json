@@ -8,7 +8,10 @@
     "pages/classStatus/classStatus",
     "pages/users/users",
     "pages/joinClass/joinClass",
-    "pages/help/help"
+    "pages/help/help",
+    "pages/help/feedback/feedback",
+    "pages/help/feedback/bug",
+    "pages/help/feedback/advice"
   ],
   "window": {
     "backgroundTextStyle": "light",

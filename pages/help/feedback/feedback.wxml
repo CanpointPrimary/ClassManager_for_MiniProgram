@@ -1,0 +1,10 @@
+<!--pages/help/feedback/feedback.wxml-->
+<view class="container">
+    <view class="tip"><text>*</text>请选择反馈类型</view>
+    <d-cell>
+        <view class="value">功能异常</view>
+    </d-cell>
+    <d-cell>
+        <view class="value">产品建议</view>
+    </d-cell>
+</view>

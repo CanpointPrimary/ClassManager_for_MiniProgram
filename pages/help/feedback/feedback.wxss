@@ -1,0 +1,18 @@
+/* pages/help/feedback/feedback.wxss */
+.container {
+    height: 100%;
+    padding: 30rpx;
+
+}
+
+.tip text {
+    color: #ff7058;
+}
+
+.tip {
+    font-size: 28rpx;
+}
+
+.value {
+    font-size: 32rpx;
+}

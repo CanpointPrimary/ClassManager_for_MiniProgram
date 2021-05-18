@@ -1,0 +1,22 @@
+<!--pages/help/feedback/bug.wxml-->
+<view class="container">
+    <view class="tip"><text>*</text>请描述您的问题（10个字以上）</view>
+    <textarea cols="20" rows="10" placeholder="请输入文字" bindinput="valueCount">
+        <view class="count">{{length}}/140</view>
+    </textarea>
+
+    <view class="tip"><text>*</text>请上传图片（{{imageList.length}}/5）</view>
+    <!-- 图片上传模块 -->
+    <view class="imageUpload">
+        <image wx:for="{{imageList}}" src="{{item.src}}" class="choseImage" mode="aspectFill"></image>
+        <view class="camera">
+            <image src="/static/icon/camera.svg" class="cameraIcon" bindtap="chooseImage"></image>
+        </view>
+    </view>
+    <view class="tip"><text>*</text>问题反馈</view>
+    <picker class="typePicker" bindchange="bindPickerChange" value="{{index}}" range="{{typeList}}" range-key="type">
+        <input type="text" placeholder="请选择" value="{{array[index].subject}}" disabled></input>
+        <mp-icon icon="arrow" size="17" color="#999" class="icon"></mp-icon>
+    </picker>
+    <view class="submit">提交</view>
+</view>

@@ -1,0 +1,84 @@
+/* pages/help/feedback/bug.wxss */
+.container {
+    height: 100%;
+    padding: 30rpx;
+}
+
+.tip text {
+    color: #ff7058;
+}
+
+.tip {
+    font-size: 28rpx;
+    margin-bottom: 20rpx;
+}
+
+textarea {
+    width: 690rpx;
+    height: 268rpx;
+    background-color: #f6f6f6;
+    border-radius: 20rpx;
+    padding: 10rpx 20rpx;
+    box-sizing: border-box;
+    font-size: 26rpx;
+    position: relative;
+    margin-bottom: 20rpx;
+}
+
+.count {
+    position: absolute;
+    right: 20rpx;
+    bottom: 10rpx;
+    font-size: 22rpx;
+    color: #999;
+}
+
+/* 图片上传模块 */
+.imageUpload {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 20rpx;
+}
+
+.camera {
+    height: 184rpx;
+    width: 184rpx;
+    margin-right: 10rpx;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20rpx;
+}
+
+.camera .cameraIcon {
+    width: 94rpx;
+    height: 74rpx;
+}
+
+.typePicker {
+    height: 82rpx;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1rpx solid #999;
+    margin-bottom: 40rpx;
+}
+
+.icon {
+    position: absolute;
+    right: 0;
+    top: 8rpx;
+}
+
+.submit {
+    width: 245rpx;
+    height: 74rpx;
+    background-color: #97bbef;
+    color: #1e50a2;
+    font-size: 28rpx;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 74rpx;
+    border-radius: 37rpx;
+}
