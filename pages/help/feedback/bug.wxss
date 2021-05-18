@@ -1,7 +1,7 @@
 /* pages/help/feedback/bug.wxss */
 .container {
     height: 100%;
-    padding: 30rpx;
+    padding: 30rpx 0 0 30rpx;
 }
 
 .tip text {
@@ -35,15 +35,23 @@ textarea {
 
 /* 图片上传模块 */
 .imageUpload {
-    display: flex;
-    justify-content: start;
     margin-bottom: 20rpx;
+    overflow: hidden;
+}
+
+.seletedImage {
+    height: 184rpx;
+    width: 210rpx;
+    margin-right: 30rpx;
+    margin-bottom: 20rpx;
+    float: left;
 }
 
 .camera {
+    float: left;
     height: 184rpx;
     width: 184rpx;
-    margin-right: 10rpx;
+    margin-left: 13rpx;
     background-color: #f6f6f6;
     display: flex;
     justify-content: center;
@@ -57,18 +65,22 @@ textarea {
 }
 
 .typePicker {
-    height: 82rpx;
-    display: flex;
-    align-items: center;
+    height: 76rpx;
+    width: 690rpx;
     position: relative;
     border-bottom: 1rpx solid #999;
     margin-bottom: 40rpx;
 }
 
+.typePicker input {
+    width: 690rpx;
+    height: 68rpx;
+}
+
 .icon {
     position: absolute;
     right: 0;
-    top: 8rpx;
+    top: 0;
 }
 
 .submit {

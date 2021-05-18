@@ -7,7 +7,16 @@ Page({
     data: {
 
     },
-
+    navToBug() {
+        wx.navigateTo({
+            url: '/pages/help/feedback/bug',
+        })
+    },
+    navToAdvice() {
+        wx.navigateTo({
+            url: '/pages/help/feedback/advice',
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */

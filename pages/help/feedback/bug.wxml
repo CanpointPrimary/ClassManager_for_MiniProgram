@@ -1,21 +1,22 @@
 <!--pages/help/feedback/bug.wxml-->
 <view class="container">
     <view class="tip"><text>*</text>请描述您的问题（10个字以上）</view>
-    <textarea cols="20" rows="10" placeholder="请输入文字" bindinput="valueCount">
+    <textarea placeholder="请输入文字" bindinput="valueCount">
         <view class="count">{{length}}/140</view>
     </textarea>
 
-    <view class="tip"><text>*</text>请上传图片（{{imageList.length}}/5）</view>
+    <view class="tip"><text>*</text>请上传至少一张图片（{{imageList.length}}/5）</view>
     <!-- 图片上传模块 -->
     <view class="imageUpload">
-        <image wx:for="{{imageList}}" src="{{item.src}}" class="choseImage" mode="aspectFill"></image>
-        <view class="camera">
-            <image src="/static/icon/camera.svg" class="cameraIcon" bindtap="chooseImage"></image>
+        <image wx:for="{{imageList.length}}" wx:key="id" src="{{imageList[item]}}" data-index="{{item}}"
+            class="seletedImage" bindtap="removeImage" mode="aspectFill"></image>
+        <view class="camera" bindtap="chooseImage">
+            <mp-icon icon="add" size="50" color="gray"></mp-icon>
         </view>
     </view>
-    <view class="tip"><text>*</text>问题反馈</view>
+    <view class="tip"><text>*</text>问题类型</view>
     <picker class="typePicker" bindchange="bindPickerChange" value="{{index}}" range="{{typeList}}" range-key="type">
-        <input type="text" placeholder="请选择" value="{{array[index].subject}}" disabled></input>
+        <input type="text" placeholder="请选择" value="{{typeList[index].type}}" disabled></input>
         <mp-icon icon="arrow" size="17" color="#999" class="icon"></mp-icon>
     </picker>
     <view class="submit">提交</view>

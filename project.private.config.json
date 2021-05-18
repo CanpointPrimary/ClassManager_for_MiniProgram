@@ -65,6 +65,12 @@
                     "pathName": "pages/help/feedback/bug",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/help/feedback/advice",
+                    "pathName": "pages/help/feedback/advice",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

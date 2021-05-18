@@ -20,6 +20,11 @@ Page({
       herf: ""
     }]
   },
+  navToFeedback() {
+    wx.navigateTo({
+      url: '/pages/help/feedback/feedback',
+    })
+  },
   changetab(e) {
     let data = e.target.dataset
     if (!this.data.current == data.index) {

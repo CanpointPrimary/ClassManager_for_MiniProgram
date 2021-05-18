@@ -12,7 +12,7 @@
         </view>
     </view>
     <view class="btnBottom">
-        <view class="btn_item">
+        <view class="btn_item" bindtap="navToFeedback">
             <image src="/static/icon/feedback.svg"></image>
             <text>意见反馈</text>
         </view>
