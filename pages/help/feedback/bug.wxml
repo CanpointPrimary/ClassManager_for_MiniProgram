@@ -4,7 +4,6 @@
     <textarea placeholder="请输入文字" bindinput="valueCount">
         <view class="count">{{length}}/140</view>
     </textarea>
-
     <view class="tip"><text>*</text>请上传至少一张图片（{{imageList.length}}/5）</view>
     <!-- 图片上传模块 -->
     <view class="imageUpload">

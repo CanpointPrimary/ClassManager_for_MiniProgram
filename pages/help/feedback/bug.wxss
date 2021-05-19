@@ -37,6 +37,11 @@ textarea {
 .imageUpload {
     margin-bottom: 20rpx;
     overflow: hidden;
+
+}
+
+.camera:active {
+    border: dashed 2px #97bbef;
 }
 
 .seletedImage {
@@ -57,6 +62,8 @@ textarea {
     justify-content: center;
     align-items: center;
     border-radius: 20rpx;
+    box-sizing: border-box;
+    border: dashed 2px #9999995e;
 }
 
 .camera .cameraIcon {

@@ -5,6 +5,10 @@
 
 }
 
+.cell--cell:active {
+    background-color: #e8edf6;
+}
+
 .tip text {
     color: #ff7058;
 }
