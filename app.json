@@ -11,7 +11,8 @@
     "pages/help/help",
     "pages/help/feedback/feedback",
     "pages/help/feedback/bug",
-    "pages/help/feedback/advice"
+    "pages/help/feedback/advice",
+    "pages/classList/classList"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -20,10 +21,10 @@
     "navigationBarTextStyle": "black"
   },
   "networkTimeout": {
-    "request": 200000,
-    "connectSocket": 200000,
-    "uploadFile": 200000,
-    "downloadFile": 200000
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
   },
   "useExtendedLib": {
     "weui": true

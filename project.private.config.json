@@ -71,6 +71,12 @@
                     "pathName": "pages/help/feedback/advice",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/classList/classList",
+                    "pathName": "pages/classList/classList",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

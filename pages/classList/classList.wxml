@@ -1,0 +1,39 @@
+<!--pages/classList/classList.wxml-->
+<view class="container">
+    <view class="tabbar">
+        <view class="tab_item {{current === 0? 'tab_active' : ''}}" bindtap="changetab" data-index='{{0}}'>已加入</view>
+        <view class="tab_item {{current === 1? 'tab_active' : ''}}" bindtap="changetab" data-index='{{1}}'>待审核</view>
+        <view class="underline" style="left:{{current === 0?  108 : 483}}rpx"></view>
+    </view>
+
+    <!-- 已加入 -->
+    <view class="classAdd" wx:if="{{current === 0}}">
+        <view class="classItem" wx:for="{{classList}}" wx:key="id">
+            <view class="body">
+
+                <!-- 以后换成图片 -->
+                <view class="avatar"></view>
+                <view class="info">
+                    <view class="title">{{item.className}}</view>
+                    <view class="name">{{item.rName}}</view>
+                </view>
+            </view>
+            <mp-icon icon="setting" size="20"></mp-icon>
+        </view>
+    </view>
+
+    <!-- 待审核 -->
+    <view class="classPre" wx:else>
+        <view class="classItem" wx:for="{{classPre}}" wx:key="id">
+            <view class="body">
+
+                <!-- 以后换成图片 -->
+                <view class="avatar"></view>
+                <view class="info">
+                    <view class="title">{{item.className}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="addBtn" wx:if="{{current === 0}}">进入班级</view>
+</view>
