@@ -29,6 +29,7 @@
   font-size: 24rpx;
   line-height: 30rpx;
   display: flex;
+  z-index: 1;
 }
 .idCard .idInfo .id_info .classInfo .className {
   color: #666666;

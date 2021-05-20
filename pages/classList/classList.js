@@ -31,6 +31,11 @@ Page({
             className: "1年级2班",
         }]
     },
+    showInfo() {
+        wx.navigateTo({
+            url: './classInfo',
+        })
+    },
     changetab(e) {
         let data = e.target.dataset
         if (this.data.current !== data.index) {

@@ -18,7 +18,7 @@
                     <view class="name">{{item.rName}}</view>
                 </view>
             </view>
-            <mp-icon icon="setting" size="20"></mp-icon>
+            <mp-icon icon="setting" size="20" bindtap="showInfo"></mp-icon>
         </view>
     </view>
 

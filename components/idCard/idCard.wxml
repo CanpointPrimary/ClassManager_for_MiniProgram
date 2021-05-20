@@ -7,7 +7,7 @@
             <view class="classInfo">
                 <text class="className">体验班级</text>
                 <image class="switchIcon" mode="aspectFit" src="/static/icon/switch.svg"></image>
-                <text class="btnSwitch">切换</text>
+                <text class="btnSwitch" bindtap="checkout">切换</text>
             </view>
         </view>
     </view>
