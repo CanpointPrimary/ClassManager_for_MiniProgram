@@ -6,7 +6,7 @@
             <view class="name">游客老师</view>
             <view class="classInfo">
                 <text class="className">体验班级</text>
-                <image class="switchIcon" mode="aspectFit" src="/static/icon/switch.svg"></image>
+                <image class="switchIcon" mode="aspectFit" src="/static/icon/switch.svg" bindtap="checkout"></image>
                 <text class="btnSwitch" bindtap="checkout">切换</text>
             </view>
         </view>
