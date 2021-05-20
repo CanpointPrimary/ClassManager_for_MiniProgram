@@ -12,7 +12,8 @@
     "pages/help/feedback/feedback",
     "pages/help/feedback/bug",
     "pages/help/feedback/advice",
-    "pages/classList/classList"
+    "pages/classList/classList",
+    "pages/classList/classInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",

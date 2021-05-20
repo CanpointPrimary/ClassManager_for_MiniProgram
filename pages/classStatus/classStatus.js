@@ -8,6 +8,7 @@ Page({
         current: 0,
         checkList: {
             preCheck: [{
+                id: 1,
                 rName: '张三丰',
                 rTime: '2021.03.21 18:05'
             }],

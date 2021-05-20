@@ -77,6 +77,12 @@
                     "pathName": "pages/classList/classList",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/classList/classInfo",
+                    "pathName": "pages/classList/classInfo",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }
