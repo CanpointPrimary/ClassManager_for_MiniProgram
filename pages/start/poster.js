@@ -13,6 +13,21 @@ Page({
    */
   onLoad: function (options) {
     let app = getApp()
+    setTimeout(() => {
+      wx.getStorage({
+        key: 'currentUser',
+        success: () => {
+          wx.switchTab({
+            url: '/pages/homePage/homePage',
+          })
+        },
+        fail: () => {
+          wx.reLaunch({
+            url: './guide',
+          })
+        }
+      })
+    }, 3000)
     wx.request({
       url: app.globalData.baseUrl + 'api/start',
       success: ({
