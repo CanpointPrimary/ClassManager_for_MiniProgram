@@ -1,2 +1,9 @@
 <!--pages/workPublish/workPublish.wxml-->
-<text>pages/workPublish/workPublish.wxml</text>
+<view class="container">
+    <view class="body">
+        <view class="header">
+            <view class="recipient">{{recipient}}</view>
+            <mp-icon icon="arrow" size="14"></mp-icon>
+        </view>
+    </view>
+</view>

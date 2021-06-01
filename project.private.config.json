@@ -89,6 +89,12 @@
                     "pathName": "pages/homeWork/homeWork",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/workPublish/workPublish",
+                    "pathName": "pages/workPublish/workPublish",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

@@ -1,1 +1,21 @@
-/* pages/workPublish/workPublish.wxss */
+.container {
+  min-height: 100%;
+  background-color: #EDF6FD;
+}
+.container .body {
+  background-color: #fff;
+  width: 100%;
+  padding: 40rpx 30rpx;
+  border-radius: 40rpx;
+  box-sizing: border-box;
+}
+.container .body .header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.container .body .header .recipient {
+  margin-right: 20rpx;
+  color: #1E50A2;
+  font-size: 28rpx;
+}

@@ -5,7 +5,8 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        recipient: "1年级2班",
+        workPack: [{},{}]
     },
 
     /**
