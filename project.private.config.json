@@ -83,6 +83,12 @@
                     "pathName": "pages/classList/classInfo",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/homeWork/homeWork",
+                    "pathName": "pages/homeWork/homeWork",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

@@ -13,7 +13,8 @@
     "pages/help/feedback/bug",
     "pages/help/feedback/advice",
     "pages/classList/classList",
-    "pages/classList/classInfo"
+    "pages/classList/classInfo",
+    "pages/homeWork/homeWork"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -48,6 +49,5 @@
       }
     ]
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
