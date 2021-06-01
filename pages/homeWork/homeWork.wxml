@@ -1,0 +1,52 @@
+<!--pages/homeWork/homeWork.wxml-->
+
+<view class="container">
+    <!-- 弹出层，时间选择器 -->
+    <van-calendar show="{{ show }}" type="range" bind:close="onClose" bind:confirm="onConfirm" show-confirm="false"
+        min-date="2020" max-date="{{endTime}}" color="#1e50a2" allow-same-day default-date="{{[startTime,endTime]}}"
+        row-height="55" />
+    <!-- 头部 -->
+    <view class="header">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="subject">
+            <text>{{array[index].subject}}</text>
+            <image src="/static/icon/triangle.svg" class="arrowDown"></image>
+        </picker>
+        <van-search value="{{ value }}" placeholder="请输入关键字" custom-class="search" bind:search="onSearch" shape="round"
+            bind:cancel="onCancel" />
+        <image src="/static/icon/calendar.svg" class="calendar" bindtap="onDisplay"></image>
+    </view>
+
+    <!-- tab栏 -->
+    <view class="tabbar">
+        <view class="tab_item {{current === 0? 'tab_active' : ''}}" bindtap="changetab" data-index='{{0}}'>全部</view>
+        <view class="tab_item {{current === 1? 'tab_active' : ''}}" bindtap="changetab" data-index='{{1}}'>我发布的</view>
+        <view class="underline"></view>
+    </view>
+
+    <!-- 作业列表 -->
+    <view class="workList">
+        <view class="item" wx:for="{{workList}}">
+            <view class="time">{{item.date}}</view>
+            <view class="inner" wx:for="{{item.lists}}">
+                <view class="title">
+                    <view class="bar"></view>
+                    <view class="value">{{item.workTitle }}</view>
+                </view>
+                <view class="publish">
+                    <image src="{{item.avatar}}" class="avatar"></image>
+                    <view class="publisher">{{item.publisher}}</view>
+                    <view class="pubTime">{{item.pubTime}}</view>
+                </view>
+                <view class="general">{{item.general}}</view>
+                <view class="progress">
+                    <progress backgroundColor="#EEECEC" activeColor="#1E50A2" active stroke-width="6rpx"
+                        percent="{{item.doneStu/item.allStu*100}}" duration="5" border-radius="3rpx"></progress>
+                    <view class="info">{{item.doneStu}}/{{item.allStu}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="addWork">
+        <image src="/static/icon/add.svg" class="addBtn"></image>
+    </view>
+</view>
