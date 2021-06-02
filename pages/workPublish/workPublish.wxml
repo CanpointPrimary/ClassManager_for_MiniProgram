@@ -27,7 +27,6 @@
         </view>
         <view class="textarea">
             <textarea class="desc"></textarea>
-
             <!-- 留给语音 -->
 
         </view>

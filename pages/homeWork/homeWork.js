@@ -80,6 +80,11 @@ Page({
             index: e.detail.value
         })
     },
+    navTo() {
+        wx.navigateTo({
+            url: '/pages/workPublish/workPublish',
+        })
+    },
     changetab(e) {
         let data = e.target.dataset
 

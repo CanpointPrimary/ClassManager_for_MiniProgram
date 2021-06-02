@@ -18,6 +18,12 @@ Page({
     },
 
   },
+  navTo(e) {
+    let url = e.currentTarget.dataset.target
+    wx.navigateTo({
+      url: url,
+    })
+  },
   copyCode() {
     wx.setClipboardData({
       data: this.data.classInfo.code,
@@ -79,7 +85,8 @@ Page({
           menuList: [{
               "id": 0,
               "list": "作业",
-              "className": "icon-zuoye"
+              "className": "icon-zuoye",
+              "target": "/pages/homeWork/homeWork"
             },
             {
               "id": 1,

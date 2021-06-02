@@ -47,6 +47,6 @@
         </view>
     </view>
     <view class="addWork">
-        <image src="/static/icon/add.svg" class="addBtn"></image>
+        <image src="/static/icon/add.svg" class="addBtn" bindtap="navTo"></image>
     </view>
 </view>
