@@ -41,4 +41,5 @@
         <view>加入班级是否需要审核</view>
         <switch color="#1e50a2"></switch>
     </view>
+    <view class="submit">发布</view>
 </view>

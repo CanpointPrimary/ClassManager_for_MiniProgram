@@ -6,7 +6,7 @@
   background-color: #fff;
   width: 100%;
   padding: 40rpx 30rpx;
-  border-radius: 40rpx;
+  border-radius: 20rpx;
   box-sizing: border-box;
 }
 .container .body .header {
@@ -98,4 +98,18 @@
 .container .check switch {
   zoom: 0.78125;
   padding-right: 20rpx;
+}
+.container .submit {
+  width: 245rpx;
+  height: 74rpx;
+  background: #97BBEF;
+  border-radius: 37rpx;
+  text-align: center;
+  line-height: 74rpx;
+  font-size: 32rpx;
+  color: #1E50A2;
+  position: fixed;
+  bottom: 60rpx;
+  left: 50%;
+  transform: translateX(-50%);
 }
