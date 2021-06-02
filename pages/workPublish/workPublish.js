@@ -6,9 +6,14 @@ Page({
      */
     data: {
         recipient: "1年级2班",
-        workPack: [{},{}]
+        title: "2021.3.11（周三）英语作业",
+        workPack: [{}, {}]
     },
-
+    titleChange(e) {
+        this.setData({
+            title: e.detail.value
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */

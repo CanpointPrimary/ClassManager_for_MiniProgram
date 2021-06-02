@@ -19,3 +19,83 @@
   color: #1E50A2;
   font-size: 28rpx;
 }
+.container .body .title {
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 82rpx;
+  background: #FFFBEF;
+  border-radius: 10rpx;
+}
+.container .body .title input {
+  width: 100%;
+}
+.container .body .title text {
+  color: #666;
+  font-size: 22rpx;
+  margin-top: 28rpx;
+}
+.container .body .btns {
+  font-size: 28rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.container .body .btns .folder {
+  width: 36rpx;
+  height: 36rpx;
+  margin: 0 10rpx;
+}
+.container .body .btns .block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 30rpx;
+}
+.container .body .btns .block .voice {
+  display: flex;
+  align-items: center;
+  margin-right: 30rpx;
+}
+.container .body .btns .block .smart {
+  display: flex;
+  align-items: center;
+}
+.container .body .btns .block .mic {
+  width: 36rpx;
+  height: 36rpx;
+  margin: 0 10rpx;
+}
+.container .body .textarea {
+  display: flex;
+  flex-direction: column;
+  height: 175rpx;
+  background: #F6F6F6;
+  opacity: 0.5;
+}
+.container .body .textarea .desc {
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+.container .van-cell {
+  background-color: transparent;
+  font-size: 28rpx;
+  height: 90rpx;
+}
+.container .check {
+  margin-top: 10rpx;
+  height: 78rpx;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  align-items: center;
+  color: #1d1d1d;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+}
+.container .check switch {
+  zoom: 0.78125;
+  padding-right: 20rpx;
+}

@@ -5,5 +5,40 @@
             <view class="recipient">{{recipient}}</view>
             <mp-icon icon="arrow" size="14"></mp-icon>
         </view>
+        <view class="title">
+            <input type="text" value="{{title}}" bindinput="titleChange"
+                maxlength="25"></input><text>{{title.length}}/25</text>
+        </view>
+        <view class="btns">
+            <view class="block">
+                <view class="voice">
+                    <image src="/static/icon/folder.svg" class="folder"></image>
+                    <text>语音作业</text>
+                </view>
+                <view class="smart">
+                    <image src="/static/icon/folder.svg" class="folder"></image>
+                    <text>智能作业</text>
+                </view>
+            </view>
+            <view class="block">
+                <image src="/static/icon/voice.svg" class="mic"></image>
+                <image src="/static/icon/picture.svg" class="mic"></image>
+            </view>
+        </view>
+        <view class="textarea">
+            <textarea class="desc"></textarea>
+
+            <!-- 留给语音 -->
+
+        </view>
+        <!-- 留给作业包 -->
+        <!-- 留给插图 -->
+        <!-- 预计用时 -->
+    </view>
+    <van-cell title="截止时间" value="无" is-link></van-cell>
+    <van-cell title="定时发送" value="立即发送" is-link></van-cell>
+    <view class="check">
+        <view>加入班级是否需要审核</view>
+        <switch color="#1e50a2"></switch>
     </view>
 </view>

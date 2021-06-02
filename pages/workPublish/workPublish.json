@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index",
     "mp-icon": "weui-miniprogram/icon/icon"
   },
   "navigationBarTitleText": "发布作业",
