@@ -34,11 +34,19 @@
         <!-- 留给插图 -->
         <!-- 预计用时 -->
     </view>
-    <van-cell title="截止时间" value="无" is-link></van-cell>
-    <van-cell title="定时发送" value="立即发送" is-link></van-cell>
+    <picker mode="multiSelector" range="{{timeList}}" value="{{time}}">
+        <van-cell title="截止时间"
+            value="{{timeSelect[0]==0?'无':(timeList[0][timeSelect[0]]+' '+timeList[1][timeSelect[1]])}}" is-link>
+        </van-cell>
+    </picker>
+    <picker mode="multiSelector" range="{{timeList}}" value="{{timeSelect}}">
+        <van-cell title="定时发送" value="{{timeList[0][timeSelect[0]]+' '+timeList[1][timeSelect[1]]}}" is-link></van-cell>
+    </picker>
+
     <view class="check">
         <view>加入班级是否需要审核</view>
         <switch color="#1e50a2"></switch>
     </view>
+
     <view class="submit">发布</view>
 </view>

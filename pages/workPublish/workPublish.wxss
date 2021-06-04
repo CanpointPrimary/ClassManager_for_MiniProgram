@@ -113,3 +113,52 @@
   left: 50%;
   transform: translateX(-50%);
 }
+.container .timePicker {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 430rpx;
+  background-color: #fff;
+  z-index: 2;
+  border-radius: 20rpx;
+}
+.container .timePicker picker-view {
+  height: 249rpx;
+  width: 630rpx;
+  background-color: #f6f6f6;
+  z-index: 3;
+}
+.container .van-popup {
+  background: #fff;
+}
+.container .van-popup .block {
+  display: flex;
+  justify-content: space-around;
+}
+.container .van-popup .block .btn {
+  width: 200rpx;
+  height: 84rpx;
+  border-radius: 10rpx;
+  line-height: 84rpx;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.container .van-popup .block .cancel {
+  color: #1E50A2;
+  border: 2rpx solid #EEECEC;
+}
+.container .van-popup .block .certain {
+  background-color: #97BBEF;
+  color: #fff;
+}
+.container .van-popup .van-picker {
+  width: 95%;
+  border-radius: 40rpx;
+  margin: 20rpx auto;
+  background-color: #F6F6F6;
+}
+.container .van-popup .van-picker .col {
+  border-left: 4px solid #1E50A2;
+  background-color: #fff;
+  box-sizing: border-box;
+}
