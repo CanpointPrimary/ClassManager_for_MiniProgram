@@ -11,7 +11,8 @@ Page({
         array: [1, 2, 3, 4, 5, 6],
         showTimePicker: true,
         timeSelect: [],
-        timeList: []
+        timeList: [],
+        imageList: []
     },
     titleChange(e) {
         this.setData({
@@ -60,6 +61,25 @@ Page({
                 ['默认', ...dateList], timeList
             ],
             timeSelect: [0, date.getHours() * 2 + 2]
+        })
+    },
+    chooseImage() {
+        if (3 - this.data.imageList.length <= 0) {
+            return wx.showToast({
+                title: '最多添加三张图片',
+                icon: "none"
+            })
+        }
+        wx.chooseImage({
+            count: 3 - this.data.imageList.length,
+            sourceType: ['album',
+                'camera'
+            ],
+            success: (res) => {
+                this.setData({
+                    imageList: [...this.data.imageList, ...res.tempFilePaths]
+                })
+            }
         })
     },
     timeChange(e) {

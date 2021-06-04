@@ -9,6 +9,35 @@
   border-radius: 20rpx;
   box-sizing: border-box;
 }
+.container .body .imageUpload {
+  overflow: hidden;
+  padding-top: 10rpx;
+}
+.container .body .camera:active {
+  border: dashed 2px #97bbef;
+}
+.container .body .seletedImage {
+  height: 160rpx;
+  width: 160rpx;
+  margin-right: 15rpx;
+  float: left;
+}
+.container .body .camera {
+  float: left;
+  height: 160rpx;
+  width: 160rpx;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20rpx;
+  box-sizing: border-box;
+  border: dashed 2px #9999995e;
+}
+.container .body .camera .cameraIcon {
+  width: 94rpx;
+  height: 74rpx;
+}
 .container .body .header {
   display: flex;
   justify-content: flex-end;
@@ -40,6 +69,7 @@
   font-size: 28rpx;
   display: flex;
   justify-content: space-between;
+  padding: 10rpx 0;
 }
 .container .body .btns .folder {
   width: 36rpx;
@@ -61,10 +91,13 @@
   display: flex;
   align-items: center;
 }
-.container .body .btns .block .mic {
+.container .body .btns .block .addFile {
   width: 36rpx;
   height: 36rpx;
-  margin: 0 10rpx;
+}
+.container .body .btns .block .picture {
+  margin-right: 10rpx;
+  margin-left: 30rpx;
 }
 .container .body .textarea {
   display: flex;

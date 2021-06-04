@@ -21,8 +21,8 @@
                 </view>
             </view>
             <view class="block">
-                <image src="/static/icon/voice.svg" class="mic"></image>
-                <image src="/static/icon/picture.svg" class="mic"></image>
+                <image src="/static/icon/voice.svg" class="mic addFile"></image>
+                <image src="/static/icon/picture.svg" class="picture addFile" bindtap="chooseImage"></image>
             </view>
         </view>
         <view class="textarea">
@@ -32,9 +32,16 @@
         </view>
         <!-- 留给作业包 -->
         <!-- 留给插图 -->
+        <view class="imageUpload" wx:if="{{imageList.length>0}}">
+            <image wx:for="{{imageList.length}}" wx:key="id" src="{{imageList[item]}}" data-index="{{item}}"
+                class="seletedImage" mode="aspectFill"></image>
+            <view class="camera" bindtap="chooseImage">
+                <mp-icon icon="add" size="50" color="gray"></mp-icon>
+            </view>
+        </view>
         <!-- 预计用时 -->
     </view>
-    <picker mode="multiSelector" range="{{timeList}}" value="{{time}}">
+    <picker mode="multiSelector" range="{{timeList}}" value="{{timeSelect}}">
         <van-cell title="截止时间"
             value="{{timeSelect[0]==0?'无':(timeList[0][timeSelect[0]]+' '+timeList[1][timeSelect[1]])}}" is-link>
         </van-cell>
