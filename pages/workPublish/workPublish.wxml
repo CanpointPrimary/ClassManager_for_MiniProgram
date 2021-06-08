@@ -21,7 +21,7 @@
                 </view>
             </view>
             <view class="block">
-                <image src="/static/icon/voice.svg" class="mic addFile"></image>
+                <image src="/static/icon/voice.svg" class="mic addFile" bindtap="showVoice"></image>
                 <image src="/static/icon/picture.svg" class="picture addFile" bindtap="chooseImage"></image>
             </view>
         </view>
@@ -54,6 +54,21 @@
         <view>加入班级是否需要审核</view>
         <switch color="#1e50a2"></switch>
     </view>
-
+    <van-popup show="{{ showVoice }}" position="bottom" custom-style="height: 30%;" round
+        bind:click-overlay="closeVoice">
+        <!-- <canvas></canvas> -->
+        <view class="icon" bindtap="startRecord">
+            <mp-icon icon="mike" type="field" color="#fff" size="{{36}}" wx:if="{{showWave}}"></mp-icon>
+            <view class="waves" wx:else>
+                <view class="waveItem1 waveItem"></view>
+                <view class="waveItem2 waveItem"></view>
+                <view class="waveItem3 waveItem"></view>
+                <view class="waveItem2 waveItem"></view>
+                <view class="waveItem1 waveItem"></view>
+            </view>
+        </view>
+        <view wx:if="{{showWave}}">点击录音</view>
+        <view wx:else>点击结束</view>
+    </van-popup>
     <view class="submit">发布</view>
 </view>

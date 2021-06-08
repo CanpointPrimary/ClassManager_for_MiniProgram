@@ -95,6 +95,12 @@
                     "pathName": "pages/workPublish/workPublish",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/workPackage/workPackage",
+                    "pathName": "pages/workPackage/workPackage",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

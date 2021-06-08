@@ -10,9 +10,54 @@ Page({
         workPack: [{}, {}],
         array: [1, 2, 3, 4, 5, 6],
         showTimePicker: true,
+        showVoice: false,
         timeSelect: [],
         timeList: [],
-        imageList: []
+        imageList: [],
+        showWave: true
+    },
+    closeVoice() {
+        this.setData({
+            showVoice: false,
+            showWave: true
+        })
+    },
+    startRecord() {
+        this.setData({
+            showWave: !this.data.showWave
+        })
+        setInterval(() => {
+            this.animate('.waveItem3', [{
+                height: '50rpx'
+            }, {
+                height: '80rpx'
+            }, {
+                height: '20rpx'
+            }, {
+                height: '80rpx'
+            }, {
+                height: '50rpx'
+            }], 1000)
+            this.animate('.waveItem2', [{
+                height: '50rpx'
+            }, {
+                height: '20rpx'
+            }, {
+                height: '50rpx'
+            }], 500)
+            this.animate('.waveItem1', [{
+                height: '20rpx'
+            }, {
+                height: '50rpx'
+            }, {
+                height: '20rpx'
+            }], 500)
+        }, 500)
+    },
+    showVoice() {
+        this.setData({
+            showVoice: true
+        })
     },
     titleChange(e) {
         this.setData({
