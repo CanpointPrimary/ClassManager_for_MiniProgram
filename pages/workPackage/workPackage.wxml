@@ -1,0 +1,43 @@
+<view class="container">
+    <view class="header">
+        <view class="info">
+            <image src="/static/avatar.png" class="avatar"></image>
+            <view class="name">{{workPackageInfo.publisher}}</view>
+            <view class="subject">{{workPackageInfo.subject}}</view>
+        </view>
+        <view class="seting">
+            <image src="/static/icon/fit.svg"></image>
+        </view>
+    </view>
+    <view class="time">
+        <view class="val">
+            <view class="startTime">
+                发布时间：{{workPackageInfo.pubTime}}</view>
+            <view class="endTime">
+                截止时间：{{workPackageInfo.endTime}}
+            </view>
+        </view>
+        <view class="btn">学生作答情况</view>
+    </view>
+    <view class="body">
+        <view class="workIntro">
+            <view class="desc">{{workPackageInfo.desc}}</view>
+            <view class="audio">
+                <image src="/static/icon/voice1099.svg"></image>
+                17″
+            </view>
+            <view class="pictures">
+                <image src="/static/work.png" wx:for="{{3}}"></image>
+            </view>
+        </view>
+        <scroll-view class="works" scroll-x>
+            <view class="outer {{index == currentWork ? 'active' : ''}}" wx:for="{{workList}}">
+                <view class="type">{{item.type}}</view>
+                <view class="title">{{item.title}}</view>
+                <view class="timeTake">预计用时：{{item.timeTake}}</view>
+                <view class="angle" wx:if="{{index==currentWork}}"></view>
+            </view>
+        </scroll-view>
+    </view>
+
+</view>

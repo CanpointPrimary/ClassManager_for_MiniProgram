@@ -1,1 +1,146 @@
-/* pages/workPackage/workPackage.wxss */
+.container {
+  min-height: 100%;
+  background-color: #EDF6FD;
+  display: flex;
+  flex-direction: column;
+}
+.container .header {
+  display: flex;
+  padding: 0 30rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .header .info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container .header .info .avatar {
+  width: 88rpx;
+  height: 88rpx;
+}
+.container .header .info .name {
+  margin: 0 20rpx;
+  color: #333;
+  font-size: 28rpx;
+}
+.container .header .info .subject {
+  color: #666;
+  font-size: 24rpx;
+}
+.container .header .seting image {
+  width: 48rpx;
+  height: 48rpx;
+}
+.container .time {
+  padding: 0 30rpx;
+  padding-bottom: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .time .val {
+  margin-left: 108rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+.container .time .btn {
+  width: 193rpx;
+  height: 48rpx;
+  color: #fff;
+  background-color: #1E50A2;
+  font-size: 24rpx;
+  line-height: 48rpx;
+  text-align: center;
+  border-radius: 24rpx;
+}
+.container .body {
+  padding: 20rpx 0;
+  flex: 1;
+  background-color: white;
+  height: 200rpx;
+  border-radius: 20rpx 20rpx 0 0;
+}
+.container .body .workIntro {
+  padding: 20rpx 30rpx;
+  margin: 0 30rpx;
+  background-color: #F6F6F6;
+  font-size: 24rpx;
+}
+.container .body .workIntro .audio {
+  background-color: #dce9fe;
+  width: 103rpx;
+  height: 39rpx;
+  display: flex;
+  align-items: center;
+  border-radius: 6rpx;
+  font-size: 22rpx;
+  line-height: 22rpx;
+  margin-bottom: 10rpx;
+}
+.container .body .workIntro .audio image {
+  margin-left: 8rpx;
+  margin-right: 15rpx;
+  height: 24rpx;
+  width: 17rpx;
+}
+.container .body .workIntro .pictures image {
+  margin-right: 20rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+.container .body .works {
+  padding-top: 20rpx;
+  height: 205rpx;
+  white-space: nowrap;
+}
+.container .body .works .active {
+  background-color: #edf6fd;
+}
+.container .body .works .active .angle {
+  border-top: 22rpx solid #edf6fd;
+}
+.container .body .outer {
+  padding-top: 20rpx;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 10rpx 10rpx 0 10rpx;
+  display: inline-block;
+  position: relative;
+  height: 166rpx;
+  width: 200rpx;
+  background-color: #fff;
+  filter: drop-shadow(0px 3rpx 6rpx rgba(0, 0, 0, 0.16));
+  border-radius: 20rpx;
+}
+.container .body .outer .type {
+  font-size: 28rpx;
+  color: #1d1d1d;
+}
+.container .body .outer .title {
+  font-size: 28rpx;
+  color: #666;
+}
+.container .body .outer .timeTake {
+  font-size: 22rpx;
+  color: #999;
+}
+.container .body .outer:first-child {
+  margin-left: 30rpx;
+}
+.container .body .outer:last-child {
+  margin-right: 30rpx;
+}
+.container .body .outer .angle {
+  position: absolute;
+  bottom: -22rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 22rpx solid #fff;
+  border-left: 30rpx solid transparent;
+  border-right: 30rpx solid transparent;
+  border-bottom: 0;
+}
