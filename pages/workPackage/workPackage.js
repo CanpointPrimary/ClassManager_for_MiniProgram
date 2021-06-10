@@ -18,23 +18,52 @@ Page({
             type: '跟读',
             title: 'unit 2单元',
             timeTake: "4分钟"
-        },{
+        }, {
             type: '跟读',
             title: 'unit 2单元',
             timeTake: "4分钟"
-        },{
+        }, {
             type: '跟读',
             title: 'unit 2单元',
             timeTake: "4分钟"
-        },{
+        }, {
             type: '跟读',
             title: 'unit 2单元',
             timeTake: "4分钟"
-        },{
+        }, {
             type: '跟读',
             title: 'unit 2单元',
-            timeTake: "4分钟"
-        }, ]
+            timeTake: '4分钟'
+        }],
+        queList: [{
+            question: 'one',
+            score: 'C'
+        }, {
+            question: 'one',
+            score: 'C'
+        }, {
+            question: 'one',
+            score: 'C'
+        }, {
+            question: 'two',
+            score: 'B'
+        }, {
+            question: 'one',
+            score: 'C'
+        }, {
+            question: 'two',
+            score: 'C'
+        }, {
+            question: 'one',
+            score: 'A'
+        }, {
+            question: 'one',
+            score: 'A'
+        }, {
+            question: 'three',
+            score: 'C'
+        }]
+
     },
 
     /**

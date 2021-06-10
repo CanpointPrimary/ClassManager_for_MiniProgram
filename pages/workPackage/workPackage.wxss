@@ -56,6 +56,7 @@
 }
 .container .body {
   padding: 20rpx 0;
+  padding-bottom: 100rpx;
   flex: 1;
   background-color: white;
   height: 200rpx;
@@ -110,7 +111,7 @@
   height: 166rpx;
   width: 200rpx;
   background-color: #fff;
-  filter: drop-shadow(0px 3rpx 6rpx rgba(0, 0, 0, 0.16));
+  filter: drop-shadow(0 3rpx 6rpx rgba(0, 0, 0, 0.16));
   border-radius: 20rpx;
 }
 .container .body .outer .type {
@@ -143,4 +144,81 @@
   border-left: 30rpx solid transparent;
   border-right: 30rpx solid transparent;
   border-bottom: 0;
+}
+.container .body .timeTake {
+  margin-right: 30rpx;
+  font-size: 24rpx;
+  float: right;
+}
+.container .body .table {
+  border-radius: 20rpx;
+  box-shadow: 0 0 6rpx rgba(0, 0, 0, 0.16);
+  margin: 0 30rpx;
+  overflow: hidden;
+}
+.container .body .table .hd {
+  display: flex;
+  height: 78rpx;
+  border-bottom: 1rpx solid #EEECEC;
+}
+.container .body .table .hd .col {
+  text-align: center;
+  line-height: 78rpx;
+  font-size: 28rpx;
+  display: flex;
+}
+.container .body .table .hd .col .question {
+  width: 220rpx;
+}
+.container .body .table .hd .col .score {
+  width: 125rpx;
+}
+.container .body .table .bd {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .body .table .bd .queItem {
+  display: flex;
+  text-align: center;
+  height: 78rpx;
+  line-height: 78rpx;
+  border-bottom: 1rpx solid #a5a5a51e;
+}
+.container .body .table .bd .queItem .question {
+  width: 220rpx;
+}
+.container .body .table .bd .queItem .score {
+  width: 125rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .body .table .bd .queItem .score .bg {
+  line-height: 58rpx;
+  width: 58rpx;
+  height: 58rpx;
+  border-radius: 50%;
+  background-color: #F2B7A8;
+}
+.container .botTab {
+  position: fixed;
+  bottom: 0;
+  height: 88rpx;
+  width: 100%;
+  background: #fff;
+  display: flex;
+}
+.container .botTab .tabItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  background: #1e51a20c;
+}
+.container .botTab .tabItem:active {
+  background: #1e51a225;
+}
+.container .botTab .tabItem image {
+  width: 48rpx;
+  height: 48rpx;
 }
