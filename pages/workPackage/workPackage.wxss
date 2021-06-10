@@ -28,6 +28,49 @@
   color: #666;
   font-size: 24rpx;
 }
+.container .header .seting {
+  width: 48rpx;
+  height: 48rpx;
+  position: relative;
+}
+.container .header .seting .tips {
+  position: absolute;
+  right: 0;
+  height: 300rpx;
+  width: 200rpx;
+  box-sizing: border-box;
+  padding: 6rpx 33rpx;
+  background-color: #666;
+  border-radius: 8rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.container .header .seting .tips .angle {
+  position: absolute;
+  top: -12rpx;
+  right: 15rpx;
+  border-bottom: 12rpx solid #666;
+  border-left: 12rpx solid transparent;
+  border-right: 12rpx solid transparent;
+  border-top: 0;
+}
+.container .header .seting .tips .tipItem {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 28rpx;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+.container .header .seting .tips .tipItem:last-child {
+  border-bottom: none;
+}
+.container .header .seting .tips .tipItem image {
+  height: 36rpx;
+  width: 36rpx;
+}
 .container .header .seting image {
   width: 48rpx;
   height: 48rpx;

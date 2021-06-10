@@ -13,6 +13,7 @@ Page({
             endTime: "3.12 17:03",
             desc: '把今天家庭作业做了以后，认真订正。'
         },
+        showEidt: false,
         currentWork: 0,
         workList: [{
             type: '跟读',
@@ -65,7 +66,11 @@ Page({
         }]
 
     },
-
+    showEdit() {
+        this.setData({
+            showEdit: !this.data.showEdit
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */

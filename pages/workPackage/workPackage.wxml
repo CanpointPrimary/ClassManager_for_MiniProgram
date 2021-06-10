@@ -5,8 +5,23 @@
             <view class="name">{{workPackageInfo.publisher}}</view>
             <view class="subject">{{workPackageInfo.subject}}</view>
         </view>
-        <view class="seting">
+        <view class="seting" bindtap="showEdit">
             <image src="/static/icon/fit.svg"></image>
+            <view class="tips" wx:if="{{showEdit}}">
+                <view class="angle"></view>
+                <view class="tipItem">
+                    <image src="/static/icon/remind.svg"></image> 提醒
+                </view>
+                <view class="tipItem">
+                    <image src="/static/icon/delete2.svg"></image> 删除
+                </view>
+                <view class="tipItem">
+                    <image src="/static/icon/copy.svg"></image> 复制
+                </view>
+                <view class="tipItem">
+                    <image src="/static/icon/edit.svg"></image> 编辑
+                </view>
+            </view>
         </view>
     </view>
     <view class="time">
