@@ -1,4 +1,5 @@
 // pages/workPackage/workPackage.js
+let voice = wx.createInnerAudioContext()
 Page({
 
     /**
@@ -13,8 +14,12 @@ Page({
             endTime: "3.12 17:03",
             desc: '把今天家庭作业做了以后，认真订正。'
         },
+        voices: [{
+            src: '/static/river.mp3'
+        }],
         showEidt: false,
         currentWork: 0,
+        voiceLength: 0,
         workList: [{
             type: '跟读',
             title: 'unit 2单元',
@@ -78,8 +83,34 @@ Page({
         wx.setNavigationBarTitle({
             title: this.data.workPackageInfo.title
         })
-    },
 
+        voice.src = this.data.voices[0].src
+        voice.onCanplay(() => {
+            voice.duration
+            setTimeout(() => {
+                this.setData({
+                    voiceLength: Math.floor(voice.duration)
+                })
+            }, 0)
+        })
+    },
+    playVoice() {
+        if (voice.paused) {
+            voice.play()
+            voice.onTimeUpdate(() => {
+                this.setData({
+                    voiceLength: Math.floor(voice.currentTime)
+                })
+            })
+        } else {
+            voice.pause()
+            voice.offTimeUpdate(() => {
+                this.setData({
+                    voiceLength: Math.floor(voice.duration)
+                })
+            })
+        }
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

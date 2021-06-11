@@ -37,16 +37,16 @@
     <view class="body">
         <view class="workIntro">
             <view class="desc">{{workPackageInfo.desc}}</view>
-            <view class="audio">
+            <view class="audio" bindtap="playVoice" wx:for="{{voices}}" wx:key="id">
                 <image src="/static/icon/voice1099.svg"></image>
-                17″
+                {{voiceLength}}″
             </view>
             <view class="pictures">
-                <image src="/static/work.png" wx:for="{{3}}"></image>
+                <image src="/static/work.png" wx:for="{{3}}" wx:key="id"></image>
             </view>
         </view>
         <scroll-view class="works" scroll-x>
-            <view class="outer {{index == currentWork ? 'active' : ''}}" wx:for="{{workList}}">
+            <view class="outer {{index == currentWork ? 'active' : ''}}" wx:for="{{workList}}" wx:key="id">
                 <view class="type">{{item.type}}</view>
                 <view class="title">{{item.title}}</view>
                 <view class="timeTake">预计用时：{{item.timeTake}}</view>
@@ -66,7 +66,7 @@
                 </view>
             </view>
             <view class="bd">
-                <view class="queItem" wx:for="{{queList}}">
+                <view class="queItem" wx:for="{{queList}}" wx:key="id">
                     <view class="question">{{item.question}}</view>
                     <view class="score">
                         <view class="bg">{{item.score}}</view>
