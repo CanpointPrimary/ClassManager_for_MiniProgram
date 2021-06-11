@@ -1,0 +1,46 @@
+/* pages/help/feedback/advice.wxss */
+.container {
+    height: 100%;
+    padding: 30rpx 0 0 30rpx;
+}
+
+.tip text {
+    color: #ff7058;
+}
+
+.tip {
+    font-size: 28rpx;
+    margin-bottom: 20rpx;
+}
+
+textarea {
+    width: 690rpx;
+    height: 268rpx;
+    background-color: #f6f6f6;
+    border-radius: 20rpx;
+    padding: 10rpx 20rpx;
+    box-sizing: border-box;
+    font-size: 26rpx;
+    position: relative;
+    margin-bottom: 40rpx;
+}
+
+.count {
+    position: absolute;
+    right: 20rpx;
+    bottom: 10rpx;
+    font-size: 22rpx;
+    color: #999;
+}
+
+.submit {
+    width: 245rpx;
+    height: 74rpx;
+    background-color: #97bbef;
+    color: #1e50a2;
+    font-size: 28rpx;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 74rpx;
+    border-radius: 37rpx;
+}

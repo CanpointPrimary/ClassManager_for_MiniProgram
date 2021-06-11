@@ -1,0 +1,8 @@
+<!--pages/help/feedback/advice.wxml-->
+<view class="container">
+    <view class="tip"><text>*</text>请描述您的问题（10个字以上）</view>
+    <textarea placeholder="请输入文字" bindinput="valueCount">
+        <view class="count">{{length}}/140</view>
+    </textarea>
+    <view class="submit">提交</view>
+</view>

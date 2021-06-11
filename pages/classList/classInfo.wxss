@@ -1,0 +1,29 @@
+/* pages/classList/classInfo.wxss */
+.container {
+    padding: 30rpx;
+    height: 100%;
+}
+
+.cell {
+    height: 102rpx;
+    border-bottom: 1px solid #eeecec;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 36rpx;
+    color: #1d1d1d;
+
+}
+
+.value {
+    font-size: 28rpx;
+    color: #666666;
+}
+
+.copy {
+    color: #1e50a2;
+    padding-left: 16rpx;
+}

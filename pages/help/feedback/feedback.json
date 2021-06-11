@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "d-cell": "/components/cell/cell"
+  },
+  "navigationBarTitleText": "意见反馈"
+}

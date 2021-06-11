@@ -20,6 +20,12 @@ Component({
     methods: {
         handleTap() {
             this.triggerEvent('handleTap')
+        },
+        checkout() {
+            console.log(1);
+            wx.navigateTo({
+                url: '/pages/classList/classList',
+            })
         }
     }
 })

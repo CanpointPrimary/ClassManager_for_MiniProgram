@@ -1,0 +1,20 @@
+<!--pages/classList/classInfo.wxml-->
+<view class="container">
+    <view class="cell">
+        <view class="title">班级码</view>
+        <view class="value">{{classInfo.id}}<text class="copy">复制</text>
+        </view>
+    </view>
+    <view class="cell">
+        <view class="title">所属学校</view>
+        <view class="value">{{classInfo.school}}</view>
+    </view>
+    <view class="cell">
+        <view class="title">班级名称</view>
+        <view class="value">{{classInfo.className}}</view>
+    </view>
+    <view class="cell">
+        <view class="title">联系方式</view>
+        <view class="value">{{classInfo.contact}}</view>
+    </view>
+</view>

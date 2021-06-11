@@ -1,0 +1,22 @@
+/* pages/help/feedback/feedback.wxss */
+.container {
+    height: 100%;
+    padding: 30rpx;
+
+}
+
+.cell--cell:active {
+    background-color: #e8edf6;
+}
+
+.tip text {
+    color: #ff7058;
+}
+
+.tip {
+    font-size: 28rpx;
+}
+
+.value {
+    font-size: 32rpx;
+}

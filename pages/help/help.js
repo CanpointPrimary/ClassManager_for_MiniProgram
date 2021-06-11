@@ -1,40 +1,47 @@
-// pages/users/users.js
+// pages/help/help.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    showInviteDialog: false,
-    isShowAdd: false
+    current: 0,
+    helpList: [{
+      value: "如何新建班级",
+      herf: ""
+    }, {
+      value: "如何加入班级",
+      herf: ""
+    }, {
+      value: "二维码失效",
+      herf: ""
+    }, {
+      value: "班级消息订阅如何订阅",
+      herf: ""
+    }]
   },
-  navToHelp() {
+  navToFeedback() {
     wx.navigateTo({
-      url: '/pages/help/help',
+      url: '/pages/help/feedback/feedback',
     })
   },
-  addToDesk() {
+  changetab(e) {
+    let data = e.target.dataset
+    if (!this.data.current == data.index) {
+      this.animate('.underline', [{
+        width: '64rpx'
+      }, {
+        width: '226rpx',
+        left: '54rpx',
+        ease: 'ease-out'
+      }, {
+        width: '64rpx',
+        left: this.data.current ? '54rpx' : '218rpx',
+        ease: 'ease-out'
+      }], 200)
+    }
     this.setData({
-      isShowAdd: true
-    })
-    this.getTabBar().setData({
-      tabBarShow: false
-    })
-  },
-  closeAdd() {
-    this.setData({
-      isShowAdd: false
-    })
-    this.getTabBar().setData({
-      tabBarShow: true
-    })
-  },
-  invite() {
-    this.setData({
-      showInviteDialog: true
-    })
-    this.getTabBar().setData({
-      tabBarShow: false
+      current: data.index
     })
   },
   /**
@@ -49,19 +56,13 @@ Page({
    */
   onReady: function () {
 
-
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    if (typeof this.getTabBar === 'function' &&
-      this.getTabBar()) {
-      this.getTabBar().setData({
-        selected: 2
-      })
-    }
+
   },
 
   /**

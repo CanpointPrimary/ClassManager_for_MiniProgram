@@ -1,0 +1,84 @@
+.container .tabbar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: relative;
+  height: 54rpx;
+  padding-top: 45rpx;
+  margin-bottom: 30rpx;
+}
+.container .tabbar .tab_item {
+  flex: 1;
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 50rpx;
+  color: #1d1d1d;
+}
+.container .tabbar .tab_active {
+  color: #1e50a2;
+}
+.container .tabbar .underline {
+  height: 4rpx;
+  border-radius: 2rpx;
+  width: 158rpx;
+  background-color: #1e50a2;
+  position: absolute;
+  bottom: 0;
+}
+.container .classItem {
+  margin-left: 30rpx;
+  width: 690rpx;
+  height: 186rpx;
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+  padding: 30rpx 40rpx 30rpx 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .classItem:nth-child(3n+1) {
+  background-color: #fdeded;
+}
+.container .classItem:nth-child(3n+2) {
+  background-color: #fffbef;
+}
+.container .classItem:nth-child(3n+3) {
+  background-color: #edf6fd;
+}
+.container .classItem .body {
+  display: flex;
+  justify-content: start;
+}
+.container .classItem .body .avatar {
+  width: 179rpx;
+  height: 118rpx;
+  background-color: #93b5cf;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+}
+.container .classItem .body .info {
+  display: flex;
+  height: 118rpx;
+  flex-direction: column;
+  justify-content: center;
+}
+.container .classItem .body .info .title {
+  font-size: 32rpx;
+  color: #1d1d1d;
+}
+.container .classItem .body .info .name {
+  font-size: 24rpx;
+  color: #666666;
+}
+.container .addBtn {
+  border-radius: 36rpx;
+  width: 245rpx;
+  height: 72rpx;
+  background-color: #97bbef;
+  color: #1e50a2;
+  text-align: center;
+  line-height: 72rpx;
+  font-size: 28rpx;
+  margin: 0 auto;
+}

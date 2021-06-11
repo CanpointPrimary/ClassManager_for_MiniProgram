@@ -1,0 +1,5 @@
+<!--components/cell/cell.wxml-->
+<view class="cell">
+    <slot></slot>
+    <mp-icon icon="arrow" size="16" color="#999"></mp-icon>
+</view>

@@ -47,6 +47,42 @@
                     "pathName": "pages/joinClass/joinClass",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/help/help",
+                    "pathName": "pages/help/help",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/help/feedback/feedback",
+                    "pathName": "pages/help/feedback/feedback",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/help/feedback/bug",
+                    "pathName": "pages/help/feedback/bug",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/help/feedback/advice",
+                    "pathName": "pages/help/feedback/advice",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/classList/classList",
+                    "pathName": "pages/classList/classList",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/classList/classInfo",
+                    "pathName": "pages/classList/classInfo",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

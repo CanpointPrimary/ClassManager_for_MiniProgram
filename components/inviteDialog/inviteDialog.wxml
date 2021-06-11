@@ -3,15 +3,15 @@
     <view class="body">
         <view class="mainWay">
             <view class="ways">
-                <image src="/static/inviteIcon/wechat.svg"></image><text>复制链接到班级群</text>
+                <image src="/static/inviteIcon/wechat.svg" class="image"></image><text>复制链接到班级群</text>
             </view>
             <view class="underline"></view>
             <view class="ways">
-                <image src="/static/inviteIcon/QR.svg"></image><text>通过二维码邀请</text>
+                <image src="/static/inviteIcon/QR.svg" class="image"></image><text>通过二维码邀请</text>
             </view>
             <view class="underline"></view>
             <view class="ways">
-                <image src="/static/inviteIcon/code.svg"></image><text>通过班级口令邀请</text>
+                <image src="/static/inviteIcon/code.svg" class="image"></image><text>通过班级口令邀请</text>
             </view>
             <view class="underline"></view>
         </view>

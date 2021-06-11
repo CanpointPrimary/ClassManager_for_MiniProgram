@@ -67,7 +67,7 @@
         <view class="checkList">
             <view class="head">待审核</view>
             <view class="body">
-                <view class="item" wx:for="{{checkList.preCheck}}">
+                <view class="item" wx:for="{{checkList.preCheck}}" wx:key="id">
                     <view class="info">
                         <image src="/static/avatar.png" class="avatar"></image>
                         <view class="info_text">
@@ -88,7 +88,7 @@
         <view class="checkList">
             <view class="head">已审核</view>
             <view class="body">
-                <view class="item hadCheck" wx:for="{{checkList.hadCheck}}">
+                <view class="item hadCheck" wx:for="{{checkList.hadCheck}}" wx:key="id">
                     <view class="info">
                         <image src="/static/avatar.png" class="avatar"></image>
                         <view class="info_text">
@@ -100,7 +100,6 @@
                                 <text>审核人：</text>{{item.cName+'老师'}}
                             </view>
                         </view>
-
                     </view>
                     <view class="result" style="color:{{item.pass?'#999':'#FF8080'}};">{{item.pass?'通过':'未通过'}}</view>
                 </view>
