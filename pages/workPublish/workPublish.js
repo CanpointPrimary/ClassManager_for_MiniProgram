@@ -1,5 +1,6 @@
 // pages/workPublish/workPublish.js
 let voice = wx.createInnerAudioContext()
+let record = wx.getRecorderManager()
 Page({
 
     /**
@@ -16,7 +17,7 @@ Page({
         timeList: [],
         imageList: [],
         voiceLength: 0,
-        voices: ['/static/river.mp3'],
+        voices: [],
         showWave: true
     },
     closeVoice() {
@@ -26,9 +27,22 @@ Page({
         })
     },
     startRecord() {
+        if (this.data.showWave) {
+            record.start()
+        } else {
+            record.stop()
+        }
+        record.onStop((res) => {
+            this.setData({
+                voices: [res.tempFilePath],
+                voiceLength: Math.floor(res.duration / 1000)
+            })
+            voice.src = res.tempFilePath
+        })
         this.setData({
             showWave: !this.data.showWave
         })
+
         setInterval(() => {
             this.animate('.waveItem3', [{
                 height: '50rpx'
@@ -109,18 +123,6 @@ Page({
                 ['默认', ...dateList], timeList
             ],
             timeSelect: [0, date.getHours() * 2 + 2]
-        })
-        voice.src = this.data.voices[0]
-        voice.volume = 0
-        voice.play()
-        voice.onTimeUpdate(() => {
-            if (voice.duration != 0) {
-                this.setData({
-                    voiceLength: Math.floor(voice.duration)
-                })
-                voice.stop()
-                voice.volume = 1
-            }
         })
     },
     playVoice() {
