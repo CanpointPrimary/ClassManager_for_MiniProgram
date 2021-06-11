@@ -85,13 +85,16 @@ Page({
         })
 
         voice.src = this.data.voices[0].src
-        voice.onCanplay(() => {
-            voice.duration
-            setTimeout(() => {
+        voice.volume = 0
+        voice.play()
+        voice.onTimeUpdate(() => {
+            if (voice.duration != 0) {
                 this.setData({
                     voiceLength: Math.floor(voice.duration)
                 })
-            }, 0)
+                voice.stop()
+                voice.volume = 1
+            }
         })
     },
     playVoice() {
@@ -103,11 +106,10 @@ Page({
                 })
             })
         } else {
-            voice.pause()
-            voice.offTimeUpdate(() => {
-                this.setData({
-                    voiceLength: Math.floor(voice.duration)
-                })
+            voice.stop()
+            voice.offTimeUpdate()
+            this.setData({
+                voiceLength: Math.floor(voice.duration)
             })
         }
     },

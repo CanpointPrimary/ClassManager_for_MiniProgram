@@ -45,7 +45,7 @@
                 <image src="/static/work.png" wx:for="{{3}}" wx:key="id"></image>
             </view>
         </view>
-        <scroll-view class="works" scroll-x>
+        <scroll-view class="works" scroll-x enhanced show-scrollbar='{{false}}'>
             <view class="outer {{index == currentWork ? 'active' : ''}}" wx:for="{{workList}}" wx:key="id">
                 <view class="type">{{item.type}}</view>
                 <view class="title">{{item.title}}</view>

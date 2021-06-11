@@ -28,7 +28,10 @@
         <view class="textarea">
             <textarea class="desc"></textarea>
             <!-- 留给语音 -->
-
+            <view class="audio" bindtap="playVoice" wx:for="{{voices}}" wx:key="id">
+                <image src="/static/icon/voice1099.svg"></image>
+                {{voiceLength}}″
+            </view>         
         </view>
         <!-- 留给作业包 -->
         <!-- 留给插图 -->

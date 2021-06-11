@@ -1,4 +1,5 @@
 // pages/workPublish/workPublish.js
+let voice = wx.createInnerAudioContext()
 Page({
 
     /**
@@ -14,6 +15,8 @@ Page({
         timeSelect: [],
         timeList: [],
         imageList: [],
+        voiceLength: 0,
+        voices: ['/static/river.mp3'],
         showWave: true
     },
     closeVoice() {
@@ -107,6 +110,35 @@ Page({
             ],
             timeSelect: [0, date.getHours() * 2 + 2]
         })
+        voice.src = this.data.voices[0]
+        voice.volume = 0
+        voice.play()
+        voice.onTimeUpdate(() => {
+            if (voice.duration != 0) {
+                this.setData({
+                    voiceLength: Math.floor(voice.duration)
+                })
+                voice.stop()
+                voice.volume = 1
+            }
+        })
+    },
+    playVoice() {
+        voice.volume = 1
+        if (voice.paused) {
+            voice.play()
+            voice.onTimeUpdate(() => {
+                this.setData({
+                    voiceLength: Math.floor(voice.currentTime)
+                })
+            })
+        } else {
+            voice.stop()
+            voice.offTimeUpdate()
+            this.setData({
+                voiceLength: Math.floor(voice.duration)
+            })
+        }
     },
     chooseImage() {
         if (3 - this.data.imageList.length <= 0) {
