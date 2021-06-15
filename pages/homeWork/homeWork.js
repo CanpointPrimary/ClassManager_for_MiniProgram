@@ -80,6 +80,11 @@ Page({
             index: e.detail.value
         })
     },
+    openDetail() {
+        wx.navigateTo({
+            url: '/pages/workPackage/workPackage',
+        })
+    },
     navTo() {
         wx.navigateTo({
             url: '/pages/workPublish/workPublish',

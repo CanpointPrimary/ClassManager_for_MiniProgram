@@ -25,7 +25,7 @@
 
     <!-- 作业列表 -->
     <view class="workList">
-        <view class="item" wx:for="{{workList}}" wx:key="id">
+        <view class="item" wx:for="{{workList}}" wx:key="id" bindtap="openDetail">
             <view class="time">{{item.date}}</view>
             <view class="inner" wx:for="{{item.lists}}" wx:key="id">
                 <view class="title">
