@@ -85,6 +85,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        // 预备事件选择器数组内容
         let dateList = []
         const day = ["星期天", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
         const date = new Date()
@@ -162,7 +163,7 @@ Page({
         })
     },
     timeChange(e) {
-        console.log(e.detail.value);
+        // 预留事件
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
