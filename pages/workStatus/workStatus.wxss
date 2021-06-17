@@ -1,0 +1,33 @@
+.container .tabbar {
+  position: relative;
+  width: 530rpx;
+  height: 56rpx;
+  border-radius: 28rpx;
+  box-shadow: 0 3rpx 6rpx rgba(0, 0, 0, 0.16);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+.container .tabbar .tabItem {
+  width: 265rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .tabbar .tabItem .UD {
+  margin-left: 10rpx;
+  display: flex;
+  flex-direction: column;
+}
+.container .tabbar .tabItem .UD .van-icon {
+  margin: -5rpx 0;
+}
+.container .tabbar .actBg {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  width: 265rpx;
+  height: 56rpx;
+  border-radius: 28rpx;
+  background-color: #dce9fe;
+}

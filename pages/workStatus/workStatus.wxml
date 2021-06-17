@@ -1,0 +1,23 @@
+<!--pages/workStatus/workStatus.wxml-->
+<view class="container">
+    <!-- 搜索框 -->
+    <van-search placeholder="输入学生姓名" shape="round"></van-search>
+
+    <!-- tabbar start-->
+    <view class="tabbar">
+        <view class="tabItem">按得分排序
+            <view class="UD">
+                <van-icon name="arrow-up" size="25rpx"></van-icon>
+                <van-icon name="arrow-down" size="25rpx"></van-icon>
+            </view>
+        </view>
+        <view class="tabItem">按时长排序
+            <view class="UD">
+                <van-icon name="arrow-up" size="25rpx"></van-icon>
+                <van-icon name="arrow-down" size="25rpx"></van-icon>
+            </view>
+        </view>
+        <view class="actBg"></view>
+    </view>
+    <!-- tabbar end -->
+</view>
