@@ -28,23 +28,23 @@
       }
     </style>
     <clipPath id="clip-path">
-      <rect id="矩形_685" data-name="矩形 685" class="cls-1" width="48" height="48" transform="translate(384.089 144.217)"/>
+      <rect id="rect_685" data-name="rect 685" class="cls-1" width="48" height="48" transform="translate(384.089 144.217)"/>
     </clipPath>
   </defs>
   <g id="add" transform="translate(-384.089 -144.217)">
-    <g id="组_1432" data-name="组 1432" class="cls-2">
-      <g id="组_1431" data-name="组 1431">
-        <g id="组_1430" data-name="组 1430" class="cls-3">
-          <rect id="矩形_684" data-name="矩形 684" class="cls-1" width="47" height="47" transform="translate(384.589 144.717)"/>
-          <path id="路径_1127" data-name="路径 1127" class="cls-1" d="M431.089,191.217h-46v-46h46Zm1-47h-48v48h48Z"/>
+    <g id="list_1432" data-name="list 1432" class="cls-2">
+      <g id="list_1431" data-name="list 1431">
+        <g id="list_1430" data-name="list 1430" class="cls-3">
+          <rect id="rect_684" data-name="rect 684" class="cls-1" width="47" height="47" transform="translate(384.589 144.717)"/>
+          <path id="line_1127" data-name="line 1127" class="cls-1" d="M431.089,191.217h-46v-46h46Zm1-47h-48v48h48Z"/>
         </g>
       </g>
     </g>
-    <g id="组_1434" data-name="组 1434">
-      <circle id="椭圆_89" data-name="椭圆 89" class="cls-4" cx="15.591" cy="15.591" r="15.591" transform="translate(392.497 152.625)"/>
-      <g id="组_1433" data-name="组 1433">
-        <line id="直线_103" data-name="直线 103" class="cls-5" x2="13.199" transform="translate(401.489 168.217)"/>
-        <line id="直线_104" data-name="直线 104" class="cls-5" y2="12.542" transform="translate(408.089 161.946)"/>
+    <g id="list_1434" data-name="list 1434">
+      <circle id="circle_89" data-name="circle 89" class="cls-4" cx="15.591" cy="15.591" r="15.591" transform="translate(392.497 152.625)"/>
+      <g id="list_1433" data-name="list 1433">
+        <line id="strike_103" data-name="strike 103" class="cls-5" x2="13.199" transform="translate(401.489 168.217)"/>
+        <line id="strike_104" data-name="strike 104" class="cls-5" y2="12.542" transform="translate(408.089 161.946)"/>
       </g>
     </g>
   </g>

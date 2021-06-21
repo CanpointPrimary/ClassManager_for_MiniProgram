@@ -18,24 +18,24 @@
       }
     </style>
     <clipPath id="clip-path">
-      <rect id="矩形_453" data-name="矩形 453" class="cls-1" width="48" height="48" transform="translate(575.463 48.777)"/>
+      <rect id="rect_453" data-name="rect 453" class="cls-1" width="48" height="48" transform="translate(575.463 48.777)"/>
     </clipPath>
   </defs>
   <g id="label" transform="translate(-486 -1266)">
-    <g id="组_769" data-name="组 769" class="cls-2" transform="translate(-89.463 1217.223)">
-      <g id="组_768" data-name="组 768">
-        <g id="组_767" data-name="组 767" class="cls-3">
-          <rect id="矩形_452" data-name="矩形 452" class="cls-1" width="47" height="47" transform="translate(575.963 49.277)"/>
-          <path id="路径_945" data-name="路径 945" class="cls-1" d="M622.463,95.777h-46v-46h46Zm1-47h-48v48h48Z"/>
+    <g id="list_769" data-name="list 769" class="cls-2" transform="translate(-89.463 1217.223)">
+      <g id="list_768" data-name="list 768">
+        <g id="list_767" data-name="list 767" class="cls-3">
+          <rect id="rect_452" data-name="rect 452" class="cls-1" width="47" height="47" transform="translate(575.963 49.277)"/>
+          <path id="line_945" data-name="line 945" class="cls-1" d="M622.463,95.777h-46v-46h46Zm1-47h-48v48h48Z"/>
         </g>
       </g>
     </g>
-    <g id="组_1026" data-name="组 1026" transform="translate(-26.185 298.559)">
-      <g id="组_1024" data-name="组 1024" transform="translate(518.185 973.441)">
-        <path id="路径_1048" data-name="路径 1048" class="cls-4" d="M538.443,1009.463a1.121,1.121,0,0,1-.8-.33L518.515,990a1.131,1.131,0,0,1-.33-.8l.053-14.639a1.127,1.127,0,0,1,1.126-1.122h0l14.586,0a1.125,1.125,0,0,1,.8.33L553.876,992.9a1.128,1.128,0,0,1,0,1.593l-14.637,14.636A1.124,1.124,0,0,1,538.443,1009.463Zm-18-20.722,18,18L551.488,993.7l-18-18.007-13,0Z" transform="translate(-518.185 -973.441)"/>
+    <g id="list_1026" data-name="list 1026" transform="translate(-26.185 298.559)">
+      <g id="list_1024" data-name="list 1024" transform="translate(518.185 973.441)">
+        <path id="line_1048" data-name="line 1048" class="cls-4" d="M538.443,1009.463a1.121,1.121,0,0,1-.8-.33L518.515,990a1.131,1.131,0,0,1-.33-.8l.053-14.639a1.127,1.127,0,0,1,1.126-1.122h0l14.586,0a1.125,1.125,0,0,1,.8.33L553.876,992.9a1.128,1.128,0,0,1,0,1.593l-14.637,14.636A1.124,1.124,0,0,1,538.443,1009.463Zm-18-20.722,18,18L551.488,993.7l-18-18.007-13,0Z" transform="translate(-518.185 -973.441)"/>
       </g>
-      <g id="组_1025" data-name="组 1025" transform="translate(526.702 981.961)">
-        <path id="路径_1049" data-name="路径 1049" class="cls-4" d="M530.767,981.869a2.938,2.938,0,1,1-4.154,0,2.938,2.938,0,0,1,4.154,0" transform="translate(-525.751 -981.01)"/>
+      <g id="list_1025" data-name="list 1025" transform="translate(526.702 981.961)">
+        <path id="line_1049" data-name="line 1049" class="cls-4" d="M530.767,981.869a2.938,2.938,0,1,1-4.154,0,2.938,2.938,0,0,1,4.154,0" transform="translate(-525.751 -981.01)"/>
       </g>
     </g>
   </g>

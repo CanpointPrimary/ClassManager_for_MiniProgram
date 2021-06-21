@@ -11,14 +11,14 @@
     </style>
   </defs>
   <g id="copy" transform="translate(-427 -735)">
-    <g id="组_976" data-name="组 976" transform="translate(427.083 735)">
-      <rect id="矩形_541" data-name="矩形 541" class="cls-1" width="36" height="36" transform="translate(-0.083)"/>
-      <g id="组_954" data-name="组 954" transform="translate(5 5)">
-        <g id="组_952" data-name="组 952" transform="translate(0 8.925)">
-          <path id="路径_1019" data-name="路径 1019" class="cls-2" d="M711.372,998.1H695.21a.736.736,0,0,1-.736-.736V981.2a.736.736,0,0,1,.736-.736h2.775a.736.736,0,0,1,0,1.473h-2.039V996.63h14.689v-2.036a.736.736,0,0,1,1.473,0v2.772A.736.736,0,0,1,711.372,998.1Z" transform="translate(-694.474 -980.468)"/>
+    <g id="list_976" data-name="list 976" transform="translate(427.083 735)">
+      <rect id="rect_541" data-name="rect 541" class="cls-1" width="36" height="36" transform="translate(-0.083)"/>
+      <g id="list_954" data-name="list 954" transform="translate(5 5)">
+        <g id="list_952" data-name="list 952" transform="translate(0 8.925)">
+          <path id="line_1019" data-name="line 1019" class="cls-2" d="M711.372,998.1H695.21a.736.736,0,0,1-.736-.736V981.2a.736.736,0,0,1,.736-.736h2.775a.736.736,0,0,1,0,1.473h-2.039V996.63h14.689v-2.036a.736.736,0,0,1,1.473,0v2.772A.736.736,0,0,1,711.372,998.1Z" transform="translate(-694.474 -980.468)"/>
         </g>
-        <g id="组_953" data-name="组 953" transform="translate(8.926)">
-          <path id="路径_1020" data-name="路径 1020" class="cls-2" d="M719.421,990.053H703.259a.736.736,0,0,1-.736-.736V973.156a.736.736,0,0,1,.736-.736h16.161a.736.736,0,0,1,.736.736v16.161A.736.736,0,0,1,719.421,990.053ZM704,988.581h14.689V973.893H704Z" transform="translate(-702.523 -972.42)"/>
+        <g id="list_953" data-name="list 953" transform="translate(8.926)">
+          <path id="line_1020" data-name="line 1020" class="cls-2" d="M719.421,990.053H703.259a.736.736,0,0,1-.736-.736V973.156a.736.736,0,0,1,.736-.736h16.161a.736.736,0,0,1,.736.736v16.161A.736.736,0,0,1,719.421,990.053ZM704,988.581h14.689V973.893H704Z" transform="translate(-702.523 -972.42)"/>
         </g>
       </g>
     </g>

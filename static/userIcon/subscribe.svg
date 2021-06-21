@@ -28,24 +28,24 @@
       }
     </style>
     <clipPath id="clip-path">
-      <rect id="矩形_687" data-name="矩形 687" class="cls-1" width="48" height="48" transform="translate(481.999 145.209)"/>
+      <rect id="rect_687" data-name="rect 687" class="cls-1" width="48" height="48" transform="translate(481.999 145.209)"/>
     </clipPath>
   </defs>
   <g id="subscribe" transform="translate(-481.999 -145.209)">
-    <g id="组_1438" data-name="组 1438" class="cls-2">
-      <g id="组_1437" data-name="组 1437">
-        <g id="组_1436" data-name="组 1436" class="cls-3">
-          <rect id="矩形_686" data-name="矩形 686" class="cls-1" width="47" height="47" transform="translate(482.499 145.709)"/>
-          <path id="路径_1128" data-name="路径 1128" class="cls-1" d="M529,192.209H483v-46h46Zm1-47H482v48h48Z"/>
+    <g id="list_1438" data-name="list 1438" class="cls-2">
+      <g id="list_1437" data-name="list 1437">
+        <g id="list_1436" data-name="list 1436" class="cls-3">
+          <rect id="rect_686" data-name="rect 686" class="cls-1" width="47" height="47" transform="translate(482.499 145.709)"/>
+          <path id="line_1128" data-name="line 1128" class="cls-1" d="M529,192.209H483v-46h46Zm1-47H482v48h48Z"/>
         </g>
       </g>
     </g>
-    <g id="组_1440" data-name="组 1440">
-      <g id="组_1439" data-name="组 1439">
-        <line id="直线_105" data-name="直线 105" class="cls-4" x2="13.449" transform="translate(499.274 166.671)"/>
-        <line id="直线_106" data-name="直线 106" class="cls-4" y2="12.78" transform="translate(505.999 160.281)"/>
+    <g id="list_1440" data-name="list 1440">
+      <g id="list_1439" data-name="list 1439">
+        <line id="strike_105" data-name="strike 105" class="cls-4" x2="13.449" transform="translate(499.274 166.671)"/>
+        <line id="strike_106" data-name="strike 106" class="cls-4" y2="12.78" transform="translate(505.999 160.281)"/>
       </g>
-      <path id="路径_1129" data-name="路径 1129" class="cls-5" d="M516.9,185.893,506,181.2l-10.9,4.691a1.79,1.79,0,0,1-2.5-1.644V155.036a2.657,2.657,0,0,1,2.657-2.657h21.485a2.656,2.656,0,0,1,2.657,2.657v29.213A1.789,1.789,0,0,1,516.9,185.893Z"/>
+      <path id="line_1129" data-name="line 1129" class="cls-5" d="M516.9,185.893,506,181.2l-10.9,4.691a1.79,1.79,0,0,1-2.5-1.644V155.036a2.657,2.657,0,0,1,2.657-2.657h21.485a2.656,2.656,0,0,1,2.657,2.657v29.213A1.789,1.789,0,0,1,516.9,185.893Z"/>
     </g>
   </g>
 </svg>

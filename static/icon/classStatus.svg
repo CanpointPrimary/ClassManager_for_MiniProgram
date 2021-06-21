@@ -1,25 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
   <defs>
     <clipPath id="clip-path">
-      <rect id="矩形_256" data-name="矩形 256" width="48" height="48" transform="translate(576.222 241.401)" fill="none"/>
+      <rect id="rect_256" data-name="rect 256" width="48" height="48" transform="translate(576.222 241.401)" fill="none"/>
     </clipPath>
   </defs>
   <g id="tab_xueqing-nor" transform="translate(-576.222 -241.401)">
-    <g id="组_301" data-name="组 301" opacity="0.2">
-      <g id="组_300" data-name="组 300">
-        <g id="组_299" data-name="组 299" clip-path="url(#clip-path)">
-          <rect id="矩形_255" data-name="矩形 255" width="47" height="47" transform="translate(576.722 241.901)" fill="none"/>
-          <path id="路径_138" data-name="路径 138" d="M623.222,288.4h-46v-46h46Zm1-47h-48v48h48Z" fill="none"/>
+    <g id="list_301" data-name="list 301" opacity="0.2">
+      <g id="list_300" data-name="list 300">
+        <g id="list_299" data-name="list 299" clip-path="url(#clip-path)">
+          <rect id="rect_255" data-name="rect 255" width="47" height="47" transform="translate(576.722 241.901)" fill="none"/>
+          <path id="line_138" data-name="line 138" d="M623.222,288.4h-46v-46h46Zm1-47h-48v48h48Z" fill="none"/>
         </g>
       </g>
     </g>
-    <g id="组_302" data-name="组 302">
-      <line id="直线_23" data-name="直线 23" x2="7.259" transform="translate(585.556 254.419)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-      <line id="直线_24" data-name="直线 24" x2="5.778" transform="translate(585.556 261.789)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-      <line id="直线_25" data-name="直线 25" x2="7.259" transform="translate(585.556 268.949)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-      <circle id="椭圆_18" data-name="椭圆 18" cx="7.762" cy="7.762" r="7.762" transform="translate(596.567 253.426)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-      <line id="直线_26" data-name="直线 26" x2="4.929" y2="4.929" transform="translate(609.626 266.883)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-      <line id="直线_27" data-name="直线 27" x2="29.333" transform="translate(585.556 277.376)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <g id="list_302" data-name="list 302">
+      <line id="strike_23" data-name="strike 23" x2="7.259" transform="translate(585.556 254.419)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="strike_24" data-name="strike 24" x2="5.778" transform="translate(585.556 261.789)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="strike_25" data-name="strike 25" x2="7.259" transform="translate(585.556 268.949)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <circle id="circle_18" data-name="circle 18" cx="7.762" cy="7.762" r="7.762" transform="translate(596.567 253.426)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="strike_26" data-name="strike 26" x2="4.929" y2="4.929" transform="translate(609.626 266.883)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="strike_27" data-name="strike 27" x2="29.333" transform="translate(585.556 277.376)" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
     </g>
   </g>
 </svg>

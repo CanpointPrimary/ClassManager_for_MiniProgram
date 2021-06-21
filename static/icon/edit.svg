@@ -17,20 +17,20 @@
     </style>
   </defs>
   <g id="edit" transform="translate(-0.144)">
-    <rect id="矩形_542" data-name="矩形 542" class="cls-1" width="36" height="36" transform="translate(0.144)"/>
-    <g id="组_977" data-name="组 977" transform="translate(2.914 2.424)">
-      <g id="组_958" data-name="组 958" transform="matrix(-0.788, -0.616, 0.616, -0.788, 7.253, 28.844)">
-        <g id="组_955" data-name="组 955" transform="translate(0)">
-          <path id="路径_1021" data-name="路径 1021" class="cls-2" d="M8.283,29.412H.92a.92.92,0,0,1-.92-.92V7.842a.919.919,0,0,1,.107-.43L3.788.451a.959.959,0,0,1,1.627,0L9.1,7.412a.92.92,0,0,1,.107.43v20.65A.92.92,0,0,1,8.283,29.412ZM1.841,27.571H7.363V8.071L4.6,2.851,1.841,8.071Z" transform="translate(0)"/>
+    <rect id="rect_542" data-name="rect 542" class="cls-1" width="36" height="36" transform="translate(0.144)"/>
+    <g id="list_977" data-name="list 977" transform="translate(2.914 2.424)">
+      <g id="list_958" data-name="list 958" transform="matrix(-0.788, -0.616, 0.616, -0.788, 7.253, 28.844)">
+        <g id="list_955" data-name="list 955" transform="translate(0)">
+          <path id="line_1021" data-name="line 1021" class="cls-2" d="M8.283,29.412H.92a.92.92,0,0,1-.92-.92V7.842a.919.919,0,0,1,.107-.43L3.788.451a.959.959,0,0,1,1.627,0L9.1,7.412a.92.92,0,0,1,.107.43v20.65A.92.92,0,0,1,8.283,29.412ZM1.841,27.571H7.363V8.071L4.6,2.851,1.841,8.071Z" transform="translate(0)"/>
         </g>
-        <g id="组_956" data-name="组 956" transform="translate(0 6.922)">
-          <path id="路径_1022" data-name="路径 1022" class="cls-2" d="M4.6,2.988a.925.925,0,0,1-.274-.041L.646,1.8A.921.921,0,0,1,1.195.041L4.6,1.1,8.009.041A.921.921,0,0,1,8.557,1.8L4.876,2.947A.925.925,0,0,1,4.6,2.988Z" transform="translate(0 0)"/>
+        <g id="list_956" data-name="list 956" transform="translate(0 6.922)">
+          <path id="line_1022" data-name="line 1022" class="cls-2" d="M4.6,2.988a.925.925,0,0,1-.274-.041L.646,1.8A.921.921,0,0,1,1.195.041L4.6,1.1,8.009.041A.921.921,0,0,1,8.557,1.8L4.876,2.947A.925.925,0,0,1,4.6,2.988Z" transform="translate(0 0)"/>
         </g>
-        <g id="组_957" data-name="组 957" transform="translate(0 23.442)">
-          <path id="路径_1023" data-name="路径 1023" class="cls-2" d="M8.283,1.841H.92A.92.92,0,1,1,.92,0H8.283a.92.92,0,0,1,0,1.841Z" transform="translate(0 0)"/>
+        <g id="list_957" data-name="list 957" transform="translate(0 23.442)">
+          <path id="line_1023" data-name="line 1023" class="cls-2" d="M8.283,1.841H.92A.92.92,0,1,1,.92,0H8.283a.92.92,0,0,1,0,1.841Z" transform="translate(0 0)"/>
         </g>
       </g>
-      <line id="直线_82" data-name="直线 82" class="cls-3" x2="24.348" transform="translate(3.82 28.823)"/>
+      <line id="strike_82" data-name="strike 82" class="cls-3" x2="24.348" transform="translate(3.82 28.823)"/>
     </g>
   </g>
 </svg>
