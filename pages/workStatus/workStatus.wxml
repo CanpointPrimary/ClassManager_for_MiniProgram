@@ -5,16 +5,17 @@
 
     <!-- tabbar start-->
     <view class="tabbar">
-        <view class="tabItem">按得分排序
+        <view class="tabItem" bindtap="changeTab" data-index="{{0}}">按得分排序
             <view class="UD">
-                <van-icon name="arrow-up" size="25rpx"></van-icon>
-                <van-icon name="arrow-down" size="25rpx"></van-icon>
+                <van-icon name="arrow-up" size="28rpx" color="{{isScore && isAscend ? '#1E50A2':'#aaa'}}"></van-icon>
+                <van-icon name="arrow-down" size="28rpx" color="{{isScore && !isAscend ? '#1E50A2':'#aaa'}}"></van-icon>
             </view>
         </view>
-        <view class="tabItem">按时长排序
+        <view class="tabItem" bindtap="changeTab" data-index="{{1}}">按时长排序
             <view class="UD">
-                <van-icon name="arrow-up" size="25rpx"></van-icon>
-                <van-icon name="arrow-down" size="25rpx"></van-icon>
+                <van-icon name="arrow-up" size="28rpx" color="{{!isScore && isAscend ? '#1E50A2':'#aaa'}}"></van-icon>
+                <van-icon name="arrow-down" size="28rpx" color="{{!isScore && !isAscend ? '#1E50A2':'#aaa'}}">
+                </van-icon>
             </view>
         </view>
         <view class="actBg"></view>

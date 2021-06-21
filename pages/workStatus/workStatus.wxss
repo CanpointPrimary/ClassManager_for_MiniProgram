@@ -9,6 +9,7 @@
   justify-content: space-around;
 }
 .container .tabbar .tabItem {
+  font-size: 28rpx;
   width: 265rpx;
   display: flex;
   justify-content: center;
@@ -20,7 +21,7 @@
   flex-direction: column;
 }
 .container .tabbar .tabItem .UD .van-icon {
-  margin: -5rpx 0;
+  margin: -6rpx 0;
 }
 .container .tabbar .actBg {
   position: absolute;

@@ -11,7 +11,8 @@
             "list": []
         },
         "miniprogram": {
-            "list": [{
+            "list": [
+                {
                     "name": "pages/login/userInfo",
                     "pathName": "pages/login/userInfo",
                     "query": "",
@@ -98,6 +99,12 @@
                 {
                     "name": "pages/workPackage/workPackage",
                     "pathName": "pages/workPackage/workPackage",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/workStatus/workStatus",
+                    "pathName": "pages/workStatus/workStatus",
                     "query": "",
                     "scene": null
                 }

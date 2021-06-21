@@ -9,6 +9,24 @@ Page({
         isAscend: true
     },
 
+    changeTab(e) {
+        let data = e.currentTarget.dataset
+        if (data.index == this.data.isScore) {
+            this.animate(".actBg", [{
+                left: this.data.isScore ? '0rpx' : '266rpx'
+            }, {
+                left: this.data.isScore ? '266rpx' : '0rpx'
+            }], 200)
+            this.setData({
+                isScore: data.index == 0 ? true : false,
+                isAscend: true
+            })
+        } else {
+            this.setData({
+                isAscend: !this.data.isAscend
+            })
+        }
+    },
     /**
      * 生命周期函数--监听页面加载
      */
