@@ -31,7 +31,28 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        let answers = [{
+        this.answers = [{
+            id: 0,
+            rname: '李梅',
+            avatar: '/static/avatar.png',
+            subTime: '2021.3.12 17:03',
+            works: [{
+                type: '跟读',
+                title: 'unit 2单元',
+                socre: 'B'
+            }, {
+                type: '跟读',
+                title: 'unit 2单元',
+                socre: 'A'
+            }],
+            useTime: '7分钟',
+            tag: '进步明显',
+            comments: [{
+                from: '巫老师',
+                val: '希望再接再厉，今天完成得很好！',
+                voice: ''
+            }]
+        }, {
             id: 1,
             rname: '李梅',
             avatar: '/static/avatar.png',
@@ -88,7 +109,7 @@ Page({
                 socre: 'A'
             }],
             useTime: '7分钟',
-            tag: '进步明显',
+            tag: '',
             comments: [{
                 from: '巫老师',
                 val: '',
@@ -174,35 +195,119 @@ Page({
                 val: '希望再接再厉，今天完成得很好！',
                 voice: ''
             }]
+        }, {
+            id: 8,
+            rname: '李梅',
+            avatar: '/static/avatar.png',
+            subTime: '2021.3.12 17:03',
+            works: [{
+                type: '跟读',
+                title: 'unit 2单元',
+                socre: 'B'
+            }, {
+                type: '跟读',
+                title: 'unit 2单元',
+                socre: 'A'
+            }],
+            useTime: '7分钟',
+            tag: '进步明显',
+            comments: [{
+                from: '巫老师',
+                val: '希望再接再厉，今天完成得很好！',
+                voice: ''
+            }, {
+                from: '巫老师',
+                val: '',
+                voice: '/static/river.mp3 '
+            }]
+        }, {
+            id: 9,
+            rname: '李梅',
+            avatar: '/static/avatar.png',
+            subTime: '2021.3.12 17:03',
+            works: [{
+                type: '跟读',
+                title: 'unit 2单元',
+                socre: 'B'
+            }, {
+                type: '跟读',
+                title: 'unit 2单元',
+                socre: 'A'
+            }],
+            useTime: '7分钟',
+            comments: [{
+                from: '巫老师',
+                val: '希望再接再厉，今天完成得很好！',
+                voice: ''
+            }]
+        }, {
+            id: 10,
+            rname: '李梅',
+            avatar: '/static/avatar.png',
+            subTime: '2021.3.12 17:03',
+            works: [{
+                type: '跟读',
+                title: 'unit 2单元',
+                socre: 'B'
+            }, {
+                type: '跟读',
+                title: 'unit 2单元',
+                socre: 'A'
+            }],
+            useTime: '7分钟',
+            tag: '进步明显',
+            comments: [{
+                from: '巫老师',
+                val: '希望再接再厉，今天完成得很好！',
+                voice: ''
+            }]
         }]
-
-        this.setData({
-            answerListLeft: answers,
-            answerListRight: answers.slice(1)
+        this._LeftIndex = 0
+        this._RightIndex = 0
+    },
+    _updateWaterfall(list) {
+        if (list.length) {
+            const item = list.shift()
+            this._createObserver().then(pos => {
+                const updateIndex = this[`_${pos}Index`]
+                this.setData({
+                    [`answerList${pos}[${updateIndex}]`]: item,
+                }, () => {
+                    this[`_${pos}Index`] += 1
+                    this._updateWaterfall(list)
+                })
+            })
+        }
+    },
+    _createObserver() {
+        return new Promise(resolve => {
+            this._observer && this._observer.disconnect()
+            this._observer = wx.createIntersectionObserver(this, {
+                observeAll: true,
+            })
+            this._observer
+                .relativeTo('.crossLine')
+                .observe('.waterView', ({
+                    dataset: {
+                        next = ""
+                    }
+                }) => {
+                    resolve(next)
+                })
         })
     },
-
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
+        this._updateWaterfall(this.answers)
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-        wx.createIntersectionObserver(this, {
-            observeAll: true
-        }).relativeTo('.waterfall').observe('.left', (res) => {
-            console.log("left:" + res.intersectionRatio);
-        })
-        wx.createIntersectionObserver(this, {
-            observeAll: true
-        }).relativeTo('.waterfall').observe('.right', (res) => {
-            console.log("right:" + res.intersectionRatio);
-        })
+
     },
 
     /**

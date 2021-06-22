@@ -34,11 +34,15 @@
   border-bottom: 1rpx solid #eeecec;
 }
 .container .waterfall {
+  position: relative;
   padding: 30rpx;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 .container .waterfall .left,
 .container .waterfall .right {
   width: 330rpx;
+  padding-bottom: 1rpx;
 }
 .container .waterfall .left .card,
 .container .waterfall .right .card {
@@ -192,4 +196,12 @@
 }
 .container .waterfall .right {
   float: right;
+  min-height: 100rpx;
+}
+.container .waterfall .crossLine {
+  position: absolute;
+  bottom: 31rpx;
+  width: 690rpx;
+  height: 1rpx;
+  opacity: 0;
 }
