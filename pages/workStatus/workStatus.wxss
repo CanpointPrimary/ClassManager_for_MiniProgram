@@ -1,3 +1,7 @@
+.container {
+  min-height: 100%;
+  padding-bottom: 80rpx;
+}
 .container .tabbar {
   position: relative;
   width: 530rpx;
@@ -152,6 +156,7 @@
 .container .waterfall .left .comments,
 .container .waterfall .right .comments {
   padding-left: 57rpx;
+  padding-right: 20rpx;
 }
 .container .waterfall .left .comments .comItem,
 .container .waterfall .right .comments .comItem {
@@ -204,4 +209,28 @@
   width: 690rpx;
   height: 1rpx;
   opacity: 0;
+}
+.container .footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 88rpx;
+  background-color: #fff;
+}
+.container .footer .inner {
+  height: 100%;
+  width: 100%;
+  background-color: #dce9fe7a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .footer .inner image {
+  height: 48rpx;
+  width: 48rpx;
+  margin-right: 10rpx;
+}
+.container .footer .inner text {
+  font-size: 24rpx;
+  color: #333;
 }
