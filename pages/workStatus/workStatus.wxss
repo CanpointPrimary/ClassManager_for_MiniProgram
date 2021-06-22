@@ -31,4 +31,165 @@
   height: 56rpx;
   border-radius: 28rpx;
   background-color: #dce9fe;
+  border-bottom: 1rpx solid #eeecec;
+}
+.container .waterfall {
+  padding: 30rpx;
+}
+.container .waterfall .left,
+.container .waterfall .right {
+  width: 330rpx;
+}
+.container .waterfall .left .card,
+.container .waterfall .right .card {
+  box-shadow: 0 0 6rpx rgba(0, 0, 0, 0.16);
+  margin-bottom: 30rpx;
+  border-radius: 20rpx;
+  padding: 20rpx 0;
+}
+.container .waterfall .left .hd,
+.container .waterfall .right .hd {
+  padding: 0 20rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+.container .waterfall .left .hd .avatar image,
+.container .waterfall .right .hd .avatar image {
+  width: 56rpx;
+  height: 56rpx;
+}
+.container .waterfall .left .hd .info,
+.container .waterfall .right .hd .info {
+  margin-left: 30rpx;
+}
+.container .waterfall .left .hd .info .name,
+.container .waterfall .right .hd .info .name {
+  font-size: 24rpx;
+}
+.container .waterfall .left .hd .info .subTime,
+.container .waterfall .right .hd .info .subTime {
+  font-size: 22rpx;
+  color: #999;
+}
+.container .waterfall .left .works,
+.container .waterfall .right .works {
+  padding: 0 20rpx;
+}
+.container .waterfall .left .works .workItem,
+.container .waterfall .right .works .workItem {
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+  justify-content: space-between;
+  background-color: #fdede9;
+  height: 54rpx;
+  border-radius: 27rpx;
+  margin-bottom: 10rpx;
+  font-size: 24rpx;
+}
+.container .waterfall .left .works .workItem .workTitle,
+.container .waterfall .right .works .workItem .workTitle {
+  display: flex;
+  color: #666;
+}
+.container .waterfall .left .works .workItem .socre,
+.container .waterfall .right .works .workItem .socre {
+  width: 37rpx;
+  height: 37rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  text-align: center;
+  line-height: 37rpx;
+}
+.container .waterfall .left .timeIcon,
+.container .waterfall .right .timeIcon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx;
+}
+.container .waterfall .left .timeIcon .useTime,
+.container .waterfall .right .timeIcon .useTime {
+  padding-top: 5rpx;
+  display: flex;
+  align-items: center;
+  font-size: 22rpx;
+  color: #666;
+}
+.container .waterfall .left .timeIcon .useTime image,
+.container .waterfall .right .timeIcon .useTime image {
+  margin-right: 4rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .waterfall .left .timeIcon .commentBtn image,
+.container .waterfall .right .timeIcon .commentBtn image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .waterfall .left .tag,
+.container .waterfall .right .tag {
+  padding-left: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.container .waterfall .left .tag image,
+.container .waterfall .right .tag image {
+  width: 27rpx;
+  height: 37rpx;
+  margin-right: 10rpx;
+}
+.container .waterfall .left .tag .desc,
+.container .waterfall .right .tag .desc {
+  font-size: 24rpx;
+  color: #333;
+}
+.container .waterfall .left .comments,
+.container .waterfall .right .comments {
+  padding-left: 57rpx;
+}
+.container .waterfall .left .comments .comItem,
+.container .waterfall .right .comments .comItem {
+  font-size: 22rpx;
+  line-height: 30rpx;
+  margin-bottom: 10rpx;
+}
+.container .waterfall .left .comments .comItem .name,
+.container .waterfall .right .comments .comItem .name {
+  vertical-align: middle;
+  color: #1d1d1d;
+}
+.container .waterfall .left .comments .comItem .value,
+.container .waterfall .right .comments .comItem .value {
+  color: #999;
+}
+.container .waterfall .left .comments .comItem .voice,
+.container .waterfall .right .comments .comItem .voice {
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  padding-left: 10rpx;
+  box-sizing: border-box;
+  width: 103rpx;
+  height: 39rpx;
+  border-radius: 8rpx;
+  background-color: #fffbef;
+}
+.container .waterfall .left .comments .comItem .voice image,
+.container .waterfall .right .comments .comItem .voice image {
+  height: 26rpx;
+  width: 26rpx;
+  margin-right: 5rpx;
+}
+.container .waterfall .left .border,
+.container .waterfall .right .border {
+  border-bottom: 1rpx solid #eeecec;
+  margin-bottom: 10rpx;
+}
+.container .waterfall .left {
+  float: left;
+}
+.container .waterfall .right {
+  float: right;
 }

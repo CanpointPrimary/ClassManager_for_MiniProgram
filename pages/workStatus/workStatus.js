@@ -31,7 +31,155 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        let answers = [{
+            id: 1,
+            rname: '李梅',
+            avatar: '/static/avatar.png',
+            subTime: '2021.3.12 17:03',
+            works: [{
+                type: '跟读',
+                title: 'unit 2单元',
+                socre: 'B'
+            }, {
+                type: '跟读',
+                title: 'unit 2单元',
+                socre: 'A'
+            }],
+            useTime: '7分钟',
+            tag: '',
+            comments: []
+        }, {
+            id: 2,
+            rname: '李梅',
+            avatar: '/static/avatar.png',
+            subTime: '2021.3.12 17:03',
+            works: [{
+                type: '跟读',
+                title: 'unit 2单元',
+                socre: 'B'
+            }, {
+                type: '跟读',
+                title: 'unit 2单元',
+                socre: 'A'
+            }],
+            useTime: '7分钟',
+            tag: '进步明显',
+            comments: [{
+                from: '巫老师',
+                val: '希望再接再厉，今天完成得很好！',
+                voice: ''
+            }, {
+                from: '巫老师',
+                val: '',
+                voice: '/static/river.mp3 '
+            }]
+        }, {
+            id: 3,
+            rname: '李梅',
+            avatar: '/static/avatar.png',
+            subTime: '2021.3.12 17:03',
+            works: [{
+                type: '跟读',
+                title: 'unit 2单元',
+                socre: 'B'
+            }, {
+                type: '跟读',
+                title: 'unit 2单元',
+                socre: 'A'
+            }],
+            useTime: '7分钟',
+            tag: '进步明显',
+            comments: [{
+                from: '巫老师',
+                val: '',
+                voice: '/static/river.mp3 '
+            }]
+        }, {
+            id: 4,
+            rname: '李梅',
+            avatar: '/static/avatar.png',
+            subTime: '2021.3.12 17:03',
+            works: [{
+                type: '跟读',
+                title: 'unit 2单元',
+                socre: 'B'
+            }, {
+                type: '跟读',
+                title: 'unit 2单元',
+                socre: 'A'
+            }],
+            useTime: '7分钟',
+            tag: '',
+            comments: []
+        }, {
+            id: 5,
+            rname: '李梅',
+            avatar: '/static/avatar.png',
+            subTime: '2021.3.12 17:03',
+            works: [{
+                type: '跟读',
+                title: 'unit 2单元',
+                socre: 'B'
+            }, {
+                type: '跟读',
+                title: 'unit 2单元',
+                socre: 'A'
+            }],
+            useTime: '7分钟',
+            tag: '进步明显',
+            comments: []
+        }, {
+            id: 6,
+            rname: '李梅',
+            avatar: '/static/avatar.png',
+            subTime: '2021.3.12 17:03',
+            works: [{
+                type: '跟读',
+                title: 'unit 2单元',
+                socre: 'B'
+            }, {
+                type: '跟读',
+                title: 'unit 2单元',
+                socre: 'A'
+            }],
+            useTime: '7分钟',
+            tag: '进步明显',
+            comments: [{
+                from: '巫老师',
+                val: '希望再接再厉，今天完成得很好！',
+                voice: ''
+            }, {
+                from: '巫老师',
+                val: '',
+                voice: '/static/river.mp3 '
+            }]
+        }, {
+            id: 7,
+            rname: '李梅',
+            avatar: '/static/avatar.png',
+            subTime: '2021.3.12 17:03',
+            works: [{
+                type: '跟读',
+                title: 'unit 2单元',
+                socre: 'B'
+            }, {
+                type: '跟读',
+                title: 'unit 2单元',
+                socre: 'A'
+            }],
+            useTime: '7分钟',
+            tag: '进步明显',
+            comments: [{
+                from: '巫老师',
+                val: '希望再接再厉，今天完成得很好！',
+                voice: ''
+            }]
+        }]
 
+        this.setData({
+            answerListLeft: answers,
+            answerListRight: answers.slice(1)
+        })
     },
 
     /**
@@ -45,7 +193,16 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        wx.createIntersectionObserver(this, {
+            observeAll: true
+        }).relativeTo('.waterfall').observe('.left', (res) => {
+            console.log("left:" + res.intersectionRatio);
+        })
+        wx.createIntersectionObserver(this, {
+            observeAll: true
+        }).relativeTo('.waterfall').observe('.right', (res) => {
+            console.log("right:" + res.intersectionRatio);
+        })
     },
 
     /**
