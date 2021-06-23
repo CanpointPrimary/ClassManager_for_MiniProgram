@@ -2,9 +2,9 @@
 
 <view class="container">
     <!-- 弹出层，时间选择器 -->
-    <van-calendar show="{{ show }}" type="range" bind:close="onClose" bind:confirm="onConfirm" show-confirm="false"
-        min-date="2020" max-date="{{endTime}}" color="#1e50a2" allow-same-day default-date="{{[startTime,endTime]}}"
-        row-height="55" />
+    <van-calendar show="{{ show }}" type="range" bind:close="onClose" bind:closed="calendarClosed"
+        bind:confirm="onConfirm" show-confirm="false" min-date="2020" max-date="{{endTime}}" color="#1e50a2"
+        allow-same-day default-date="{{[startTime,endTime]}}" row-height="55" />
     <!-- 头部 -->
     <view class="header">
         <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="subject">
@@ -45,7 +45,8 @@
                     </view>
                     <!-- 进度条 -->
                     <van-circle size="50" layer-color="#E8EDF0" value="{{item.doneStu/item.allStu*100}}"
-                        text="{{item.doneStu/item.allStu*100}}%" catchtap="openList"></van-circle>
+                        text="{{item.doneStu/item.allStu*100}}%" catchtap="openList" wx:if="{{circleShow}}">
+                    </van-circle>
                 </view>
             </view>
         </view>

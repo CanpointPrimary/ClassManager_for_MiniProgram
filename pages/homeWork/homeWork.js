@@ -2,6 +2,7 @@ Page({
     data: {
         date: '',
         show: false,
+        circleShow: true,
         startTime: 0,
         endTime: 0,
         index: 0,
@@ -115,6 +116,7 @@ Page({
     onDisplay() {
         this.setData({
             show: true,
+            circleShow: false,
             startTime: new Date(
                 new Date().getFullYear(),
                 new Date().getMonth(),
@@ -127,6 +129,11 @@ Page({
         this.setData({
             show: false
         });
+    },
+    calendarClosed() {
+        this.setData({
+            circleShow: true,
+        })
     },
     formatDate(date) {
         date = new Date(date);
