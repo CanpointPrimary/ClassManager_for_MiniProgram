@@ -76,6 +76,11 @@ Page({
             showEdit: !this.data.showEdit
         })
     },
+    openWorkStatus() {
+        wx.navigateTo({
+            url: '/pages/workStatus/workStatus',
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
