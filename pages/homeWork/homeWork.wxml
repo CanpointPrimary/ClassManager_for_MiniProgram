@@ -26,22 +26,26 @@
     <!-- 作业列表 -->
     <view class="workList">
         <view class="item" wx:for="{{workList}}" wx:key="id" bindtap="openDetail">
+
+            <!-- 按天数分块 -->
             <view class="time">{{item.date}}</view>
             <view class="inner" wx:for="{{item.lists}}" wx:key="id">
                 <view class="title">
                     <view class="bar"></view>
                     <view class="value">{{item.workTitle }}</view>
                 </view>
-                <view class="publish">
-                    <image src="{{item.avatar}}" class="avatar"></image>
-                    <view class="publisher">{{item.publisher}}</view>
-                    <view class="pubTime">{{item.pubTime}}</view>
-                </view>
-                <view class="general">{{item.general}}</view>
-                <view class="progress">
-                    <progress backgroundColor="#EEECEC" activeColor="#1E50A2" active stroke-width="6rpx"
-                        percent="{{item.doneStu/item.allStu*100}}" duration="5" border-radius="3rpx"></progress>
-                    <view class="info">{{item.doneStu}}/{{item.allStu}}</view>
+                <view class="bd">
+                    <view class="left">
+                        <view class="publish">
+                            <image src="{{item.avatar}}" class="avatar"></image>
+                            <view class="publisher">{{item.publisher}}</view>
+                            <view class="pubTime">{{item.pubTime}}</view>
+                        </view>
+                        <view class="general">{{item.general}}</view>
+                    </view>
+                    <!-- 进度条 -->
+                    <van-circle size="50" layer-color="#E8EDF0" value="{{item.doneStu/item.allStu*100}}"
+                        text="{{item.doneStu/item.allStu*100}}%"></van-circle>
                 </view>
             </view>
         </view>

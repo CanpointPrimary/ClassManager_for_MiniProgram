@@ -2,7 +2,8 @@
   "usingComponents": {
     "van-calendar": "@vant/weapp/calendar/index",
     "van-cell": "@vant/weapp/cell/index",
-    "van-search": "@vant/weapp/search/index"
+    "van-search": "@vant/weapp/search/index",
+    "van-circle": "@vant/weapp/circle/index"
   },
   "navigationBarTitleText": "作业列表"
 }

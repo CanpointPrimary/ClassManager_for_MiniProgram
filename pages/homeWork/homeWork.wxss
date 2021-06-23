@@ -70,7 +70,7 @@
   flex-direction: column;
   justify-content: space-between;
   margin: 0 30rpx;
-  height: 278rpx;
+  height: 218rpx;
   background: #DCE9FE;
   box-shadow: 0 0 6rpx rgba(0, 0, 0, 0.16);
   border-radius: 20rpx;
@@ -96,44 +96,46 @@
   line-height: 48rpx;
   color: #1D1D1D;
 }
-.container .workList .item .inner .publish {
+.container .workList .item .inner .bd {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .workList .item .inner .bd .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+.container .workList .item .inner .bd .left .publish {
   display: flex;
   align-items: center;
 }
-.container .workList .item .inner .publish .avatar {
+.container .workList .item .inner .bd .left .publish .avatar {
   margin-left: 25rpx;
   margin-right: 15rpx;
   width: 48rpx;
   height: 48rpx;
 }
-.container .workList .item .inner .publish .publisher {
+.container .workList .item .inner .bd .left .publish .publisher {
   color: #1D1D1D;
   font-size: 28rpx;
   margin-right: 15rpx;
 }
-.container .workList .item .inner .publish .pubTime {
+.container .workList .item .inner .bd .left .publish .pubTime {
   color: #999;
   font-size: 24rpx;
 }
-.container .workList .item .inner .general {
+.container .workList .item .inner .bd .left .general {
   margin-left: 22rpx;
   font-size: 24rpx;
   line-height: 33rpx;
   color: #666;
 }
-.container .workList .item .inner .progress {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 505rpx;
-  height: 46rpx;
-  background: #FFF;
-  margin-left: 20rpx;
-  border-radius: 100rpx;
-  padding: 0 10rpx;
-}
-.container .workList .item .inner .progress progress {
-  width: 358rpx;
+.container .workList .item .inner .bd van-circle {
+  height: 100rpx;
+  margin-right: 20rpx;
 }
 .container .workList .item .inner .info {
   font-size: 22rpx;
@@ -141,7 +143,7 @@
 }
 .container .addWork {
   position: fixed;
-  bottom: 20rpx;
+  bottom: 30rpx;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -149,4 +151,6 @@
 .container .addWork .addBtn {
   width: 70rpx;
   height: 70rpx;
+  border-radius: 50%;
+  box-shadow: 0 3rpx 6rpx #b9d7ff;
 }
