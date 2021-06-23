@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #666;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4 {
+        clip-path: url(#clip-path-2);
+      }
+
+      .cls-5 {
+        clip-path: url(#clip-path-3);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <path id="line_1094" data-name="line 1094" class="cls-1" d="M107.822,660.2l-8.661,14.938,8.64,14.916-1.361.787,1.361-.787a.027.027,0,0,0,.021.007h17.256l8.662-14.939-8.64-14.916ZM125.078,693.2H107.822a3.176,3.176,0,0,1-2.743-1.577L96.439,676.7a3.137,3.137,0,0,1,0-3.135l8.639-14.93a3.178,3.178,0,0,1,2.743-1.576h17.256a3.18,3.18,0,0,1,2.742,1.575l8.642,14.932a3.139,3.139,0,0,1,0,3.134l-8.641,14.931A3.177,3.177,0,0,1,125.078,693.2Z" transform="translate(-96.019 -657.054)"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="ract_639" data-name="ract 639" class="cls-1" width="545.163" height="787.08"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <path id="line_1095" data-name="line 1095" class="cls-1" d="M122.51,676.551a3.536,3.536,0,1,0,3.536,3.536A3.54,3.54,0,0,0,122.51,676.551Zm0,11a7.466,7.466,0,1,1,7.465-7.466A7.474,7.474,0,0,1,122.51,687.553Z" transform="translate(-115.045 -672.622)"/>
+    </clipPath>
+  </defs>
+  <g id="fit" transform="translate(-626.808 -172.808)">
+    <rect id="ract_642" data-name="ract 642" class="cls-2" width="48" height="48" transform="translate(626.808 172.808)"/>
+    <g id="list_1303" data-name="list 1303" transform="translate(629.915 178.899)">
+      <g id="list_1298" data-name="list 1298" transform="translate(0)">
+        <g id="list_1297" data-name="list 1297" class="cls-3">
+          <g id="list_1296" data-name="list 1296" transform="translate(-65.433 -447.752)">
+            <g id="list_1295" data-name="list 1295" class="cls-4">
+              <rect id="ract_638" data-name="ract 638" class="cls-1" width="47.675" height="42.963" transform="translate(62.026 444.345)"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="list_1302" data-name="list 1302" transform="translate(12.965 10.609)">
+        <g id="list_1301" data-name="list 1301" class="cls-5" transform="translate(0 0)">
+          <g id="list_1300" data-name="list 1300" transform="translate(-78.398 -458.361)">
+            <g id="list_1299" data-name="list 1299" class="cls-4">
+              <rect id="ract_640" data-name="ract 640" class="cls-1" width="21.746" height="21.746" transform="translate(74.99 454.954)"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

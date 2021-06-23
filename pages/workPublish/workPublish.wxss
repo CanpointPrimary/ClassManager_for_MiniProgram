@@ -1,0 +1,210 @@
+.container {
+  min-height: 100%;
+  background-color: #EDF6FD;
+}
+.container .body {
+  background-color: #fff;
+  width: 100%;
+  padding: 40rpx 30rpx;
+  border-radius: 20rpx;
+  box-sizing: border-box;
+}
+.container .body .imageUpload {
+  overflow: hidden;
+  padding-top: 10rpx;
+}
+.container .body .camera:active {
+  border: dashed 2px #97bbef;
+}
+.container .body .seletedImage {
+  height: 160rpx;
+  width: 160rpx;
+  margin-right: 15rpx;
+  float: left;
+}
+.container .body .camera {
+  float: left;
+  height: 160rpx;
+  width: 160rpx;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20rpx;
+  box-sizing: border-box;
+  border: dashed 2px #9999995e;
+}
+.container .body .camera .cameraIcon {
+  width: 94rpx;
+  height: 74rpx;
+}
+.container .body .header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.container .body .header .recipient {
+  margin-right: 20rpx;
+  color: #1E50A2;
+  font-size: 28rpx;
+}
+.container .body .title {
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 82rpx;
+  background: #FFFBEF;
+  border-radius: 10rpx;
+}
+.container .body .title input {
+  width: 100%;
+}
+.container .body .title text {
+  color: #666;
+  font-size: 22rpx;
+  margin-top: 28rpx;
+}
+.container .body .btns {
+  font-size: 28rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 0;
+}
+.container .body .btns .folder {
+  width: 36rpx;
+  height: 36rpx;
+  margin: 0 10rpx;
+}
+.container .body .btns .block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 30rpx;
+}
+.container .body .btns .block .voice {
+  display: flex;
+  align-items: center;
+  margin-right: 30rpx;
+}
+.container .body .btns .block .smart {
+  display: flex;
+  align-items: center;
+}
+.container .body .btns .block .addFile {
+  width: 36rpx;
+  height: 36rpx;
+}
+.container .body .btns .block .picture {
+  margin-right: 10rpx;
+  margin-left: 30rpx;
+}
+.container .body .textarea {
+  display: flex;
+  flex-direction: column;
+  height: 180rpx;
+  background: #f6f6f694;
+}
+.container .body .textarea .desc {
+  height: 130rpx;
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+.container .body .textarea .audio {
+  margin-left: 10rpx;
+  background-color: #d5e5ff;
+  width: 103rpx;
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  border-radius: 6rpx;
+  font-size: 22rpx;
+  line-height: 22rpx;
+  margin-bottom: 5rpx;
+}
+.container .body .textarea .audio image {
+  margin-left: 8rpx;
+  margin-right: 15rpx;
+  height: 24rpx;
+  width: 17rpx;
+}
+.container .van-cell {
+  background-color: transparent;
+  font-size: 28rpx;
+  height: 90rpx;
+}
+.container .check {
+  margin-top: 10rpx;
+  height: 78rpx;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  align-items: center;
+  color: #1d1d1d;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+}
+.container .check switch {
+  zoom: 0.78125;
+  padding-right: 20rpx;
+}
+.container .submit {
+  width: 245rpx;
+  height: 74rpx;
+  background: #97BBEF;
+  border-radius: 37rpx;
+  text-align: center;
+  line-height: 74rpx;
+  font-size: 32rpx;
+  color: #1E50A2;
+  position: fixed;
+  bottom: 60rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container .timePicker {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 430rpx;
+  background-color: #fff;
+  z-index: 2;
+  border-radius: 20rpx;
+}
+.container .timePicker picker-view {
+  height: 249rpx;
+  width: 630rpx;
+  background-color: #f6f6f6;
+  z-index: 3;
+}
+.container .van-popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 32rpx;
+}
+.container .van-popup .icon {
+  width: 120rpx;
+  height: 120rpx;
+  margin-bottom: 20rpx;
+  border-radius: 50%;
+  background-color: #1E50A2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .van-popup .icon .waves {
+  padding: 0 15rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .van-popup .icon .waves .waveItem {
+  border-radius: 3rpx;
+  width: 6rpx;
+  background-color: #fff;
+}

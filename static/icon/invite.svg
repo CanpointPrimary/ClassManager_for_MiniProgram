@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="174" height="38" viewBox="0 0 174 38">
-  <g id="邀请老师" transform="translate(-546 -178)">
-    <path id="路径_120" data-name="路径 120" d="M19,0H155a19,19,0,0,1,0,38H19A19,19,0,0,1,19,0Z" transform="translate(546 178)" fill="#1e50a2"/>
-    <text id="邀请学生_老师" data-name="邀请学生/老师" transform="translate(633 204)" fill="#fff" font-size="20" font-family="PingFang SC Medium, PingFang SC"><tspan x="-65" y="0">邀请学生/老师</tspan></text>
+  <g id="inviteT" transform="translate(-546 -178)">
+    <path id="line_120" data-name="line 120" d="M19,0H155a19,19,0,0,1,0,38H19A19,19,0,0,1,19,0Z" transform="translate(546 178)" fill="#1e50a2"/>
+    <text id="inviteST" data-name="inviteST" transform="translate(633 204)" fill="#fff" font-size="20" font-family="PingFang SC Medium, PingFang SC"><tspan x="-65" y="0">邀请学生/老师</tspan></text>
   </g>
 </svg>

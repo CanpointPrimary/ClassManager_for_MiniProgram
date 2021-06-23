@@ -20,16 +20,17 @@
 
     <!-- 上部cell -->
     <mp-cells ext-class="cellsTop cells">
-        <mp-cell icon="/static/userIcon/invite.svg" ext-class="cell" value="邀请班级成员加入" link hover bindtap="invite">
+        <mp-cell icon="/static/userIcon/addMembers.svg" ext-class="cell" value="邀请班级成员加入" link hover bindtap="invite">
         </mp-cell>
         <mp-cell icon="/static/userIcon/add.svg" ext-class="cell" link hover bindtap="addToDesk">添加到桌面</mp-cell>
         <mp-cell icon="/static/userIcon/subscribe.svg" ext-class="cell" link hover>班级信息订阅</mp-cell>
-        <mp-cell icon="/static/userIcon/lab.svg" ext-class="cell" link hover>慧点实验室</mp-cell>
+        <mp-cell icon="/static/userIcon/laboratory.svg" ext-class="cell" link hover>慧点实验室</mp-cell>
     </mp-cells>
 
     <mp-cells ext-class="cellsBot cells">
-        <mp-cell icon="/static/userIcon/help.svg" value="帮助&反馈" hover ext-class="cell" bindtap="navToHelp"></mp-cell>
-        <mp-cell icon="/static/userIcon/clear.svg" value="清理缓存" hover ext-class="cell"></mp-cell>
+        <mp-cell icon="/static/userIcon/feedback.svg" value="帮助&反馈" hover ext-class="cell" bindtap="navToHelp">
+        </mp-cell>
+        <mp-cell icon="/static/userIcon/clean.svg" value="清理缓存" hover ext-class="cell"></mp-cell>
     </mp-cells>
     <invite-dialog isShow="{{showInviteDialog}}" wx:if="{{showInviteDialog}}"></invite-dialog>
     <view class="fillBd"></view>

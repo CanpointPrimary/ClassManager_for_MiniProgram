@@ -1,0 +1,49 @@
+.container {
+  width: 100%;
+  min-height: 100%;
+  background-color: #edf6fd;
+  padding: 30rpx;
+}
+.container .title {
+  color: #1d1d1d;
+  font-size: 32rpx;
+  font-weight: bolder;
+  margin: 10rpx 0;
+}
+.container .list {
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 20rpx;
+}
+.container .list .name {
+  width: 20%;
+  text-align: center;
+  font-size: 28rpx;
+  color: #333;
+  line-height: 56rpx;
+}
+.container .btns {
+  display: flex;
+  justify-content: space-around;
+}
+.container .btns .btn {
+  width: 272rpx;
+  height: 68rpx;
+  border-radius: 34rpx;
+  text-align: center;
+  line-height: 68rpx;
+  font-size: 28rpx;
+  color: #1e50a2;
+}
+.container .btns .copy {
+  background-color: #fff;
+  box-shadow: 0 3rpx 6rpx #c0c0c0;
+}
+.container .btns .remind {
+  background-color: #dce9fe;
+  box-shadow: 0 3rpx 6rpx #89b0f0;
+}

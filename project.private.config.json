@@ -83,6 +83,36 @@
                     "pathName": "pages/classList/classInfo",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/homeWork/homeWork",
+                    "pathName": "pages/homeWork/homeWork",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/workPublish/workPublish",
+                    "pathName": "pages/workPublish/workPublish",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/workPackage/workPackage",
+                    "pathName": "pages/workPackage/workPackage",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/workStatus/workStatus",
+                    "pathName": "pages/workStatus/workStatus",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/subStatus/subStatus",
+                    "pathName": "pages/subStatus/subStatus",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

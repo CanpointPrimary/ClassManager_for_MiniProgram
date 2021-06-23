@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1, .cls-4, .cls-5, .cls-6 {
+        fill: none;
+      }
+
+      .cls-2 {
+        opacity: 0.2;
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4 {
+        stroke: #1e50a2;
+      }
+
+      .cls-4, .cls-5 {
+        stroke-linecap: round;
+      }
+
+      .cls-4, .cls-5, .cls-6 {
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-5, .cls-6 {
+        stroke: #000;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="rect_695" data-name="rect 695" class="cls-1" width="48" height="48" transform="translate(767.464 143.713)"/>
+    </clipPath>
+  </defs>
+  <g id="clean" transform="translate(-767.464 -143.713)">
+    <g id="list_1456" data-name="list 1456" class="cls-2">
+      <g id="list_1455" data-name="list 1455">
+        <g id="list_1454" data-name="list 1454" class="cls-3">
+          <rect id="rect_694" data-name="rect 694" class="cls-1" width="47" height="47" transform="translate(767.964 144.213)"/>
+          <path id="line_1134" data-name="line 1134" class="cls-1" d="M814.464,190.713h-46v-46h46Zm1-47h-48v48h48Z"/>
+        </g>
+      </g>
+    </g>
+    <g id="list_1459" data-name="list 1459">
+      <g id="list_1457" data-name="list 1457">
+        <line id="strike_114" data-name="strike 114" class="cls-4" y2="18.701" transform="translate(791.464 161.937)"/>
+        <line id="strike_115" data-name="strike 115" class="cls-4" y2="18.701" transform="translate(785.348 161.937)"/>
+        <line id="strike_116" data-name="strike 116" class="cls-4" y2="18.701" transform="translate(797.58 161.937)"/>
+      </g>
+      <g id="list_1458" data-name="list 1458">
+        <path id="rect_696" data-name="rect 696" class="cls-5" d="M0,0H28.342a0,0,0,0,1,0,0V30.191a2.394,2.394,0,0,1-2.394,2.394H2.394A2.394,2.394,0,0,1,0,30.191V0A0,0,0,0,1,0,0Z" transform="translate(777.293 153.962)"/>
+        <line id="strike_117" data-name="strike 117" class="cls-5" x2="37.847" transform="translate(772.541 153.962)"/>
+        <rect id="rect_697" data-name="rect 697" class="cls-6" width="15.557" height="5.081" rx="1.802" transform="translate(783.686 148.88)"/>
+      </g>
+    </g>
+  </g>
+</svg>

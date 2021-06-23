@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31.999" height="32" viewBox="0 0 31.999 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="delete2" transform="translate(-605.289 -310.868)">
+    <g id="list_845" data-name="list 845">
+      <path id="line_982" data-name="line 982" class="cls-1" d="M630.766,342.868H611.834a1,1,0,0,1-1-.944l-1.5-26.382a1,1,0,0,1,1-1.057h21.9a1,1,0,0,1,1,1.056l-1.473,26.382A1,1,0,0,1,630.766,342.868Zm-17.987-2H629.82l1.362-24.383H611.4Z"/>
+    </g>
+    <g id="list_846" data-name="list 846">
+      <path id="line_983" data-name="line 983" class="cls-1" d="M636.288,316.485h-3.74a1,1,0,0,1,0-2h3.74a1,1,0,0,1,0,2Z"/>
+    </g>
+    <g id="list_847" data-name="list 847">
+      <path id="line_984" data-name="line 984" class="cls-1" d="M610.068,316.485h-3.779a1,1,0,0,1,0-2h3.779a1,1,0,0,1,0,2Z"/>
+    </g>
+    <g id="list_848" data-name="list 848">
+      <path id="line_985" data-name="line 985" class="cls-1" d="M625.994,316.229a1,1,0,0,1-1-1v-2.361h-7.41v2.361a1,1,0,0,1-2,0v-3.361a1,1,0,0,1,1-1h9.41a1,1,0,0,1,1,1v3.361A1,1,0,0,1,625.994,316.229Z"/>
+    </g>
+    <g id="list_849" data-name="list 849">
+      <path id="line_986" data-name="line 986" class="cls-1" d="M616.337,338.993a1,1,0,0,1-1-.944l-1.052-18.534a1,1,0,1,1,2-.114l1.052,18.535a1,1,0,0,1-.942,1.055Z"/>
+    </g>
+    <g id="list_850" data-name="list 850">
+      <path id="line_987" data-name="line 987" class="cls-1" d="M626.2,338.993l-.058,0a1,1,0,0,1-.941-1.055l1.053-18.535a1,1,0,1,1,2,.114L627.2,338.049A1,1,0,0,1,626.2,338.993Z"/>
+    </g>
+    <g id="list_851" data-name="list 851">
+      <path id="line_988" data-name="line 988" class="cls-1" d="M621.289,338.993a1,1,0,0,1-1-1V319.458a1,1,0,0,1,2,0v18.535A1,1,0,0,1,621.289,338.993Z"/>
+    </g>
+  </g>
+</svg>

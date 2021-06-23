@@ -1,0 +1,68 @@
+<svg id="folder" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36" viewBox="0 0 36 36">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        opacity: 0.2;
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4 {
+        fill: #f8dcdc;
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-6 {
+        opacity: 0.2;
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-7 {
+        fill: #fdede9;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="rect_525" data-name="rect 525" class="cls-1" width="36" height="36"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.115" y1="0.173" x2="0.918" y2="0.855" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffcaca"/>
+      <stop offset="1" stop-color="#f59a9a"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.168" y1="0.14" x2="0.947" y2="0.59" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <g id="group_888" data-name="group 888" class="cls-2">
+    <g id="list_887" data-name="list 887">
+      <g id="list_886" data-name="list 886" class="cls-3">
+        <rect id="rect_524" data-name="rect 524" class="cls-1" width="35.25" height="35.25" transform="translate(0.375 0.375)"/>
+        <path id="line_1006" data-name="line 1006" class="cls-1" d="M803.25,83.25h-34.5V48.75h34.5ZM804,48H768V84h36Z" transform="translate(-768 -48)"/>
+      </g>
+    </g>
+  </g>
+  <g id="group_893" data-name="group 893" transform="translate(2.566 0.787)">
+    <rect id="rectangle_526" data-name="rectangle 526" class="cls-4" width="25.748" height="19.994" rx="4.71"/>
+    <g id="group_889" data-name="group 889" transform="translate(0 7.933)">
+      <rect id="rectangle_527" data-name="rectangle 527" class="cls-5" width="32.377" height="25.365" rx="4.336" transform="translate(0 0)"/>
+      <path id="route_1007" data-name="route 1007" class="cls-6" d="M813.578,81.638c.461,0,.91-.044,1.365-.069V61.084a4.364,4.364,0,0,0-4.364-4.364H788.661A24.918,24.918,0,0,0,813.578,81.638Z" transform="translate(-782.566 -56.72)"/>
+    </g>
+    <g id="group_892" data-name="group 892" transform="translate(6.737 11.361)">
+      <g id="group_890" data-name="group 890" transform="translate(0 7.387)">
+        <path id="line_1008" data-name="line 1008" class="cls-7" d="M800.14,77.468H785.485a2.145,2.145,0,0,1-2.172-1.853,2.066,2.066,0,0,1,2.055-2.277h14.654a2.147,2.147,0,0,1,2.173,1.853A2.066,2.066,0,0,1,800.14,77.468Z" transform="translate(-783.302 -73.338)"/>
+      </g>
+      <g id="group_891" data-name="group 891" transform="translate(7.387)">
+        <path id="route_1009" data-name="route 1009" class="cls-7" d="M792.541,84.844a2.147,2.147,0,0,1-1.852-2.173V68.134a2.146,2.146,0,0,1,1.852-2.172,2.066,2.066,0,0,1,2.279,2.054V82.789A2.066,2.066,0,0,1,792.541,84.844Z" transform="translate(-790.689 -65.951)"/>
+      </g>
+    </g>
+  </g>
+</svg>

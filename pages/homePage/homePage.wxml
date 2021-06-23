@@ -19,7 +19,7 @@
 
         <!-- menu栏 -->
         <view class="menu">
-            <view class="menuItem" wx:for="{{menuList}}" wx:key="id">
+            <view class="menuItem" wx:for="{{menuList}}" wx:key="id" data-target="{{item.target}}" bindtap="navTo">
                 <view class="iconfont {{item.className}}"></view>
                 <view class="itemName">{{item.list}}</view>
             </view>

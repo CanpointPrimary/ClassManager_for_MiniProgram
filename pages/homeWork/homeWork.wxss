@@ -1,0 +1,152 @@
+.container {
+  height: 100%;
+  width: 100%;
+}
+.container .header {
+  padding-left: 30rpx;
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.container .header .arrowDown {
+  height: 15rpx;
+  width: 20rpx;
+  margin-bottom: 4rpx;
+  padding-left: 6rpx;
+}
+.container .header .calendar {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 30rpx;
+}
+.container .header .van-search {
+  width: 540rpx;
+}
+.container .tabbar {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  position: relative;
+  height: 54rpx;
+  margin-bottom: 20rpx;
+}
+.container .tabbar .tab_active {
+  color: #1d1d1d;
+  font-weight: bolder;
+}
+.container .tabbar .tab_item {
+  margin: 0 40rpx;
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 50rpx;
+  color: #333;
+}
+.container .tabbar .underline {
+  height: 4rpx;
+  border-radius: 2rpx;
+  width: 68rpx;
+  background-color: #1E50A2;
+  position: absolute;
+  bottom: -5rpx;
+  left: 38rpx;
+}
+.container .workList {
+  padding-bottom: 100rpx;
+}
+.container .workList .item {
+  margin-bottom: 20rpx;
+}
+.container .workList .item .time {
+  font-size: 20rpx;
+  text-align: center;
+  color: #999;
+  margin: 10rpx 0;
+}
+.container .workList .item .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 30rpx;
+  height: 278rpx;
+  background: #DCE9FE;
+  box-shadow: 0 0 6rpx rgba(0, 0, 0, 0.16);
+  border-radius: 20rpx;
+  box-sizing: border-box;
+  padding: 30rpx 40rpx;
+  margin-bottom: 20rpx;
+}
+.container .workList .item .inner .title {
+  display: flex;
+  align-items: center;
+}
+.container .workList .item .inner .title .bar {
+  height: 45rpx;
+  width: 10rpx;
+  border-radius: 5rpx;
+  background-color: #1E50A2;
+  margin-right: 10rpx;
+}
+.container .workList .item .inner .title .value {
+  height: 45rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 48rpx;
+  color: #1D1D1D;
+}
+.container .workList .item .inner .publish {
+  display: flex;
+  align-items: center;
+}
+.container .workList .item .inner .publish .avatar {
+  margin-left: 25rpx;
+  margin-right: 15rpx;
+  width: 48rpx;
+  height: 48rpx;
+}
+.container .workList .item .inner .publish .publisher {
+  color: #1D1D1D;
+  font-size: 28rpx;
+  margin-right: 15rpx;
+}
+.container .workList .item .inner .publish .pubTime {
+  color: #999;
+  font-size: 24rpx;
+}
+.container .workList .item .inner .general {
+  margin-left: 22rpx;
+  font-size: 24rpx;
+  line-height: 33rpx;
+  color: #666;
+}
+.container .workList .item .inner .progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 505rpx;
+  height: 46rpx;
+  background: #FFF;
+  margin-left: 20rpx;
+  border-radius: 100rpx;
+  padding: 0 10rpx;
+}
+.container .workList .item .inner .progress progress {
+  width: 358rpx;
+}
+.container .workList .item .inner .info {
+  font-size: 22rpx;
+  color: #666;
+}
+.container .addWork {
+  position: fixed;
+  bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.container .addWork .addBtn {
+  width: 70rpx;
+  height: 70rpx;
+}

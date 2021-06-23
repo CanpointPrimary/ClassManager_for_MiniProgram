@@ -1,0 +1,130 @@
+<!--pages/workStatus/workStatus.wxml-->
+<view class="container">
+    <!-- 搜索框 -->
+    <van-search placeholder="输入学生姓名" shape="round"></van-search>
+
+    <!-- tabbar start-->
+    <view class="tabbar">
+        <view class="tabItem" bindtap="changeTab" data-index="{{0}}">按得分排序
+            <view class="UD">
+                <van-icon name="arrow-up" size="28rpx" color="{{isScore && isAscend ? '#1E50A2':'#aaa'}}"></van-icon>
+                <van-icon name="arrow-down" size="28rpx" color="{{isScore && !isAscend ? '#1E50A2':'#aaa'}}"></van-icon>
+            </view>
+        </view>
+        <view class="tabItem" bindtap="changeTab" data-index="{{1}}">按时长排序
+            <view class="UD">
+                <van-icon name="arrow-up" size="28rpx" color="{{!isScore && isAscend ? '#1E50A2':'#aaa'}}"></van-icon>
+                <van-icon name="arrow-down" size="28rpx" color="{{!isScore && !isAscend ? '#1E50A2':'#aaa'}}">
+                </van-icon>
+            </view>
+        </view>
+        <view class="actBg"></view>
+    </view>
+    <!-- tabbar end -->
+
+
+    <!-- 作业内容瀑布流区域start -->
+    <view class="waterfall">
+        <!-- 相交线 -->
+        <view class="crossLine"></view>
+        <view class="left waterView" data-next="Right">
+            <view class="card" wx:for="{{answerListLeft}}" wx:key='id'>
+                <view class="hd">
+                    <view class="avatar">
+                        <image src="{{item.avatar}}"></image>
+                    </view>
+                    <view class="info">
+                        <view class="name">{{item.rname}}</view>
+                        <view class="subTime">{{item.subTime}}</view>
+                    </view>
+                </view>
+
+                <!-- 作业 -->
+                <view class="works">
+                    <view class="workItem" wx:for="{{item.works}}" wx:key='id'>
+                        <view class="workTitle">
+                            <view class="type">{{item.type}}</view>
+                            <text>：</text>
+                            <view class="title">{{item.title}}</view>
+                        </view>
+                        <view class="socre">{{item.socre}}</view>
+                    </view>
+                </view>
+
+                <!-- 时间和评论图标 -->
+                <view class="timeIcon">
+                    <view class="useTime">
+                        <image src="/static/answerIcon/time.svg"></image><text>{{item.useTime}}</text>
+                    </view>
+                    <view class="commentBtn">
+                        <image src="/static/answerIcon/comment2.svg"></image>
+                    </view>
+                </view>
+                <view class="border" wx:if="{{item.tag !== '' || item.comments.length !== 0}}"></view>
+                <view class="tag" wx:if="{{item.tag}}">
+                    <image src="/static/answerIcon/badge.svg"></image><text class="desc">{{item.tag}}</text>
+                </view>
+                <view class="comments">
+                    <view class="comItem" wx:for="{{item.comments}}" wx:key="id">
+                        <text class="name">{{item.from}}：</text><text class="value">{{item.val}}</text>
+                        <view class="voice" wx:if="{{item.voice}}">
+                            <image src="/static/icon/voice1099.svg"></image>
+                            <text>17″</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="right waterView" data-next="Left">
+            <view class="card" wx:for="{{answerListRight}}" wx:key='id'>
+                <view class="hd">
+                    <view class="avatar">
+                        <image src="{{item.avatar}}"></image>
+                    </view>
+                    <view class="info">
+                        <view class="name">{{item.rname}}</view>
+                        <view class="subTime">{{item.subTime}}</view>
+                    </view>
+                </view>
+
+                <!-- 作业 -->
+                <view class="works">
+                    <view class="workItem" wx:for="{{item.works}}" wx:key='id'>
+                        <view class="workTitle">
+                            <view class="type">{{item.type}}</view>
+                            <text>：</text>
+                            <view class="title">{{item.title}}</view>
+                        </view>
+                        <view class="socre">{{item.socre}}</view>
+                    </view>
+                </view>
+
+                <!-- 时间和评论图标 -->
+                <view class="timeIcon">
+                    <view class="useTime">
+                        <image src="/static/answerIcon/time.svg"></image><text>{{item.useTime}}</text>
+                    </view>
+                    <view class="commentBtn">
+                        <image src="/static/answerIcon/comment2.svg"></image>
+                    </view>
+                </view>
+                <view class="border" wx:if="{{item.tag !== '' || item.comments.length !== 0}}"></view>
+                <view class="comments">
+                    <view class="comItem" wx:for="{{item.comments}}" wx:key='id'>
+                        <text class="name">{{item.from}}：</text><text class="value">{{item.val}}</text>
+                        <view class="voice" wx:if="{{item.voice}}">
+                            <image src="/static/icon/voice1099.svg"></image>
+                            <text>17″</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="footer">
+        <view class="inner">
+            <image src="/static/answerIcon/comment1.svg"></image>
+            <text>一键点评</text>
+        </view>
+    </view>
+</view>

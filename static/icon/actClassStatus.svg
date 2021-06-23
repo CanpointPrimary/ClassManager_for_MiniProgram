@@ -1,35 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
   <defs>
     <clipPath id="clip-path">
-      <rect id="矩形_258" data-name="矩形 258" width="48" height="48" transform="translate(576.389 335.158)" fill="none"/>
+      <rect id="rect_258" data-name="rect 258" width="48" height="48" transform="translate(576.389 335.158)" fill="none"/>
     </clipPath>
   </defs>
   <g id="tab_xueqing_sel" transform="translate(-351 -1247)">
-    <g id="学情选中状态" transform="translate(-225.389 911.842)">
-      <g id="组_305" data-name="组 305" opacity="0.2">
-        <g id="组_304" data-name="组 304">
-          <g id="组_303" data-name="组 303" clip-path="url(#clip-path)">
-            <rect id="矩形_257" data-name="矩形 257" width="47" height="47" transform="translate(576.889 335.658)" fill="none"/>
-            <path id="路径_139" data-name="路径 139" d="M623.389,382.158h-46v-46h46Zm1-47h-48v48h48Z" fill="none"/>
+    <g id="choose" transform="translate(-225.389 911.842)">
+      <g id="list_305" data-name="list 305" opacity="0.2">
+        <g id="list_304" data-name="list 304">
+          <g id="list_303" data-name="list 303" clip-path="url(#clip-path)">
+            <rect id="rect_257" data-name="rect 257" width="47" height="47" transform="translate(576.889 335.658)" fill="none"/>
+            <path id="line_139" data-name="line 139" d="M623.389,382.158h-46v-46h46Zm1-47h-48v48h48Z" fill="none"/>
           </g>
         </g>
       </g>
-      <g id="组_306" data-name="组 306">
-        <circle id="椭圆_19" data-name="椭圆 19" cx="7.207" cy="7.207" r="7.207" transform="translate(597.288 350.803)" fill="#ff7058" opacity="0.35"/>
-        <line id="直线_28" data-name="直线 28" x2="7.259" transform="translate(585.722 348.176)" fill="none" stroke="#1e50a2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-        <line id="直线_29" data-name="直线 29" x2="5.778" transform="translate(585.722 355.546)" fill="none" stroke="#1e50a2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-        <line id="直线_30" data-name="直线 30" x2="7.259" transform="translate(585.722 362.706)" fill="none" stroke="#1e50a2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-        <circle id="椭圆_20" data-name="椭圆 20" cx="7.762" cy="7.762" r="7.762" transform="translate(596.734 347.183)" fill="none" stroke="#1e50a2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-        <line id="直线_31" data-name="直线 31" x2="4.929" y2="4.929" transform="translate(609.662 360.666)" fill="none" stroke="#1e50a2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-        <line id="直线_32" data-name="直线 32" x2="29.333" transform="translate(585.722 371.133)" fill="none" stroke="#1e50a2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <g id="list_306" data-name="list 306">
+        <circle id="round_19" data-name="round 19" cx="7.207" cy="7.207" r="7.207" transform="translate(597.288 350.803)" fill="#ff7058" opacity="0.35"/>
+        <line id="strike_28" data-name="strike 28" x2="7.259" transform="translate(585.722 348.176)" fill="none" stroke="#1e50a2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <line id="strike_29" data-name="strike 29" x2="5.778" transform="translate(585.722 355.546)" fill="none" stroke="#1e50a2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <line id="strike_30" data-name="strike 30" x2="7.259" transform="translate(585.722 362.706)" fill="none" stroke="#1e50a2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <circle id="round_20" data-name="round 20" cx="7.762" cy="7.762" r="7.762" transform="translate(596.734 347.183)" fill="none" stroke="#1e50a2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <line id="strike_31" data-name="strike 31" x2="4.929" y2="4.929" transform="translate(609.662 360.666)" fill="none" stroke="#1e50a2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <line id="strike_32" data-name="strike 32" x2="29.333" transform="translate(585.722 371.133)" fill="none" stroke="#1e50a2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
       </g>
     </g>
-    <g id="小装饰" transform="translate(0 1)">
-      <path id="多边形_1" data-name="多边形 1" d="M1.5,0,3,3,1.5,6,0,3Z" transform="translate(383 1249)" fill="#1e50a2" opacity="0.74"/>
-      <path id="多边形_2" data-name="多边形 2" d="M2,0l.5,1.488,1.5.04-1.191.96L3.236,4,2,3.106.764,4l.427-1.512L0,1.528l1.5-.04Z" transform="translate(370 1247)" fill="#1e50a2"/>
-      <path id="多边形_3" data-name="多边形 3" d="M3,0l.75,2.231L6,2.292,4.214,3.731,4.854,6,3,4.658,1.146,6l.641-2.269L0,2.292l2.25-.06Z" transform="translate(390 1266)" fill="#1e50a2" opacity="0.47"/>
-      <path id="多边形_5" data-name="多边形 5" d="M3,0l.75,2.231L6,2.292,4.214,3.731,4.854,6,3,4.658,1.146,6l.641-2.269L0,2.292l2.25-.06Z" transform="translate(377 1262)" fill="#1e50a2"/>
-      <path id="多边形_4" data-name="多边形 4" d="M2,0l.5,1.488,1.5.04-1.191.96L3.236,4,2,3.106.764,4l.427-1.512L0,1.528l1.5-.04Z" transform="translate(390 1255)" fill="#1e50a2" opacity="0.18"/>
+    <g id="display" transform="translate(0 1)">
+      <path id="polygon_1" data-name="polygon 1" d="M1.5,0,3,3,1.5,6,0,3Z" transform="translate(383 1249)" fill="#1e50a2" opacity="0.74"/>
+      <path id="polygon_2" data-name="polygon 2" d="M2,0l.5,1.488,1.5.04-1.191.96L3.236,4,2,3.106.764,4l.427-1.512L0,1.528l1.5-.04Z" transform="translate(370 1247)" fill="#1e50a2"/>
+      <path id="polygon_3" data-name="polygon 3" d="M3,0l.75,2.231L6,2.292,4.214,3.731,4.854,6,3,4.658,1.146,6l.641-2.269L0,2.292l2.25-.06Z" transform="translate(390 1266)" fill="#1e50a2" opacity="0.47"/>
+      <path id="polygon_5" data-name="polygon 5" d="M3,0l.75,2.231L6,2.292,4.214,3.731,4.854,6,3,4.658,1.146,6l.641-2.269L0,2.292l2.25-.06Z" transform="translate(377 1262)" fill="#1e50a2"/>
+      <path id="polygon_4" data-name="polygon 4" d="M2,0l.5,1.488,1.5.04-1.191.96L3.236,4,2,3.106.764,4l.427-1.512L0,1.528l1.5-.04Z" transform="translate(390 1255)" fill="#1e50a2" opacity="0.18"/>
     </g>
   </g>
 </svg>

@@ -1,0 +1,77 @@
+<!--pages/workPublish/workPublish.wxml-->
+<view class="container">
+    <view class="body">
+        <view class="header">
+            <view class="recipient">{{recipient}}</view>
+            <mp-icon icon="arrow" size="14"></mp-icon>
+        </view>
+        <view class="title">
+            <input type="text" value="{{title}}" bindinput="titleChange"
+                maxlength="25"></input><text>{{title.length}}/25</text>
+        </view>
+        <view class="btns">
+            <view class="block">
+                <view class="voice">
+                    <image src="/static/icon/folder.svg" class="folder"></image>
+                    <text>语音作业</text>
+                </view>
+                <view class="smart">
+                    <image src="/static/icon/folder.svg" class="folder"></image>
+                    <text>智能作业</text>
+                </view>
+            </view>
+            <view class="block">
+                <image src="/static/icon/voice.svg" class="mic addFile" bindtap="showVoice"></image>
+                <image src="/static/icon/picture.svg" class="picture addFile" bindtap="chooseImage"></image>
+            </view>
+        </view>
+        <view class="textarea">
+            <textarea class="desc"></textarea>
+            <!-- 留给语音 -->
+            <view class="audio" bindtap="playVoice" wx:for="{{voices}}" wx:key="id">
+                <image src="/static/icon/voice1099.svg"></image>
+                {{voiceLength}}″
+            </view>         
+        </view>
+        <!-- 留给作业包 -->
+        <!-- 留给插图 -->
+        <view class="imageUpload" wx:if="{{imageList.length>0}}">
+            <image wx:for="{{imageList.length}}" wx:key="id" src="{{imageList[item]}}" data-index="{{item}}"
+                class="seletedImage" mode="aspectFill"></image>
+            <view class="camera" bindtap="chooseImage">
+                <mp-icon icon="add" size="50" color="gray"></mp-icon>
+            </view>
+        </view>
+        <!-- 预计用时 -->
+    </view>
+    <picker mode="multiSelector" range="{{timeList}}" value="{{timeSelect}}">
+        <van-cell title="截止时间"
+            value="{{timeSelect[0]==0?'无':(timeList[0][timeSelect[0]]+' '+timeList[1][timeSelect[1]])}}" is-link>
+        </van-cell>
+    </picker>
+    <picker mode="multiSelector" range="{{timeList}}" value="{{timeSelect}}">
+        <van-cell title="定时发送" value="{{timeList[0][timeSelect[0]]+' '+timeList[1][timeSelect[1]]}}" is-link></van-cell>
+    </picker>
+
+    <view class="check">
+        <view>加入班级是否需要审核</view>
+        <switch color="#1e50a2"></switch>
+    </view>
+    <van-popup show="{{ showVoice }}" position="bottom" custom-style="height: 30%;" round
+        bind:click-overlay="closeVoice">
+        <!-- <canvas></canvas> -->
+        <view class="icon" bindtap="startRecord">
+            <mp-icon icon="mike" type="field" color="#fff" size="{{36}}" wx:if="{{showWave}}"></mp-icon>
+            <view class="waves" wx:else>
+                <view class="waveItem1 waveItem"></view>
+                <view class="waveItem2 waveItem"></view>
+                <view class="waveItem3 waveItem"></view>
+                <view class="waveItem2 waveItem"></view>
+                <view class="waveItem1 waveItem"></view>
+            </view>
+        </view>
+        <view wx:if="{{showWave}}">点击录音</view>
+        <view wx:else>点击结束</view>
+    </van-popup>
+    <view class="submit">发布</view>
+</view>

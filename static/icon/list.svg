@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        opacity: 0.2;
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4 {
+        fill: #333;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="rect_451" data-name="rect 451" class="cls-1" width="48" height="48" transform="translate(480.461 46.715)"/>
+    </clipPath>
+  </defs>
+  <g id="list" transform="translate(-111 -1266)">
+    <g id="list_764" data-name="list 764" class="cls-2" transform="translate(-369.461 1219.285)">
+      <g id="list_763" data-name="list 763">
+        <g id="list_762" data-name="list 762" class="cls-3">
+          <rect id="rect_450" data-name="rect 450" class="cls-1" width="47" height="47" transform="translate(480.961 47.215)"/>
+          <path id="line_942" data-name="line 942" class="cls-1" d="M527.461,93.715h-46v-46h46Zm1-47h-48v48h48Z"/>
+        </g>
+      </g>
+    </g>
+    <g id="list_1023" data-name="list 1023" transform="translate(-313.75 187.977)">
+      <path id="line_1047" data-name="line 1047" class="cls-4" d="M461.173,1122.286a1.257,1.257,0,0,1-1.047-.56l-11.535-17.3-11.535,17.3a1.258,1.258,0,0,1-2.305-.7v-37.747a1.258,1.258,0,0,1,1.258-1.258h25.164a1.258,1.258,0,0,1,1.258,1.258v37.747a1.254,1.254,0,0,1-1.258,1.258ZM448.59,1100.9a1.258,1.258,0,0,1,1.047.561l10.277,15.416v-32.334H437.266v32.334l10.277-15.416A1.256,1.256,0,0,1,448.59,1100.9Z" transform="translate(0)"/>
+    </g>
+  </g>
+</svg>

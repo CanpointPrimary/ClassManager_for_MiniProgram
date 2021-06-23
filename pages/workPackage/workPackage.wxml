@@ -1,0 +1,87 @@
+<view class="container">
+    <view class="header">
+        <view class="info">
+            <image src="/static/avatar.png" class="avatar"></image>
+            <view class="name">{{workPackageInfo.publisher}}</view>
+            <view class="subject">{{workPackageInfo.subject}}</view>
+        </view>
+        <view class="seting" bindtap="showEdit">
+            <image src="/static/icon/fit.svg"></image>
+            <view class="tips" wx:if="{{showEdit}}">
+                <view class="angle"></view>
+                <view class="tipItem">
+                    <image src="/static/icon/remind.svg"></image> 提醒
+                </view>
+                <view class="tipItem">
+                    <image src="/static/icon/delete2.svg"></image> 删除
+                </view>
+                <view class="tipItem">
+                    <image src="/static/icon/copy.svg"></image> 复制
+                </view>
+                <view class="tipItem">
+                    <image src="/static/icon/edit.svg"></image> 编辑
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="time">
+        <view class="val">
+            <view class="startTime">
+                发布时间：{{workPackageInfo.pubTime}}</view>
+            <view class="endTime">
+                截止时间：{{workPackageInfo.endTime}}
+            </view>
+        </view>
+        <view class="btn">学生作答情况</view>
+    </view>
+    <view class="body">
+        <view class="workIntro">
+            <view class="desc">{{workPackageInfo.desc}}</view>
+            <view class="audio" bindtap="playVoice" wx:for="{{voices}}" wx:key="id">
+                <image src="/static/icon/voice1099.svg"></image>
+                {{voiceLength}}″
+            </view>
+            <view class="pictures">
+                <image src="/static/work.png" wx:for="{{3}}" wx:key="id"></image>
+            </view>
+        </view>
+        <scroll-view class="works" scroll-x enhanced show-scrollbar='{{false}}'>
+            <view class="outer {{index == currentWork ? 'active' : ''}}" wx:for="{{workList}}" wx:key="id">
+                <view class="type">{{item.type}}</view>
+                <view class="title">{{item.title}}</view>
+                <view class="timeTake">预计用时：{{item.timeTake}}</view>
+                <view class="angle" wx:if="{{index==currentWork}}"></view>
+            </view>
+        </scroll-view>
+
+        <view class="table">
+            <view class="hd">
+                <view class="col">
+                    <view class="question">单词</view>
+                    <view class="score">得分</view>
+                </view>
+                <view class="col">
+                    <view class="question">单词</view>
+                    <view class="score">得分</view>
+                </view>
+            </view>
+            <view class="bd">
+                <view class="queItem" wx:for="{{queList}}" wx:key="id">
+                    <view class="question">{{item.question}}</view>
+                    <view class="score">
+                        <view class="bg">{{item.score}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="timeTake">总计平均完成时间：12分钟</view>
+    </view>
+    <view class="botTab">
+        <view class="tabItem">
+            <image src="/static/icon/list.svg"></image>推荐榜
+        </view>
+        <view class="tabItem">
+            <image src="/static/icon/label.svg"></image>标签
+        </view>
+    </view>
+</view>

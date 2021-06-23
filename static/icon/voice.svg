@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #1e50a2;
+      }
+    </style>
+  </defs>
+  <g id="voice" transform="translate(-528 -368)">
+    <rect id="rectangle_540" data-name="rectangle 540" class="cls-1" width="36" height="36" transform="translate(528 368)"/>
+    <g id="group_859" data-name="group 859" transform="translate(101 -603.276)">
+      <g id="group_855" data-name="group 855">
+        <path id="line_989" data-name="line 989" class="cls-2" d="M445,1000.575a11.987,11.987,0,0,1-12-11.736c0-.036,0-5.115,0-5.16a1,1,0,0,1,2,0c0,.044,0,4.992,0,5.137a10,10,0,0,0,20,.04c0-.138,0-5.117,0-5.177a1,1,0,0,1,2,0c0,.061,0,5.149,0,5.211A12,12,0,0,1,445,1000.575Z"/>
+      </g>
+      <g id="group_856" data-name="group 856">
+        <path id="line_990" data-name="line 990" class="cls-2" d="M445,1004.468a1,1,0,0,1-1-1v-2.9a1,1,0,0,1,2,0v2.9A1,1,0,0,1,445,1004.468Z"/>
+      </g>
+      <g id="group_857" data-name="group 857">
+        <path id="line_991" data-name="line 991" class="cls-2" d="M450.546,1005.275H439.454a1,1,0,0,1,0-2h11.092a1,1,0,0,1,0,2Z"/>
+      </g>
+      <g id="group_858" data-name="group 858">
+        <path id="route_992" data-name="route 992" class="cls-2" d="M445,995.6a6.878,6.878,0,0,1-6.9-6.84v-8.642a6.9,6.9,0,0,1,13.8,0v8.642A6.878,6.878,0,0,1,445,995.6Zm0-20.32a4.875,4.875,0,0,0-4.9,4.838v8.642a4.9,4.9,0,0,0,9.8,0v-8.642A4.875,4.875,0,0,0,445,975.276Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
