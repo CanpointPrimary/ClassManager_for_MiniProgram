@@ -45,7 +45,7 @@
                     </view>
                     <!-- 进度条 -->
                     <van-circle size="50" layer-color="#E8EDF0" value="{{item.doneStu/item.allStu*100}}"
-                        text="{{item.doneStu/item.allStu*100}}%" bindtap="openList"></van-circle>
+                        text="{{item.doneStu/item.allStu*100}}%" catchtap="openList"></van-circle>
                 </view>
             </view>
         </view>
