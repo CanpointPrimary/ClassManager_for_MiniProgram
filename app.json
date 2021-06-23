@@ -17,7 +17,8 @@
     "pages/homeWork/homeWork",
     "pages/workPublish/workPublish",
     "pages/workPackage/workPackage",
-    "pages/workStatus/workStatus"
+    "pages/workStatus/workStatus",
+    "pages/subStatus/subStatus"
   ],
   "window": {
     "backgroundTextStyle": "light",

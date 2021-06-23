@@ -107,6 +107,12 @@
                     "pathName": "pages/workStatus/workStatus",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/subStatus/subStatus",
+                    "pathName": "pages/subStatus/subStatus",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }
