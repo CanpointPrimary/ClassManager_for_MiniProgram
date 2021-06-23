@@ -48,7 +48,7 @@
   height: 4rpx;
   border-radius: 2rpx;
   width: 68rpx;
-  background-color: #1E50A2;
+  background-color: #1e50a2;
   position: absolute;
   bottom: -5rpx;
   left: 38rpx;
@@ -71,7 +71,7 @@
   justify-content: space-between;
   margin: 0 30rpx;
   height: 218rpx;
-  background: #DCE9FE;
+  background: #dce9fe;
   box-shadow: 0 0 6rpx rgba(0, 0, 0, 0.16);
   border-radius: 20rpx;
   box-sizing: border-box;
@@ -86,7 +86,7 @@
   height: 45rpx;
   width: 10rpx;
   border-radius: 5rpx;
-  background-color: #1E50A2;
+  background-color: #1e50a2;
   margin-right: 10rpx;
 }
 .container .workList .item .inner .title .value {
@@ -94,7 +94,7 @@
   font-size: 32rpx;
   font-weight: bold;
   line-height: 48rpx;
-  color: #1D1D1D;
+  color: #1d1d1d;
 }
 .container .workList .item .inner .bd {
   flex: 1;
@@ -119,7 +119,7 @@
   height: 48rpx;
 }
 .container .workList .item .inner .bd .left .publish .publisher {
-  color: #1D1D1D;
+  color: #1d1d1d;
   font-size: 28rpx;
   margin-right: 15rpx;
 }
@@ -136,6 +136,10 @@
 .container .workList .item .inner .bd van-circle {
   height: 100rpx;
   margin-right: 20rpx;
+  font-size: 28rpx;
+}
+.container .workList .item .inner .bd van-circle .van-circle__text {
+  color: #666;
 }
 .container .workList .item .inner .info {
   font-size: 22rpx;

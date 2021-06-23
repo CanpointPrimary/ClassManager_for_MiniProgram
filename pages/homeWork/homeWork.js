@@ -85,6 +85,11 @@ Page({
             url: '/pages/workPackage/workPackage',
         })
     },
+    openList() {
+        wx.navigateTo({
+            url: '/pages/subStatus/subStatus',
+        })
+    },
     navTo() {
         wx.navigateTo({
             url: '/pages/workPublish/workPublish',
