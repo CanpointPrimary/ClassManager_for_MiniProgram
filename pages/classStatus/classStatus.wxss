@@ -249,15 +249,18 @@
   background-color: #fffbef;
 }
 .container .stuScroll .stu_card .stu_bd {
-  width: 200rpx;
+  width: 215rpx;
   display: flex;
   height: 100%;
   align-items: center;
   justify-content: space-between;
 }
 .container .stuScroll .stu_card .stu_bd .avatar {
-  width: 78rpx;
-  height: 78rpx;
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  border: 6rpx solid #a6ccff;
+  box-shadow: 0 3rpx 6rpx #28060633;
 }
 .container .stuScroll .stu_card .stu_bd .info {
   width: 100rpx;

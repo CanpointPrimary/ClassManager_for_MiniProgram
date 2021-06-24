@@ -39,6 +39,7 @@
                 <view>小组</view>
             </view>
         </view>
+        <!-- 学生列表 -->
         <view class="memList stu">
             <view class="mem_hd">学生{{stuList.length}}人</view>
             <scroll-view scroll-y class="stuScroll" style="height:{{tabTop-scrollTop}}px;">
@@ -47,7 +48,7 @@
                         <image class="avatar" src="{{item.avaSrc}}"></image>
                         <view class="info">
                             <view class="name">{{item.rName}}</view>
-                            <view class="relation">{{item.relation}}</view>
+                            <view class="relation">学生{{item.relation}}</view>
                         </view>
                     </view>
                     <view class="arrow">
