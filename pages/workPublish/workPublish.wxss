@@ -151,14 +151,15 @@
   padding-right: 20rpx;
 }
 .container .submit {
-  width: 245rpx;
-  height: 74rpx;
-  background: #97BBEF;
+  width: 272rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  background: #dce9fe;
+  box-shadow: 0 3rpx 6rpx #89b0f0;
   border-radius: 37rpx;
   text-align: center;
-  line-height: 74rpx;
-  font-size: 32rpx;
-  color: #1E50A2;
+  font-size: 28rpx;
+  color: #1e50a2;
   position: fixed;
   bottom: 60rpx;
   left: 50%;

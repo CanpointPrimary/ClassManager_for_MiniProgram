@@ -72,13 +72,14 @@
   color: #666666;
 }
 .container .addBtn {
-  border-radius: 36rpx;
-  width: 245rpx;
-  height: 72rpx;
-  background-color: #97bbef;
+  border-radius: 34rpx;
+  width: 272rpx;
+  height: 68rpx;
+  background: #dce9fe;
+  box-shadow: 0 3rpx 6rpx #89b0f0;
   color: #1e50a2;
   text-align: center;
-  line-height: 72rpx;
+  line-height: 68rpx;
   font-size: 28rpx;
   margin: 0 auto;
 }
