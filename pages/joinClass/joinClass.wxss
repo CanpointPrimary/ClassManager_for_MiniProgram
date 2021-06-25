@@ -89,13 +89,13 @@
   line-height: 54rpx;
 }
 .container .btn {
-  width: 245rpx;
-  height: 74rpx;
+  width: 272rpx;
+  height: 68rpx;
+  line-height: 68rpx;
   background-color: #2d9e64;
-  border-radius: 37rpx;
+  border-radius: 34rpx;
   font-size: 30rpx;
-  line-height: 74rpx;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   margin: 0 auto;
 }

@@ -32,6 +32,10 @@
         </mp-cell>
         <mp-cell icon="/static/userIcon/clean.svg" value="清理缓存" hover ext-class="cell"></mp-cell>
     </mp-cells>
+
+    <!-- 邀请弹窗 -->
     <invite-dialog isShow="{{showInviteDialog}}" wx:if="{{showInviteDialog}}"></invite-dialog>
-    <view class="fillBd"></view>
+    <view class="fillBd">
+        <view class="addBtn">加入班级</view>
+    </view>
 </view>

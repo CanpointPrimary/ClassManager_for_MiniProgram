@@ -8,6 +8,23 @@
 .container .fillBd {
   flex: 1;
   background-color: #fff;
+  position: relative;
+}
+.container .fillBd .addBtn {
+  width: 272rpx;
+  height: 68rpx;
+  position: absolute;
+  bottom: 200rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 36rpx;
+  background: #dce9fe;
+  box-shadow: 0 3rpx 6rpx #89b0f0;
+  color: #1e50a2;
+  text-align: center;
+  line-height: 68rpx;
+  font-size: 28rpx;
+  margin: 0 auto;
 }
 .container .cellsTop {
   border-radius: 20rpx 20rpx 0 0;

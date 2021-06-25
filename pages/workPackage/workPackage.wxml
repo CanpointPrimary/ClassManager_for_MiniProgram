@@ -32,7 +32,7 @@
                 截止时间：{{workPackageInfo.endTime}}
             </view>
         </view>
-        <view class="btn">学生作答情况</view>
+        <view class="btn" bindtap="openWorkStatus">学生作答情况</view>
     </view>
     <view class="body">
         <view class="workIntro">
