@@ -85,6 +85,4 @@ describe('登录注册界面测试', () => {
     const array = await page.data('array')
     expect(await inputs[1].value()).toBe(array[2].subject);
   });
-  // 页面跳转
-  //  点击确认是否跳转到用户首页
 })
