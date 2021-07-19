@@ -1,0 +1,19 @@
+/* components/button/button.wxss */
+.btn {
+    width: 272rpx;
+    height: 68rpx;
+    font-size: 28rpx;
+    color: #1e50a2;
+    text-align: center;
+    border-radius: 100rpx;
+}
+
+.fill {
+    background: #dce9fe;
+    box-shadow: 0 3rpx 6rpx #89b0f0;
+}
+
+.outline {
+    background: #FFFFFF;
+    border: 1rpx solid #1E50A2;
+}
