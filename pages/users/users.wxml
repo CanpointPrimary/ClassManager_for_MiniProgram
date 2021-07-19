@@ -36,6 +36,6 @@
     <!-- 邀请弹窗 -->
     <invite-dialog isShow="{{showInviteDialog}}" wx:if="{{showInviteDialog}}"></invite-dialog>
     <view class="fillBd">
-        <view class="addBtn">加入班级</view>
+        <view class="addBtn" bindtap="toJoinClass">加入班级</view>
     </view>
 </view>
