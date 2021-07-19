@@ -7,7 +7,11 @@ Page({
     data: {
 
     },
-
+    editGroup() {
+        wx.navigateTo({
+            url: '../editGroup/editGroup',
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
