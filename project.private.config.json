@@ -119,6 +119,12 @@
                     "pathName": "pages/group/groups",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/group/addGroup/addGroup",
+                    "pathName": "pages/group/addGroup/addGroup",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

@@ -19,7 +19,9 @@
     "pages/workPackage/workPackage",
     "pages/workStatus/workStatus",
     "pages/subStatus/subStatus",
-    "pages/group/groups"
+    "pages/group/groups",
+    "pages/group/addGroup/addGroup",
+    "pages/group/editGroup/editGroup"
   ],
   "window": {
     "backgroundTextStyle": "light",

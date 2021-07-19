@@ -6,5 +6,5 @@
     <d-cell bindtap="navToAdvice">
         <view class="value">蜗牛组</view>
     </d-cell>
-    <d-button type='fill'>新建分组</d-button>
+    <d-button type='fill' bindtap="addGroup">新建分组</d-button>
 </view>

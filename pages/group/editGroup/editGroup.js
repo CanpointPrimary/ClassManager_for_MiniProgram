@@ -1,4 +1,4 @@
-// pages/group/groups.js
+// pages/group/editGroup/editGroup.js
 Page({
 
     /**
@@ -7,11 +7,7 @@ Page({
     data: {
 
     },
-    addGroup() {
-        wx.navigateTo({
-            url: './addGroup/addGroup',
-        })
-    },
+
     /**
      * 生命周期函数--监听页面加载
      */
