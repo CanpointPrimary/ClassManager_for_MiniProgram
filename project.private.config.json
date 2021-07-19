@@ -113,6 +113,12 @@
                     "pathName": "pages/subStatus/subStatus",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/group/groups",
+                    "pathName": "pages/group/groups",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

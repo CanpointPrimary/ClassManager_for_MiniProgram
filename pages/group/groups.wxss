@@ -1,0 +1,4 @@
+/* pages/group/groups.wxss */
+.container {
+    padding: 0 30rpx;
+}

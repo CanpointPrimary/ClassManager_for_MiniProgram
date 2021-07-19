@@ -1,0 +1,9 @@
+<!--pages/group/groups.wxml-->
+<view class="container">
+    <d-cell bindtap="navToBug">
+        <view class="value">火箭组</view>
+    </d-cell>
+    <d-cell bindtap="navToAdvice">
+        <view class="value">蜗牛组</view>
+    </d-cell>
+</view>

@@ -18,7 +18,8 @@
     "pages/workPublish/workPublish",
     "pages/workPackage/workPackage",
     "pages/workStatus/workStatus",
-    "pages/subStatus/subStatus"
+    "pages/subStatus/subStatus",
+    "pages/group/groups"
   ],
   "window": {
     "backgroundTextStyle": "light",
