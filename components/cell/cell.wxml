@@ -1,5 +1,5 @@
 <!--components/cell/cell.wxml-->
 <view class="cell">
     <slot></slot>
-    <mp-icon icon="arrow" size="16" color="#999"></mp-icon>
+    <mp-icon wx:if="{{icon}}" icon="{{icon}}" size="16" color="{{color ? color : '#999'}}"></mp-icon>
 </view>

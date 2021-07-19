@@ -125,6 +125,12 @@
                     "pathName": "pages/group/addGroup/addGroup",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/group/editGroup/editGroup",
+                    "pathName": "pages/group/editGroup/editGroup",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }
