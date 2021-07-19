@@ -4,7 +4,9 @@
     height: 68rpx;
     font-size: 28rpx;
     color: #1e50a2;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 100rpx;
 }
 

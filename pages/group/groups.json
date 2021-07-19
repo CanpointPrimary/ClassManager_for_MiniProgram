@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "d-cell": "/components/cell/cell"
+    "d-cell": "/components/cell/cell",
+    "d-button": "/components/button/button"
   },
   "navigationBarTitleText": "班级小组"
 }
