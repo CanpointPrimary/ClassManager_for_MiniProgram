@@ -1,1 +1,57 @@
 /* pages/group/editGroup/editGroup.wxss */
+.container {
+    padding: 0 30rpx;
+    height: 100%;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cell--cell {
+    margin-bottom: 53rpx;
+}
+
+input {
+    flex: 1;
+}
+
+.avatar {
+    width: 72rpx;
+    height: 72rpx;
+    margin-bottom: 15rpx;
+}
+
+.members {
+    display: flex;
+}
+
+.member {
+    box-sizing: border-box;
+    width: 93rpx;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30rpx;
+}
+
+.rname {
+    font-size: 24rpx;
+    color: #666;
+    line-height: 24rpx;
+}
+
+.member .weui-icon {
+    position: absolute;
+    right: -14rpx;
+    top: -14rpx;
+}
+
+.addMember {
+    width: 75rpx;
+    height: 75rpx;
+}

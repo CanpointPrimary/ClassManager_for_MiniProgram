@@ -1,9 +1,9 @@
 <!--pages/group/groups.wxml-->
 <view class="container">
-    <d-cell bindtap="navToBug">
+    <d-cell bindtap="navToBug" icon="arrow">
         <view class="value">火箭组</view>
     </d-cell>
-    <d-cell bindtap="navToAdvice">
+    <d-cell bindtap="navToAdvice" icon='arrow'>
         <view class="value">蜗牛组</view>
     </d-cell>
     <d-button type='fill' bindtap="addGroup">新建分组</d-button>
