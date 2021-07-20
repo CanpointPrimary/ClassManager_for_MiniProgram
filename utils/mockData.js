@@ -387,7 +387,69 @@ let subStatusList = {
     }
   ]
 }
+let groupMembers = [{
+  id: 0,
+  avatar: '/static/avatar2.png',
+  uname: '哥哥'
+}, {
+  id: 1,
+  avatar: '/static/avatar2.png',
+  uname: '哥哥'
+}, {
+  id: 2,
+  avatar: '/static/avatar2.png',
+  uname: '哥哥'
+}, {
+  id: 3,
+  avatar: '/static/avatar2.png',
+  uname: '哥哥'
+}, {
+  id: 4,
+  avatar: '/static/avatar2.png',
+  uname: '哥哥'
+}, {
+  id: 5,
+  avatar: '/static/avatar2.png',
+  uname: '哥哥'
+}, {
+  id: 6,
+  avatar: '/static/avatar2.png',
+  uname: '哥哥'
+}, {
+  id: 7,
+  avatar: '/static/avatar2.png',
+  uname: '哥哥'
+}, {
+  id: 8,
+  avatar: '/static/avatar2.png',
+  uname: '哥哥'
+}, {
+  id: 9,
+  avatar: '/static/avatar2.png',
+  uname: '哥哥'
+}, {
+  id: 10,
+  avatar: '/static/avatar2.png',
+  uname: '哥哥'
+}, {
+  id: 11,
+  avatar: '/static/avatar2.png',
+  uname: '哥哥'
+}, {
+  id: 12,
+  avatar: '/static/avatar2.png',
+  uname: '哥哥'
+}, {
+  id: 13,
+  avatar: '/static/avatar2.png',
+  uname: '哥哥'
+}, {
+  id: 14,
+  avatar: '/static/avatar2.png',
+  uname: '哥哥'
+}, ]
 module.exports = {
   answers,
-  subStatusList
+  subStatusList,
+  groupMembers
 }

@@ -9,9 +9,9 @@
     <view class="members">
         <view class="member">
             <mp-icon icon='close' size='14' color='#1e50a2'></mp-icon>
-            <image src="/static/avatar2.svg" class="avatar"></image>
+            <image src="/static/avatar2.png" class="avatar"></image>
             <view class="rname">张三</view>
         </view>
-        <image src="/static/groupIcon/add.svg" class="addMember"></image>
+        <image src="/static/groupIcon/add.svg" class="addMember" bindtap="toAddMember"></image>
     </view>
 </view>

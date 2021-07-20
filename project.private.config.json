@@ -131,6 +131,12 @@
                     "pathName": "pages/group/editGroup/editGroup",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/group/editGroup/addMember",
+                    "pathName": "pages/group/editGroup/addMember",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

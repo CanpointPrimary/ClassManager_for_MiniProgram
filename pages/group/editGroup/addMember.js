@@ -1,22 +1,44 @@
-// pages/group/editGroup/editGroup.js
+// pages/group/editGroup/addMember.js
+const {
+    groupMembers
+} = require('../../../utils/mockData')
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        title: '火箭组'
+        result: [],
+        selectAll: false
     },
-    toAddMember() {
-        wx.navigateTo({
-            url: './addMember',
+    onChange(e) {
+        this.setData({
+            result: e.detail,
+            selectAll: e.detail.length < groupMembers.length ? false : true
+        });
+
+    },
+    getMembersId(arr) {
+        this.allMember = []
+        for (let i = 0; i < arr.length; i++) {
+            this.allMember.push(arr[i].id.toString())
+        }
+    },
+    onSelectAll(e) {
+        this.getMembersId(groupMembers)
+        this.setData({
+            selectAll: e.detail,
+            result: e.detail ? this.allMember : []
         })
     },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.allMember = []
+        this.setData({
+            groupMembers: groupMembers
+        })
     },
 
     /**
