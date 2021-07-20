@@ -10,7 +10,7 @@
                 <text class="selectNum">{{result.length}}</text>
                 <text>/{{groupMembers.length}}</text>
             </text>
-            <view class="btn">确定</view>
+            <view class="btn" bindtap="confireGroup">确定</view>
         </view>
     </view>
     <van-checkbox-group value="{{result}}" bind:change="onChange">

@@ -7,11 +7,13 @@
         </view>
     </d-cell>
     <view class="members">
-        <view class="member">
+        <view class="member" wx:for="{{groupMembers}}">
             <mp-icon icon='close' size='14' color='#1e50a2'></mp-icon>
-            <image src="/static/avatar2.png" class="avatar"></image>
-            <view class="rname">张三</view>
+            <image src="{{item.avatar}}" class="avatar"></image>
+            <view class="rname">{{item.uname}}</view>
         </view>
         <image src="/static/groupIcon/add.svg" class="addMember" bindtap="toAddMember"></image>
     </view>
+    <d-button type='fill' bindtap="saveChange">保存修改</d-button>
+    <d-button type='outline'>删除分组</d-button>
 </view>

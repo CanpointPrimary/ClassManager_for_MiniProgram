@@ -1,4 +1,7 @@
 // pages/group/editGroup/editGroup.js
+const {
+    groupMembers
+} = require('../../../utils/mockData')
 Page({
 
     /**
@@ -16,9 +19,13 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.setData({
+            groupMembers
+        })
     },
-
+    saveChange() {
+        wx.navigateBack()
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

@@ -34,7 +34,7 @@
                 <image src="/static/icon/search.svg" class="icon_search"></image>
                 <input type="search" class="input" placeholder="查找学生" placeholder-class="placeholder"></input>
             </view>
-            <view class="group">
+            <view class="group" bindtap="openGroup">
                 <image src="/static/icon/group.svg" class="icon_group"></image>
                 <view>小组</view>
             </view>
