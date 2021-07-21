@@ -1,10 +1,7 @@
 <!--pages/group/groups.wxml-->
 <view class="container">
-    <d-cell icon="arrow">
-        <view class="value">火箭组</view>
-    </d-cell>
-    <d-cell icon='arrow'>
-        <view class="value">蜗牛组</view>
+    <d-cell icon="arrow" bindtap="editGroup" wx:for="{{groupList}}" data-id="{{item.id}}">
+        <view class="value">{{item.gname}}</view>
     </d-cell>
     <d-button type='fill' bindtap="addGroup">新建分组</d-button>
 </view>

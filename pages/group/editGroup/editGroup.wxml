@@ -2,12 +2,12 @@
 <view class="container">
     <d-cell>
         <view class="title">
-            <input type="text" value="{{title}}"></input>
+            <input type="text" value="{{groupInfo.gname}}"></input>
             <mp-icon icon='close' color='#1e50a2' size='18' bindtap="clear"></mp-icon>
         </view>
     </d-cell>
     <view class="members">
-        <view class="member" wx:for="{{groupMembers}}">
+        <view class="member" wx:for="{{groupInfo.member}}">
             <mp-icon icon='close' size='14' color='#1e50a2'></mp-icon>
             <image src="{{item.avatar}}" class="avatar"></image>
             <view class="rname">{{item.uname}}</view>

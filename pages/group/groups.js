@@ -1,4 +1,7 @@
 // pages/group/groups.js
+const {
+    groupList
+} = require('../../utils/mockData')
 Page({
 
     /**
@@ -12,11 +15,24 @@ Page({
             url: './addGroup/addGroup',
         })
     },
+    editGroup(e) {
+        let id = e.currentTarget.dataset.id
+
+        wx.navigateTo({
+            url: './editGroup/editGroup',
+            success: function (res) {
+                // 通过eventChannel向被打开页面传送数据
+                res.eventChannel.emit('groupInfo', groupList[id])
+            }
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.setData({
+            groupList
+        })
     },
 
     /**

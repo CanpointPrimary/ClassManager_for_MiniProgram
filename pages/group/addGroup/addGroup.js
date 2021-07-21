@@ -9,7 +9,7 @@ Page({
     },
     editGroup() {
         wx.navigateTo({
-            url: '../editGroup/editGroup',
+            url: '../editGroup/addMember',
         })
     },
     /**

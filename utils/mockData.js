@@ -447,9 +447,75 @@ let groupMembers = [{
   id: 14,
   avatar: '/static/avatar2.png',
   uname: '哥哥'
-}, ]
+}]
+let groupList = [{
+  id: 0,
+  gname: '火箭组',
+  member: [{
+    id: 0,
+    avatar: '/static/avatar2.png',
+    uname: '哥哥'
+  }, {
+    id: 1,
+    avatar: '/static/avatar2.png',
+    uname: '哥哥'
+  }, {
+    id: 2,
+    avatar: '/static/avatar2.png',
+    uname: '哥哥'
+  }, {
+    id: 3,
+    avatar: '/static/avatar2.png',
+    uname: '哥哥'
+  }, {
+    id: 4,
+    avatar: '/static/avatar2.png',
+    uname: '哥哥'
+  }, {
+    id: 5,
+    avatar: '/static/avatar2.png',
+    uname: '哥哥'
+  }, {
+    id: 6,
+    avatar: '/static/avatar2.png',
+    uname: '哥哥'
+  }]
+}, {
+  id: 1,
+  gname: '蜗牛组',
+  member: [{
+    id: 0,
+    avatar: '/static/avatar2.png',
+    uname: '哥哥'
+  }, {
+    id: 1,
+    avatar: '/static/avatar2.png',
+    uname: '哥哥'
+  }, {
+    id: 2,
+    avatar: '/static/avatar2.png',
+    uname: '哥哥'
+  }, {
+    id: 3,
+    avatar: '/static/avatar2.png',
+    uname: '哥哥'
+  }, {
+    id: 4,
+    avatar: '/static/avatar2.png',
+    uname: '哥哥'
+  }, {
+    id: 5,
+    avatar: '/static/avatar2.png',
+    uname: '哥哥'
+  }, {
+    id: 6,
+    avatar: '/static/avatar2.png',
+    uname: '哥哥'
+  }]
+}]
 module.exports = {
   answers,
   subStatusList,
-  groupMembers
+  groupMembers,
+  groupList
 }
