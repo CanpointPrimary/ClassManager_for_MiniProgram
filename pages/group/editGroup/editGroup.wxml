@@ -2,7 +2,7 @@
 <view class="container">
     <d-cell>
         <view class="title">
-            <input type="text" value="{{groupInfo.gname}}"></input>
+            <input type="text" value="{{groupInfo.gname}}" bindinput="setGroupName"></input>
             <mp-icon icon='close' color='#1e50a2' size='18' bindtap="clear"></mp-icon>
         </view>
     </d-cell>

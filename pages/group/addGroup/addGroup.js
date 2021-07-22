@@ -7,6 +7,9 @@ Page({
     data: {
 
     },
+    setGroupName(e) {
+        this.gname = e.detail.value
+    },
     editGroup() {
         wx.navigateTo({
             url: '../editGroup/addMember',

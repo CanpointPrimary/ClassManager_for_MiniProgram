@@ -10,6 +10,9 @@ Page({
     data: {
         title: '火箭组'
     },
+    setGroupName(e) {
+        this.gname = e.detail.value
+    },
     toAddMember() {
         wx.navigateTo({
             url: './addMember',

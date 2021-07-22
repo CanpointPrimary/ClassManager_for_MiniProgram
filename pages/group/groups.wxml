@@ -1,7 +1,17 @@
 <!--pages/group/groups.wxml-->
 <view class="container">
-    <d-cell icon="arrow" bindtap="editGroup" wx:for="{{groupList}}" data-id="{{item.id}}">
-        <view class="value">{{item.gname}}</view>
-    </d-cell>
+    <view class="cell" wx:if="{{isHeadTeacher}}">
+        <d-cell icon="arrow" bindtap="editGroup" wx:for="{{groupList}}" data-id="{{item.id}}">
+            <view class="value">{{item.gname}}</view>
+        </d-cell>
+    </view>
+    <van-collapse wx:else value="{{ activeNames }}" bind:change="onChange">
+        <van-collapse-item title="{{item.gname}}" wx:for="{{groupList}}" content-class='context' name="{{index}}">
+            <view class="member" wx:for="{{item.member}}">
+                <image src="{{item.avatar}}" class="avatar"></image>
+                <view class="rname">{{item.uname}}</view>
+            </view>
+        </van-collapse-item>
+    </van-collapse>
     <d-button type='fill' bindtap="addGroup">新建分组</d-button>
 </view>

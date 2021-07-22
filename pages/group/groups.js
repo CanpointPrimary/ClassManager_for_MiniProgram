@@ -15,9 +15,13 @@ Page({
             url: './addGroup/addGroup',
         })
     },
+    onChange(event) {
+        this.setData({
+            activeNames: event.detail,
+        });
+    },
     editGroup(e) {
         let id = e.currentTarget.dataset.id
-
         wx.navigateTo({
             url: './editGroup/editGroup',
             success: function (res) {
@@ -30,8 +34,12 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        let {
+            isHeadTeacher
+        } = wx.getStorageSync('currentUser')
         this.setData({
-            groupList
+            groupList,
+            isHeadTeacher
         })
     },
 

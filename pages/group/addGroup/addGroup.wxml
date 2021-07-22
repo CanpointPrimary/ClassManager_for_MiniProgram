@@ -1,6 +1,11 @@
 <!--pages/group/addGroup/addGroup.wxml-->
 <view class="container">
-    <view class="title">小组名称</view>
+    <d-cell>
+        <view class="title">
+            <input type="text" placeholder="请输入小组名字" bindinput="setGroupName"></input>
+            <mp-icon icon='close' color='#1e50a2' size='18' bindtap="clear"></mp-icon>
+        </view>
+    </d-cell>
     <image src="/static/groupIcon/add.svg" class="addBtn" bindtap="editGroup"></image>
     <d-button type='fill'>发布</d-button>
 </view>
