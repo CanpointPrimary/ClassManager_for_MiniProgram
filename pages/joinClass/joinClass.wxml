@@ -7,28 +7,55 @@
         <view class="{{invited ? 'underline_invited' : 'underline'}}" style="left:{{current === 0?  103: 478}}rpx">
         </view>
     </view>
+
+    <!-- 表单区域 -->
     <view class="form">
+
         <view class="form_item">
-            <view class="form_title"><text>您的姓名</text></view><input type="text" placeholder="请输入姓名"></input>
+            <view class="form_title"><text>您的姓名</text></view>
+            <view class="value">
+                <input type="text" placeholder="请输入姓名"></input>
+                <mp-icon icon='arrow' size='13'></mp-icon>
+            </view>
         </view>
-        <view class="form_item" wx:if="{{!current}}">
+
+        <view class="form_item">
             <view class="form_title"><text>任教科目</text></view>
-            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="subject">
-                <input type="text" placeholder="请选择任教科目" value="{{array[index].subject}}" disabled></input>
-            </picker>
+            <view class="value">
+                <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="subject">
+                    <input type="text" placeholder="请选择任教科目" value="{{array[index].subject}}" disabled></input>
+                </picker>
+            </view>
         </view>
+    </view>
+
+    <view class="form">
         <view class="form_item phoneNumber">
             <view class="form_title"><text>电话号码</text></view>
-            <input type="text" placeholder="请输入号码"></input>
-            <view class="getNumber">获取本机号码</view>
+            <view class="value">
+                <input type="text" placeholder="请输入号码"></input>
+                <view class="getNumber">获取本机号码</view>
+            </view>
         </view>
+        <view class="form_item">
+            <view class="form_title"><text>验证码</text></view>
+            <view class="value">
+                <input type="text" placeholder="4位验证码"></input>
+                <view class="{{invited?'getCode_invited':'getCode'}}">获取验证码</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="form">
         <view class="form_item">
             <view class="form_title">
                 <text>班级码</text>
             </view>
-            <input type="text" placeholder="请输入班级码"></input>
+            <view class="value">
+                <input type="text" placeholder="请输入班级码"></input>
+                <view class="how">如何获取班级码？</view>
+            </view>
         </view>
-        <view class="how">如何获取班级码？</view>
     </view>
     <view class="{{invited ? 'btn_invited':'btn'}}">加入班级</view>
 </view>

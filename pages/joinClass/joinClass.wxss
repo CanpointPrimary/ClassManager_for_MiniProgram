@@ -56,14 +56,7 @@
   padding: 0 50rpx;
   box-sizing: border-box;
   padding-bottom: 40rpx;
-  margin-bottom: 154rpx;
-}
-.container .form .how {
-  height: 28rpx;
-  font-size: 22rpx;
-  color: #1e50a2;
-  padding-top: 12rpx;
-  text-align: right;
+  margin-bottom: 30rpx;
 }
 .container .form .phoneNumber {
   position: relative;
@@ -77,13 +70,46 @@
 }
 .container .form .form_item {
   height: 54rpx;
-  border-bottom: solid 1rpx #eeecec;
   padding-top: 40rpx;
   display: flex;
   align-items: center;
 }
+.container .form .form_item .value {
+  border-bottom: solid 1rpx #eeecec;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52rpx;
+}
+.container .form .form_item .value .how {
+  font-size: 22rpx;
+  color: #1e50a2;
+}
+.container .form .form_item .value .getCode {
+  width: 125rpx;
+  height: 45rpx;
+  font-size: 20rpx;
+  color: #fff;
+  background: #F5B1AA;
+  box-shadow: 0 0 4rpx rgba(0, 0, 0, 0.25);
+  border-radius: 8rpx;
+  text-align: center;
+  line-height: 45rpx;
+}
+.container .form .form_item .value .getCode_invited {
+  width: 125rpx;
+  height: 45rpx;
+  font-size: 20rpx;
+  color: #fff;
+  background: #2d9e64;
+  box-shadow: 0 0 4rpx rgba(0, 0, 0, 0.25);
+  border-radius: 8rpx;
+  text-align: center;
+  line-height: 45rpx;
+}
 .container .form .form_item input {
-  width: 300rpx;
+  width: 280rpx;
   font-size: 26rpx;
 }
 .container .form .form_item .form_title {
