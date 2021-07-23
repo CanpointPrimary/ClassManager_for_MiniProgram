@@ -1,10 +1,11 @@
 <!--pages/joinClass/joinClass.wxml-->
-<view class="container">
+<view class="container" style="  background: url('{{joinBgUrl}}') bottom center no-repeat;">
     <view class="inviter">巫老师邀请您加入1年级2班（慧点小学）</view>
     <view class="tabbar">
         <view class="tab_item {{current === 0? 'tab_active' : ''}}" bindtap="changetab" data-index='{{0}}'>我是老师</view>
         <view class="tab_item {{current === 1? 'tab_active' : ''}}" bindtap="changetab" data-index='{{1}}'>我是学生</view>
-        <view class="underline" style="left:{{current === 0?  103: 478}}rpx"></view>
+        <view class="{{invited ? 'underline_invited' : 'underline'}}" style="left:{{current === 0?  103: 478}}rpx">
+        </view>
     </view>
     <view class="form">
         <view class="form_item">
@@ -29,5 +30,5 @@
         </view>
         <view class="how">如何获取班级码？</view>
     </view>
-    <view class="btn">加入班级</view>
+    <view class="{{invited ? 'btn_invited':'btn'}}">加入班级</view>
 </view>
