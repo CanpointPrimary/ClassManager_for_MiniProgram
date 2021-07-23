@@ -82,6 +82,9 @@
   justify-content: space-between;
   height: 52rpx;
 }
+.container .form .form_item .value picker {
+  flex: 1;
+}
 .container .form .form_item .value .how {
   font-size: 22rpx;
   color: #1e50a2;
