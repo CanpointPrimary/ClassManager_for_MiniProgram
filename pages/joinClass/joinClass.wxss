@@ -67,6 +67,13 @@
   line-height: 45rpx;
   font-size: 22rpx;
   color: #1e50a2;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+.container .form .phoneNumber .getNumber::after {
+  border: none;
 }
 .container .form .form_item {
   height: 54rpx;
@@ -99,6 +106,9 @@
   border-radius: 8rpx;
   text-align: center;
   line-height: 45rpx;
+}
+.container .form .form_item .value .disable {
+  opacity: 0.5;
 }
 .container .form .form_item .value .getCode_invited {
   width: 125rpx;

@@ -8,9 +8,11 @@ Page({
      * 页面的初始数据
      */
     data: {
+        getCodeDisable: false,
         index: -1,
         current: 0,
         realName: '',
+        getCodeValue: '获取验证码',
         array: [{
                 id: 0,
                 subject: "语文"
@@ -45,6 +47,32 @@ Page({
         this.setData({
             current: data.index
         })
+    },
+    getPhoneNumber(e) {
+        console.log(e);
+    },
+    getCode() {
+        let i = 60
+        if (!this.data.getCodeDisable) {
+            this.setData({
+                getCodeDisable: !this.data.getCodeDisable,
+                getCodeValue: i
+            })
+            let timer = setInterval(() => {
+                i--
+                this.setData({
+                    getCodeValue: i
+                })
+                if (i == 0) {
+                    clearInterval(timer)
+                    this.setData({
+                        getCodeValue: '获取验证码',
+                        getCodeDisable: !this.data.getCodeDisable
+                    })
+                }
+            }, 1000)
+        }
+
     },
     /**
      * 生命周期函数--监听页面加载
