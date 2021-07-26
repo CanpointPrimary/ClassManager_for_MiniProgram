@@ -15,7 +15,8 @@
     <view class="main">
 
         <!-- 身份卡片 -->
-        <id-card bind:handleTap="invite" bind:handleChange="changeId" showInvite="{{true}}" isTour="{{isTourist}}">
+        <id-card bind:handleTap="invite" bind:handleChange="changeId" showInvite="{{true}}" isTour="{{isTourist}}"
+            rname="{{currentUser.rname}}">
         </id-card>
 
         <!-- menu栏 -->

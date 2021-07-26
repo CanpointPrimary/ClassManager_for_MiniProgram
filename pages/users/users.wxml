@@ -9,7 +9,8 @@
 
     <!-- 身份卡片 -->
     <view class="card">
-        <id-card showInvite='{{false}}' isTour="{{isTourist}}"></id-card>
+        <id-card showInvite='{{false}}' isTour="{{isTourist}}" rname="{{currentUser.rname}}"
+            bind:handleChange="changeId"></id-card>
     </view>
 
     <!-- 添加到桌面蒙版 -->

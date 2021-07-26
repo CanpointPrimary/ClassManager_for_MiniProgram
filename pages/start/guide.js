@@ -37,7 +37,8 @@ Page({
     wx.setStorage({
       data: {
         identity: e.currentTarget.dataset.id,
-        isHeadTeacher: e.currentTarget.dataset.id == "teacher" ? true : false
+        isHeadTeacher: e.currentTarget.dataset.id == "teacher" ? true : false,
+        rname: e.currentTarget.dataset.id == "teacher" ? '游客老师' : '游客学生'
       },
       key: 'currentUser',
       success: () => {

@@ -5,7 +5,8 @@ Component({
      */
     properties: {
         showInvite: Boolean,
-        isTour: Boolean
+        isTour: Boolean,
+        rname: String
     },
 
     /**

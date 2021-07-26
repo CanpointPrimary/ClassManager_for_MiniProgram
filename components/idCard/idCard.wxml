@@ -3,7 +3,7 @@
     <view class="idInfo">
         <image class="id_avatar" mode="scaleToFill" src="/static/avatar.png"></image>
         <view class="id_info">
-            <view class="name">游客老师</view>
+            <view class="name">{{rname}}</view>
             <view class="classInfo">
                 <text class="className" wx:if="{{!isTour}}">体验班级</text>
                 <image class="switchIcon" mode="aspectFit" src="/static/icon/switch.svg" bindtap="checkout"></image>
