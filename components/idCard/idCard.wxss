@@ -49,3 +49,12 @@
   height: 38rpx;
   width: 174rpx;
 }
+.idCard .userInfo {
+  z-index: 2;
+  height: 38rpx;
+  background: #1e50a2;
+  color: #fff;
+  font-size: 22rpx;
+  padding: 0 20rpx;
+  border-radius: 19rpx;
+}

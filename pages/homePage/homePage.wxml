@@ -9,13 +9,13 @@
     <!-- 背景图片 -->
     <image class="bdSunsine" mode="scaleToFill" src="/static/sunsine.svg"></image>
 
-    <!-- 主体 -->
     <inviteDialog isShow="{{showInviteDialog}}" wx:if="{{showInviteDialog}}"></inviteDialog>
 
+    <!-- 主体 -->
     <view class="main">
 
         <!-- 身份卡片 -->
-        <id-card bind:handleTap="invite"></id-card>
+        <id-card bind:handleTap="invite" showInvite="{{true}}" isTour="{{isTourist}}"></id-card>
 
         <!-- menu栏 -->
         <view class="menu">

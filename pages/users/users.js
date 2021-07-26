@@ -6,7 +6,8 @@ Page({
    */
   data: {
     showInviteDialog: false,
-    isShowAdd: false
+    isShowAdd: false,
+    isTourist: true,
   },
   navToHelp() {
     wx.navigateTo({

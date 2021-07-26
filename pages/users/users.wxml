@@ -9,7 +9,7 @@
 
     <!-- 身份卡片 -->
     <view class="card">
-        <id-card></id-card>
+        <id-card showInvite='{{false}}' isTour="{{isTourist}}"></id-card>
     </view>
 
     <!-- 添加到桌面蒙版 -->
@@ -20,11 +20,14 @@
 
     <!-- 上部cell -->
     <mp-cells ext-class="cellsTop cells">
-        <mp-cell icon="/static/userIcon/addMembers.svg" ext-class="cell" value="邀请班级成员加入" link hover bindtap="invite">
+        <mp-cell wx:if="{{!isTourist}}" icon="/static/userIcon/addMembers.svg" ext-class="cell" value="邀请班级成员加入" link
+            hover bindtap="invite">
         </mp-cell>
         <mp-cell icon="/static/userIcon/add.svg" ext-class="cell" link hover bindtap="addToDesk">添加到桌面</mp-cell>
-        <mp-cell icon="/static/userIcon/subscribe.svg" ext-class="cell" link hover>班级信息订阅</mp-cell>
-        <mp-cell icon="/static/userIcon/laboratory.svg" ext-class="cell" link hover>慧点实验室</mp-cell>
+        <mp-cell wx:if="{{!isTourist}}" icon="/static/userIcon/subscribe.svg" ext-class="cell" link hover>班级信息订阅
+        </mp-cell>
+        <mp-cell wx:if="{{!isTourist}}" icon="/static/userIcon/laboratory.svg" ext-class="cell" link hover>慧点实验室
+        </mp-cell>
     </mp-cells>
 
     <mp-cells ext-class="cellsBot cells">
