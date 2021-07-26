@@ -26,7 +26,6 @@ Page({
     this.currentUser.identity = this.data.isTeacher ? 'student' : 'teacher'
     this.currentUser.rname = this.data.isTeacher ? '游客学生' : '游客老师'
     this.setData({
-      isTeacher: !this.data.isTeacher,
       currentUser: this.currentUser
     })
     wx.setStorageSync('currentUser', this.currentUser)
