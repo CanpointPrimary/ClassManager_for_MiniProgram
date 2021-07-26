@@ -23,10 +23,13 @@ Component({
             this.triggerEvent('handleTap')
         },
         checkout() {
-            console.log(1);
-            wx.navigateTo({
-                url: '/pages/classList/classList',
-            })
+            if (this.data.isTour) {
+                this.triggerEvent('handleChange')
+            } else {
+                wx.navigateTo({
+                    url: '/pages/classList/classList',
+                })
+            }
         }
     }
 })
