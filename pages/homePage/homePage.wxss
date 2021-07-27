@@ -4,6 +4,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 .container .bdSunsine {
   position: absolute;
@@ -48,42 +49,23 @@
   flex: 1;
   background-color: #fff;
   margin-top: 10rpx;
+  padding-bottom: 90rpx;
 }
 .container .toDo .tabTop {
   position: relative;
   padding-top: 18rpx;
-  display: flex;
-  justify-content: space-around;
-}
-.container .toDo .tabTop .underline {
-  height: 6rpx;
-  width: 20%;
-  border-radius: 6rpx;
-  background-color: #1e50a2;
-  position: absolute;
-  bottom: 0;
-  left: 15%;
-}
-.container .toDo .tabTop text {
-  text-align: center;
-  display: block;
-  font-size: 32rpx;
+  padding-left: 30rpx;
   font-weight: bold;
-  color: #999;
-  line-height: 62rpx;
-  width: 158rpx;
-  padding: 5rpx;
-}
-.container .toDo .tabTop .tab_active {
-  color: #000;
+  font-size: 32rpx;
+  color: #1d1d1d;
 }
 .container .toDo .addToDo {
   position: fixed;
-  bottom: 160rpx;
+  bottom: 200rpx;
   margin-bottom: env(safe-area-inset-bottom);
   right: 60rpx;
-  height: 100rpx;
-  width: 100rpx;
+  height: 70rpx;
+  width: 70rpx;
   color: #add8e6;
 }
 .container .toDo .noList {
@@ -91,6 +73,88 @@
   text-align: center;
   font-size: 26rpx;
   color: #999;
+}
+.container .toDo .to_do_date {
+  padding: 0 30rpx;
+}
+.container .toDo .to_do_date .timeLine {
+  font-size: 20rpx;
+  text-align: center;
+  color: #999;
+  margin-bottom: 20rpx;
+}
+.container .toDo .to_do_date .to_do_item {
+  background-color: #fffbef;
+  border-radius: 20rpx;
+  padding: 30rpx 15rpx;
+  display: flex;
+  margin-bottom: 30rpx;
+}
+.container .toDo .to_do_date .to_do_item .left {
+  width: 60rpx;
+}
+.container .toDo .to_do_date .to_do_item .left .avatar {
+  width: 58rpx;
+  height: 58rpx;
+}
+.container .toDo .to_do_date .to_do_item .right {
+  flex: 1;
+  padding-left: 15rpx;
+}
+.container .toDo .to_do_date .to_do_item .right .head {
+  height: 36rpx;
+  display: flex;
+  font-size: 26rpx;
+  align-items: center;
+  margin-bottom: 5rpx;
+}
+.container .toDo .to_do_date .to_do_item .right .head .pname {
+  font-weight: bolder;
+  margin-right: 20rpx;
+}
+.container .toDo .to_do_date .to_do_item .right .head .ptime {
+  font-size: 24rpx;
+  color: #666;
+  margin-right: 40rpx;
+}
+.container .toDo .to_do_date .to_do_item .right .head .tag {
+  background-color: #1e50a2;
+  height: 29rpx;
+  font-size: 20rpx;
+  color: #fff;
+  line-height: 29rpx;
+  padding: 0 18rpx;
+  border-radius: 15rpx;
+}
+.container .toDo .to_do_date .to_do_item .right .title {
+  font-size: 24rpx;
+  color: #666;
+  margin-bottom: 5rpx;
+}
+.container .toDo .to_do_date .to_do_item .right .value {
+  font-size: 24rpx;
+  color: #666;
+  margin-bottom: 5rpx;
+}
+.container .toDo .to_do_date .to_do_item .right .endTime {
+  font-size: 20rpx;
+  color: #666;
+}
+.container .toDo .to_do_date .to_do_item .right .endTime .desc {
+  color: #1e50a2;
+}
+.container .toDo .to_do_date .application {
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32rpx;
+}
+.container .toDo .to_do_date .application .status {
+  font-size: 26rpx;
+  color: #1e50a2;
 }
 .container .joinClass {
   padding-top: 30rpx;

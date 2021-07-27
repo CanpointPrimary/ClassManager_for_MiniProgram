@@ -30,16 +30,48 @@
         <!-- 待办 -->
         <view class="toDo" wx:if="{{hasClass}}">
             <view class="tabTop">
-                <text class="{{isToDo? 'tab_active' : ''}}" bindtap="changeTab" data-isToDo='{{true}}'>待办</text>
-                <text class="{{!isToDo? 'tab_active' : ''}}" bindtap="changeTab" data-isToDo='{{false}}'>已办</text>
-                <view class="underline" style="left:{{left}}"></view>
+                全部待办
             </view>
 
-            <view class="noList" wx:if="{{!todolist}}">
+            <view class="noList" wx:if="{{!toDoList.length}}">
                 暂无发布信息,快去发布吧
             </view>
+            <block wx:else>
+                <view wx:for="{{toDoList}}" wx:key='id' class="to_do_date">
+                    <view class="timeLine">{{item.pdate}}</view>
+                    <view class="to_do_item" wx:for="{{item.toDo}}" wx:key='id'>
+                        <block wx:if="{{item.type == 'work'}}">
+
+                            <view class="left">
+                                <image src="{{item.avatar}}" class="avatar"></image>
+                            </view>
+                            <view class="right">
+                                <view class="head">
+                                    <view class="pname">{{item.publisher}}</view>
+                                    <view class="ptime">{{item.ptime}}</view>
+                                    <view class="tag">作业</view>
+                                </view>
+                                <view class="title">{{item.title}}</view>
+                                <view class="value">{{item.value}}</view>
+                                <view class="endTime"><text class="desc">截止时间：</text><text>{{item.endTime}}</text>
+                                </view>
+                            </view>
+
+                        </block>
+                        <block wx:if="{{item.type == 'application'}}">
+                            <view class="application">
+                                <view class="title">
+                                    {{item.className}}
+                                </view>
+                                <view class="status">{{item.status}}</view>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+            </block>
             <image class="addToDo" mode="scaleToFill" src="/static/icon/add.svg"></image>
         </view>
+
         <!-- else -->
         <!-- 加入班级 -->
         <view wx:else class="joinClass">

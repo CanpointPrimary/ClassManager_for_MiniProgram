@@ -1,4 +1,7 @@
 // pages/homePage/homePage.js
+const {
+  toDoList
+} = require('../../utils/mockData')
 Page({
 
   /**
@@ -138,6 +141,7 @@ Page({
       }
     })
     this.setData({
+      toDoList,
       currentUser,
       isTeacher: currentUser.identity == 'teacher' ? true : false
     })
