@@ -192,6 +192,7 @@ Page({
 
     wx.getClipboardData({
       success: (option) => {
+        wx.hideToast()
         if (option.data.indexOf('班级口令') != -1) {
           wx.showToast({
             title: '检测到班级口令',
@@ -199,13 +200,13 @@ Page({
             duration: 2000
           })
           setTimeout(() => {
-            wx.navigateTo({
-              url: '/pages/joinClass/joinClass?invited=1'
-            })
             wx.setClipboardData({
-              data: '',
+              data: ' ',
               success() {
                 wx.hideToast()
+                wx.navigateTo({
+                  url: '/pages/joinClass/joinClass?invited=1'
+                })
               }
             })
           }, 2000)
