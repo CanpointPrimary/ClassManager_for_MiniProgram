@@ -127,18 +127,18 @@
   border-radius: 15rpx;
 }
 .container .toDo .to_do_date .to_do_item .right .title {
-  font-size: 24rpx;
+  font-size: 26rpx;
   color: #666;
   margin-bottom: 5rpx;
 }
 .container .toDo .to_do_date .to_do_item .right .value {
-  font-size: 24rpx;
+  font-size: 26rpx;
   color: #666;
   margin-bottom: 5rpx;
 }
 .container .toDo .to_do_date .to_do_item .right .endTime {
-  font-size: 20rpx;
-  color: #666;
+  font-size: 24rpx;
+  color: #999;
 }
 .container .toDo .to_do_date .to_do_item .right .endTime .desc {
   color: #1e50a2;
