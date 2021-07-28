@@ -19,12 +19,27 @@ Page({
         imageList: [],
         voiceLength: 0,
         voices: [],
-        showWave: true
+        showWave: true,
+        galleryShow: false,
+        currentGallery: 0
     },
     closeVoice() {
         this.setData({
             showVoice: false,
             showWave: true
+        })
+    },
+    showBigImage(e) {
+        console.log();
+        this.setData({
+            galleryShow: true,
+            currentGallery: e.currentTarget.dataset.index
+        })
+    },
+    deleteImage(e) {
+        this.data.imageList.splice(e.detail.index, 1)
+        this.setData({
+            imageList: this.data.imageList
         })
     },
     startRecord() {

@@ -12,7 +12,7 @@
             <view class="body">
 
                 <!-- 以后换成图片 -->
-                <view class="avatar"></view>
+                <image src="/static/classlist/class{{index%3}}.png" class="avatar"></image>
                 <view class="info">
                     <view class="title">{{item.className}}</view>
                     <view class="name">{{item.rName}}</view>
@@ -28,7 +28,7 @@
             <view class="body">
 
                 <!-- 以后换成图片 -->
-                <view class="avatar"></view>
+                <image src="/static/classlist/class{{index%3}}.png" class="avatar"></image>
                 <view class="info">
                     <view class="title">{{item.className}}</view>
                 </view>

@@ -47,21 +47,23 @@
   background-color: #edf6fd;
 }
 .container .classItem .body {
+  width: 330rpx;
   display: flex;
-  justify-content: start;
+  justify-content: space-around;
+  align-items: center;
 }
 .container .classItem .body .avatar {
-  width: 179rpx;
-  height: 118rpx;
-  background-color: #93b5cf;
+  width: 153rpx;
+  height: 99rpx;
   border-radius: 10rpx;
-  margin-right: 20rpx;
 }
 .container .classItem .body .info {
   display: flex;
   height: 118rpx;
+  box-sizing: border-box;
+  padding: 10rpx 0;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
 }
 .container .classItem .body .info .title {
   font-size: 32rpx;
