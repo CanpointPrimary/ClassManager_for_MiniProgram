@@ -67,6 +67,7 @@
 }
 .container .mask {
   position: absolute;
+  padding-top: 100rpx;
   height: 100%;
   width: 100%;
   top: 0;
