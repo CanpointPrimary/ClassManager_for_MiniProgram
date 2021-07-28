@@ -189,6 +189,30 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+
+    wx.getClipboardData({
+      success: (option) => {
+        if (option.data.indexOf('班级口令') != -1) {
+          wx.showToast({
+            title: '检测到班级口令',
+            icon: 'none',
+            duration: 2000
+          })
+          setTimeout(() => {
+            wx.navigateTo({
+              url: '/pages/joinClass/joinClass?invited=1'
+            })
+            wx.setClipboardData({
+              data: '',
+              success() {
+                wx.hideToast()
+              }
+            })
+          }, 2000)
+        }
+      },
+    })
+
     if (typeof this.getTabBar === 'function' &&
       this.getTabBar()) {
       this.getTabBar().setData({

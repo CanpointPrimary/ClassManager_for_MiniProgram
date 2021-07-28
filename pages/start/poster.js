@@ -15,6 +15,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
     let app = getApp()
     wx.request({
       url: app.globalData.baseUrl + 'api/start',
@@ -33,26 +34,13 @@ Page({
             })
           }
         })
-        setTimeout(() => {
-          wx.getStorage({
-            key: 'currentUser',
-            success: () => {
-              wx.switchTab({
-                url: '/pages/homePage/homePage',
-              })
-            },
-            fail: () => {
-              wx.reLaunch({
-                url: './guide',
-              })
-            }
-          })
-        }, 3000)
       },
       fail: () => {
         this.setData({
           postSrc: joinBg[2]
         })
+      },
+      complete: () => {
         setTimeout(() => {
           wx.getStorage({
             key: 'currentUser',
@@ -69,7 +57,6 @@ Page({
           })
         }, 3000)
       }
-
     })
 
   },
@@ -85,7 +72,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    wx.hideToast()
   },
 
   /**
