@@ -7,6 +7,13 @@ Page({
     data: {
         result: []
     },
+
+    // 确认发作业对象
+    confirm() {
+        wx.navigateBack()
+    },
+
+    // 监听选择框变化
     onChange(e) {
         this.setData({
             result: e.detail

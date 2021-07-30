@@ -29,6 +29,12 @@ Page({
             showWave: true
         })
     },
+    // 选择发送作业对象
+    chooseRecipient() {
+        wx.navigateTo({
+            url: './sendTo',
+        })
+    },
     showBigImage(e) {
         console.log();
         this.setData({

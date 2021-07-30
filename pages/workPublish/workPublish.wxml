@@ -2,8 +2,8 @@
 <view class="container">
     <view class="body">
         <view class="header">
-            <view class="recipient">{{recipient}}</view>
-            <mp-icon icon="arrow" size="14"></mp-icon>
+            <view class="recipient" bindtap="chooseRecipient">{{recipient}}</view>
+            <mp-icon icon="arrow" bindtap="chooseRecipient" size="14"></mp-icon>
         </view>
         <!-- 作业标题 -->
         <view class="title">
