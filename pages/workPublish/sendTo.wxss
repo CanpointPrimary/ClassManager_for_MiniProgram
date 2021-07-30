@@ -1,3 +1,36 @@
 .container {
   min-height: 100%;
+  padding: 0 30rpx;
+}
+.container .header {
+  height: 90rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.container .header .choose {
+  font-size: 24rpx;
+}
+.container .header .confirm {
+  width: 88rpx;
+  height: 52rpx;
+  background-color: #1e50a2;
+  color: #fff;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 52rpx;
+  margin-left: 20rpx;
+  font-size: 24rpx;
+}
+.container .target {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  margin-bottom: 30rpx;
+  box-sizing: border-box;
+  height: 110rpx;
+  border-radius: 20rpx;
+  background-color: #edf6fd;
+  filter: drop-shadow(0 3rpx 6rpx #00000029);
 }
