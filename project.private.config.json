@@ -137,6 +137,12 @@
                     "pathName": "pages/group/editGroup/addMember",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/workPublish/sendTo",
+                    "pathName": "pages/workPublish/sendTo",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

@@ -1,0 +1,12 @@
+<!--pages/workPublish/sendTo.wxml-->
+<view class="container">
+    <van-checkbox-group value="{{ result }}" bind:change="onChange">
+        <view class="header">
+            <view class="choose">
+                <view class="cent"><text>已选择 </text><text>1</text>/<text>4</text></view>
+            </view>
+            <view class="confirm">确认</view>
+        </view>
+        <van-checkbox name='a' checked-color="#1E50A2"></van-checkbox>
+    </van-checkbox-group>
+</view>
