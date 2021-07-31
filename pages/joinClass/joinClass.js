@@ -1,4 +1,7 @@
 // pages/joinClass/joinClass.js
+const {
+    joinBg
+} = require('../../utils/mockData')
 Page({
 
     /**
@@ -47,7 +50,17 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        let invited = false
+        let index = 0
+        if (invited) index = 1
+        this.setData({
+            joinBgUrl: joinBg[index],
+            invited
+        })
+        wx.setNavigationBarColor({
+            backgroundColor: index == 0 ? '#FDEDE9' : '#eaf5ef',
+            frontColor: '#000000'
+        })
     },
 
     /**

@@ -104,6 +104,11 @@ Page({
             current: data.index
         })
     },
+    openGroup() {
+        wx.navigateTo({
+            url: '../group/groups',
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */

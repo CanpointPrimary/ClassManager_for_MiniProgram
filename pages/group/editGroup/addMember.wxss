@@ -1,0 +1,52 @@
+/* pages/group/editGroup/addMember.wxss */
+.container {
+  min-height: 100%;
+  padding: 0 30rpx;
+}
+.van-checkbox__label {
+  height: 82rpx;
+  display: flex;
+  align-items: center;
+  color: #666;
+  font-size: 24rpx;
+}
+.van-checkbox__label .avatar {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 28rpx;
+}
+.header .selectAll {
+  font-size: 28rpx;
+}
+.header .haveSelect {
+  display: flex;
+  align-items: center;
+}
+.header .haveSelect .cent {
+  display: flex;
+  align-items: center;
+  margin-right: 20rpx;
+}
+.header .haveSelect .cent .selectNum {
+  color: #1e50a2;
+}
+.header .haveSelect .cent text {
+  color: #666;
+  font-size: 24rpx;
+}
+.header .haveSelect .btn {
+  width: 89rpx;
+  height: 43rpx;
+  background: #1e50a2;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 43rpx;
+}

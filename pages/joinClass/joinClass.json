@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "nav-bar": "/components/navigationBar/navigationBar"
+    "nav-bar": "/components/navigationBar/navigationBar",
+    "mp-icon": "weui-miniprogram/icon/icon"
   },
   "navigationBarTitleText": "完善信息",
   "navigationBarBackgroundColor": "#eaf5ef"

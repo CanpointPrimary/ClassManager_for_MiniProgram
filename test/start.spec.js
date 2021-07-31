@@ -47,7 +47,7 @@ describe('打开小程序流程测试', () => {
       // 第三页的身份选择按键是否渲染
       // 点击按键之后是否正确跳转，本地是否缓存对应数据
     } else {
-      expect(await miniProgram.currentPage().url).toBe('/pages/homePage/homePage');
+      expect(await miniProgram.currentPage().path).toBe('pages/homePage/homePage');
     }
   });
 

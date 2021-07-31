@@ -36,7 +36,8 @@ Page({
   selectId(e) {
     wx.setStorage({
       data: {
-        identity: e.target.dataset.id
+        identity: e.currentTarget.dataset.id,
+        isHeadTeacher: e.currentTarget.dataset.id == "teacher" ? true : false
       },
       key: 'currentUser',
       success: () => {

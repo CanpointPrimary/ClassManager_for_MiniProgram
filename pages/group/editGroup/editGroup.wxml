@@ -1,0 +1,19 @@
+<!--pages/group/editGroup/editGroup.wxml-->
+<view class="container">
+    <d-cell>
+        <view class="title">
+            <input type="text" value="{{groupInfo.gname}}" bindinput="setGroupName"></input>
+            <mp-icon icon='close' color='#1e50a2' size='18' bindtap="clear"></mp-icon>
+        </view>
+    </d-cell>
+    <view class="members">
+        <view class="member" wx:for="{{groupInfo.member}}">
+            <mp-icon icon='close' size='14' color='#1e50a2'></mp-icon>
+            <image src="{{item.avatar}}" class="avatar"></image>
+            <view class="rname">{{item.uname}}</view>
+        </view>
+        <image src="/static/groupIcon/add.svg" class="addMember" bindtap="toAddMember"></image>
+    </view>
+    <d-button type='fill' bindtap="saveChange">保存修改</d-button>
+    <d-button type='outline'>删除分组</d-button>
+</view>

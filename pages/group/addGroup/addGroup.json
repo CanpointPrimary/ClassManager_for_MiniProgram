@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "d-button": "/components/button/button"
+  },
+  "navigationBarTitleText": "新建小组"
+}

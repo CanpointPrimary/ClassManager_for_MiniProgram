@@ -13,6 +13,11 @@ Page({
       url: '/pages/help/help',
     })
   },
+  toJoinClass() {
+    wx.navigateTo({
+      url: '../joinClass/joinClass',
+    })
+  },
   addToDesk() {
     this.setData({
       isShowAdd: true

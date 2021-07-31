@@ -1,0 +1,4 @@
+<!--components/button/button.wxml-->
+<view class="btn {{type}}">
+    <slot></slot>
+</view>

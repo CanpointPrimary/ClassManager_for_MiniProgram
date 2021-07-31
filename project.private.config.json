@@ -113,6 +113,30 @@
                     "pathName": "pages/subStatus/subStatus",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/group/groups",
+                    "pathName": "pages/group/groups",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/group/addGroup/addGroup",
+                    "pathName": "pages/group/addGroup/addGroup",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/group/editGroup/editGroup",
+                    "pathName": "pages/group/editGroup/editGroup",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/group/editGroup/addMember",
+                    "pathName": "pages/group/editGroup/addMember",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

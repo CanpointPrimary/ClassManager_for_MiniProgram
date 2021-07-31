@@ -1,0 +1,22 @@
+<!--pages/group/editGroup/addMember.wxml-->
+<view class="container">
+    <view class="header">
+        <van-checkbox label-class="selectAll" icon-size="28rpx" value="{{selectAll}}" bind:change="onSelectAll">
+            <text>全选</text>
+        </van-checkbox>
+        <view class="haveSelect">
+            <text>已选择</text>
+            <text class="cent">
+                <text class="selectNum">{{result.length}}</text>
+                <text>/{{groupMembers.length}}</text>
+            </text>
+            <view class="btn" bindtap="confireGroup">确定</view>
+        </view>
+    </view>
+    <van-checkbox-group value="{{result}}" bind:change="onChange">
+        <van-checkbox icon-size="28rpx" name="{{item.id}}" wx:for="{{groupMembers}}">
+            <image src="{{item.avatar}}" class="avatar"></image>
+            <text>{{item.uname}}</text>
+        </van-checkbox>
+    </van-checkbox-group>
+</view>

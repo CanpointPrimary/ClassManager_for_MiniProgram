@@ -1,11 +1,10 @@
-// components/cell/cell.js
+// components/button/button.js
 Component({
     /**
      * 组件的属性列表
      */
     properties: {
-        icon: String,
-        color: String
+        type: String
     },
 
     /**
