@@ -8,7 +8,7 @@
             <view class="confirm" bindtap="confirm">确认</view>
 
         </view>
-        <view wx:for="{{4}}" class="selectItem">
+        <view wx:for="{{4}}" wx:key='id' class="selectItem">
             <view class="target" catchtap="select" data-index="{{index}}">
                 <view class="className">1年级{{index+1}}班</view>
                 <van-checkbox name='{{index}}' checked-color="#1E50A2" icon-size='32rpx' class="checkbox_{{index}}">
@@ -16,11 +16,32 @@
             </view>
             <view class="range">
                 <view class="desc">发布范围</view>
-                <view class="selectGroup" catchtap="chooseRange">
+                <view class="selectGroup" catchtap="showChooseRange">
                     火箭组，乌龟组
                 </view>
             </view>
         </view>
-
     </van-checkbox-group>
+
+    <!-- 选择范围弹出层 -->
+    <van-popup show="{{rangeShow}}" position='bottom' round safe-area-inset-bottom bind:click-overlay='closePup'>
+        <van-checkbox-group value="{{ selectGroups }}" bind:change="chooseRange">
+            <view class="body">
+                <d-cell wx:for="{{4}}" wx:key='id' catchtap="handleChoose" data-index="{{index}}">
+                    火箭组
+                    <van-checkbox class="checkbox_group_{{index}}" checked-color="#1E50A2" icon-size='32rpx'
+                        name="{{index}}">
+                    </van-checkbox>
+
+                </d-cell>
+
+                <view class="addGroup">
+                    <image src="/static/groupIcon/add.svg" class="addBtn" bindtap="addGroup"></image>
+                    <view class="desc">
+                        新建分组
+                    </view>
+                </view>
+            </view>
+        </van-checkbox-group>
+    </van-popup>
 </view>

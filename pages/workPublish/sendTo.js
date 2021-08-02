@@ -5,7 +5,8 @@ Page({
      * 页面的初始数据
      */
     data: {
-        result: []
+        result: [],
+        rangeShow: false
     },
 
     // 确认发作业对象
@@ -18,6 +19,34 @@ Page({
         } = e.target.dataset
         const checkbox = this.selectComponent(`.checkbox_${index}`)
         if (index >= 0) checkbox.toggle()
+    },
+    showChooseRange() {
+        this.setData({
+            rangeShow: true
+        })
+    },
+    chooseRange(e) {
+        this.setData({
+            selectGroups: e.detail
+        });
+    },
+    closePup() {
+        this.setData({
+            rangeShow: false
+        })
+    },
+    addGroup() {
+        wx.navigateTo({
+            url: '../group/addGroup/addGroup',
+        })
+    },
+    handleChoose(e) {
+        let {
+            index
+        } = e.target.dataset
+        const checkbox = this.selectComponent(`.checkbox_group_${index}`)
+        if (index >= 0) checkbox.toggle()
+
     },
     // 监听选择框变化
     onChange(e) {

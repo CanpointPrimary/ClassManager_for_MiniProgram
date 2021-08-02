@@ -143,6 +143,12 @@
                     "pathName": "pages/workPublish/sendTo",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/workPublish/chooseRange",
+                    "pathName": "pages/workPublish/chooseRange",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

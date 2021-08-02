@@ -1,7 +1,9 @@
 {
   "usingComponents": {
     "van-checkbox": "@vant/weapp/checkbox/index",
-    "van-checkbox-group": "@vant/weapp/checkbox-group/index"
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "d-cell": "/components/cell/cell"
   },
   "navigationBarTitleText": "发送对象"
 }

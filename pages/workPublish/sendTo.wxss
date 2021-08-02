@@ -58,3 +58,22 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
+.container .body {
+  padding: 0 30rpx;
+  padding-top: 50rpx;
+}
+.container .body .addGroup {
+  height: 147rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .body .addGroup .addBtn {
+  width: 75rpx;
+  height: 75rpx;
+}
+.container .body .addGroup .desc {
+  font-size: 28rpx;
+  color: #1e50a2;
+  margin-left: 30rpx;
+}
