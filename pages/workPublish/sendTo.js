@@ -12,7 +12,13 @@ Page({
     confirm() {
         wx.navigateBack()
     },
-
+    select(e) {
+        let {
+            index
+        } = e.target.dataset
+        const checkbox = this.selectComponent(`.checkbox_${index}`)
+        if (index >= 0) checkbox.toggle()
+    },
     // 监听选择框变化
     onChange(e) {
         this.setData({

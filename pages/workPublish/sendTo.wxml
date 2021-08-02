@@ -8,9 +8,10 @@
             <view class="confirm" bindtap="confirm">确认</view>
 
         </view>
-        <view class="target" wx:for="{{4}}">
+        <view class="target" wx:for="{{4}}" catchtap="select" data-index="{{index}}">
             <view class="className">1年级{{index+1}}班</view>
-            <van-checkbox name='{{index}}' checked-color="#1E50A2" icon-size='32rpx'>
+            <van-checkbox name='{{index}}' checked-color="#1E50A2" icon-size='32rpx'
+                class="checkbox_{{index}} checkbox">
             </van-checkbox>
         </view>
 
