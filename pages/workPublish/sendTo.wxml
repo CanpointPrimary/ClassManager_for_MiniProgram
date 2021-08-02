@@ -8,11 +8,18 @@
             <view class="confirm" bindtap="confirm">确认</view>
 
         </view>
-        <view class="target" wx:for="{{4}}" catchtap="select" data-index="{{index}}">
-            <view class="className">1年级{{index+1}}班</view>
-            <van-checkbox name='{{index}}' checked-color="#1E50A2" icon-size='32rpx'
-                class="checkbox_{{index}} checkbox">
-            </van-checkbox>
+        <view wx:for="{{4}}" class="selectItem">
+            <view class="target" catchtap="select" data-index="{{index}}">
+                <view class="className">1年级{{index+1}}班</view>
+                <van-checkbox name='{{index}}' checked-color="#1E50A2" icon-size='32rpx' class="checkbox_{{index}}">
+                </van-checkbox>
+            </view>
+            <view class="range">
+                <view class="desc">发布范围</view>
+                <view class="selectGroup" catchtap="chooseRange">
+                    火箭组，乌龟组
+                </view>
+            </view>
         </view>
 
     </van-checkbox-group>
