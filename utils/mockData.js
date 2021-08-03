@@ -532,10 +532,10 @@ let toDoList = [{
     avatar: '/static/avatar2.png',
     publisher: '巫老师',
     ptime: '17:03',
-    type: 'work',
-    title: '2021.3.15（周一）读拼音',
-    value: '练习所有复韵母的发音以及其声调。',
-    endTime: '今天19:00'
+    type: 'notice',
+    title: '2021.3.15（周一）通知',
+    value: '春季开学通知: 各位家长朋友：',
+    endTime: '今天 19:00'
   }]
 }, {
   pdate: '昨天 星期天',
@@ -547,7 +547,7 @@ let toDoList = [{
     type: 'work',
     title: '2021.3.15（周一）读拼音',
     value: '练习所有复韵母的发音以及其声调。',
-    endTime: '昨天19:00'
+    endTime: '昨天 19:00'
   }, {
     id: '12313',
     type: 'application',
@@ -558,10 +558,19 @@ let toDoList = [{
     avatar: '/static/avatar2.png',
     publisher: '巫老师',
     ptime: '17:03',
-    type: 'work',
-    title: '2021.3.15（周一）读拼音',
-    value: '练习所有复韵母的发音以及其声调。',
-    endTime: '今天19:00'
+    type: 'sign',
+    title: '2021.3.15（周一）打卡',
+    value: '打卡周期：4月13日-5月13日',
+    count: [4, 30]
+  }, {
+    id: 4,
+    avatar: '/static/avatar2.png',
+    publisher: '巫老师',
+    ptime: '17:03',
+    type: 'solitaire',
+    title: '2021.3.15（周一）接龙',
+    value: '各位朋友，春季大环境圣诞集市',
+    endTime: '今天 19:00'
   }]
 }]
 module.exports = {

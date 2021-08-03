@@ -39,7 +39,7 @@
             <block wx:else>
                 <view wx:for="{{toDoList}}" wx:key='id' class="to_do_date">
                     <view class="timeLine">{{item.pdate}}</view>
-                    <view class="to_do_item" wx:for="{{item.toDo}}" wx:key='id'>
+                    <view class="to_do_item {{item.type}}" wx:for="{{item.toDo}}" wx:key='id'>
                         <block wx:if="{{item.type == 'work'}}">
 
                             <view class="left">
@@ -53,10 +53,69 @@
                                 </view>
                                 <view class="title">{{item.title}}</view>
                                 <view class="value">{{item.value}}</view>
-                                <view class="endTime"><text class="desc">截止时间：</text><text>{{item.endTime}}</text>
+                                <view class="endTime">
+                                    <image src="/static/icon/Vector.svg" class="pot"></image>
+                                    截止时间：3.14 19:00
                                 </view>
                             </view>
 
+                        </block>
+                        <block wx:if="{{item.type == 'solitaire'}}">
+                            <view class="left">
+                                <image src="{{item.avatar}}" class="avatar"></image>
+                            </view>
+                            <view class="right">
+                                <view class="head">
+                                    <view class="pname">{{item.publisher}}</view>
+                                    <view class="ptime">{{item.ptime}}</view>
+                                    <view class="tag">接龙</view>
+                                </view>
+                                <view class="title">{{item.title}}</view>
+                                <view class="value">{{item.value}}</view>
+                                <view class="endTime">
+                                    <image src="/static/icon/Vector.svg" class="pot"></image>
+                                    截止时间：3.14 19:00
+                                </view>
+                            </view>
+                        </block>
+                        <block wx:if="{{item.type == 'notice'}}">
+                            <view class="left">
+                                <image src="{{item.avatar}}" class="avatar"></image>
+                            </view>
+                            <view class="right">
+                                <view class="head">
+                                    <view class="pname">{{item.publisher}}</view>
+                                    <view class="ptime">{{item.ptime}}</view>
+                                    <view class="tag">通知</view>
+                                </view>
+                                <view class="title">{{item.title}}</view>
+                                <view class="value">{{item.value}}</view>
+                                <view class="endTime">
+                                    <image src="/static/icon/Vector.svg" class="pot"></image>
+                                    截止时间：3.14 19:00
+                                </view>
+                            </view>
+                        </block>
+                        <block wx:if="{{item.type == 'sign'}}">
+                            <view class="left">
+                                <image src="{{item.avatar}}" class="avatar"></image>
+                            </view>
+                            <view class="right">
+                                <view class="head">
+                                    <view class="pname">{{item.publisher}}</view>
+                                    <view class="ptime">{{item.ptime}}</view>
+                                    <view class="tag">打卡</view>
+                                </view>
+                                <view class="title">{{item.title}}</view>
+                                <view class="value">{{item.value}}</view>
+
+                                <progress percent="{{item.count[0]/item.count[1]*100}}" border-radius='6'
+                                    activeColor='#1E50A2' backgroundColor='#D2D6DB' stroke-width='6rpx'></progress>
+                            </view>
+                            <view class="handle">
+                                <view class="toSign">去打卡</view>
+                            </view>
+                            <view class="day">第{{item.count[0]+'/'+item.count[1]}}天</view>
                         </block>
                         <block wx:if="{{item.type == 'application'}}">
                             <view class="application">
