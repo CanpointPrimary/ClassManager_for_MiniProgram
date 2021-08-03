@@ -23,7 +23,8 @@
     "pages/group/addGroup/addGroup",
     "pages/group/editGroup/editGroup",
     "pages/group/editGroup/addMember",
-    "pages/workPublish/sendTo"
+    "pages/workPublish/sendTo",
+    "pages/workRank/workRank"
   ],
   "window": {
     "backgroundTextStyle": "light",
