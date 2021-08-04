@@ -1,0 +1,16 @@
+<!--pages/textbookWork/textbookWork.wxml-->
+<view class="container">
+    <view class="main">
+        <view class="header">
+            <view class="title">教材</view>
+            <view class="value">人教版</view>
+        </view>
+        <view class="check">
+            <van-checkbox wx:for="{{10}}" value="{{index == checked}}" data-index="{{index}}" bind:tap="onChange"
+                use-icon-slot icon-size="26rpx">第{{index+1}}课 天地人
+                <view slot="icon" class="{{index == checked ? 'activeIcon' : 'inactiveIcon'}}"></view>
+            </van-checkbox>
+        </view>
+    </view>
+    <d-button type="fill">确定</d-button>
+</view>

@@ -149,6 +149,12 @@
                     "pathName": "pages/workPublish/chooseRange",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/textbookWork/textbookWork",
+                    "pathName": "pages/textbookWork/textbookWork",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

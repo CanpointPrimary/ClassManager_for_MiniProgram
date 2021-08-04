@@ -1,0 +1,47 @@
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background: #edf6fd;
+}
+.container .main {
+  background: #fff;
+}
+.container .header {
+  background: #fff;
+  height: 88rpx;
+  color: #333;
+  font-size: 28rpx;
+  box-shadow: 0 3rpx 6rpx #00000029;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .header .value {
+  color: #1e50a2;
+}
+.container .check {
+  padding: 0 30rpx;
+}
+.container .check .van-checkbox {
+  height: 88rpx;
+  border-bottom: 1px solid #eeecec;
+  font-size: 28rpx;
+  color: #333;
+}
+.container .check .inactiveIcon {
+  width: 26rpx;
+  height: 26rpx;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 1rpx solid #c9c9c9;
+}
+.container .check .activeIcon {
+  width: 26rpx;
+  height: 26rpx;
+  border-radius: 50%;
+  background-color: #a6ccff;
+}
+.container .button--fill {
+  margin: 40rpx auto;
+}
