@@ -13,14 +13,22 @@
         <!-- 按钮区 -->
         <view class="btns">
             <view class="block">
-                <view class="voice">
-                    <image src="/static/icon/folder.svg" class="folder"></image>
-                    <text>语音作业</text>
-                </view>
-                <view class="smart">
-                    <image src="/static/icon/folder.svg" class="folder"></image>
-                    <text>智能作业</text>
-                </view>
+                <block wx:if="{{isTextbook}}">
+                    <view class="textbook voice" bindtap="chooseChapter">
+                        <image src="/static/icon/folder.svg" class="folder"></image>
+                        <text>校本作业</text>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view class="voice">
+                        <image src="/static/icon/folder.svg" class="folder"></image>
+                        <text>语音作业</text>
+                    </view>
+                    <view class="smart">
+                        <image src="/static/icon/folder.svg" class="folder"></image>
+                        <text>智能作业</text>
+                    </view>
+                </block>
             </view>
             <view class="block">
                 <image src="/static/icon/voice.svg" class="mic addFile" bindtap="showVoice"></image>

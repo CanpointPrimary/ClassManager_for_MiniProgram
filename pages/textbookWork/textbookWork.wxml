@@ -12,5 +12,5 @@
             </van-checkbox>
         </view>
     </view>
-    <d-button type="fill">确定</d-button>
+    <d-button type="fill" bindtap="confirm">确定</d-button>
 </view>

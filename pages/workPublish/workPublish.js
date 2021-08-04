@@ -17,11 +17,17 @@ Page({
         timeSelect: [],
         timeList: [],
         imageList: [],
+        isTextbook: true,
         voiceLength: 0,
         voices: [],
         showWave: true,
         galleryShow: false,
         currentGallery: 0
+    },
+    chooseChapter() {
+        wx.navigateTo({
+            url: '../textbookWork/textbookWork',
+        })
     },
     closeVoice() {
         this.setData({
