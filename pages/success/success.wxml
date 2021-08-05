@@ -11,7 +11,7 @@
         </view>
     </view>
     <view class="bottom">
-        <view class="btn fill">返回首页</view>
-        <view class="btn outline">查看作业</view>
+        <view class="btn fill" bindtap="backHome">返回首页</view>
+        <view class="btn outline" bindtap="checkWork">查看作业</view>
     </view>
 </view>

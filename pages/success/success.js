@@ -7,7 +7,16 @@ Page({
     data: {
 
     },
-
+    backHome() {
+        wx.switchTab({
+            url: '/pages/homePage/homePage',
+        })
+    },
+    checkWork() {
+        wx.navigateTo({
+            url: '/pages/homeWork/homeWork',
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
