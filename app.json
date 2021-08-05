@@ -26,7 +26,8 @@
     "pages/workPublish/sendTo",
     "pages/workRank/workRank",
     "pages/textbookWork/textbookWork",
-    "pages/success/success"
+    "pages/success/success",
+    "pages/information/information"
   ],
   "window": {
     "backgroundTextStyle": "light",

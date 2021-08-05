@@ -573,11 +573,73 @@ let toDoList = [{
     endTime: '今天 19:00'
   }]
 }]
+let infos = [{
+  id: 123,
+  avatar: "/static/avatar2.png",
+  publisher: "李力老师",
+  checked: false,
+  time: "今天 17:03",
+  form: {
+    id: 123123,
+    title: "#3.15（周三）单词跟读",
+  },
+  value: {
+    type: "评论",
+    voice: "",
+    value: "你做的太好了"
+  }
+}, {
+  id: 124,
+  avatar: "/static/avatar2.png",
+  publisher: "李力老师",
+  checked: false,
+  time: "今天 17:03",
+  form: {
+    id: 123123,
+    title: "#3.15（周三）单词跟读",
+  },
+  value: {
+    type: "评论",
+    voice: "",
+    value: "你做的太好了"
+  }
+}, {
+  id: 125,
+  avatar: "/static/avatar2.png",
+  publisher: "李力老师",
+  checked: true,
+  time: "5.13 17:03",
+  form: {
+    id: 123123,
+    title: "#3.15（周三）单词跟读",
+  },
+  value: {
+    type: "提示",
+    voice: "",
+    value: "你的作业已被批改"
+  }
+}, {
+  id: 126,
+  avatar: "/static/avatar2.png",
+  publisher: "李力老师",
+  checked: true,
+  time: "5.11 17:03",
+  form: {
+    id: 123123,
+    title: "#3.15（周三）单词跟读",
+  },
+  value: {
+    type: "评论",
+    voice: "/static/river.mp3",
+    value: ""
+  }
+}, ]
 module.exports = {
   answers,
   subStatusList,
   groupMembers,
   groupList,
   joinBg,
-  toDoList
+  toDoList,
+  infos
 }

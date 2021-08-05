@@ -161,6 +161,12 @@
                     "pathName": "pages/success/success",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/information/information",
+                    "pathName": "pages/information/information",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }
