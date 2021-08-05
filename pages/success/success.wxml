@@ -1,0 +1,17 @@
+<!--pages/success/success.wxml-->
+<view class="container">
+    <view class="top">
+        <view class="icon">
+            <view class="round">
+                <image src="/static/icon/success.svg" class="success"></image>
+            </view>
+        </view>
+        <view class="desc">
+            发布成功！
+        </view>
+    </view>
+    <view class="bottom">
+        <view class="btn fill">返回首页</view>
+        <view class="btn outline">查看作业</view>
+    </view>
+</view>

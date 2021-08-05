@@ -25,7 +25,8 @@
     "pages/group/editGroup/addMember",
     "pages/workPublish/sendTo",
     "pages/workRank/workRank",
-    "pages/textbookWork/textbookWork"
+    "pages/textbookWork/textbookWork",
+    "pages/success/success"
   ],
   "window": {
     "backgroundTextStyle": "light",

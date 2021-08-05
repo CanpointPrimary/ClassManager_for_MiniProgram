@@ -155,6 +155,12 @@
                     "pathName": "pages/textbookWork/textbookWork",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/success/success",
+                    "pathName": "pages/success/success",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }
