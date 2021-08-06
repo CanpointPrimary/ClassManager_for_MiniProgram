@@ -29,6 +29,14 @@
     "pages/success/success",
     "pages/information/information"
   ],
+  "subPackages": [
+    {
+      "root": "studentView",
+      "pages": [
+        "pages/workList/workList"
+      ]
+    }
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
@@ -40,7 +48,7 @@
     "connectSocket": 20000,
     "uploadFile": 20000,
     "downloadFile": 20000
-  },
+  }, 
   "useExtendedLib": {
     "weui": true
   },

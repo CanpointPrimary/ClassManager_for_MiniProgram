@@ -167,6 +167,12 @@
                     "pathName": "pages/information/information",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "studentView/pages/workList/workList",
+                    "pathName": "studentView/pages/workList/workList",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }
