@@ -634,6 +634,58 @@ let infos = [{
     value: ""
   }
 }, ]
+
+// 作业列表
+let workList = [{
+  date: "今天",
+  lists: [{
+    workTitle: "2021.4.13（周二）读拼音",
+    publisher: '巫梅梅',
+    avatar: '/static/avatar.png',
+    pubTime: '2021.3.12 17:03',
+    general: '练习所有单韵母的发音以及其声调。',
+    allStu: 50,
+    doneStu: 20
+  }]
+}, {
+  date: "昨天",
+  lists: [{
+    workTitle: "2021.4.13（周二）读拼音",
+    publisher: '巫梅梅',
+    avatar: '/static/avatar.png',
+    pubTime: '2021.3.12 17:03',
+    general: '练习所有单韵母的发音以及其声调。',
+    allStu: 50,
+    doneStu: 45
+  }, {
+    workTitle: "2021.4.13（周二）读拼音",
+    publisher: '巫梅梅',
+    avatar: '/static/avatar.png',
+    pubTime: '2021.3.12 17:03',
+    general: '练习所有单韵母的发音以及其声调。',
+    allStu: 50,
+    doneStu: 35
+  }]
+}, {
+  date: "2021.4.12",
+  lists: [{
+    workTitle: "2021.4.13（周二）读拼音",
+    publisher: '巫梅梅',
+    avatar: '/static/avatar.png',
+    pubTime: '2021.4.12 17:03',
+    general: '练习所有单韵母的发音以及其声调。',
+    allStu: 50,
+    doneStu: 12
+  }, {
+    workTitle: "2021.4.13（周二）读拼音",
+    publisher: '巫梅梅',
+    avatar: '/static/avatar.png',
+    pubTime: '2021.4.12 17:03',
+    general: '练习所有单韵母的发音以及其声调。',
+    allStu: 50,
+    doneStu: 50
+  }]
+}]
 module.exports = {
   answers,
   subStatusList,
@@ -641,5 +693,6 @@ module.exports = {
   groupList,
   joinBg,
   toDoList,
-  infos
+  infos,
+  workList
 }

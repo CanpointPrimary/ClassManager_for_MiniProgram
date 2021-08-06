@@ -11,4 +11,10 @@
             <view class="desc">学习报告</view>
         </view>
     </view>
+    <view class="worklist">
+        <view class="date" wx:for="{{workList}}">
+            <view class="time">{{item.date}}</view>
+            <view class="workItem" wx:for="{{item.lists}}">作业</view>
+        </view>
+    </view>
 </view>
