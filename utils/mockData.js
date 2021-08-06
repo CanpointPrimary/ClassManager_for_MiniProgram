@@ -633,7 +633,7 @@ let infos = [{
     voice: "/static/river.mp3",
     value: ""
   }
-}, ]
+}]
 
 // 作业列表
 let workList = [{
