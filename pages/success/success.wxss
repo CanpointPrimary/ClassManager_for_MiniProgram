@@ -1,0 +1,51 @@
+/* pages/success/success.wxss */
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.round {
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 50%;
+    background: #a6ccff;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40rpx;
+}
+
+.success {
+    width: 106rpx;
+    height: 76rpx;
+}
+
+.btn {
+    width: 468rpx;
+    height: 78rpx;
+    border-radius: 39rpx;
+    line-height: 78rpx;
+    text-align: center;
+}
+
+.desc {
+    text-align: center;
+    padding-left: .5em;
+    font-size: 28rpx;
+}
+
+.fill {
+    background: #a6ccff;
+    margin-bottom: 20rpx;
+    color: #fff;
+}
+
+.outline {
+    border: solid 1rpx #a6ccff;
+    color: #a6ccff;
+    box-sizing: border-box;
+}

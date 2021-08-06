@@ -1,0 +1,79 @@
+.container {
+  min-height: 100%;
+  padding: 0 30rpx;
+}
+.container .header {
+  height: 90rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.container .header .choose {
+  font-size: 24rpx;
+}
+.container .header .confirm {
+  width: 88rpx;
+  height: 52rpx;
+  background-color: #1e50a2;
+  color: #fff;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 52rpx;
+  margin-left: 20rpx;
+  font-size: 24rpx;
+}
+.container .target {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  height: 110rpx;
+  background-color: #edf6fd;
+}
+.container .selectItem {
+  overflow: hidden;
+  margin-bottom: 30rpx;
+  border-radius: 20rpx;
+  filter: drop-shadow(0 3rpx 6rpx #00000029);
+}
+.container .range {
+  height: 110rpx;
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  padding: 0 50rpx;
+  justify-content: space-between;
+}
+.container .range .desc {
+  font-size: 32rpx;
+  color: #1d1d1d;
+}
+.container .range .selectGroup {
+  width: 163rpx;
+  font-size: 24rpx;
+  text-align: right;
+  color: #1e50a2;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.container .body {
+  padding: 0 30rpx;
+  padding-top: 50rpx;
+}
+.container .body .addGroup {
+  height: 147rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .body .addGroup .addBtn {
+  width: 75rpx;
+  height: 75rpx;
+}
+.container .body .addGroup .desc {
+  font-size: 28rpx;
+  color: #1e50a2;
+  margin-left: 30rpx;
+}

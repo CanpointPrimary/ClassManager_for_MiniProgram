@@ -60,7 +60,7 @@
   margin-bottom: 20rpx;
 }
 .container .workList .item .time {
-  font-size: 20rpx;
+  font-size: 24rpx;
   text-align: center;
   color: #999;
   margin: 10rpx 0;

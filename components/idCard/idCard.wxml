@@ -3,16 +3,18 @@
     <view class="idInfo">
         <image class="id_avatar" mode="scaleToFill" src="/static/avatar.png"></image>
         <view class="id_info">
-            <view class="name">游客老师</view>
+            <view class="name">{{rname}}</view>
             <view class="classInfo">
-                <text class="className">体验班级</text>
+                <text class="className" wx:if="{{!isTour}}">体验班级</text>
                 <image class="switchIcon" mode="aspectFit" src="/static/icon/switch.svg" bindtap="checkout"></image>
                 <text class="btnSwitch" bindtap="checkout">切换</text>
             </view>
         </view>
     </view>
-    <view class="invite" bindtap="handleTap">
-        <image src="/static/icon/invite.svg" class="image"></image>
-    </view>
-    <view class="userInfo" wx:if="{{false}}">个人信息</view>
+    <block wx:if="{{!isTour}}">
+        <view class="invite" bindtap="handleTap" wx:if="{{showInvite}}">
+            <image src="/static/icon/invite.svg" class="image"></image>
+        </view>
+        <view class="userInfo" bindtap="navToInfo" wx:else>个人信息</view>
+    </block>
 </view>

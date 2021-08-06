@@ -1,0 +1,18 @@
+/* components/tag/tag.wxss */
+.tag {
+    width: 131rpx;
+    height: 49rpx;
+    background: #9891e2;
+    border-radius: 0 20rpx;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.status {
+    text-align: center;
+    font-size: 22rpx;
+    color: #fff;
+    line-height: 49rpx;
+}

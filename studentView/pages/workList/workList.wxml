@@ -1,0 +1,14 @@
+<!--studentView/pages/workList/workList.wxml-->
+<view class="container">
+    <view class="header">
+        <view class="tabbar">
+            <view class="tabbarItem">全部</view>
+            <view class="tabbarItem">待办</view>
+            <view class="underline"></view>
+        </view>
+        <view class="report">
+            <image src="/studentView/static/icon/carbon_report-data.svg"></image>
+            <view class="desc">学习报告</view>
+        </view>
+    </view>
+</view>

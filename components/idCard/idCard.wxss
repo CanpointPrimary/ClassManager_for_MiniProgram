@@ -8,6 +8,7 @@
 .idCard .idInfo {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .idCard .idInfo .id_avatar {
   width: 88rpx;
@@ -26,21 +27,23 @@
   font-weight: bold;
 }
 .idCard .idInfo .id_info .classInfo {
-  font-size: 24rpx;
+  font-size: 28rpx;
   line-height: 30rpx;
   display: flex;
+  align-items: center;
   z-index: 1;
 }
 .idCard .idInfo .id_info .classInfo .className {
   color: #666666;
 }
 .idCard .idInfo .id_info .classInfo .switchIcon {
-  height: 32rpx;
-  width: 32rpx;
-  margin: 0 0 0 3rpx;
+  height: 38rpx;
+  width: 38rpx;
+  margin: 0 8rpx 0 3rpx;
 }
 .idCard .idInfo .id_info .classInfo .btnSwitch {
   color: #1e50a2;
+  font-size: 28rpx;
 }
 .idCard .invite {
   z-index: 2;
@@ -48,4 +51,13 @@
 .idCard .invite .image {
   height: 38rpx;
   width: 174rpx;
+}
+.idCard .userInfo {
+  z-index: 2;
+  height: 38rpx;
+  background: #1e50a2;
+  color: #fff;
+  font-size: 22rpx;
+  padding: 0 20rpx;
+  border-radius: 19rpx;
 }

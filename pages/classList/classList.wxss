@@ -25,7 +25,12 @@
   position: absolute;
   bottom: 0;
 }
+.container .classPre .classItem {
+  background: #fff !important;
+  filter: drop-shadow(0 0 6rpx rgba(0, 0, 0, 0.161));
+}
 .container .classItem {
+  position: relative;
   margin-left: 30rpx;
   width: 690rpx;
   height: 186rpx;
@@ -36,6 +41,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  filter: drop-shadow(0 0 6rpx #00000029);
 }
 .container .classItem:nth-child(3n+1) {
   background-color: #fdeded;

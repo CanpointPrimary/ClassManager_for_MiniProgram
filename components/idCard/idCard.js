@@ -4,7 +4,9 @@ Component({
      * 组件的属性列表
      */
     properties: {
-
+        showInvite: Boolean,
+        isTour: Boolean,
+        rname: String
     },
 
     /**
@@ -22,10 +24,13 @@ Component({
             this.triggerEvent('handleTap')
         },
         checkout() {
-            console.log(1);
-            wx.navigateTo({
-                url: '/pages/classList/classList',
-            })
+            if (this.data.isTour) {
+                this.triggerEvent('handleChange')
+            } else {
+                wx.navigateTo({
+                    url: '/pages/classList/classList',
+                })
+            }
         }
     }
 })

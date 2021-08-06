@@ -2,12 +2,10 @@
 .container {
     height: 100%;
     width: 100%;
-    background: linear-gradient(to right, #56ccf2, #2f81ed);
 }
 
 .poster {
-    background: no-repeat center 30%;
-    background-size: 40%;
+    background: no-repeat center;
+    background-size: cover;
     height: 100%;
-    /* width: 50%; */
 }

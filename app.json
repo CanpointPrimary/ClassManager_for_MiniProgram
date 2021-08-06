@@ -22,7 +22,20 @@
     "pages/group/groups",
     "pages/group/addGroup/addGroup",
     "pages/group/editGroup/editGroup",
-    "pages/group/editGroup/addMember"
+    "pages/group/editGroup/addMember",
+    "pages/workPublish/sendTo",
+    "pages/workRank/workRank",
+    "pages/textbookWork/textbookWork",
+    "pages/success/success",
+    "pages/information/information"
+  ],
+  "subPackages": [
+    {
+      "root": "studentView",
+      "pages": [
+        "pages/workList/workList"
+      ]
+    }
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -35,7 +48,7 @@
     "connectSocket": 20000,
     "uploadFile": 20000,
     "downloadFile": 20000
-  },
+  }, 
   "useExtendedLib": {
     "weui": true
   },

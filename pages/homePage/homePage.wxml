@@ -9,13 +9,15 @@
     <!-- 背景图片 -->
     <image class="bdSunsine" mode="scaleToFill" src="/static/sunsine.svg"></image>
 
-    <!-- 主体 -->
     <inviteDialog isShow="{{showInviteDialog}}" wx:if="{{showInviteDialog}}"></inviteDialog>
 
+    <!-- 主体 -->
     <view class="main">
 
         <!-- 身份卡片 -->
-        <id-card bind:handleTap="invite"></id-card>
+        <id-card bind:handleTap="invite" bind:handleChange="changeId" showInvite="{{true}}" isTour="{{isTourist}}"
+            rname="{{currentUser.rname}}">
+        </id-card>
 
         <!-- menu栏 -->
         <view class="menu">
@@ -28,16 +30,107 @@
         <!-- 待办 -->
         <view class="toDo" wx:if="{{hasClass}}">
             <view class="tabTop">
-                <text class="{{isToDo? 'tab_active' : ''}}" bindtap="changeTab" data-isToDo='{{true}}'>待办</text>
-                <text class="{{!isToDo? 'tab_active' : ''}}" bindtap="changeTab" data-isToDo='{{false}}'>已办</text>
-                <view class="underline" style="left:{{left}}"></view>
+                全部待办
             </view>
 
-            <view class="noList" wx:if="{{!todolist}}">
+            <view class="noList" wx:if="{{!toDoList.length}}">
                 暂无发布信息,快去发布吧
             </view>
+            <block wx:else>
+                <view wx:for="{{toDoList}}" wx:key='id' class="to_do_date">
+                    <view class="timeLine">{{item.pdate}}</view>
+                    <view class="to_do_item {{item.type}}" wx:for="{{item.toDo}}" wx:key='id'>
+                        <block wx:if="{{item.type == 'work'}}">
+
+                            <view class="left">
+                                <image src="{{item.avatar}}" class="avatar"></image>
+                            </view>
+                            <view class="right">
+                                <view class="head">
+                                    <view class="pname">{{item.publisher}}</view>
+                                    <view class="ptime">{{item.ptime}}</view>
+                                    <view class="tag">作业</view>
+                                </view>
+                                <view class="title">{{item.title}}</view>
+                                <view class="value">{{item.value}}</view>
+                                <view class="endTime">
+                                    <image src="/static/icon/Vector.svg" class="pot"></image>
+                                    截止时间：3.14 19:00
+                                </view>
+                            </view>
+
+                        </block>
+                        <block wx:if="{{item.type == 'solitaire'}}">
+                            <view class="left">
+                                <image src="{{item.avatar}}" class="avatar"></image>
+                            </view>
+                            <view class="right">
+                                <view class="head">
+                                    <view class="pname">{{item.publisher}}</view>
+                                    <view class="ptime">{{item.ptime}}</view>
+                                    <view class="tag">接龙</view>
+                                </view>
+                                <view class="title">{{item.title}}</view>
+                                <view class="value">{{item.value}}</view>
+                                <view class="endTime">
+                                    <image src="/static/icon/Vector.svg" class="pot"></image>
+                                    截止时间：3.14 19:00
+                                </view>
+                            </view>
+                        </block>
+                        <block wx:if="{{item.type == 'notice'}}">
+                            <view class="left">
+                                <image src="{{item.avatar}}" class="avatar"></image>
+                            </view>
+                            <view class="right">
+                                <view class="head">
+                                    <view class="pname">{{item.publisher}}</view>
+                                    <view class="ptime">{{item.ptime}}</view>
+                                    <view class="tag">通知</view>
+                                </view>
+                                <view class="title">{{item.title}}</view>
+                                <view class="value">{{item.value}}</view>
+                                <view class="endTime">
+                                    <image src="/static/icon/Vector.svg" class="pot"></image>
+                                    截止时间：3.14 19:00
+                                </view>
+                            </view>
+                        </block>
+                        <block wx:if="{{item.type == 'sign'}}">
+                            <view class="left">
+                                <image src="{{item.avatar}}" class="avatar"></image>
+                            </view>
+                            <view class="right">
+                                <view class="head">
+                                    <view class="pname">{{item.publisher}}</view>
+                                    <view class="ptime">{{item.ptime}}</view>
+                                    <view class="tag">打卡</view>
+                                </view>
+                                <view class="title">{{item.title}}</view>
+                                <view class="value">{{item.value}}</view>
+
+                                <progress percent="{{item.count[0]/item.count[1]*100}}" border-radius='6'
+                                    activeColor='#1E50A2' backgroundColor='#D2D6DB' stroke-width='6rpx'></progress>
+                            </view>
+                            <view class="handle">
+                                <view class="toSign">去打卡</view>
+                            </view>
+                            <view class="day">第{{item.count[0]+'/'+item.count[1]}}天</view>
+                        </block>
+                        <block wx:if="{{item.type == 'application'}}">
+                            <view class="application">
+                                <view class="title">
+                                    {{item.className}}
+                                </view>
+                                <view class="status">{{item.status}}</view>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+            </block>
             <image class="addToDo" mode="scaleToFill" src="/static/icon/add.svg"></image>
         </view>
+
         <!-- else -->
         <!-- 加入班级 -->
         <view wx:else class="joinClass">

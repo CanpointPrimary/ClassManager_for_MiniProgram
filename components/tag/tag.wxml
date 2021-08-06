@@ -1,0 +1,6 @@
+<!--components/tag/tag.wxml-->
+<view class="tag">
+    <view class="status">
+        <slot></slot>
+    </view>
+</view>

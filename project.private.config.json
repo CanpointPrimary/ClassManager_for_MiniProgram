@@ -137,6 +137,42 @@
                     "pathName": "pages/group/editGroup/addMember",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/workPublish/sendTo",
+                    "pathName": "pages/workPublish/sendTo",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/workPublish/chooseRange",
+                    "pathName": "pages/workPublish/chooseRange",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/textbookWork/textbookWork",
+                    "pathName": "pages/textbookWork/textbookWork",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/success/success",
+                    "pathName": "pages/success/success",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/information/information",
+                    "pathName": "pages/information/information",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "studentView/pages/workList/workList",
+                    "pathName": "studentView/pages/workList/workList",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

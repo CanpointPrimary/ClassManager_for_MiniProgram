@@ -1,4 +1,7 @@
 // pages/start/poster.js
+const {
+  joinBg
+} = require('../../utils/mockData')
 Page({
 
   /**
@@ -12,22 +15,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
     let app = getApp()
-    setTimeout(() => {
-      wx.getStorage({
-        key: 'currentUser',
-        success: () => {
-          wx.switchTab({
-            url: '/pages/homePage/homePage',
-          })
-        },
-        fail: () => {
-          wx.reLaunch({
-            url: './guide',
-          })
-        }
-      })
-    }, 3000)
     wx.request({
       url: app.globalData.baseUrl + 'api/start',
       success: ({
@@ -45,6 +34,13 @@ Page({
             })
           }
         })
+      },
+      fail: () => {
+        this.setData({
+          postSrc: joinBg[2]
+        })
+      },
+      complete: () => {
         setTimeout(() => {
           wx.getStorage({
             key: 'currentUser',
@@ -62,6 +58,7 @@ Page({
         }, 3000)
       }
     })
+
   },
 
   /**
@@ -75,7 +72,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    wx.hideToast()
   },
 
   /**

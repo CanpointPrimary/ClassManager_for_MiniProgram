@@ -1,0 +1,26 @@
+<!--pages/information/information.wxml-->
+<view class="container">
+    <view class="cellGroup">
+        <view class="cell" wx:for="{{infos}}" wx:key="id">
+            <view class="left">
+                <image src="/static/avatar2.png" class="avatar"></image>
+            </view>
+            <view class="right">
+                <view class="publisher">{{item.publisher}}
+                    <view class="dot" wx:if="{{!item.checked}}"></view>
+                </view>
+                <view class="value">
+                    <text>{{item.value.type}}:</text><text>{{item.value.value}}</text>
+                    <view class="audio" wx:if="{{item.value.voice != ''}}">
+                        <image src="/static/icon/voice1099.svg" class="voice"></image><text>17″</text>
+                    </view>
+                </view>
+
+                <view class="footer">
+                    <view class="time">{{item.time}}</view>
+                    <view class="work">{{item.form.title}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

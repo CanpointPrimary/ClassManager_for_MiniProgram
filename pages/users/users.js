@@ -6,7 +6,8 @@ Page({
    */
   data: {
     showInviteDialog: false,
-    isShowAdd: false
+    isShowAdd: false,
+    isTourist: true,
   },
   navToHelp() {
     wx.navigateTo({
@@ -42,11 +43,58 @@ Page({
       tabBarShow: false
     })
   },
+  changeId() {
+    this.currentUser = this.data.currentUser
+    this.currentUser.identity = this.data.isTeacher ? 'student' : 'teacher'
+    this.currentUser.rname = this.data.isTeacher ? '游客学生' : '游客老师'
+    this.setData({
+      currentUser: this.currentUser
+    })
+    wx.setStorageSync('currentUser', this.currentUser)
+    wx.reLaunch({
+      url: './users',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let currentUser = wx.getStorageSync('currentUser')
+    this.setData({
+      currentUser,
+      isTeacher: currentUser.identity == 'teacher' ? true : false
+    })
+    if (typeof this.getTabBar === 'function' &&
+      this.getTabBar()) {
+      this.getTabBar().setData({
+        list: this.data.currentUser.identity == 'student' ? [{
+          pagePath: "/pages/homePage/homePage",
+          text: "首页",
+          iconPath: "/static/icon/home.svg",
+          selectedIconPath: "/static/icon/actHome.svg"
+        }, {
+          pagePath: "/pages/users/users",
+          text: "个人中心",
+          iconPath: "/static/icon/user.svg",
+          selectedIconPath: "/static/icon/actUser.svg"
+        }] : [{
+          pagePath: "/pages/homePage/homePage",
+          text: "首页",
+          iconPath: "/static/icon/home.svg",
+          selectedIconPath: "/static/icon/actHome.svg"
+        }, {
+          pagePath: "/pages/classStatus/classStatus",
+          text: "学情",
+          iconPath: "/static/icon/classStatus.svg",
+          selectedIconPath: "/static/icon/actClassStatus.svg"
+        }, {
+          pagePath: "/pages/users/users",
+          text: "个人中心",
+          iconPath: "/static/icon/user.svg",
+          selectedIconPath: "/static/icon/actUser.svg"
+        }]
+      })
+    }
   },
 
   /**

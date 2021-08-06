@@ -1,4 +1,7 @@
 // pages/homePage/homePage.js
+const {
+  toDoList
+} = require('../../utils/mockData')
 Page({
 
   /**
@@ -12,16 +15,25 @@ Page({
     isToDo: true,
     hasClass: true,
     showInviteDialog: false,
-    classInfo: {
-      name: '1年级2班',
-      code: '234234CSwe'
-    },
+    isTeacher: true
 
   },
   navTo(e) {
     let url = e.currentTarget.dataset.target
     wx.navigateTo({
       url: url,
+    })
+  },
+  changeId() {
+    this.currentUser = this.data.currentUser
+    this.currentUser.identity = this.data.isTeacher ? 'student' : 'teacher'
+    this.currentUser.rname = this.data.isTeacher ? '游客学生' : '游客老师'
+    this.setData({
+      currentUser: this.currentUser
+    })
+    wx.setStorageSync('currentUser', this.currentUser)
+    wx.reLaunch({
+      url: './homePage',
     })
   },
   copyCode() {
@@ -70,6 +82,7 @@ Page({
    */
   onLoad: function (options) {
     let app = getApp()
+    let currentUser = wx.getStorageSync('currentUser')
     wx.request({
       url: app.globalData.baseUrl + 'api/menu',
       success: ({
@@ -127,7 +140,42 @@ Page({
         })
       }
     })
-
+    this.setData({
+      toDoList,
+      currentUser,
+      isTeacher: currentUser.identity == 'teacher' ? true : false
+    })
+    if (typeof this.getTabBar === 'function' &&
+      this.getTabBar()) {
+      this.getTabBar().setData({
+        list: this.data.currentUser.identity == 'student' ? [{
+          pagePath: "/pages/homePage/homePage",
+          text: "首页",
+          iconPath: "/static/icon/home.svg",
+          selectedIconPath: "/static/icon/actHome.svg"
+        }, {
+          pagePath: "/pages/users/users",
+          text: "个人中心",
+          iconPath: "/static/icon/user.svg",
+          selectedIconPath: "/static/icon/actUser.svg"
+        }] : [{
+          pagePath: "/pages/homePage/homePage",
+          text: "首页",
+          iconPath: "/static/icon/home.svg",
+          selectedIconPath: "/static/icon/actHome.svg"
+        }, {
+          pagePath: "/pages/classStatus/classStatus",
+          text: "学情",
+          iconPath: "/static/icon/classStatus.svg",
+          selectedIconPath: "/static/icon/actClassStatus.svg"
+        }, {
+          pagePath: "/pages/users/users",
+          text: "个人中心",
+          iconPath: "/static/icon/user.svg",
+          selectedIconPath: "/static/icon/actUser.svg"
+        }]
+      })
+    }
   },
 
   /**
@@ -141,6 +189,31 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+
+    wx.getClipboardData({
+      success: (option) => {
+        wx.hideToast()
+        if (option.data.indexOf('班级口令') != -1) {
+          wx.showToast({
+            title: '检测到班级口令',
+            icon: 'none',
+            duration: 2000
+          })
+          setTimeout(() => {
+            wx.setClipboardData({
+              data: ' ',
+              success() {
+                wx.hideToast()
+                wx.navigateTo({
+                  url: '/pages/joinClass/joinClass?invited=1'
+                })
+              }
+            })
+          }, 2000)
+        }
+      },
+    })
+
     if (typeof this.getTabBar === 'function' &&
       this.getTabBar()) {
       this.getTabBar().setData({
