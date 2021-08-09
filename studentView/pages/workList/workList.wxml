@@ -20,6 +20,18 @@
                     <view class="mark"></view>
                     <view class="value">{{item.workTitle}}</view>
                 </view>
+                <view class="inner">
+                    <view class="left">
+                        <image src="{{item.avatar}}" class="avatar"></image>
+                    </view>
+                    <view class="right">
+                        <view class="pub">
+                            <view class="punlisher">{{item.publisher}}</view>
+                            <view class="pubtime">{{item.pubTime}}</view>
+                        </view>
+                        <view class="desc">{{item.general}}</view>
+                    </view>
+                </view>
             </view>
         </view>
     </view>

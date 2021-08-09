@@ -668,14 +668,14 @@ let workList = [{
   lists: [{
     workTitle: "4.13（周二）读拼音",
     publisher: '巫梅梅',
-    avatar: '/static/avatar.png',
+    avatar: '/static/avatar2.png',
     pubTime: '2021.4.12 17:03',
     general: '练习所有单韵母的发音以及其声调。',
     status: 'onAudit'
   }, {
     workTitle: "4.13（周二）读拼音",
     publisher: '巫梅梅',
-    avatar: '/static/avatar.png',
+    avatar: '/static/avatar2.png',
     pubTime: '2021.4.12 17:03',
     general: '练习所有单韵母的发音以及其声调。',
     status: 'noFeedback'

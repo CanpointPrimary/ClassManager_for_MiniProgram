@@ -71,6 +71,7 @@
   font-size: 32rpx;
   color: #333;
   font-weight: bolder;
+  margin-bottom: 15rpx;
 }
 .container .worklist .workItem .title .mark {
   margin-left: 5rpx;
@@ -79,4 +80,33 @@
   height: 45rpx;
   border-radius: 5rpx;
   background: #dde5f1;
+}
+.container .worklist .workItem .inner {
+  display: flex;
+}
+.container .worklist .workItem .inner .left {
+  padding-left: 40rpx;
+}
+.container .worklist .workItem .inner .left .avatar {
+  width: 58rpx;
+  height: 58rpx;
+}
+.container .worklist .workItem .inner .right {
+  padding-left: 20rpx;
+}
+.container .worklist .workItem .inner .right .pub {
+  display: flex;
+  font-size: 28rpx;
+  align-items: center;
+  margin-bottom: 9rpx;
+}
+.container .worklist .workItem .inner .right .pub .pubtime {
+  padding-left: 10rpx;
+  color: #666;
+  font-size: 24rpx;
+}
+.container .worklist .workItem .inner .right .desc {
+  font-size: 24rpx;
+  color: #999;
+  line-height: 34rpx;
 }
