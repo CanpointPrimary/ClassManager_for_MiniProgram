@@ -2,7 +2,6 @@
 .tag {
     width: 131rpx;
     height: 49rpx;
-    background: #9891e2;
     border-radius: 0 20rpx;
     box-sizing: border-box;
     position: absolute;
@@ -15,4 +14,12 @@
     font-size: 22rpx;
     color: #fff;
     line-height: 49rpx;
+}
+
+.noFeedback {
+    background: #999;
+}
+
+.onAudit {
+    background: #9891e2;
 }

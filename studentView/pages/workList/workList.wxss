@@ -47,3 +47,36 @@
   width: 48rpx;
   height: 48rpx;
 }
+.container .worklist {
+  padding: 0 30rpx;
+}
+.container .worklist .time {
+  text-align: center;
+  font-size: 20rpx;
+  line-height: 28rpx;
+  color: #999;
+  margin-bottom: 20rpx;
+}
+.container .worklist .workItem {
+  position: relative;
+  margin-bottom: 30rpx;
+  padding: 30rpx;
+  background: #edf6fd;
+  border-radius: 20rpx;
+  box-shadow: 0 0 6rpx #00000029;
+}
+.container .worklist .workItem .title {
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bolder;
+}
+.container .worklist .workItem .title .mark {
+  margin-left: 5rpx;
+  margin-right: 25rpx;
+  width: 10rpx;
+  height: 45rpx;
+  border-radius: 5rpx;
+  background: #dde5f1;
+}

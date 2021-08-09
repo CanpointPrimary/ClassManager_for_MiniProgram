@@ -14,7 +14,13 @@
     <view class="worklist">
         <view class="date" wx:for="{{workList}}">
             <view class="time">{{item.date}}</view>
-            <view class="workItem" wx:for="{{item.lists}}">作业</view>
+            <view class="workItem" wx:for="{{item.lists}}">
+                <d-tag type="{{item.status}}">未反馈</d-tag>
+                <view class="title">
+                    <view class="mark"></view>
+                    <view class="value">{{item.workTitle}}</view>
+                </view>
+            </view>
         </view>
     </view>
 </view>

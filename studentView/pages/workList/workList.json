@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "d-tag": "/components/tag/tag"
+  },
   "navigationBarTitleText": "作业列表"
 }

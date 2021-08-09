@@ -639,51 +639,46 @@ let infos = [{
 let workList = [{
   date: "今天",
   lists: [{
-    workTitle: "2021.4.13（周二）读拼音",
+    workTitle: "4.13（周二）读拼音",
     publisher: '巫梅梅',
     avatar: '/static/avatar.png',
     pubTime: '2021.3.12 17:03',
     general: '练习所有单韵母的发音以及其声调。',
-    allStu: 50,
-    doneStu: 20
+    status: 'onAudit'
   }]
 }, {
   date: "昨天",
   lists: [{
-    workTitle: "2021.4.13（周二）读拼音",
+    workTitle: "4.13（周二）读拼音",
     publisher: '巫梅梅',
     avatar: '/static/avatar.png',
     pubTime: '2021.3.12 17:03',
     general: '练习所有单韵母的发音以及其声调。',
-    allStu: 50,
-    doneStu: 45
+    status: 'noFeedback'
   }, {
-    workTitle: "2021.4.13（周二）读拼音",
+    workTitle: "4.13（周二）读拼音",
     publisher: '巫梅梅',
     avatar: '/static/avatar.png',
     pubTime: '2021.3.12 17:03',
     general: '练习所有单韵母的发音以及其声调。',
-    allStu: 50,
-    doneStu: 35
+    status: 'noFeedback'
   }]
 }, {
   date: "2021.4.12",
   lists: [{
-    workTitle: "2021.4.13（周二）读拼音",
+    workTitle: "4.13（周二）读拼音",
     publisher: '巫梅梅',
     avatar: '/static/avatar.png',
     pubTime: '2021.4.12 17:03',
     general: '练习所有单韵母的发音以及其声调。',
-    allStu: 50,
-    doneStu: 12
+    status: 'onAudit'
   }, {
-    workTitle: "2021.4.13（周二）读拼音",
+    workTitle: "4.13（周二）读拼音",
     publisher: '巫梅梅',
     avatar: '/static/avatar.png',
     pubTime: '2021.4.12 17:03',
     general: '练习所有单韵母的发音以及其声调。',
-    allStu: 50,
-    doneStu: 50
+    status: 'noFeedback'
   }]
 }]
 module.exports = {

@@ -1,5 +1,5 @@
 <!--components/tag/tag.wxml-->
-<view class="tag">
+<view class="tag {{type}}">
     <view class="status">
         <slot></slot>
     </view>
