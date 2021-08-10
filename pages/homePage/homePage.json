@@ -2,7 +2,8 @@
   "usingComponents": {
     "navBar": "/components/navigationBar/navigationBar",
     "inviteDialog": "/components/inviteDialog/inviteDialog",
-    "id-card": "/components/idCard/idCard"
+    "id-card": "/components/idCard/idCard",
+    "van-popup": "@vant/weapp/popup/index"
   },
   "navigationStyle": "custom"
 }

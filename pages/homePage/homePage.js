@@ -15,8 +15,24 @@ Page({
     isToDo: true,
     hasClass: true,
     showInviteDialog: false,
-    isTeacher: true
-
+    isTeacher: true,
+    showAdd: false
+  },
+  showAdd() {
+    this.setData({
+      showAdd: !this.data.showAdd
+    })
+    this.getTabBar().setData({
+      tabBarShow: !this.data.showAdd
+    })
+  },
+  closeAdd() {
+    this.setData({
+      showAdd: !this.data.showAdd
+    })
+    this.getTabBar().setData({
+      tabBarShow: !this.data.showAdd
+    })
   },
   navTo(e) {
     let url = e.currentTarget.dataset.target
