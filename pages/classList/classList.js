@@ -29,7 +29,13 @@ Page({
         }, ],
         classPre: [{
             className: "1年级2班",
-        }]
+            status: 'unpass',
+            desc: '未通过'
+        }, {
+            className: "1年级2班",
+            status: 'onAudit',
+            desc: '审核中'
+        }],
     },
     showInfo() {
         wx.navigateTo({

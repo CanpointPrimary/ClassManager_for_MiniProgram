@@ -23,3 +23,7 @@
 .onAudit {
     background: #9891e2;
 }
+
+.unpass {
+    background: #FFB357;
+}
