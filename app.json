@@ -29,11 +29,16 @@
     "pages/success/success",
     "pages/information/information"
   ],
-  "subPackages": [
-    {
+  "subPackages": [{
       "root": "studentView",
       "pages": [
         "pages/workList/workList"
+      ]
+    },
+    {
+      "root": "textbook",
+      "pages": [
+        "pages/workPub/workPub"
       ]
     }
   ],
@@ -48,7 +53,7 @@
     "connectSocket": 20000,
     "uploadFile": 20000,
     "downloadFile": 20000
-  }, 
+  },
   "useExtendedLib": {
     "weui": true
   },

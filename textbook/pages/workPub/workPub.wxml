@@ -1,0 +1,86 @@
+<!--pages/workPublish/workPublish.wxml-->
+<view class="container">
+    <view class="body">
+        <view class="header">
+            <view class="recipient" bindtap="chooseRecipient">{{recipient}}</view>
+            <mp-icon icon="arrow" bindtap="chooseRecipient" size="14"></mp-icon>
+        </view>
+        <!-- 作业标题 -->
+        <view class="title">
+            <input type="text" value="{{title}}" bindinput="titleChange"
+                maxlength="25"></input><text>{{title.length}}/25</text>
+        </view>
+        <!-- 按钮区 -->
+        <view class="btns">
+            <view class="block">
+                <image class="addFile" src="/static/icon/video.svg"></image>
+                <image class="addFile" src="/static/icon/file.svg"></image>
+                <image src="/static/icon/picture.svg" class="picture addFile" bindtap="chooseImage"></image>
+                <image src="/static/icon/voice.svg" class="mic addFile" bindtap="showVoice"></image>
+            </view>
+        </view>
+        <view class="textarea">
+            <textarea class="desc"></textarea>
+            <!-- 留给语音 -->
+            <view class="audio" bindtap="playVoice" wx:for="{{voices}}" wx:key="id">
+                <image src="/static/icon/voice1099.svg"></image>
+                {{voiceLength}}″
+            </view>
+
+            <!-- 暂时保留 -->
+            <!-- <view class="imageUpload" wx:if="{{imageList.length>0}}">
+                <image wx:for="{{imageList.length}}" wx:key="id" src="{{imageList[item]}}" data-index="{{item}}"
+                    class="seletedImage" mode="aspectFill" bindtap="showBigImage"></image>
+                <view class="camera" bindtap="chooseImage">
+                    <mp-icon icon="add" size="50" color="gray"></mp-icon>
+                </view>
+            </view> -->
+        </view>
+
+        <!-- 语音进度条 -->
+        <view class="audio file">
+            <image src="/static/icon/play.svg" class="icon"></image>
+            <van-slider value="50"></van-slider>
+            <view class="time">58″</view>
+            <image src="/static/icon/close.svg" class="close"></image>
+        </view>
+        <view class="file">
+            <image class="icon" src="/static/icon/word.svg"></image>
+            <view class="fileName">第四课_金木水火土</view>
+            <image src="/static/icon/close.svg" class="close"></image>
+        </view>
+        <view class="file">
+            <image class="icon" src="/static/icon/movie.svg"></image>
+            <view class="fileName">视频</view>
+            <image src="/static/icon/close.svg" class="close"></image>
+        </view>
+        <!-- 预计用时 -->
+    </view>
+    <picker mode="multiSelector" range="{{timeList}}" value="{{timeSelect}}">
+        <van-cell title="截止时间"
+            value="{{timeSelect[0]==0?'无':(timeList[0][timeSelect[0]]+' '+timeList[1][timeSelect[1]])}}" is-link>
+        </van-cell>
+    </picker>
+    <picker mode="multiSelector" range="{{timeList}}" value="{{timeSelect}}">
+        <van-cell title="定时发送" value="{{timeList[0][timeSelect[0]]+' '+timeList[1][timeSelect[1]]}}" is-link></van-cell>
+    </picker>
+
+
+    <van-popup show="{{ showVoice }}" position="bottom" custom-style="height: 30%;" round
+        bind:click-overlay="closeVoice">
+        <!-- <canvas></canvas> -->
+        <view class="icon" bindtap="startRecord">
+            <mp-icon icon="mike" type="field" color="#fff" size="{{36}}" wx:if="{{showWave}}"></mp-icon>
+            <view class="waves" wx:else>
+                <view class="waveItem1 waveItem"></view>
+                <view class="waveItem2 waveItem"></view>
+                <view class="waveItem3 waveItem"></view>
+                <view class="waveItem2 waveItem"></view>
+                <view class="waveItem1 waveItem"></view>
+            </view>
+        </view>
+        <view wx:if="{{showWave}}">点击录音</view>
+        <view wx:else>点击结束</view>
+    </van-popup>
+    <view class="submit">发布</view>
+</view>

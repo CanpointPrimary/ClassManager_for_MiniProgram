@@ -173,6 +173,12 @@
                     "pathName": "studentView/pages/workList/workList",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "textbook/pages/workPub/workPub",
+                    "pathName": "textbook/pages/workPub/workPub",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

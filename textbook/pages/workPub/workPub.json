@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-slider": "@vant/weapp/slider/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "mp-icon": "weui-miniprogram/icon/icon",
+    "mp-gallery": "weui-miniprogram/gallery/gallery"
+  },
+  "navigationBarTitleText": "发布作业",
+  "navigationBarBackgroundColor": "#EDF6FD"
+}
