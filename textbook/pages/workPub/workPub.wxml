@@ -13,8 +13,8 @@
         <!-- 按钮区 -->
         <view class="btns">
             <view class="block">
-                <image class="addFile" src="/static/icon/video.svg"></image>
-                <image class="addFile" src="/static/icon/file.svg"></image>
+                <image class="addFile" src="/static/icon/video.svg" bindtap="addVideo"></image>
+                <image class="addFile" src="/static/icon/file.svg" bindtap="addFile"></image>
                 <image src="/static/icon/picture.svg" class="picture addFile" bindtap="chooseImage"></image>
                 <image src="/static/icon/voice.svg" class="mic addFile" bindtap="showVoice"></image>
             </view>

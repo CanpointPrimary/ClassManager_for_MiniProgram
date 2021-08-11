@@ -24,6 +24,24 @@ Page({
         galleryShow: false,
         currentGallery: 0
     },
+    addVideo() {
+        wx.chooseMessageFile({
+            count: 3,
+            type: 'video',
+            success: (res) => {
+                console.log(res);
+            }
+        })
+    },
+    addFile() {
+        wx.chooseMessageFile({
+            count: 5,
+            type: 'file',
+            success: (res) => {
+                console.log(res);
+            }
+        })
+    },
     chooseChapter() {
         wx.navigateTo({
             url: '../textbookWork/textbookWork',

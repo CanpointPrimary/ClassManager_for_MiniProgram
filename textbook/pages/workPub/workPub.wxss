@@ -125,7 +125,7 @@
   background: #f6f6f694;
 }
 .container .body .textarea .desc {
-  height: 130rpx;
+  height: 180rpx;
   width: 100%;
   font-size: 28rpx;
   line-height: 40rpx;
