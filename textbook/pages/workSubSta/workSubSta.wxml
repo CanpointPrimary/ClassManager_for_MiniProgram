@@ -1,2 +1,37 @@
 <!--textbook/pages/workSubSta/workSubSta.wxml-->
-<text>textbook/pages/workSubSta/workSubSta.wxml</text>
+<!--pages/subStatus/subStatus.wxml-->
+<view class="container">
+    <!-- 未查看 -->
+    <view class="title">
+        已完成
+    </view>
+    <view class="list">
+        <view class="name" wx:for="{{subStatusList.notViewed}}">{{item.rname}}</view>
+        <view wx:if="{{!subStatusList.notViewed.length}}">全部已查看</view>
+    </view>
+    <view class="btns">
+        <view class="btn copy">复制名单</view>
+        <view class="btn remind">提醒学生</view>
+    </view>
+    <view class="title">
+        未重做
+    </view>
+    <view class="list">
+        <view class="name" wx:for="{{subStatusList.notSubmit}}">{{item.rname}}</view>
+        <view wx:if="{{!subStatusList.notSubmit.length}}">全部已查看</view>
+    </view>
+    <view class="btns">
+        <view class="btn copy">复制名单</view>
+        <view class="btn remind">提醒学生</view>
+    </view>
+    <view class="title">
+        未提交
+    </view>
+    <view class="list">
+        <view class="name" wx:for="{{subStatusList.hadSubmit}}">{{item.rname}}</view>
+        <view wx:if="{{!subStatusList.hadSubmit.length}}">全部已查看</view>
+    </view>
+    <view class="btns">
+        <view class="btn copy">复制名单</view>
+    </view>
+</view>

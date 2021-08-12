@@ -179,6 +179,12 @@
                     "pathName": "textbook/pages/workPub/workPub",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "作业统计",
+                    "pathName": "textbook/pages/workSubSta/workSubSta",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }
