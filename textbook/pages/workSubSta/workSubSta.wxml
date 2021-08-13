@@ -6,43 +6,50 @@
         <view class="tabItem" bindtap="changeTab" data-index="{{1}}"><text class="value">作答统计</text></view>
         <view class="actBg"></view>
     </view>
+    <block wx:if="{{!index}}">
+        <!-- 环形图 -->
+        <view class="ring">
+            <canvas id="canvas_ring" canvas-id="canvas_ring" type="2d" bindtap="showTip"></canvas>
+        </view>
 
-    <!-- 环形图 -->
-    <view class="ring">
-        <canvas id="canvas_ring" canvas-id="canvas_ring" type="2d" bindtap="showTip"></canvas>
-    </view>
-
-    <!-- 未查看 -->
-    <view class="title">
-        已完成
-    </view>
-    <view class="list">
-        <view class="name" wx:for="{{subStatusList.notViewed}}">{{item.rname}}</view>
-        <view wx:if="{{!subStatusList.notViewed.length}}">全部已查看</view>
-    </view>
-    <view class="btns">
-        <view class="btn copy">复制名单</view>
-    </view>
-    <view class="title">
-        未重做
-    </view>
-    <view class="list">
-        <view class="name" wx:for="{{subStatusList.notSubmit}}">{{item.rname}}</view>
-        <view wx:if="{{!subStatusList.notSubmit.length}}">全部已查看</view>
-    </view>
-    <view class="btns">
-        <view class="btn copy">复制名单</view>
-        <view class="btn remind">提醒学生</view>
-    </view>
-    <view class="title">
-        未提交
-    </view>
-    <view class="list">
-        <view class="name" wx:for="{{subStatusList.hadSubmit}}">{{item.rname}}</view>
-        <view wx:if="{{!subStatusList.hadSubmit.length}}">全部已查看</view>
-    </view>
-    <view class="btns">
-        <view class="btn copy">复制名单</view>
-        <view class="btn remind">提醒学生</view>
-    </view>
+        <!-- 未查看 -->
+        <view class="title">
+            已完成
+        </view>
+        <view class="list">
+            <view class="name" wx:for="{{subStatusList.notViewed}}">{{item.rname}}</view>
+            <view wx:if="{{!subStatusList.notViewed.length}}">全部已查看</view>
+        </view>
+        <view class="btns">
+            <view class="btn copy">复制名单</view>
+        </view>
+        <view class="title">
+            未重做
+        </view>
+        <view class="list">
+            <view class="name" wx:for="{{subStatusList.notSubmit}}">{{item.rname}}</view>
+            <view wx:if="{{!subStatusList.notSubmit.length}}">全部已查看</view>
+        </view>
+        <view class="btns">
+            <view class="btn copy">复制名单</view>
+            <view class="btn remind">提醒学生</view>
+        </view>
+        <view class="title">
+            未提交
+        </view>
+        <view class="list">
+            <view class="name" wx:for="{{subStatusList.hadSubmit}}">{{item.rname}}</view>
+            <view wx:if="{{!subStatusList.hadSubmit.length}}">全部已查看</view>
+        </view>
+        <view class="btns">
+            <view class="btn copy">复制名单</view>
+            <view class="btn remind">提醒学生</view>
+        </view>
+    </block>
+    <block wx:else>
+        <view class="bar">
+            <view class="chartTitle">提交人数统计</view>
+            <canvas id="canvas_bar" canvas-id="canvas_bar" type="2d"></canvas>
+        </view>
+    </block>
 </view>

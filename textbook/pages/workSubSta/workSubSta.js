@@ -24,6 +24,11 @@ Page({
         this.setData({
             index: data.index
         })
+        if (!data.index) {
+            this.setRingData()
+        } else {
+            this.showBar()
+        }
 
     },
     /**
@@ -33,9 +38,168 @@ Page({
         this.setData({
             subStatusList
         })
-        this.setSeriesData()
+        this.setRingData()
     },
-    setSeriesData() {
+    showBar() {
+        let Bar = {
+            categories: [
+                "A",
+                "B",
+                "C",
+                "D",
+                "E",
+            ],
+            series: [{
+                "name": "目标值",
+                "data": [
+                    35,
+                    15,
+                    31,
+                    13,
+                    34
+                ]
+            }]
+        }
+        wx.createSelectorQuery().select("#canvas_bar").fields({
+            node: true,
+            size: true,
+        }).exec((res) => {
+            const ctx = res[0].node.getContext('2d')
+            const width = res[0].width
+            const height = res[0].height
+            const dpr = wx.getSystemInfoSync().pixelRatio
+            res[0].node.width = width * dpr
+            res[0].node.height = height * dpr
+            new uCharts({
+                context: ctx,
+                series: Bar.series,
+                categories: Bar.categories,
+                width: width * dpr,
+                height: height * dpr,
+                pixelRatio: dpr,
+                "type": "column",
+                "canvasId": "",
+                "canvas2d": false,
+                "background": "none",
+                "animation": true,
+                "timing": "easeOut",
+                "duration": 1000,
+                "color": [
+                    "#9891E2",
+                ],
+                "padding": [
+                    15,
+                    30,
+                    0,
+                    10
+                ],
+                "rotate": false,
+                "errorReload": true,
+                "fontSize": 8,
+                "fontColor": "#000",
+                "enableScroll": false,
+                "touchMoveLimit": 60,
+                "enableMarkLine": false,
+                "dataLabel": false,
+                "dataPointShape": true,
+                "dataPointShapeType": "solid",
+                "tapLegend": true,
+                "xAxis": {
+                    "disabled": false,
+                    "axisLine": true,
+                    "axisLineColor": "#CCCCCC",
+                    "calibration": false,
+                    "fontColor": "#666666",
+                    "fontSize": 9,
+                    "rotateLabel": false,
+                    "itemCount": 5,
+                    "boundaryGap": "center",
+                    "disableGrid": true,
+                    "gridColor": "#CCCCCC",
+                    "gridType": "solid",
+                    "dashLength": 4,
+                    "gridEval": 1,
+                    "scrollShow": false,
+                    "scrollAlign": "left",
+                    "scrollColor": "#A6A6A6",
+                    "scrollBackgroundColor": "#EFEBEF",
+                    "format": ""
+                },
+                "yAxis": {
+                    "disabled": false,
+                    "disableGrid": true,
+                    "splitNumber": 5,
+                    "gridType": "solid",
+                    "dashLength": 8,
+                    "gridColor": "#CCCCCC",
+                    "padding": 10,
+                    "showTitle": false,
+                    "data": [{
+                        "type": "value",
+                        "position": "left",
+                        "disabled": false,
+                        "axisLine": true,
+                        "axisLineColor": "#CCCCCC",
+                        "calibration": true,
+                        "fontColor": "#666666",
+                        "fontSize": 9,
+                        "textAlign": "right",
+                        "tofix": null,
+                        "unit": "",
+                        "format": ""
+                    }]
+                },
+                "legend": {
+                    "show": false,
+                },
+                "extra": {
+                    "column": {
+                        "type": "group",
+                        "width": 36,
+                        "seriesGap": 2,
+                        "categoryGap": 3,
+                        "barBorderCircle": false,
+                        "linearType": "none",
+                        "linearOpacity": 1,
+                        "colorStop": 0,
+                        "meterBorder": 1,
+                        "meterFillColor": "#FFFFFF",
+                        "activeBgColor": "#000000",
+                        "activeBgOpacity": 0.08,
+                        "meterBorde": 1
+                    },
+                    "tooltip": {
+                        "showBox": true,
+                        "showArrow": true,
+                        "showCategory": false,
+                        "borderWidth": 0,
+                        "borderRadius": 0,
+                        "borderColor": "#000000",
+                        "borderOpacity": 0.7,
+                        "bgColor": "#000000",
+                        "bgOpacity": 0.7,
+                        "gridType": "solid",
+                        "dashLength": 4,
+                        "gridColor": "#CCCCCC",
+                        "fontColor": "#FFFFFF",
+                        "splitLine": true,
+                        "horizentalLine": false,
+                        "xAxisLabel": false,
+                        "yAxisLabel": false,
+                        "labelBgColor": "#FFFFFF",
+                        "labelBgOpacity": 0.7,
+                        "labelFontColor": "#666666"
+                    },
+                    "markLine": {
+                        "type": "solid",
+                        "dashLength": 4,
+                        "data": []
+                    }
+                }
+            })
+        })
+    },
+    setRingData() {
         let Pie = {
             "series": [{
                 "data": [{
