@@ -2,6 +2,9 @@
 let {
     subStatusList
 } = require('../../../utils/mockData')
+let {
+    answersCount
+} = require('../../../utils/mockData')
 import uCharts from '../../utils/u-charts';
 let canvasRing
 Page({
@@ -36,7 +39,8 @@ Page({
      */
     onLoad: function (options) {
         this.setData({
-            subStatusList
+            subStatusList,
+            answersCount
         })
         this.setRingData()
     },

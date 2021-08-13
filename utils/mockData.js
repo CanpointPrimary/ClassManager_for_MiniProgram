@@ -681,6 +681,27 @@ let workList = [{
     status: 'noFeedback'
   }]
 }]
+let answersCount = [{
+  sName: '王小二',
+  count: 4,
+  score: 'A'
+}, {
+  sName: '张三丰',
+  count: 5,
+  score: 'A'
+}, {
+  sName: '王文龙',
+  count: 4,
+  score: 'A'
+}, {
+  sName: '刘十九',
+  count: 1,
+  score: 'A'
+}, {
+  sName: '胡八一',
+  count: 2,
+  score: 'A'
+}, ]
 module.exports = {
   answers,
   subStatusList,
@@ -689,5 +710,6 @@ module.exports = {
   joinBg,
   toDoList,
   infos,
-  workList
+  workList,
+  answersCount
 }

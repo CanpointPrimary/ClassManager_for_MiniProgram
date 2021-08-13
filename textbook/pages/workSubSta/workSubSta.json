@@ -1,5 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "mp-icon": "weui-miniprogram/icon/icon"
+  },
   "navigationBarBackgroundColor": "#edf6fd",
   "navigationBarTitleText": "作业统计"
 }
