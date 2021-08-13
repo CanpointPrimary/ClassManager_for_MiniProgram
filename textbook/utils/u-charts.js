@@ -533,10 +533,10 @@ function getTouches(touches, opts, e) {
   let x, y;
   if (touches.clientX) {
     if (opts.rotate) {
-      y = opts.height - touches.clientX * opts.pix;
+      y = (touches.pageX - e.currentTarget.offsetLeft) * opts.pix;
       x = (touches.pageY - e.currentTarget.offsetTop) * opts.pix;
     } else {
-      x = touches.clientX * opts.pix;
+      x = (touches.pageX - e.currentTarget.offsetLeft) * opts.pix;
       y = (touches.pageY - e.currentTarget.offsetTop) * opts.pix;
     }
   } else {

@@ -6,6 +6,12 @@
         <view class="tabItem" bindtap="changeTab" data-index="{{1}}"><text class="value">作答统计</text></view>
         <view class="actBg"></view>
     </view>
+
+    <!-- 环形图 -->
+    <view class="ring">
+        <canvas id="canvas_ring" canvas-id="canvas_ring" type="2d" bindtap="showTip"></canvas>
+    </view>
+
     <!-- 未查看 -->
     <view class="title">
         已完成
