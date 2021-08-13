@@ -3,6 +3,37 @@
   min-height: 100%;
   background-color: #edf6fd;
   padding: 30rpx;
+  padding-bottom: 100rpx;
+}
+.container .tabbar {
+  position: relative;
+  width: 530rpx;
+  height: 56rpx;
+  border-radius: 28rpx;
+  filter: drop-shadow(0 3rpx 6rpx #00000029);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+}
+.container .tabbar .tabItem {
+  font-size: 28rpx;
+  width: 265rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .tabbar .tabItem .value {
+  z-index: 1;
+}
+.container .tabbar .actBg {
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  width: 265rpx;
+  height: 56rpx;
+  border-radius: 28rpx;
+  background-color: #dce9fe;
 }
 .container .title {
   color: #1d1d1d;

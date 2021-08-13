@@ -1,4 +1,5 @@
 {
   "usingComponents": {},
-  "navigationBarBackgroundColor": "#edf6fd"
+  "navigationBarBackgroundColor": "#edf6fd",
+  "navigationBarTitleText": "作业统计"
 }

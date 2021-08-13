@@ -8,9 +8,22 @@ Page({
      * 页面的初始数据
      */
     data: {
+        index: 0
+    },
+    changeTab(e) {
+        let data = e.currentTarget.dataset
+        if (this.data.index != data.index) {
+            this.animate(".actBg", [{
+                left: data.index ? '0rpx' : '266rpx'
+            }, {
+                left: data.index ? '266rpx' : '0rpx'
+            }], 200)
+        }
+        this.setData({
+            index: data.index
+        })
 
     },
-
     /**
      * 生命周期函数--监听页面加载
      */

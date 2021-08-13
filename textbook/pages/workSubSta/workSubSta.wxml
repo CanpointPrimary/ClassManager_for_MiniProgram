@@ -1,6 +1,11 @@
 <!--textbook/pages/workSubSta/workSubSta.wxml-->
-<!--pages/subStatus/subStatus.wxml-->
 <view class="container">
+    <!-- tabbar -->
+    <view class="tabbar">
+        <view class="tabItem" bindtap="changeTab" data-index="{{0}}"><text class="value">提交统计</text></view>
+        <view class="tabItem" bindtap="changeTab" data-index="{{1}}"><text class="value">作答统计</text></view>
+        <view class="actBg"></view>
+    </view>
     <!-- 未查看 -->
     <view class="title">
         已完成
@@ -11,7 +16,6 @@
     </view>
     <view class="btns">
         <view class="btn copy">复制名单</view>
-        <view class="btn remind">提醒学生</view>
     </view>
     <view class="title">
         未重做
@@ -33,5 +37,6 @@
     </view>
     <view class="btns">
         <view class="btn copy">复制名单</view>
+        <view class="btn remind">提醒学生</view>
     </view>
 </view>
