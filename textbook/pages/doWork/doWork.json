@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "van-slider": "@vant/weapp/slider/index"
+    "van-slider": "@vant/weapp/slider/index",
+    "d-button": "/components/button/button"
   },
   "navigationBarTitleText": "作业作答",
   "navigationBarBackgroundColor": "#EDF6FD"

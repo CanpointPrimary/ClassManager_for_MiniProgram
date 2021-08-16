@@ -73,4 +73,8 @@
             </view>
         </view>
     </view>
+    <view class="btns">
+        <d-button type="shadow">保存草稿</d-button>
+        <d-button type="fill">确认提交</d-button>
+    </view>
 </view>

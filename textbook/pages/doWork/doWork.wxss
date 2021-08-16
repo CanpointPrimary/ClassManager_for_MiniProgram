@@ -2,6 +2,7 @@
   min-height: 100vh;
   background: #EDF6FD;
   padding-top: 30rpx;
+  padding-bottom: 166rpx;
 }
 .container .work {
   position: relative;
@@ -151,4 +152,10 @@
 .container .answer .body .textarea .input {
   font-size: 28rpx;
   color: #666;
+}
+.container .btns {
+  padding-top: 66rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
