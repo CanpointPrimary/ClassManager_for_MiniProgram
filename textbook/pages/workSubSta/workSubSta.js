@@ -7,6 +7,7 @@ let {
 } = require('../../../utils/mockData')
 import uCharts from '../../utils/u-charts';
 let canvasRing
+let canvasBar
 Page({
 
     /**
@@ -44,6 +45,13 @@ Page({
         })
         this.setRingData()
     },
+    tapBar(e) {
+        canvasBar.showToolTip(e, {
+            formatter: function (item) {
+                return item.data
+            }
+        })
+    },
     showBar() {
         let Bar = {
             categories: [
@@ -74,7 +82,7 @@ Page({
             const dpr = wx.getSystemInfoSync().pixelRatio
             res[0].node.width = width * dpr
             res[0].node.height = height * dpr
-            new uCharts({
+            canvasBar = new uCharts({
                 context: ctx,
                 series: Bar.series,
                 categories: Bar.categories,
