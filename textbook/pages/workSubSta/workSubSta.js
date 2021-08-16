@@ -171,6 +171,7 @@ Page({
                         "seriesGap": 2,
                         "categoryGap": 3,
                         "barBorderCircle": false,
+                        barBorderRadius: [10, 10, 0, 0],
                         "linearType": "none",
                         "linearOpacity": 1,
                         "colorStop": 0,

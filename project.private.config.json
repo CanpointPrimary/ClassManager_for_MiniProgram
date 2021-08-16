@@ -185,6 +185,12 @@
                     "pathName": "textbook/pages/workSubSta/workSubSta",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "作业作答",
+                    "pathName": "textbook/pages/doWork/doWork",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

@@ -1,0 +1,76 @@
+<!--textbook/pages/doWork/doWork.wxml-->
+<view class="container">
+    <view class="work">
+        <view class="endtime">
+            <image class="icon" src="../../static/clock.png"></image>
+            <view class="value">截止时间：今天22:00</view>
+        </view>
+
+        <!-- 背景点阵 -->
+        <image class="bg_dot left" src="../../static/Dot_Grid.png"></image>
+        <image class="bg_dot right" src="../../static/Dot_Grid.png"></image>
+
+        <!-- 作业卡片 -->
+        <view class="card">
+            <view class="header">
+                <image src="../../static/etc.png" class="icon"></image>
+            </view>
+            <view class="title">2021.3.11（周三）英语作业</view>
+            <view class="inner">
+                <view class="value">
+                    完成第四课读写内容，并拍照上传。完成第四课读写内容，并拍照上传。完成第四课读写内容，并拍照上传。完成第四课读写内容，并拍照上传。完成第四课读写内容，并拍照上传。完成第四课读写内容，并拍照上传。
+                </view>
+                <view class="images">
+                    <image class="desc_image" src="/static/work.png" mode="aspectFill" wx:for="{{4}}"></image>
+                </view>
+
+                <!-- 添加的文件 -->
+                <view class="files">
+                    <view class="audio file">
+                        <image src="/static/icon/play.svg" class="icon"></image>
+                        <van-slider value="50" bar-height="3px" active-color="#1e50a2"></van-slider>
+                        <view class="time">02:36</view>
+                    </view>
+                    <view class="file">
+                        <image class="icon" src="/static/icon/word.svg"></image>
+                        <view class="fileName">第四课_金木水火土</view>
+                    </view>
+                    <view class="file">
+                        <image class="icon" src="/static/icon/movie.svg"></image>
+                        <view class="fileName">视频</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <!-- 作答 -->
+    </view>
+    <view class="answer">
+        <view class="body">
+
+            <!-- 按钮区 -->
+            <view class="btns">
+                <view class="video btn">
+                    <image class="icon" src="../../static/video_black.svg"></image>
+                    <text>视频</text>
+                </view>
+                <view class="bar"></view>
+                <view class="picture btn">
+                    <image class="icon" src="../../static/picture.svg"></image>
+                    <text>拍照</text>
+                </view>
+                <view class="bar"></view>
+                <view class="audio btn">
+                    <image class="icon" src="../../static/audio.svg"></image>
+                    <text>语音</text>
+                </view>
+            </view>
+
+
+            <!-- 作答 -->
+            <view class="textarea">
+                <textarea class="input" placeholder="在此处添加作答描述···"></textarea>
+            </view>
+        </view>
+    </view>
+</view>

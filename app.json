@@ -39,7 +39,8 @@
       "root": "textbook",
       "pages": [
         "pages/workPub/workPub",
-        "pages/workSubSta/workSubSta"
+        "pages/workSubSta/workSubSta",
+        "pages/doWork/doWork"
       ]
     }
   ],
