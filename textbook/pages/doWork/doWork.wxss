@@ -146,12 +146,12 @@
 }
 .container .answer .body .textarea {
   background: #f6f6f6;
-  min-height: 300rpx;
-  padding: 20rpx;
 }
 .container .answer .body .textarea .input {
+  padding: 20rpx;
   font-size: 28rpx;
   color: #666;
+  width: 100%;
 }
 .container .btnsGroup {
   padding-top: 66rpx;

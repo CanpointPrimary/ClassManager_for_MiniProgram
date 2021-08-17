@@ -5,9 +5,50 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        imageList: [{
+                url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+                name: '图片1',
+            },
+            {
+                url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+                name: '图片2',
+            }, {
+                url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+                name: '图片2',
+            }, {
+                url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+                name: '图片2',
+            }, {
+                url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+                name: '图片2',
+            }, {
+                url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+                name: '图片2',
+            }
+        ]
     },
-
+    addPicture(e) {
+        wx.chooseImage({
+            success: (res) => {
+                let imageList = this.data.imageList.slice()
+                let addList = res.tempFilePaths.map((item) => {
+                    return {
+                        url: item
+                    }
+                })
+                console.log(addList);
+                this.setData({
+                    imageList: [...imageList, ...addList]
+                })
+            }
+        })
+    },
+    deletePic(e) {
+        this.data.imageList.splice(e.detail.index, 1)
+        this.setData({
+            imageList: this.data.imageList
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */

@@ -55,7 +55,7 @@
                     <text>视频</text>
                 </view>
                 <view class="bar"></view>
-                <view class="picture btn">
+                <view class="picture btn" bindtap="addPicture">
                     <image class="icon" src="../../static/picture.svg"></image>
                     <text>拍照</text>
                 </view>
@@ -66,10 +66,14 @@
                 </view>
             </view>
 
-
             <!-- 作答 -->
             <view class="textarea">
-                <textarea class="input" placeholder="在此处添加作答描述···"></textarea>
+                <textarea class="input" placeholder="在此处添加作答描述···" auto-height></textarea>
+
+                <!-- 图片上传 -->
+                <van-uploader accept="image" show-upload='{{false}}' file-list="{{ imageList }}" preview-size="146rpx"
+                    binddelete='deletePic'>
+                </van-uploader>
             </view>
         </view>
     </view>
