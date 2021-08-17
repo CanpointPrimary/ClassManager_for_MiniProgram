@@ -18,14 +18,9 @@ Page({
             }, {
                 url: 'https://img.yzcdn.cn/vant/leaf.jpg',
                 name: '图片2',
-            }, {
-                url: 'https://img.yzcdn.cn/vant/leaf.jpg',
-                name: '图片2',
-            }, {
-                url: 'https://img.yzcdn.cn/vant/leaf.jpg',
-                name: '图片2',
             }
-        ]
+        ],
+        sublist: 1
     },
     addPicture(e) {
         wx.chooseImage({

@@ -42,43 +42,77 @@
                 </view>
             </view>
         </view>
-
-        <!-- 作答 -->
     </view>
-    <view class="answer">
-        <view class="body">
 
-            <!-- 按钮区 -->
-            <view class="btns">
-                <view class="video btn">
-                    <image class="icon" src="../../static/video_black.svg"></image>
-                    <text>视频</text>
-                </view>
-                <view class="bar"></view>
-                <view class="picture btn" bindtap="addPicture">
-                    <image class="icon" src="../../static/picture.svg"></image>
-                    <text>拍照</text>
-                </view>
-                <view class="bar"></view>
-                <view class="audio btn">
-                    <image class="icon" src="../../static/audio.svg"></image>
-                    <text>语音</text>
-                </view>
-            </view>
 
-            <!-- 作答 -->
-            <view class="textarea">
-                <textarea class="input" placeholder="在此处添加作答描述···" auto-height></textarea>
+    <block wx:if="{{!sublist}}">
+        <!-- 作答 -->
+        <view class="answer">
+            <view class="body">
 
-                <!-- 图片上传 -->
-                <van-uploader accept="image" show-upload='{{false}}' file-list="{{ imageList }}" preview-size="146rpx"
-                    binddelete='deletePic'>
-                </van-uploader>
+                <!-- 按钮区 -->
+                <view class="btns">
+                    <view class="video btn">
+                        <image class="icon" src="../../static/video_black.svg"></image>
+                        <text>视频</text>
+                    </view>
+                    <view class="bar"></view>
+                    <view class="picture btn" bindtap="addPicture">
+                        <image class="icon" src="../../static/picture.svg"></image>
+                        <text>拍照</text>
+                    </view>
+                    <view class="bar"></view>
+                    <view class="audio btn">
+                        <image class="icon" src="../../static/audio.svg"></image>
+                        <text>语音</text>
+                    </view>
+                </view>
+
+                <!-- 作答 -->
+                <view class="textarea">
+                    <textarea class="input" placeholder="在此处添加作答描述···" auto-height></textarea>
+
+                    <!-- 图片上传 -->
+                    <van-uploader accept="image" show-upload='{{false}}' file-list="{{ imageList }}"
+                        preview-size="146rpx" binddelete='deletePic'>
+                    </van-uploader>
+                </view>
             </view>
         </view>
-    </view>
-    <view class="btnsGroup">
-        <d-button type="shadow">保存草稿</d-button>
-        <d-button type="fill">确认提交</d-button>
-    </view>
+        <view class="btnsGroup">
+            <d-button type="shadow">保存草稿</d-button>
+            <d-button type="fill">确认提交</d-button>
+        </view>
+    </block>
+    <block wx:else>
+        <view class="subAnswer">
+            <view class="inner">
+                <d-tag type="sub_blue">已提交</d-tag>
+                <view class="header">
+                    <view class="title">第一次提交</view>
+                    <view class="time">提交时间：2021.3.12 20:05</view>
+                </view>
+                <view class="value">
+                    <view class="text">老师我已经做完了，其中第2页第3题不太确定</view>
+                    <van-uploader accept="image" show-upload='{{false}}' file-list="{{ imageList }}"
+                        deletable="{{false}}" preview-size="156rpx" binddelete='deletePic'>
+                    </van-uploader>
+                </view>
+                <view class="filePadding">
+
+                    <view class="files">
+                        <view class="audio file">
+                            <image src="/static/icon/play.svg" class="icon"></image>
+                            <van-slider value="50" bar-height="3px" active-color="#1e50a2"></van-slider>
+                            <view class="time">02:36</view>
+                        </view>
+                        <view class="file">
+                            <image class="icon" src="/static/icon/movie.svg"></image>
+                            <view class="fileName">视频</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
 </view>

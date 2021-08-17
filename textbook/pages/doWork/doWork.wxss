@@ -81,10 +81,10 @@
   width: 146rpx;
   height: 146rpx;
 }
-.container .work .card .inner .files {
+.container .files {
   padding-bottom: 92rpx;
 }
-.container .work .card .inner .files .file {
+.container .files .file {
   height: 86rpx;
   margin-bottom: 10rpx;
   padding: 0 20rpx;
@@ -95,17 +95,17 @@
   font-size: 22rpx;
   color: #666;
 }
-.container .work .card .inner .files .file .icon {
+.container .files .file .icon {
   width: 48rpx;
   height: 48rpx;
 }
-.container .work .card .inner .files .file .fileName {
+.container .files .file .fileName {
   flex: 1;
   margin: 0 10rpx;
   font-size: 24rpx;
   color: #666;
 }
-.container .work .card .inner .files .audio .van-slider {
+.container .files .audio .van-slider {
   width: 468rpx;
   margin: 0 10rpx;
 }
@@ -158,4 +158,42 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+.container .subAnswer {
+  padding: 0 30rpx;
+}
+.container .subAnswer .inner {
+  position: relative;
+  border-radius: 20rpx;
+  background: #fff;
+}
+.container .subAnswer .inner .header {
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 39rpx;
+  padding-left: 20rpx;
+}
+.container .subAnswer .inner .header .title {
+  font-size: 28rpx;
+}
+.container .subAnswer .inner .header .time {
+  font-size: 24rpx;
+  color: #999;
+}
+.container .subAnswer .inner .value {
+  background: #f6f6f6;
+  font-size: 28rpx;
+  color: #666;
+}
+.container .subAnswer .inner .value .text {
+  padding-left: 20rpx;
+}
+.container .subAnswer .inner .filePadding {
+  position: relative;
+  padding: 0 20rpx;
+}
+.container .subAnswer .inner .filePadding .files {
+  padding-bottom: 50rpx;
 }
