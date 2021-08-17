@@ -161,6 +161,7 @@
 }
 .container .subAnswer {
   padding: 0 30rpx;
+  margin-bottom: 60rpx;
 }
 .container .subAnswer .inner {
   position: relative;
@@ -196,4 +197,7 @@
 }
 .container .subAnswer .inner .filePadding .files {
   padding-bottom: 50rpx;
+}
+.container .button--btn {
+  margin: 0 auto;
 }

@@ -98,8 +98,8 @@
                         deletable="{{false}}" preview-size="156rpx" binddelete='deletePic'>
                     </van-uploader>
                 </view>
-                <view class="filePadding">
 
+                <view class="filePadding">
                     <view class="files">
                         <view class="audio file">
                             <image src="/static/icon/play.svg" class="icon"></image>
@@ -115,4 +115,5 @@
             </view>
         </view>
     </block>
+    <d-button type="shadow_blue">去重做</d-button>
 </view>
