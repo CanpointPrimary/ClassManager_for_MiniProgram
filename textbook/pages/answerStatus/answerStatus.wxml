@@ -65,7 +65,35 @@
             </view>
         </view>
 
-
+        <view class="answerItem">
+            <view class="submit">
+                <view class="hd">
+                    <image src="/static/avatar2.png" class="avatar"></image>
+                    <view class="title">
+                        <view class="name">李梅</view>
+                        <view class="time">2021.3.12 17:03</view>
+                    </view>
+                </view>
+                <view class="inner">
+                    <view class="value">老师我已经做完了，其中第2页第3题不太确定</view>
+                    <view class="images">
+                        <image wx:for="{{4}}" src="/static/work.png" mode="aspectFill"></image>
+                    </view>
+                </view>
+                <view class="files">
+                    <view class="file">
+                        <image class="icon" src="/static/icon/movie.svg"></image>
+                        <view class="fileName">视频</view>
+                    </view>
+                </view>
+                <view class="footer">
+                    <view class="comments"></view>
+                    <view class="addComment">
+                        <image class="icon" src="../../static/comment.svg"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
     </view>
 
 </view>

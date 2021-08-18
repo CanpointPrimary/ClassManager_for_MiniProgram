@@ -5,8 +5,23 @@ Page({
      * 页面的初始数据
      */
     data: {
-        collStatus: 'down',
-        index: 0
+        collStatus: 'up',
+        index: 0,
+        imageList: [{
+                url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+                name: '图片1',
+            },
+            {
+                url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+                name: '图片2',
+            }, {
+                url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+                name: '图片4',
+            }, {
+                url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+                name: '图片6',
+            }
+        ],
     },
     foldInner() {
         this.setData({
