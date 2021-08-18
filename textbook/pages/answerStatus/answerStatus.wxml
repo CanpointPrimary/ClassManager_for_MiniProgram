@@ -16,7 +16,7 @@
                 <image src="../../static/etc.png" class="icon"></image>
             </view>
             <view class="title">2021.3.11（周三）英语作业</view>
-            <view class="inner">
+            <view class="inner {{collStatus}}">
                 <view class="value">
                     完成第四课读写内容，并拍照上传。完成第四课读写内容，并拍照上传。完成第四课读写内容，并拍照上传。完成第四课读写内容，并拍照上传。完成第四课读写内容，并拍照上传。完成第四课读写内容，并拍照上传。
                 </view>
@@ -40,9 +40,9 @@
                         <view class="fileName">视频</view>
                     </view>
                 </view>
-                <view class="coll">
-                    <image src="../../static/arrow_double_down.svg" class="double_arrow"></image>
-                </view>
+            </view>
+            <view class="coll" bindtap="foldInner">
+                <image src="../../static/arrow_double_{{collStatus}}.svg" class="double_arrow"></image>
             </view>
         </view>
 

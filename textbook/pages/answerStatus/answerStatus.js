@@ -5,7 +5,12 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        collStatus: 'down'
+    },
+    foldInner() {
+        this.setData({
+            collStatus: this.data.collStatus == 'down' ? 'up' : "down"
+        })
     },
 
     /**

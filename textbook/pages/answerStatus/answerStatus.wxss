@@ -65,10 +65,18 @@
   font-size: 32rpx;
   color: #1d1d1d;
 }
+.container .work .card .up {
+  overflow: hidden;
+  height: 60rpx;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
 .container .work .card .inner {
   padding: 20rpx;
 }
 .container .work .card .inner .value {
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 28rpx;
   line-height: 42rpx;
   color: #666;
@@ -85,6 +93,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 47rpx;
+  padding-bottom: 10rpx;
 }
 .container .work .card .coll .double_arrow {
   width: 32rpx;
