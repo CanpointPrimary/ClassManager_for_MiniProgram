@@ -191,6 +191,12 @@
                     "pathName": "textbook/pages/doWork/doWork",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "作答情况",
+                    "pathName": "textbook/pages/answerStatus/answerStatus",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

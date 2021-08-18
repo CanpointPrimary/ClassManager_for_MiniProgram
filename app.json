@@ -40,7 +40,8 @@
       "pages": [
         "pages/workPub/workPub",
         "pages/workSubSta/workSubSta",
-        "pages/doWork/doWork"
+        "pages/doWork/doWork",
+        "pages/answerStatus/answerStatus"
       ]
     }
   ],

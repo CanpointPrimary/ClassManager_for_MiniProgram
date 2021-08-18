@@ -1,0 +1,212 @@
+.container {
+  min-height: 100vh;
+  background: #EDF6FD;
+  padding-top: 30rpx;
+  padding-bottom: 166rpx;
+}
+.container .work {
+  position: relative;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+}
+.container .work .endtime {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .work .endtime .icon {
+  width: 25rpx;
+  height: 25rpx;
+}
+.container .work .endtime .value {
+  color: #333;
+  font-size: 24rpx;
+  margin-left: 12rpx;
+}
+.container .work .bg_dot {
+  position: absolute;
+  width: 100rpx;
+  height: 100rpx;
+}
+.container .work .left {
+  left: 0;
+  top: 0;
+}
+.container .work .right {
+  right: 0;
+  bottom: 0;
+}
+.container .work .card {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  border-radius: 20rpx;
+}
+.container .work .card .header {
+  display: flex;
+  align-items: center;
+  height: 57rpx;
+  justify-content: flex-end;
+}
+.container .work .card .header .icon {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 20rpx;
+}
+.container .work .card .title {
+  background: #FFFBEF;
+  padding-left: 20rpx;
+  height: 82rpx;
+  line-height: 82rpx;
+  font-size: 32rpx;
+  color: #1d1d1d;
+}
+.container .work .card .inner {
+  padding: 20rpx;
+}
+.container .work .card .inner .value {
+  font-size: 28rpx;
+  line-height: 42rpx;
+  color: #666;
+}
+.container .work .card .inner .images {
+  display: flex;
+  justify-content: space-between;
+}
+.container .work .card .inner .images .desc_image {
+  width: 146rpx;
+  height: 146rpx;
+}
+.container .work .card .coll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .work .card .coll .double_arrow {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container .files {
+  padding-bottom: 47rpx;
+}
+.container .files .file {
+  height: 86rpx;
+  margin-bottom: 10rpx;
+  padding: 0 20rpx;
+  box-shadow: 0px 0px 2rpx #00000040;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 22rpx;
+  color: #666;
+}
+.container .files .file .icon {
+  width: 48rpx;
+  height: 48rpx;
+}
+.container .files .file .fileName {
+  flex: 1;
+  margin: 0 10rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+.container .files .audio .van-slider {
+  width: 468rpx;
+  margin: 0 10rpx;
+}
+.container .answer {
+  padding: 30rpx;
+}
+.container .answer .body {
+  background: #fff;
+  padding: 30rpx 20rpx;
+  border-radius: 20rpx;
+}
+.container .answer .body .btns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+.container .answer .body .btns .btn {
+  padding: 0 30rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.container .answer .body .btns .btn text {
+  font-size: 22rpx;
+  color: #666;
+}
+.container .answer .body .btns .btn .icon {
+  width: 48rpx;
+  height: 48rpx;
+}
+.container .answer .body .btns .bar {
+  width: 0;
+  height: 55rpx;
+  border-right: 1rpx solid #eeececa1;
+}
+.container .answer .body .textarea {
+  background: #f6f6f6;
+}
+.container .answer .body .textarea .input {
+  padding: 20rpx;
+  font-size: 28rpx;
+  color: #666;
+  width: 100%;
+}
+.container .btnsGroup {
+  padding-top: 66rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .subAnswer {
+  padding: 0 30rpx;
+  margin-bottom: 60rpx;
+}
+.container .subAnswer .inner {
+  position: relative;
+  border-radius: 20rpx;
+  background: #fff;
+}
+.container .subAnswer .inner .header {
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 39rpx;
+  padding-left: 20rpx;
+}
+.container .subAnswer .inner .header .title {
+  font-size: 28rpx;
+}
+.container .subAnswer .inner .header .time {
+  font-size: 24rpx;
+  color: #999;
+}
+.container .subAnswer .inner .value {
+  background: #f6f6f6;
+  font-size: 28rpx;
+  color: #666;
+}
+.container .subAnswer .inner .value .text {
+  padding-left: 20rpx;
+}
+.container .subAnswer .inner .filePadding {
+  position: relative;
+  padding: 0 20rpx;
+}
+.container .subAnswer .inner .filePadding .files {
+  padding-bottom: 50rpx;
+}
+.container .button--btn {
+  margin: 0 auto;
+}
