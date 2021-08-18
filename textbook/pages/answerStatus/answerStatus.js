@@ -5,14 +5,19 @@ Page({
      * 页面的初始数据
      */
     data: {
-        collStatus: 'down'
+        collStatus: 'down',
+        index: 0
     },
     foldInner() {
         this.setData({
             collStatus: this.data.collStatus == 'down' ? 'up' : "down"
         })
     },
-
+    changeTab(e) {
+        this.setData({
+            index: e.currentTarget.dataset.index
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */

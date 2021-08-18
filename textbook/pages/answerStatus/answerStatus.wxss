@@ -71,12 +71,14 @@
   box-sizing: border-box;
   white-space: nowrap;
 }
+.container .work .card .up .value {
+  text-overflow: ellipsis;
+}
 .container .work .card .inner {
   padding: 20rpx;
 }
 .container .work .card .inner .value {
   overflow: hidden;
-  text-overflow: ellipsis;
   font-size: 28rpx;
   line-height: 42rpx;
   color: #666;
@@ -93,15 +95,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 47rpx;
+  padding-top: 37rpx;
   padding-bottom: 10rpx;
 }
 .container .work .card .coll .double_arrow {
   width: 32rpx;
   height: 32rpx;
-}
-.container .files {
-  padding-bottom: 47rpx;
 }
 .container .files .file {
   height: 86rpx;
@@ -129,48 +128,51 @@
   margin: 0 10rpx;
 }
 .container .answer {
-  padding: 30rpx;
-}
-.container .answer .body {
-  background: #fff;
-  padding: 30rpx 20rpx;
-  border-radius: 20rpx;
-}
-.container .answer .body .btns {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-bottom: 10rpx;
-}
-.container .answer .body .btns .btn {
   padding: 0 30rpx;
-  height: 80rpx;
+}
+.container .answer .header {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+}
+.container .answer .header .tabbar {
+  width: 232rpx;
+  display: flex;
   justify-content: space-around;
+  align-items: center;
+  font-size: 32rpx;
+  color: #999;
 }
-.container .answer .body .btns .btn text {
-  font-size: 22rpx;
-  color: #666;
+.container .answer .header .tabbar .tab_item {
+  height: 48rpx;
+  line-height: 44rpx;
 }
-.container .answer .body .btns .btn .icon {
+.container .answer .header .tabbar .tab_item .active {
+  color: #000;
+}
+.container .answer .header .tabbar .tab_item .underline {
+  height: 4rpx;
+  border-radius: 4rpx;
+  width: 35rpx;
+  background: #1E50A2;
+  margin: 0 auto;
+}
+.container .answer .header .count {
+  font-size: 24rpx;
+  color: #1e50a2;
+  width: 171rpx;
+  height: 57rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 15rpx;
+  background: #DCE9FE;
+  box-shadow: inset 0 0 2rpx #1E50A2;
+  border-radius: 10rpx;
+}
+.container .answer .header .count .chart_icon {
   width: 48rpx;
   height: 48rpx;
-}
-.container .answer .body .btns .bar {
-  width: 0;
-  height: 55rpx;
-  border-right: 1rpx solid #eeececa1;
-}
-.container .answer .body .textarea {
-  background: #f6f6f6;
-}
-.container .answer .body .textarea .input {
-  padding: 20rpx;
-  font-size: 28rpx;
-  color: #666;
-  width: 100%;
 }
 .container .btnsGroup {
   padding-top: 66rpx;

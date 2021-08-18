@@ -45,6 +45,26 @@
                 <image src="../../static/arrow_double_{{collStatus}}.svg" class="double_arrow"></image>
             </view>
         </view>
+    </view>
+    <view class="answer">
+
+        <!-- tabbar -->
+        <view class="header">
+            <view class="tabbar">
+                <view class="tab_item" bindtap="changeTab" data-index="{{0}}">
+                    <text class="{{index == 0 ? 'active' : ''}}">未批改</text>
+                    <view class="{{index == 0 ? 'underline' : ''}}"></view>
+                </view>
+                <view class="tab_item" bindtap="changeTab" data-index="{{1}}">
+                    <text class="{{index == 1 ? 'active' : ''}}">已批改</text>
+                    <view class="{{index == 1 ? 'underline' : ''}}"></view>
+                </view>
+            </view>
+            <view class="count">
+                <image src="../../static/chart-line.svg" class="chart_icon"></image><text>数据统计</text>
+            </view>
+        </view>
+
 
     </view>
 
