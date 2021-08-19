@@ -178,10 +178,15 @@
 .container .answer .answerItem {
   border-radius: 20rpx;
   overflow: hidden;
+  margin-bottom: 20rpx;
 }
 .container .answer .answerItem .submit {
   background: #fff;
   padding: 20rpx 0;
+  margin-bottom: 10rpx;
+}
+.container .answer .answerItem .submit:last-child {
+  margin-bottom: 0;
 }
 .container .answer .answerItem .submit .hd {
   display: flex;
@@ -214,12 +219,16 @@
 }
 .container .answer .answerItem .submit .inner .images {
   display: flex;
-  padding-right: 20rpx;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 .container .answer .answerItem .submit .inner .images image {
   width: 147rpx;
   height: 147rpx;
+  margin-right: 22rpx;
+}
+.container .answer .answerItem .submit .inner .images image:nth-child(4n+0) {
+  margin-right: 0;
 }
 .container .answer .answerItem .submit .inner .value {
   margin-bottom: 10rpx;
@@ -232,9 +241,23 @@
 }
 .container .answer .answerItem .submit .footer {
   padding: 0 20rpx;
+  padding-bottom: 10rpx;
+}
+.container .answer .answerItem .submit .footer .comments .comment {
+  font-size: 24rpx;
+  display: flex;
+}
+.container .answer .answerItem .submit .footer .comments .comment .publisher {
+  color: #000;
+}
+.container .answer .answerItem .submit .footer .comments .comment .deal {
+  color: #1e50a2;
+}
+.container .answer .answerItem .submit .footer .comments .comment .value {
+  color: #868686;
 }
 .container .answer .answerItem .submit .footer .addComment {
-  padding: 10rpx 0;
+  padding: 10rpx 0 0 0;
   display: flex;
   justify-content: flex-end;
 }

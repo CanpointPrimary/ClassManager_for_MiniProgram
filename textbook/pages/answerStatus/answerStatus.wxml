@@ -21,7 +21,8 @@
                     完成第四课读写内容，并拍照上传。完成第四课读写内容，并拍照上传。完成第四课读写内容，并拍照上传。完成第四课读写内容，并拍照上传。完成第四课读写内容，并拍照上传。完成第四课读写内容，并拍照上传。
                 </view>
                 <view class="images">
-                    <image class="desc_image" src="/static/work.png" mode="aspectFill" wx:for="{{4}}"></image>
+                    <image class="desc_image" src="/static/work.png" mode="aspectFill" wx:for="{{4}}" wx:key='id'>
+                    </image>
                 </view>
 
                 <!-- 添加的文件 -->
@@ -65,35 +66,95 @@
             </view>
         </view>
 
-        <view class="answerItem">
-            <view class="submit">
-                <view class="hd">
-                    <image src="/static/avatar2.png" class="avatar"></image>
-                    <view class="title">
-                        <view class="name">李梅</view>
-                        <view class="time">2021.3.12 17:03</view>
+        <block wx:if="{{index == 0}}">
+            <view class="answerItem" wx:for="{{studentAnswer}}" wx:key='id'>
+                <view class="submit" wx:for="{{item.answer}}" wx:key='id'>
+                    <view class="hd">
+                        <block wx:if="{{item.sub}}">
+                            <view class="title">
+                                <view class="sub">{{item.sub}}</view>
+                                <view class="time">提交时间：{{item.ptime}}</view>
+                            </view>
+                        </block>
+                        <block wx:else>
+                            <image src="{{item.avatar}}" class="avatar"></image>
+                            <view class="title">
+                                <view class="name">{{item.rname}}</view>
+                                <view class="time">{{item.ptime}}</view>
+                            </view>
+                        </block>
                     </view>
-                </view>
-                <view class="inner">
-                    <view class="value">老师我已经做完了，其中第2页第3题不太确定</view>
-                    <view class="images">
-                        <image wx:for="{{4}}" src="/static/work.png" mode="aspectFill"></image>
+                    <view class="inner">
+                        <view class="value">{{item.desc}}</view>
+                        <view class="images">
+                            <image wx:for="{{item.picture}}" src="{{item.url}}" mode="aspectFill" wx:key='id'></image>
+                        </view>
                     </view>
-                </view>
-                <view class="files">
-                    <view class="file">
-                        <image class="icon" src="/static/icon/movie.svg"></image>
-                        <view class="fileName">视频</view>
+                    <view class="files">
+                        <view class="file">
+                            <image class="icon" src="/static/icon/movie.svg"></image>
+                            <view class="fileName">视频</view>
+                        </view>
                     </view>
-                </view>
-                <view class="footer">
-                    <view class="comments"></view>
-                    <view class="addComment">
-                        <image class="icon" src="../../static/comment.svg"></image>
+                    <view class="footer">
+                        <view class="addComment">
+                            <image class="icon" src="../../static/comment.svg"></image>
+                        </view>
+                        <view class="comments">
+                            <view class="comment" wx:for="{{item.comments}}" wx:key='id'>
+                                <view class="publisher">{{item.publisher}}：</view>
+                                <view class="deal">{{item.deal}}</view>
+                                <view class="value">{{item.value}}</view>
+                            </view>
+                        </view>
                     </view>
                 </view>
             </view>
-        </view>
+        </block>
+        <block wx:else>
+            <view class="answerItem" wx:for="{{currentAnswer}}" wx:key='id'>
+                <view class="submit" wx:for="{{item.answer}}" wx:key='id'>
+                    <view class="hd">
+                        <block wx:if="{{item.sub}}">
+                            <view class="title">
+                                <view class="sub">{{item.sub}}</view>
+                                <view class="time">提交时间：{{item.ptime}}</view>
+                            </view>
+                        </block>
+                        <block wx:else>
+                            <image src="{{item.avatar}}" class="avatar"></image>
+                            <view class="title">
+                                <view class="name">{{item.rname}}</view>
+                                <view class="time">{{item.ptime}}</view>
+                            </view>
+                        </block>
+                    </view>
+                    <view class="inner">
+                        <view class="value">{{item.desc}}</view>
+                        <view class="images">
+                            <image wx:for="{{item.picture}}" src="{{item.url}}" mode="aspectFill" wx:key='id'></image>
+                        </view>
+                    </view>
+                    <view class="files">
+                        <view class="file">
+                            <image class="icon" src="/static/icon/movie.svg"></image>
+                            <view class="fileName">视频</view>
+                        </view>
+                    </view>
+                    <view class="footer">
+                        <view class="addComment">
+                            <image class="icon" src="../../static/comment.svg"></image>
+                        </view>
+                        <view class="comments">
+                            <view class="comment" wx:for="{{item.comments}}" wx:key='id'>
+                                <view class="publisher">{{item.publisher}}：</view>
+                                <view class="deal">{{item.deal}}</view>
+                                <view class="value">{{item.value}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
     </view>
-
 </view>
