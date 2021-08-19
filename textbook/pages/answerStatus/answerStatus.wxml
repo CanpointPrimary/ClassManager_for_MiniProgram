@@ -55,10 +55,12 @@
                 <view class="tab_item" bindtap="changeTab" data-index="{{0}}">
                     <text class="{{index == 0 ? 'active' : ''}}">未批改</text>
                     <view class="{{index == 0 ? 'underline' : ''}}"></view>
+                    <d-msg-tip type="num">{{studentAnswer.length}}</d-msg-tip>
                 </view>
                 <view class="tab_item" bindtap="changeTab" data-index="{{1}}">
                     <text class="{{index == 1 ? 'active' : ''}}">已批改</text>
                     <view class="{{index == 1 ? 'underline' : ''}}"></view>
+                    <d-msg-tip type="dot"></d-msg-tip>
                 </view>
             </view>
             <view class="count">

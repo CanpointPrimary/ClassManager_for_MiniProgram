@@ -1,0 +1,28 @@
+/* components/msgTip/msgTip.wxss */
+.tip {
+    background: #F74C32;
+    border-radius: 50%;
+    position: absolute;
+
+}
+
+.num {
+    width: 26rpx;
+    height: 26rpx;
+    line-height: 26rpx;
+    right: -24rpx;
+    top: -8rpx;
+}
+
+.dot {
+    width: 10rpx;
+    height: 10rpx;
+    right: -8rpx;
+    top: 4rpx;
+}
+
+.inner {
+    font-size: 14rpx;
+    color: #fff;
+    text-align: center;
+}

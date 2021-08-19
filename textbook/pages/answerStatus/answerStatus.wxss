@@ -137,7 +137,7 @@
   margin-bottom: 20rpx;
 }
 .container .answer .header .tabbar {
-  width: 232rpx;
+  width: 262rpx;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -147,6 +147,7 @@
 .container .answer .header .tabbar .tab_item {
   height: 48rpx;
   line-height: 44rpx;
+  position: relative;
 }
 .container .answer .header .tabbar .tab_item .active {
   color: #000;

@@ -1,0 +1,6 @@
+<!--components/msgTip/msgTip.wxml-->
+<view class="tip {{type}}">
+    <view class="inner">
+        <slot></slot>
+    </view>
+</view>

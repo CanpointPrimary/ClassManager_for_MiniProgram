@@ -3,7 +3,8 @@
     "van-slider": "@vant/weapp/slider/index",
     "d-button": "/components/button/button",
     "van-uploader": "@vant/weapp/uploader/index",
-    "d-tag": "/components/tag/tag"
+    "d-tag": "/components/tag/tag",
+    "d-msg-tip": "/components/msgTip/msgTip"
   },
   "navigationBarTitleText": "作答情况",
   "navigationBarBackgroundColor": "#EDF6FD"
