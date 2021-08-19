@@ -12,8 +12,8 @@
 .container .work .endtime {
   position: absolute;
   top: 0;
+  width: 690rpx;
   transform: translateY(-50%);
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -313,4 +313,26 @@
 }
 .container .button--btn {
   margin: 0 auto;
+}
+.container .fixedBtn {
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  height: 88rpx;
+  align-items: center;
+  background: #fff;
+}
+.container .fixedBtn .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+  color: #333;
+}
+.container .fixedBtn .btn .icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 10rpx;
 }

@@ -159,4 +159,12 @@
             </view>
         </block>
     </view>
+    <view class="fixedBtn">
+        <view class="btn">
+            <image class="icon" src="../../static/comment_btn.svg"></image><text>一键点评</text>
+        </view>
+        <view class="btn">
+            <image class="icon" src="../../static/pushBack.svg"></image><text>一键打回</text>
+        </view>
+    </view>
 </view>
