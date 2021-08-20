@@ -60,7 +60,6 @@ Page({
         })
     },
     showBigImage(e) {
-        console.log();
         this.setData({
             galleryShow: true,
             currentGallery: e.currentTarget.dataset.index

@@ -30,7 +30,6 @@ Page({
         this.setData({
             index: e.detail.value
         })
-        console.log(this.data.index);
     },
     valueCount(e) {
         this.setData({

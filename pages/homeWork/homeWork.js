@@ -145,6 +145,5 @@ Page({
             show: false,
             date: `${this.formatDate(start)} - ${this.formatDate(end)}`,
         });
-        console.log(event.detail);
     },
 });

@@ -31,7 +31,6 @@ Page({
                         url: item
                     }
                 })
-                console.log(addList);
                 this.setData({
                     imageList: [...imageList, ...addList]
                 })
