@@ -180,16 +180,16 @@
 
     <!-- 弹窗 -->
     <van-popup position='bottom' round show='{{addCommentShow}}' overlay-style='background: transparent;'
-        custom-class='commentInput' bind:click-overlay='closeComment' safe-area-inset-bottom>
+        custom-class='commentInput' bind:click-overlay='closeComment'>
         <view class="header">
             <view class="title">评语</view>
             <view class="close" bindtap="closeComment">取消</view>
         </view>
         <view class="body">
-            <view class="input"><input type="text" /></view>
+            <view class="input"><input type="text" confirm-type='done' /></view>
             <view class="confirm">确认</view>
         </view>
     </van-popup>
-    <van-popup position=' bottom' round></van-popup>
+    <van-popup position='bottom' round></van-popup>
     <van-popup position='bottom' round></van-popup>
 </view>
