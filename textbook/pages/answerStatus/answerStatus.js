@@ -26,6 +26,17 @@ Page({
                 name: '图片6',
             }
         ],
+        addCommentShow: false
+    },
+    openComment() {
+        this.setData({
+            addCommentShow: true
+        })
+    },
+    closeComment() {
+        this.setData({
+            addCommentShow: false
+        })
     },
     foldInner() {
         this.setData({

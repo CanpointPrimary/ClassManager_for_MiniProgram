@@ -349,3 +349,39 @@
   height: 48rpx;
   margin-right: 10rpx;
 }
+.container .commentInput {
+  filter: drop-shadow(0 -3rpx 6rpx rgba(0, 0, 0, 0.161));
+  padding: 30rpx;
+}
+.container .commentInput .header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+}
+.container .commentInput .header .close {
+  color: #1e50a2;
+}
+.container .commentInput .body {
+  display: flex;
+  padding-bottom: 40rpx;
+}
+.container .commentInput .body .input {
+  flex: 1;
+  margin-right: 10rpx;
+  line-height: 64rpx;
+  background: #f6f6f6;
+  border-radius: 15rpx;
+  display: flex;
+  align-items: center;
+}
+.container .commentInput .body .confirm {
+  width: 160rpx;
+  height: 64rpx;
+  border-radius: 10rpx;
+  background: #1e50a2;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 64rpx;
+}

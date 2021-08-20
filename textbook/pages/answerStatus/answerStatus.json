@@ -4,7 +4,8 @@
     "d-button": "/components/button/button",
     "van-uploader": "@vant/weapp/uploader/index",
     "d-tag": "/components/tag/tag",
-    "d-msg-tip": "/components/msgTip/msgTip"
+    "d-msg-tip": "/components/msgTip/msgTip",
+    "van-popup": "@vant/weapp/popup/index"
   },
   "navigationBarTitleText": "作答情况",
   "navigationBarBackgroundColor": "#EDF6FD"
