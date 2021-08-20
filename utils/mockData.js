@@ -780,6 +780,7 @@ let studentAnswer = [{
     }, ]
   }, {
     sub: '第一次提交',
+    rank: 'c',
     ptime: '2021.3.12 17:03',
     desc: '老师我已经做完了，其中第2页第3题不太确定',
     picture: [{
@@ -817,6 +818,7 @@ let currentAnswer = [{
   id: 0,
   answer: [{
     rname: '张三',
+    rank: 'd',
     avatar: '/static/avatar2.png',
     ptime: '2021.3.12 17:03',
     desc: '老师我已经做完了，其中第2页第3题不太确定',
@@ -857,6 +859,7 @@ let currentAnswer = [{
   id: 1,
   answer: [{
     rname: '薛冰',
+    rank: 'c',
     avatar: '/static/avatar2.png',
     ptime: '2021.3.12 17:03',
     desc: '老师我已经做完了，其中第2页第3题不太确定',
@@ -886,6 +889,7 @@ let currentAnswer = [{
     sub: '第二次提交',
     ptime: '2021.3.12 17:03',
     desc: '又改了一次',
+    rank: 'c',
     picture: [{
       url: 'https://img.yzcdn.cn/vant/leaf.jpg',
       name: '图片4',
@@ -914,6 +918,7 @@ let currentAnswer = [{
     }, ]
   }, {
     sub: '第一次提交',
+    rank: 'd',
     ptime: '2021.3.12 17:03',
     desc: '老师我已经做完了，其中第2页第3题不太确定',
     picture: [{
@@ -953,6 +958,7 @@ let currentAnswer = [{
   id: 1,
   answer: [{
     rname: '薛冰',
+    rank: 'd',
     avatar: '/static/avatar2.png',
     ptime: '2021.3.12 17:03',
     desc: '老师我已经做完了，其中第2页第3题不太确定',

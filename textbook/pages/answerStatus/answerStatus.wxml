@@ -85,6 +85,11 @@
                                 <view class="time">{{item.ptime}}</view>
                             </view>
                         </block>
+                        <block wx:if="{{item.rank}}">
+                            <view class="rank">
+                                <image src="../../static/rank_{{item.rank}}.svg"></image>
+                            </view>
+                        </block>
                     </view>
                     <view class="inner">
                         <view class="value">{{item.desc}}</view>
@@ -128,6 +133,11 @@
                             <view class="title">
                                 <view class="name">{{item.rname}}</view>
                                 <view class="time">{{item.ptime}}</view>
+                            </view>
+                        </block>
+                        <block wx:if="{{item.rank}}">
+                            <view class="rank">
+                                <image src="../../static/rank_{{item.rank}}.svg"></image>
                             </view>
                         </block>
                     </view>

@@ -193,6 +193,19 @@
   display: flex;
   align-items: center;
   padding-left: 20rpx;
+  position: relative;
+}
+.container .answer .answerItem .submit .hd .rank {
+  position: absolute;
+  right: 40rpx;
+  height: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+.container .answer .answerItem .submit .hd .rank image {
+  width: 57rpx;
+  height: 57rpx;
 }
 .container .answer .answerItem .submit .hd .avatar {
   width: 62rpx;
