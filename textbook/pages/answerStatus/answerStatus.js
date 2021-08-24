@@ -28,7 +28,18 @@ Page({
         ],
         score: ["已阅", "A", "B", "C", "D", 'E'],
         addCommentShow: false,
-        batchReviewsShow: false
+        batchReviewsShow: false,
+        batchSendBackShow: false
+    },
+    closeSendBack() {
+        this.setData({
+            batchSendBackShow: false
+        })
+    },
+    openSendBack() {
+        this.setData({
+            batchSendBackShow: true
+        })
     },
     closeReview() {
         this.setData({

@@ -173,7 +173,7 @@
         <view class="btn" bindtap="openReview">
             <image class="icon" src="../../static/comment_btn.svg"></image><text>一键点评</text>
         </view>
-        <view class="btn">
+        <view class="btn" bindtap="openSendBack">
             <image class="icon" src="../../static/pushBack.svg"></image><text>一键打回</text>
         </view>
     </view>
@@ -211,7 +211,19 @@
             <view class="confirm">确认</view>
         </view>
     </van-popup>
-    <van-popup position='bottom' round show="{{batchSendBackShow}}" bind:click-overlay='closeSendBack'>
-        一键打回
+
+
+    <van-popup position='bottom' round show="{{batchSendBackShow}}" custom-class='batchPup'
+        overlay-style='background: transparent;' bind:click-overlay='closeSendBack'>
+        <view class="header">
+            <view class="title">已选择3位学生</view>
+            <view class="right">
+                <view class="selectAll">全选</view>
+                <view class="close" bindtap="closeSendBack">取消</view>
+            </view>
+        </view>
+        <view class="footer">
+            <view class="confirm">确认打回</view>
+        </view>
     </van-popup>
 </view>
