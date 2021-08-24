@@ -26,7 +26,19 @@ Page({
                 name: '图片6',
             }
         ],
-        addCommentShow: false
+        score: ["已阅", "A", "B", "C", "D", 'E'],
+        addCommentShow: false,
+        batchReviewsShow: false
+    },
+    closeReview() {
+        this.setData({
+            batchReviewsShow: false
+        })
+    },
+    openReview() {
+        this.setData({
+            batchReviewsShow: true
+        })
     },
     openComment() {
         this.setData({

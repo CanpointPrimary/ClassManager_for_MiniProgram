@@ -1,6 +1,6 @@
 .container {
   min-height: 100vh;
-  background: #EDF6FD;
+  background: #edf6fd;
   padding-top: 30rpx;
   padding-bottom: 166rpx;
 }
@@ -58,7 +58,7 @@
   margin-right: 20rpx;
 }
 .container .work .card .title {
-  background: #FFFBEF;
+  background: #fffbef;
   padding-left: 20rpx;
   height: 82rpx;
   line-height: 82rpx;
@@ -156,7 +156,7 @@
   height: 4rpx;
   border-radius: 4rpx;
   width: 35rpx;
-  background: #1E50A2;
+  background: #1e50a2;
   margin: 0 auto;
 }
 .container .answer .header .count {
@@ -168,8 +168,8 @@
   align-items: center;
   box-sizing: border-box;
   padding-left: 15rpx;
-  background: #DCE9FE;
-  box-shadow: inset 0 0 2rpx #1E50A2;
+  background: #dce9fe;
+  box-shadow: inset 0 0 2rpx #1e50a2;
   border-radius: 10rpx;
 }
 .container .answer .header .count .chart_icon {
@@ -241,7 +241,7 @@
   height: 147rpx;
   margin-right: 22rpx;
 }
-.container .answer .answerItem .submit .inner .images image:nth-child(4n+0) {
+.container .answer .answerItem .submit .inner .images image:nth-child(4n + 0) {
   margin-right: 0;
 }
 .container .answer .answerItem .submit .inner .value {
@@ -344,6 +344,11 @@
   align-items: center;
   font-size: 24rpx;
   color: #333;
+  flex: 1;
+  height: 100%;
+}
+.container .fixedBtn .btn:active {
+  background: #eee;
 }
 .container .fixedBtn .btn .icon {
   width: 48rpx;
@@ -382,6 +387,87 @@
   margin-bottom: 20rpx;
 }
 .container .commentInput .body .confirm {
+  width: 160rpx;
+  height: 64rpx;
+  border-radius: 10rpx;
+  background: #1e50a2;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 64rpx;
+}
+.container .batchPup {
+  filter: drop-shadow(0 -3rpx 6rpx rgba(0, 0, 0, 0.161));
+  padding: 30rpx;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.container .batchPup .header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+}
+.container .batchPup .header .title {
+  color: #1d1d1d;
+  font-size: 32rpx;
+}
+.container .batchPup .header .right {
+  display: flex;
+  color: #1e50a2;
+}
+.container .batchPup .header .right .close {
+  margin-left: 30rpx;
+}
+.container .batchPup .footer_title {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bolder;
+}
+.container .batchPup .body_title {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: bolder;
+}
+.container .batchPup .body {
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .batchPup .body .score {
+  background: #fdeded;
+  margin-right: 46rpx;
+  width: 138rpx;
+  height: 64rpx;
+  border-radius: 8rpx;
+  line-height: 64rpx;
+  text-align: center;
+  color: #666;
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+}
+.container .batchPup .body .score:nth-child(4n+0) {
+  margin-right: 0;
+}
+.container .batchPup .footer {
+  display: flex;
+  justify-content: space-between;
+  height: 64rpx;
+}
+.container .batchPup .footer .input {
+  flex: 1;
+  margin-right: 10rpx;
+  line-height: 64rpx;
+  background: #f6f6f6;
+  border-radius: 15rpx;
+}
+.container .batchPup .footer .input input {
+  width: 100%;
+  height: 100%;
+  line-height: 100%;
+  margin-bottom: 20rpx;
+}
+.container .batchPup .footer .confirm {
   width: 160rpx;
   height: 64rpx;
   border-radius: 10rpx;

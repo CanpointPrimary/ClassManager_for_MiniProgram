@@ -170,7 +170,7 @@
         </block>
     </view>
     <view class="fixedBtn">
-        <view class="btn">
+        <view class="btn" bindtap="openReview">
             <image class="icon" src="../../static/comment_btn.svg"></image><text>一键点评</text>
         </view>
         <view class="btn">
@@ -190,6 +190,28 @@
             <view class="confirm">确认</view>
         </view>
     </van-popup>
-    <van-popup position='bottom' round show="{{batchReviewsShow}}"></van-popup>
-    <van-popup position='bottom' round show="{{batchSendBackShow}}"></van-popup>
+
+
+    <van-popup position='bottom' round show="{{batchReviewsShow}}" custom-class='batchPup'
+        overlay-style='background: transparent;' bind:click-overlay='closeReview'>
+        <view class="header">
+            <view class="title">已选择3位学生</view>
+            <view class="right">
+                <view class="selectAll">全选</view>
+                <view class="close" bindtap="closeReview">取消</view>
+            </view>
+        </view>
+        <view class="body_title">等级</view>
+        <view class="body">
+            <view class="score" wx:for="{{score}}" wx:key="id">{{item}}</view>
+        </view>
+        <view class="footer_title">评语</view>
+        <view class="footer">
+            <view class="input"><input type="text" confirm-type='done' /></view>
+            <view class="confirm">确认</view>
+        </view>
+    </van-popup>
+    <van-popup position='bottom' round show="{{batchSendBackShow}}" bind:click-overlay='closeSendBack'>
+        一键打回
+    </van-popup>
 </view>
