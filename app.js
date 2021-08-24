@@ -1,7 +1,7 @@
 // app.js
 App({
   globalData: {
-    baseUrl: 'http://canpoint/'
+    baseUrl: 'http://demo.hackedin.cn'
   },
   onShow(e) {
     if (e.path.indexOf('pages/start') == -1) {
@@ -29,6 +29,5 @@ App({
         },
       })
     }
-
   }
 })

@@ -2,6 +2,7 @@
 const {
   joinBg
 } = require('../../utils/mockData')
+let app = getApp()
 Page({
 
   /**
@@ -16,24 +17,17 @@ Page({
    */
   onLoad: function (options) {
 
-    let app = getApp()
+    console.log('拿到了app');
     wx.request({
-      url: app.globalData.baseUrl + 'api/start',
+      url: app.globalData.baseUrl + '',
       success: ({
         data
       }) => {
+
         this.setData({
           postSrc: data.src
         })
-        wx.login({
-          success: (res) => {
-            // 先保存接口后修改
-            wx.setStorage({
-              data: res.code,
-              key: 'code',
-            })
-          }
-        })
+        console.log('执行了login');
       },
       fail: () => {
         this.setData({
@@ -65,7 +59,28 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    wx.login({
+      success: (res) => {
+        // 先保存接口后修改
+        wx.setStorage({
+          data: res.code,
+          key: 'code',
+        })
+        wx.request({
+          url: app.globalData.baseUrl + `/class_manager/access_tokens/${res.code}`,
+          success: ({
+            data: res
+          }) => {
 
+            console.log(res);
+            wx.setStorageSync('Token', res.data.token_type + ' ' + res.data.access_token)
+          }
+        })
+      },
+      fail: (res) => {
+        console.log(res);
+      }
+    })
   },
 
   /**
