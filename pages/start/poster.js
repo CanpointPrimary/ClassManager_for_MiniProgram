@@ -73,7 +73,7 @@ Page({
           }) => {
 
             console.log(res);
-            wx.setStorageSync('Token', res.data.token_type + ' ' + res.data.access_token)
+            wx.setStorageSync('Token', 'Bearer ' + res.data.access_token)
           }
         })
       },

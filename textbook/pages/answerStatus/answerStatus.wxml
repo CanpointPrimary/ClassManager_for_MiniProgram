@@ -190,6 +190,6 @@
             <view class="confirm">确认</view>
         </view>
     </van-popup>
-    <van-popup position='bottom' round></van-popup>
-    <van-popup position='bottom' round></van-popup>
+    <van-popup position='bottom' round show="{{batchReviewsShow}}"></van-popup>
+    <van-popup position='bottom' round show="{{batchSendBackShow}}"></van-popup>
 </view>

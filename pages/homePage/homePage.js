@@ -2,6 +2,9 @@
 const {
   toDoList
 } = require('../../utils/mockData')
+const {
+  request
+} = require('../../utils/request')
 Page({
 
   /**
@@ -96,11 +99,14 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: async function (options) {
+    let token = wx.getStorageSync('Token')
+    let res = await request('/class_manager/pages/homepage_menus', 'get', token)
+    console.log(res);
     let app = getApp()
     let currentUser = wx.getStorageSync('currentUser')
     wx.request({
-      url: app.globalData.baseUrl + 'api/menu',
+      url: app.globalData.baseUrl + '/api/menu',
       success: ({
         data
       }) => {
