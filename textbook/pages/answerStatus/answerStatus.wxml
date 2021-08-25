@@ -222,8 +222,14 @@
                 <view class="close" bindtap="closeSendBack">取消</view>
             </view>
         </view>
+        <view class="textTitle">请输入打回原因</view>
+        <view class="body reason">
+            <view class="text">
+                <textarea class="inner"></textarea>
+            </view>
+        </view>
         <view class="footer">
-            <view class="confirm">确认打回</view>
+            <view class="confirm mid">确认打回</view>
         </view>
     </van-popup>
 </view>

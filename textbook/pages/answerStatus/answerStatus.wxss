@@ -428,6 +428,21 @@
   color: #333;
   font-weight: bolder;
 }
+.container .batchPup .reason {
+  padding: 0 30rpx;
+}
+.container .batchPup .reason .text {
+  background: #f6f6f6;
+  height: 197rpx;
+}
+.container .batchPup .reason .text .inner {
+  height: 197rpx;
+}
+.container .batchPup .textTitle {
+  padding-left: 30rpx;
+  font-size: 28rpx;
+  color: #333;
+}
 .container .batchPup .body {
   padding-top: 20rpx;
   padding-bottom: 20rpx;
@@ -453,6 +468,9 @@
   display: flex;
   justify-content: space-between;
   height: 64rpx;
+}
+.container .batchPup .footer .mid {
+  margin: 0 auto;
 }
 .container .batchPup .footer .input {
   flex: 1;
