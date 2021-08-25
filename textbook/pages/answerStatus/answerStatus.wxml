@@ -94,7 +94,8 @@
                     <view class="inner">
                         <view class="value">{{item.desc}}</view>
                         <view class="images">
-                            <image wx:for="{{item.picture}}" src="{{item.url}}" mode="aspectFill" wx:key='id'></image>
+                            <image wx:for="{{item.picture}}" bindtap="toCheck" src="{{item.url}}" mode="aspectFill"
+                                wx:key='id'></image>
                         </view>
                     </view>
                     <view class="files">
@@ -144,7 +145,8 @@
                     <view class="inner">
                         <view class="value">{{item.desc}}</view>
                         <view class="images">
-                            <image wx:for="{{item.picture}}" src="{{item.url}}" mode="aspectFill" wx:key='id'></image>
+                            <image wx:for="{{item.picture}}" src="{{item.url}}" bindtap="toCheck" mode="aspectFill"
+                                wx:key='id'></image>
                         </view>
                     </view>
                     <view class="files">

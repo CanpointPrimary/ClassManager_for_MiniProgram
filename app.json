@@ -41,7 +41,8 @@
         "pages/workPub/workPub",
         "pages/workSubSta/workSubSta",
         "pages/doWork/doWork",
-        "pages/answerStatus/answerStatus"
+        "pages/answerStatus/answerStatus",
+        "pages/checkWork/checkWork"
       ]
     }
   ],

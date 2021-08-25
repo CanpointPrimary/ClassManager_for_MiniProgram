@@ -31,6 +31,12 @@ Page({
         batchReviewsShow: false,
         batchSendBackShow: false
     },
+    toCheck() {
+        console.log(1);
+        wx.navigateTo({
+            url: '../checkWork/checkWork',
+        })
+    },
     closeSendBack() {
         this.setData({
             batchSendBackShow: false
