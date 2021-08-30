@@ -23,22 +23,25 @@ Page({
             this.dpr = wx.getSystemInfoSync().pixelRatio
             res[0].node.width = width * this.dpr
             res[0].node.height = height * this.dpr
-            let img = canvas.createImage()
-            wx.downloadFile({
-                url: 'https://img1.baidu.com/it/u=4072960247,1216537019&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=1590',
-                success: (res) => {
-                    this._src = res.tempFilePath
-                    img.src = res.tempFilePath
-                },
-                fail: (err) => {
-                    console.log(err);
-                }
-            })
-            img.onload = () => {
-                this.initPosition(img, canvas)
-            }
+            this.loadFile('https://img1.baidu.com/it/u=4072960247,1216537019&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=1590', canvas)
         })
 
+    },
+    loadFile(url, canvas) {
+        let img = canvas.createImage()
+        wx.downloadFile({
+            url,
+            success: (res) => {
+                this._src = res.tempFilePath
+                img.src = res.tempFilePath
+            },
+            fail: (err) => {
+                console.log(err);
+            }
+        })
+        img.onload = () => {
+            this.initPosition(img, canvas)
+        }
     },
     initPosition(img, canvas) {
         let initX
@@ -51,7 +54,6 @@ Page({
             initX = (canvas.width - img.width * canvas.height / img.height) / 2
             initY = 0
             this.ctx.drawImage(img, initX, initY, img.width * canvas.height / img.height, canvas.height)
-
         }
     },
     ontouch(e) {
