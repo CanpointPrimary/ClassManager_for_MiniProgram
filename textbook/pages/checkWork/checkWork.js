@@ -17,15 +17,15 @@ Page({
             size: true,
         }).exec((res) => {
             const canvas = res[0].node
-            const ctx = res[0].node.getContext('2d')
+            this.ctx = res[0].node.getContext('2d')
             const width = res[0].width
             const height = res[0].height
-            const dpr = wx.getSystemInfoSync().pixelRatio
-            res[0].node.width = width * dpr
-            res[0].node.height = height * dpr
+            this.dpr = wx.getSystemInfoSync().pixelRatio
+            res[0].node.width = width * this.dpr
+            res[0].node.height = height * this.dpr
             let img = canvas.createImage()
             wx.downloadFile({
-                url: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fnimg.ws.126.net%2F%3Furl%3Dhttp%253A%252F%252Fdingyue.ws.126.net%252F2021%252F0824%252F1c916f76j00qycd4l003uc000h600m8c.jpg%26thumbnail%3D650x2147483647%26quality%3D80%26type%3Djpg&refer=http%3A%2F%2Fnimg.ws.126.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1632559210&t=54349fe8646c8de64d3b2ae8901fb38b',
+                url: 'https://img1.baidu.com/it/u=4072960247,1216537019&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=1590',
                 success: (res) => {
                     this._src = res.tempFilePath
                     img.src = res.tempFilePath
@@ -35,13 +35,28 @@ Page({
                 }
             })
             img.onload = () => {
-                ctx.scale(width / img.width, width / img.width)
-                ctx.drawImage(img, 0, 0, img.width * dpr, img.height * dpr)
+                this.initPosition(img, canvas)
             }
         })
 
     },
+    initPosition(img, canvas) {
+        let initX
+        let initY
+        if (img.width / canvas.width > img.height / canvas.height) {
+            initX = 0
+            initY = (canvas.height - img.height * canvas.width / img.width) / 2
+            this.ctx.drawImage(img, initX, initY, canvas.width, img.height * canvas.width / img.width)
+        } else {
+            initX = (canvas.width - img.width * canvas.height / img.height) / 2
+            initY = 0
+            this.ctx.drawImage(img, initX, initY, img.width * canvas.height / img.height, canvas.height)
 
+        }
+    },
+    ontouch(e) {
+
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
