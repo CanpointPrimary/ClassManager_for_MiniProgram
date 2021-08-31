@@ -14,7 +14,7 @@
             <view class="title">等级</view>
             <view class="score" wx:for="{{score}}" wx:key="id">{{item}}</view>
         </view>
-        <canvas type="2d" id="work" canvas-id="work" bindtouchstart="ontouch"></canvas>
+        <canvas type="2d" id="work" canvas-id="work" bindtouchstart="ontouchStart" bindtouchmove="onTouchMove" bindtouchend="onTouchEnd"></canvas>
 
     </view>
     <view class="footer">
