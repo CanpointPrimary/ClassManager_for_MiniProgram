@@ -64,7 +64,7 @@ Page({
     },
     ontouchStart(e) {
         if (e.touches.length == 2) {
-
+            this._scale || (this._scale = 1)
             this.touchStartX = (e.touches[0].x + e.touches[1].x) / 2 * this.dpr
             this.touchStartY = (e.touches[0].y + e.touches[1].y) / 2 * this.dpr
 
@@ -72,25 +72,47 @@ Page({
             // 记录初始点和新原点的位置，计算新的定位
             this.positionX = -this.touchStartX + this.initX
             this.positionY = -this.touchStartY + this.initY
+
+            // 计算双指之间的距离
+            this.startDistance = Math.sqrt(Math.pow(e.touches[0].x - e.touches[1].x, 2) + Math.pow(e.touches[0].y - e.touches[1].y, 2))
         }
     },
     onTouchMove(e) {
         if (e.touches.length == 2) {
-
+            // 记录触控中心点
             this.touchCenterX = (e.touches[0].x + e.touches[1].x) * this.dpr / 2
             this.touchCenterY = (e.touches[0].y + e.touches[1].y) * this.dpr / 2
-            this.ctx.setTransform(1, 0, 0, 1, this.touchCenterX, this.touchCenterY)
-            this.ctx.clearRect(-this.touchCenterX, -this.touchCenterY, this.canvas.width, this.canvas.height);
+
+            // 计算当前双指距离
+            this.nowDistance = Math.sqrt(Math.pow(e.touches[0].x - e.touches[1].x, 2) + Math.pow(e.touches[0].y - e.touches[1].y, 2))
+
+            // 计算缩放比例
+            this.scale = this.nowDistance / this.startDistance
+
+            // 清除画布
+            this.ctx.resetTransform()
+            this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+            // 设置当前坐标为原点
+            this.ctx.setTransform(this._scale * this.scale, 0, 0, this._scale * this.scale, this.touchCenterX, this.touchCenterY)
+
+            // 根据当前原点绘制图像
             this.renderImage()
             this.touchEndX = (e.touches[0].x + e.touches[1].x) * this.dpr / 2
             this.touchEndY = (e.touches[0].y + e.touches[1].y) * this.dpr / 2
+            this.move = 1
         }
     },
     onTouchEnd(e) {
         if (e.touches.length == 1) {
-            this.initX = this.touchEndX - this.touchStartX + this.initX
-            this.initY = this.touchEndY - this.touchStartY + this.initY
+            this.initX = (this.touchEndX - this.touchStartX) * this.move + this.initX
+            this.initY = (this.touchEndY - this.touchStartY) * this.move + this.initY
+            this._scale = this._scale * this.scale
+            this.scale = 1
+            this.move = 0
+
         }
+        this.scale = 1
     },
     renderImage() {
         this.ctx.drawImage(this.img, this.positionX, this.positionY, this.fitWidth, this.fitHeight)
