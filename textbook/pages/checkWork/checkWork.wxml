@@ -14,34 +14,37 @@
             <view class="title">等级</view>
             <view class="score" wx:for="{{score}}" wx:key="id">{{item}}</view>
         </view>
-        <canvas type="2d" id="work" canvas-id="work" bindtouchstart="ontouchStart" bindtouchmove="onTouchMove" bindtouchend="onTouchEnd"></canvas>
+        <canvas type="2d" id="work" canvas-id="work" bindtouchstart="ontouchStart" bindtouchmove="onTouchMove"
+            bindtouchend="onTouchEnd"></canvas>
 
     </view>
     <view class="footer">
         <view class="tools">
             <view class="btn">
-                <image class="icon" src="../../static/checkIcon/withdraw.svg"></image>
+                <image class="icon" src="../../static/checkIcon/withdraw.svg" data-tool="withdraw" bindtap="chooseTool">
+                </image>
                 <view class="title">撤回</view>
             </view>
             <view class="bar"></view>
-            <view class="btn">
-                <image class="icon" src="../../static/checkIcon/text.svg"></image>
-                <view class="title">文本</view>
+            <view class="btn" data-tool="text" bindtap="chooseTool">
+                <image class="icon" src="../../static/checkIcon/text{{theTool == 'text'?'-sel':''}}.svg"></image>
+                <view class="title {{theTool == 'text'?'.active':''}}">文本</view>
             </view>
             <view class="bar"></view>
-            <view class="btn">
-                <image class="icon" src="../../static/checkIcon/graffiti.svg"></image>
-                <view class="title">涂鸦</view>
+            <view class="btn" data-tool="graffiti" bindtap="chooseTool">
+                <image class="icon" src="../../static/checkIcon/graffiti{{theTool == 'graffiti'?'-sel':''}}.svg">
+                </image>
+                <view class="title {{theTool == 'graffiti'?'.active':''}}">涂鸦</view>
             </view>
             <view class="bar"></view>
-            <view class="btn">
-                <image class="icon" src="../../static/checkIcon/correct.svg"></image>
-                <view class="title">打勾</view>
+            <view class="btn" data-tool="correct" bindtap="chooseTool">
+                <image class="icon" src="../../static/checkIcon/correct{{theTool == 'correct'?'-sel':''}}.svg"></image>
+                <view class="title {{theTool == 'correct'?'.active':''}}">打勾</view>
             </view>
             <view class="bar"></view>
-            <view class="btn">
-                <image class="icon" src="../../static/checkIcon/wrong.svg"></image>
-                <view class="title">打叉</view>
+            <view class="btn" data-tool="wrong" bindtap="chooseTool">
+                <image class="icon" src="../../static/checkIcon/wrong{{theTool == 'wrong'?'-sel':''}}.svg"></image>
+                <view class="title {{theTool == 'wrong'?'.active':''}}">打叉</view>
             </view>
         </view>
         <view class="finish">完成</view>

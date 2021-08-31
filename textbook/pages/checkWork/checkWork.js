@@ -6,6 +6,7 @@ Page({
      */
     data: {
         score: ["已阅", "A", "B", "C", "D", 'E'],
+        theTool: 'none'
     },
 
     /**
@@ -116,6 +117,11 @@ Page({
     },
     renderImage() {
         this.ctx.drawImage(this.img, this.positionX, this.positionY, this.fitWidth, this.fitHeight)
+    },
+    chooseTool(e) {
+        this.setData({
+            theTool: e.currentTarget.dataset.tool
+        })
     },
     /**
      * 生命周期函数--监听页面初次渲染完成
