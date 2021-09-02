@@ -1,4 +1,5 @@
 // textbook/pages/checkWork/checkWork.js
+let time = 0
 Page({
 
     /**
@@ -10,7 +11,8 @@ Page({
         currentWork: 0,
         works: [
             'https://img1.baidu.com/it/u=4072960247,1216537019&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=1590',
-            'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn17%2F424%2Fw1080h944%2F20180427%2Fef66-fztkpip3391150.jpg&refer=http%3A%2F%2Fn.sinaimg.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1633137528&t=2b66101908cff29e37f26ec9dbc0eb25', 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsnscangm.b0.upaiyun.com%2F2015%2F1008%2F03%2Fhi0u7pcy6xsgr.jpg&refer=http%3A%2F%2Fsnscangm.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1633139023&t=f0965e7c996dfa2ce6bf5f796de3dd14'
+            'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn17%2F424%2Fw1080h944%2F20180427%2Fef66-fztkpip3391150.jpg&refer=http%3A%2F%2Fn.sinaimg.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1633137528&t=2b66101908cff29e37f26ec9dbc0eb25',
+            'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsnscangm.b0.upaiyun.com%2F2015%2F1008%2F03%2Fhi0u7pcy6xsgr.jpg&refer=http%3A%2F%2Fsnscangm.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1633139023&t=f0965e7c996dfa2ce6bf5f796de3dd14'
         ]
     },
 
@@ -76,6 +78,9 @@ Page({
         this.twoFinger = false
         this.touchStartX = e.touches[0].x
         this.touchStartY = e.touches[0].y
+        this.interval = setInterval(function () {
+            time++;
+        }, 100);
         if (e.touches.length == 2) {
             this.twoFinger = true
             this._scale || (this._scale = 1)
@@ -127,40 +132,48 @@ Page({
 
         }
         if (!this.twoFinger) {
-            if (e.changedTouches[0].x - this.touchStartX < -60 && Math.abs(e.changedTouches[0].y - this.touchStartY) < 60) this.moveLeft()
-            if (e.changedTouches[0].x - this.touchStartX > 60 && Math.abs(e.changedTouches[0].y - this.touchStartY) < 60) this.moveRight()
+            if (e.changedTouches[0].x - this.touchStartX < -40 && Math.abs(e.changedTouches[0].y - this.touchStartY) < 80 && time <= 10) this.moveLeft()
+            if (e.changedTouches[0].x - this.touchStartX > 40 && Math.abs(e.changedTouches[0].y - this.touchStartY) < 80 && time <= 10) this.moveRight()
+            time = 0
+            clearInterval(this.interval)
         }
         this.scale = 1
     },
 
     moveLeft() {
-        if (this.data.currentWork < this.data.works.length) {
+        if (this.data.currentWork < this.data.works.length - 1) {
             this.setData({
                 currentWork: this.data.currentWork + 1
+            }, () => {
+                this.loadFile(this.data.works[this.data.currentWork])
             })
         } else {
             this.setData({
                 currentWork: 0
+            }, () => {
+                this.loadFile(this.data.works[this.data.currentWork])
             })
         }
 
-        this.loadFile(this.data.works[this.data.currentWork])
-        // this.img.onload = () => {
-        //     this.initPosition()
-        // }
+
     },
     moveRight() {
         if (this.data.currentWork > 0) {
             this.setData({
-                currentWork: this.data.currentWork - 1
+                currentWork: this.data.currentWork - 1,
+                success: () => {
+                    this.loadFile(this.data.works[this.data.currentWork])
+                }
+            }, () => {
+                this.loadFile(this.data.works[this.data.currentWork])
             })
         } else {
             this.setData({
                 currentWork: this.data.works.length - 1
+            }, () => {
+                this.loadFile(this.data.works[this.data.currentWork])
             })
         }
-
-        this.loadFile(this.data.works[this.data.currentWork])
     },
     renderImage() {
         this.ctx.drawImage(this.img, this.positionX, this.positionY, this.fitWidth, this.fitHeight)
