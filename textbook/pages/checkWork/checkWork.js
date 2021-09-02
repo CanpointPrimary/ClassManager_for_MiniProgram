@@ -1,5 +1,6 @@
 // textbook/pages/checkWork/checkWork.js
 let time = 0
+let timer
 Page({
 
     /**
@@ -70,17 +71,22 @@ Page({
             this.positionX = this.initX
             this.positionY = this.initY
         }
+        this.move = 0
+        this.scale = 1
+        this._scale = 1
         this.ctx.resetTransform()
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.renderImage()
     },
     ontouchStart(e) {
         this.twoFinger = false
-        this.touchStartX = e.touches[0].x
-        this.touchStartY = e.touches[0].y
-        this.interval = setInterval(function () {
-            time++;
-        }, 100);
+        if (e.touches.length == 1) {
+            this.touchStartX = e.touches[0].x
+            this.touchStartY = e.touches[0].y
+            timer = setInterval(function () {
+                time++;
+            }, 100);
+        }
         if (e.touches.length == 2) {
             this.twoFinger = true
             this._scale || (this._scale = 1)
@@ -134,10 +140,11 @@ Page({
         if (!this.twoFinger) {
             if (e.changedTouches[0].x - this.touchStartX < -40 && Math.abs(e.changedTouches[0].y - this.touchStartY) < 80 && time <= 10) this.moveLeft()
             if (e.changedTouches[0].x - this.touchStartX > 40 && Math.abs(e.changedTouches[0].y - this.touchStartY) < 80 && time <= 10) this.moveRight()
-            time = 0
-            clearInterval(this.interval)
         }
         this.scale = 1
+        clearInterval(timer)
+        time = 0
+
     },
 
     moveLeft() {
