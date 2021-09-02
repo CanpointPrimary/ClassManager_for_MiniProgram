@@ -6,7 +6,12 @@ Page({
      */
     data: {
         score: ["已阅", "A", "B", "C", "D", 'E'],
-        theTool: 'none'
+        theTool: 'none',
+        currentWork: 0,
+        works: [
+            'https://img1.baidu.com/it/u=4072960247,1216537019&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=1590',
+            'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn17%2F424%2Fw1080h944%2F20180427%2Fef66-fztkpip3391150.jpg&refer=http%3A%2F%2Fn.sinaimg.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1633137528&t=2b66101908cff29e37f26ec9dbc0eb25', 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsnscangm.b0.upaiyun.com%2F2015%2F1008%2F03%2Fhi0u7pcy6xsgr.jpg&refer=http%3A%2F%2Fsnscangm.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1633139023&t=f0965e7c996dfa2ce6bf5f796de3dd14'
+        ]
     },
 
     /**
@@ -25,7 +30,7 @@ Page({
             this.dpr = wx.getSystemInfoSync().pixelRatio
             res[0].node.width = width * this.dpr
             res[0].node.height = height * this.dpr
-            this.loadFile('https://img1.baidu.com/it/u=4072960247,1216537019&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=1590')
+            this.loadFile(this.data.works[0])
         })
 
     },
@@ -45,12 +50,14 @@ Page({
             this.initPosition()
         }
     },
+
+    // 初始化定位，使图片居中
     initPosition() {
         if (this.img.width / this.canvas.width > this.img.height / this.canvas.height) {
             this.initX = 0
             this.initY = (this.canvas.height - this.img.height * this.canvas.width / this.img.width) / 2
-            this.fitHeight = this.img.width * this.canvas.height / this.img.height
-            this.fitWidth = this.canvas.height
+            this.fitHeight = this.img.height * this.canvas.width / this.img.width
+            this.fitWidth = this.canvas.width
             this.positionX = this.initX
             this.positionY = this.initY
         } else {
@@ -61,10 +68,16 @@ Page({
             this.positionX = this.initX
             this.positionY = this.initY
         }
+        this.ctx.resetTransform()
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.renderImage()
     },
     ontouchStart(e) {
+        this.twoFinger = false
+        this.touchStartX = e.touches[0].x
+        this.touchStartY = e.touches[0].y
         if (e.touches.length == 2) {
+            this.twoFinger = true
             this._scale || (this._scale = 1)
             this.touchStartX = (e.touches[0].x + e.touches[1].x) / 2 * this.dpr
             this.touchStartY = (e.touches[0].y + e.touches[1].y) / 2 * this.dpr
@@ -113,15 +126,51 @@ Page({
             this.move = 0
 
         }
+        if (!this.twoFinger) {
+            if (e.changedTouches[0].x - this.touchStartX < -60 && Math.abs(e.changedTouches[0].y - this.touchStartY) < 60) this.moveLeft()
+            if (e.changedTouches[0].x - this.touchStartX > 60 && Math.abs(e.changedTouches[0].y - this.touchStartY) < 60) this.moveRight()
+        }
         this.scale = 1
+    },
+
+    moveLeft() {
+        if (this.data.currentWork < this.data.works.length) {
+            this.setData({
+                currentWork: this.data.currentWork + 1
+            })
+        } else {
+            this.setData({
+                currentWork: 0
+            })
+        }
+
+        this.loadFile(this.data.works[this.data.currentWork])
+        // this.img.onload = () => {
+        //     this.initPosition()
+        // }
+    },
+    moveRight() {
+        if (this.data.currentWork > 0) {
+            this.setData({
+                currentWork: this.data.currentWork - 1
+            })
+        } else {
+            this.setData({
+                currentWork: this.data.works.length - 1
+            })
+        }
+
+        this.loadFile(this.data.works[this.data.currentWork])
     },
     renderImage() {
         this.ctx.drawImage(this.img, this.positionX, this.positionY, this.fitWidth, this.fitHeight)
     },
     chooseTool(e) {
-        this.setData({
-            theTool: e.currentTarget.dataset.tool
-        })
+        if (e.currentTarget.dataset.tool != this.data.theTool) {
+            this.setData({
+                theTool: e.currentTarget.dataset.tool
+            })
+        }
     },
     /**
      * 生命周期函数--监听页面初次渲染完成

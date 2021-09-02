@@ -83,17 +83,17 @@ Page({
     },
     openDetail() {
         wx.navigateTo({
-            url: '/pages/workPackage/workPackage',
+            url: '/textbook/pages/answerStatus/answerStatus',
         })
     },
     openList() {
         wx.navigateTo({
-            url: '/pages/subStatus/subStatus',
+            url: '/textbook/pages/workSubSta/workSubSta',
         })
     },
     navTo() {
         wx.navigateTo({
-            url: '/pages/workPublish/workPublish',
+            url: '/textbook/pages/workPub/workPub',
         })
     },
     changetab(e) {

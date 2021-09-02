@@ -102,7 +102,7 @@ Page({
   onLoad: async function (options) {
     let token = wx.getStorageSync('Token')
     let res = await request('/class_manager/pages/homepage_menus', 'get', token)
-    console.log(res);
+
     let app = getApp()
     let currentUser = wx.getStorageSync('currentUser')
     wx.request({
@@ -111,7 +111,48 @@ Page({
         data
       }) => {
         this.setData({
-          menuList: data.menu
+          menuList: [{
+              "id": 0,
+              "list": "作业",
+              "className": "icon-zuoye",
+              "target": "/pages/homeWork/homeWork"
+            },
+            {
+              "id": 1,
+              "list": "通知",
+              "className": "icon-tongzhi"
+            },
+            {
+              "id": 2,
+              "list": "打卡",
+              "className": "icon-daka"
+            },
+            {
+              "id": 3,
+              "list": "接龙",
+              "className": "icon-jielong"
+            },
+            {
+              "id": 4,
+              "list": "问卷",
+              "className": "icon-ziyuan"
+            },
+            {
+              "id": 5,
+              "list": "成绩",
+              "className": "icon-chengji"
+            },
+            {
+              "id": 6,
+              "list": "请假",
+              "className": "icon-qingjia"
+            },
+            {
+              "id": 7,
+              "list": "班级空间",
+              "className": "icon-banjixinxi"
+            }
+          ]
         })
       },
       timeout: 500,
