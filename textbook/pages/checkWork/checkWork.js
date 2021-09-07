@@ -1,6 +1,12 @@
 // textbook/pages/checkWork/checkWork.js
 let time = 0
 let timer
+const {
+    Shape,
+    Correct,
+    Tools,
+    WorkSpace
+} = require('../../../utils/workCheckTool')
 Page({
 
     /**
@@ -77,6 +83,12 @@ Page({
         this.ctx.resetTransform()
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.renderImage()
+        const correct = new Correct(300, 200, 100)
+        const tools = new Tools()
+        tools.add(correct)
+        const workSpace = new WorkSpace(this.ctx)
+        workSpace.add(tools)
+        workSpace.update()
     },
     ontouchStart(e) {
         this.twoFinger = false
@@ -195,7 +207,9 @@ Page({
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function () {},
+    onReady: function () {
+
+    },
 
     /**
      * 生命周期函数--监听页面显示
