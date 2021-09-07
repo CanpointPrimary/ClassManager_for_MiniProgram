@@ -5,7 +5,8 @@ const {
     Shape,
     Correct,
     Tools,
-    WorkSpace
+    WorkSpace,
+    Wrong
 } = require('../../../utils/workCheckTool')
 Page({
 
@@ -93,7 +94,9 @@ Page({
         this.renderImage()
         const correct = new Correct(300, 200, 100)
         const tools = new Tools()
+        const wrong = new Wrong(420, 200, 100)
         tools.add(correct)
+        tools.add(wrong)
         const workSpace = new WorkSpace(this.ctx)
         workSpace.add(tools)
         workSpace.update()

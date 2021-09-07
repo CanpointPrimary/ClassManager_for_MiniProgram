@@ -51,9 +51,9 @@ class Correct extends Shape {
   }
   draw() {
     this.beginPath()
-      .moveTo(-this.size / 2 + this.x, -this.size / 6 + this.y)
-      .lineTo(-this.size / 6 + this.x, this.size / 6 + this.y)
-      .lineTo(this.size / 2 + this.x, -this.size / 2 + this.y)
+      .moveTo(-this.size / 2 + this.x, this.y)
+      .lineTo(-this.size / 6 + this.x, this.size / 3 + this.y)
+      .lineTo(this.size / 2 + this.x, -this.size / 3 + this.y)
       .strokeStyle('#38a935')
       .lineCap('round')
       .lineJoin('round')
@@ -61,6 +61,28 @@ class Correct extends Shape {
       .stroke()
   }
 }
+// 声明形状--打叉
+class Wrong extends Shape {
+  constructor(x, y, size) {
+    super();
+    this.x = x
+    this.y = y
+    this.size = size * .67
+  }
+  draw() {
+    this.beginPath()
+      .moveTo(-this.size / 2 + this.x, -this.size / 2 + this.y)
+      .lineTo(this.size / 2 + this.x, this.size / 2 + this.y)
+      .moveTo(this.size / 2 + this.x, -this.size / 2 + this.y)
+      .lineTo(-this.size / 2 + this.x, this.size / 2 + this.y)
+      .strokeStyle('#d72229')
+      .lineCap('round')
+      .lineJoin('round')
+      .lineWidth(this.size * .09)
+      .stroke()
+  }
+}
+
 
 // 元素管理器构造器
 class Tools {
@@ -109,5 +131,6 @@ module.exports = {
   Shape,
   Correct,
   Tools,
-  WorkSpace
+  WorkSpace,
+  Wrong
 }
