@@ -43,6 +43,8 @@ Page({
         })
 
     },
+
+    // 加载图片
     loadFile(url) {
         this.img = this.canvas.createImage()
         wx.downloadFile({
@@ -56,6 +58,7 @@ Page({
             }
         })
         this.img.onload = () => {
+            // 图片地址加载成功后初始化图片
             this.initPosition()
         }
     },
@@ -63,10 +66,15 @@ Page({
     // 初始化定位，使图片居中
     initPosition() {
         if (this.img.width / this.canvas.width > this.img.height / this.canvas.height) {
+            // 计算初始位置
             this.initX = 0
             this.initY = (this.canvas.height - this.img.height * this.canvas.width / this.img.width) / 2
+
+            // 计算自适应宽高
             this.fitHeight = this.img.height * this.canvas.width / this.img.width
             this.fitWidth = this.canvas.width
+
+            // 设置初始定位
             this.positionX = this.initX
             this.positionY = this.initY
         } else {
@@ -91,7 +99,9 @@ Page({
         workSpace.update()
     },
     ontouchStart(e) {
+        // 判断是否是双指以上指头触碰
         this.twoFinger = false
+
         if (e.touches.length == 1) {
             this.touchStartX = e.touches[0].x
             this.touchStartY = e.touches[0].y
@@ -100,7 +110,10 @@ Page({
             }, 100);
         }
         if (e.touches.length == 2) {
+            // 如果是双指，那么就让这个参数值为真
             this.twoFinger = true
+
+            // 使用_scale来保存当前缩放比
             this._scale || (this._scale = 1)
             this.touchStartX = (e.touches[0].x + e.touches[1].x) / 2 * this.dpr
             this.touchStartY = (e.touches[0].y + e.touches[1].y) / 2 * this.dpr
@@ -144,12 +157,15 @@ Page({
         if (e.touches.length == 1) {
             this.initX = (this.touchEndX - this.touchStartX) * this.move + this.initX
             this.initY = (this.touchEndY - this.touchStartY) * this.move + this.initY
+
+            // 操作之后，就把scale转变为0，以免后面误触
             this._scale = this._scale * this.scale
             this.scale = 1
             this.move = 0
 
         }
         if (!this.twoFinger) {
+            // 如果从来没有双指以上触碰，那么就视为单指操作，可以触发左滑右滑事件
             if (e.changedTouches[0].x - this.touchStartX < -40 && Math.abs(e.changedTouches[0].y - this.touchStartY) < 80 && time <= 10) this.moveLeft()
             if (e.changedTouches[0].x - this.touchStartX > 40 && Math.abs(e.changedTouches[0].y - this.touchStartY) < 80 && time <= 10) this.moveRight()
         }
@@ -198,6 +214,7 @@ Page({
         this.ctx.drawImage(this.img, this.positionX, this.positionY, this.fitWidth, this.fitHeight)
     },
     chooseTool(e) {
+        //to do 如果再次点击同一个工具栏，那么就取消这个工具
         if (e.currentTarget.dataset.tool != this.data.theTool) {
             this.setData({
                 theTool: e.currentTarget.dataset.tool

@@ -1,3 +1,4 @@
+// 封装一系列方法，使其可以链式调用
 class Shape {
   constructor() {
     this.cmds = []
@@ -53,7 +54,7 @@ class Correct extends Shape {
       .moveTo(-this.size / 2 + this.x, -this.size / 6 + this.y)
       .lineTo(-this.size / 6 + this.x, this.size / 6 + this.y)
       .lineTo(this.size / 2 + this.x, -this.size / 2 + this.y)
-      .strokeStyle('green')
+      .strokeStyle('#38a935')
       .lineCap('round')
       .lineJoin('round')
       .lineWidth(this.size * .08)
@@ -67,6 +68,7 @@ class Tools {
     this.group = []
   }
   add(element) {
+    // 在这里调用节点的 draw 方法，拿到 cmds
     element.draw()
     this.group.push(element)
   }
