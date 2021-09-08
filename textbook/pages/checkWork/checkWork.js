@@ -93,18 +93,20 @@ Page({
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.renderImage()
         const correct = new Correct(300, 200, 100)
-        const tools = new Tools()
+        this.tools = new Tools()
         const wrong = new Wrong(420, 200, 100)
-        tools.add(correct)
-        tools.add(wrong)
-        const workSpace = new WorkSpace(this.ctx)
-        workSpace.add(tools)
-        workSpace.update()
+        this.tools.add(correct)
+        this.tools.add(wrong)
+        this.workSpace = new WorkSpace(this.ctx)
+        this.workSpace.add(0, this.tools)
+        this.workSpace.update(0)
     },
+
     ontouchStart(e) {
+
+
         // 判断是否是双指以上指头触碰
         this.twoFinger = false
-
         if (e.touches.length == 1) {
             this.touchStartX = e.touches[0].x
             this.touchStartY = e.touches[0].y
@@ -112,6 +114,14 @@ Page({
                 time++;
             }, 100);
         }
+
+        this.tools.touchShape(this.touchStartX * this.dpr, this.touchStartY * this.dpr)
+        this.ctx.resetTransform()
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        // 根据当前原点绘制图像
+        this.renderImage()
+        this.workSpace.update(0)
+
         if (e.touches.length == 2) {
             // 如果是双指，那么就让这个参数值为真
             this.twoFinger = true
