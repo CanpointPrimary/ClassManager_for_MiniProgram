@@ -103,8 +103,6 @@ Page({
     },
 
     ontouchStart(e) {
-
-
         // 判断是否是双指以上指头触碰
         this.twoFinger = false
         if (e.touches.length == 1) {
@@ -114,14 +112,27 @@ Page({
                 time++;
             }, 100);
         }
+        if (this.data.theTool == 'correct') {
+            let correct = new Correct(this.touchStartX * this.dpr, this.touchStartY * this.dpr, 100)
+            this.tools.add(correct)
+            this.workSpace.update(0)
+            return
+        }
+        if (this.data.theTool == 'wrong') {
+            let wrong = new Wrong(this.touchStartX * this.dpr, this.touchStartY * this.dpr, 100)
+            this.tools.add(wrong)
+            this.workSpace.update(0)
+            return
+        }
+
 
         this.tools.touchShape(this.touchStartX * this.dpr, this.touchStartY * this.dpr)
         this.ctx.resetTransform()
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        if (this.touchCenterX && this.touchCenterY) this.ctx.setTransform(this._scale * this.scale, 0, 0, this._scale * this.scale, this.touchCenterX, this.touchCenterY)
         // 根据当前原点绘制图像
         this.renderImage()
         this.workSpace.update(0)
-
         if (e.touches.length == 2) {
             // 如果是双指，那么就让这个参数值为真
             this.twoFinger = true
@@ -227,10 +238,29 @@ Page({
         this.ctx.drawImage(this.img, this.positionX, this.positionY, this.fitWidth, this.fitHeight)
     },
     chooseTool(e) {
-        //to do 如果再次点击同一个工具栏，那么就取消这个工具
+        //done 如果再次点击同一个工具栏，那么就取消这个工具
+        if (e.currentTarget.dataset.tool == 'withdraw') {
+            this.setData({
+                theTool: e.currentTarget.dataset.tool
+            })
+            let time = 0
+            let timer = setInterval(() => {
+                time++
+                if (time > 20) this.setData({
+                    theTool: 'none'
+                }, () => {
+                    clearInterval(timer)
+                })
+            }, 10);
+            return
+        }
         if (e.currentTarget.dataset.tool != this.data.theTool) {
             this.setData({
                 theTool: e.currentTarget.dataset.tool
+            })
+        } else {
+            this.setData({
+                theTool: 'none'
             })
         }
     },

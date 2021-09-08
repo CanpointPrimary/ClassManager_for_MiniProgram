@@ -89,7 +89,7 @@
 }
 .container .footer .tools .active {
   color: #1E50A2;
-  font-weight: 500;
+  font-weight: bolder;
 }
 .container .footer .tools .bar {
   height: 40rpx;

@@ -69,7 +69,7 @@ class Correct extends Shape {
     this.x = x
     this.y = y
     this.size = size
-    this.touchArea = [x - size / 2, x + size / 2, y - size / 3, y + size / 3]
+    this.touchArea = [x - size / 2 - 10, x + size / 2 + 10, y - size / 3 - 10, y + size / 3 + 10]
   }
   draw() {
     this.beginPath()
@@ -107,7 +107,7 @@ class Wrong extends Shape {
     this.x = x
     this.y = y
     this.size = size * .67
-    this.touchArea = [x - this.size / 2, x + this.size / 2, y - this.size / 2, y + this.size / 2]
+    this.touchArea = [x - this.size / 2 - 10, x + this.size / 2 + 10, y - this.size / 2 - 10, y + this.size / 2 + 10]
   }
   draw() {
     this.beginPath()
