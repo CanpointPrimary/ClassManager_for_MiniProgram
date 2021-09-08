@@ -92,9 +92,9 @@ Page({
         this.ctx.resetTransform()
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.renderImage()
-        const correct = new Correct(300, 200, 100)
+        const correct = new Correct(100 * this.dpr, 80 * this.dpr, 50 * this.dpr)
         this.tools = new Tools()
-        const wrong = new Wrong(420, 200, 100)
+        const wrong = new Wrong(200 * this.dpr, 80 * this.dpr, 50 * this.dpr)
         this.tools.add(correct)
         this.tools.add(wrong)
         this.workSpace = new WorkSpace(this.ctx)

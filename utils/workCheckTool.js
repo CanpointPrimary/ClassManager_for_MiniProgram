@@ -96,8 +96,17 @@ class Correct extends Shape {
       .stroke()
       .beginPath()
       .moveTo(this.touchArea[1] + 10, this.touchArea[2])
-      .arc(this.touchArea[1], this.touchArea[2], 10, 0, Math.PI * 2, true)
+      .arc(this.touchArea[1] + 15, this.touchArea[2] - 15, 20, 0, Math.PI * 2, true)
+      .fillStyle('red')
       .fill()
+      .beginPath()
+      .moveTo(this.touchArea[1] + 5, this.touchArea[2] - 5)
+      .lineTo(this.touchArea[1] + 25, this.touchArea[2] - 25)
+      .moveTo(this.touchArea[1] + 25, this.touchArea[2] - 5)
+      .lineTo(this.touchArea[1] + 5, this.touchArea[2] - 25)
+      .lineWidth(3)
+      .strokeStyle('#fff')
+      .stroke()
   }
 }
 // 声明形状--打叉
@@ -134,9 +143,17 @@ class Wrong extends Shape {
       .strokeStyle('#68c15e')
       .stroke()
       .beginPath()
-      .moveTo(this.touchArea[1] + 10, this.touchArea[2])
-      .arc(this.touchArea[1], this.touchArea[2], 10, 0, Math.PI * 2, true)
+      .arc(this.touchArea[1] + 15, this.touchArea[2] - 15, 22, 0, Math.PI * 2, true)
+      .fillStyle('red')
       .fill()
+      .beginPath()
+      .moveTo(this.touchArea[1] + 5, this.touchArea[2] - 5)
+      .lineTo(this.touchArea[1] + 25, this.touchArea[2] - 25)
+      .moveTo(this.touchArea[1] + 25, this.touchArea[2] - 5)
+      .lineTo(this.touchArea[1] + 5, this.touchArea[2] - 25)
+      .lineWidth(3)
+      .strokeStyle('#fff')
+      .stroke()
   }
 
 }
