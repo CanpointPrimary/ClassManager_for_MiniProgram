@@ -108,9 +108,11 @@ Page({
         if (e.touches.length == 1) {
             this.touchStartX = e.touches[0].x
             this.touchStartY = e.touches[0].y
-            timer = setInterval(function () {
-                time++;
-            }, 100);
+            if (this.data.theTool == 'none') {
+                timer = setInterval(function () {
+                    time++;
+                }, 100)
+            }
         }
         if (this.data.theTool == 'correct') {
             let correct = new Correct(this.touchStartX * this.dpr, this.touchStartY * this.dpr, 30 * this.dpr)
@@ -178,6 +180,7 @@ Page({
         }
     },
     onTouchEnd(e) {
+        if (this.data.theTool != 'none') return
         if (e.touches.length == 1) {
             this.initX = (this.touchEndX - this.touchStartX) * this.move + this.initX
             this.initY = (this.touchEndY - this.touchStartY) * this.move + this.initY
