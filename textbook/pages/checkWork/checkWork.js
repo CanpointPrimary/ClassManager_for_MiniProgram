@@ -257,7 +257,7 @@ Page({
             // this.workSpace.renderList[this.data.currentWork].group.pop()
             // 因为对象浅拷贝，所以指针不变吗，直接操作pop即可
             // this.tools.group.pop()
-            this.tools.distory('last')
+            this.tools.destory('last')
 
             this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
             if (this.touchCenterX && this.touchCenterY) this.ctx.setTransform(this._scale * this.scale, 0, 0, this._scale * this.scale, this.touchCenterX, this.touchCenterY)

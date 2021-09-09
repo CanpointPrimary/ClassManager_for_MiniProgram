@@ -190,7 +190,7 @@ class Tools {
     if (touchX == null || touchY == null) return
     if (this.currentIndex > -1) {
       if (touchX > this.group[this.currentIndex].closeArea[0] && touchX < this.group[this.currentIndex].closeArea[1] && touchY > this.group[this.currentIndex].closeArea[2] && touchY < this.group[this.currentIndex].closeArea[3]) {
-        this.distory(this.currentIndex)
+        this.destory(this.currentIndex)
         return this.currentIndex = -1
       }
     }
@@ -213,7 +213,7 @@ class Tools {
   }
 
   // 删除，用name？id？使用id
-  distory(index) {
+  destory(index) {
     if (index == 'last') return this.group.splice(this.group.length - 1, 1)
 
     this.group.splice(index, 1)
