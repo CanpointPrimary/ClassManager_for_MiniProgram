@@ -3,6 +3,7 @@ class Shape {
   constructor() {
     this.cmds = []
     this.active = false
+    this.closeR = 22
   }
   moveTo() {
     this.cmds.push(['moveTo', arguments])
@@ -69,7 +70,8 @@ class Correct extends Shape {
     this.x = x
     this.y = y
     this.size = size
-    this.touchArea = [x - size / 2 - 10, x + size / 2 + 10, y - size / 3 - 10, y + size / 3 + 10]
+    this.touchArea = [x - this.size / 2 - 10, x + this.size / 2 + 10, y - this.size / 3 - 10, y + this.size / 3 + 10]
+    this.closeArea = [this.touchArea[1] + 15 - this.closeR, this.touchArea[1] + 15 + this.closeR, this.touchArea[2] - 15 - this.closeR, this.touchArea[2] - 15 + this.closeR]
   }
   draw() {
     this.beginPath()
@@ -84,6 +86,7 @@ class Correct extends Shape {
   }
   handleTouch() {
     this.active = true
+
     // 点击之后再现有图像外框加一个框，右上角绘制一个删除按钮
     this.beginPath()
       .moveTo(this.touchArea[0], this.touchArea[2])
@@ -96,7 +99,7 @@ class Correct extends Shape {
       .stroke()
       .beginPath()
       .moveTo(this.touchArea[1] + 10, this.touchArea[2])
-      .arc(this.touchArea[1] + 15, this.touchArea[2] - 15, 20, 0, Math.PI * 2, true)
+      .arc(this.touchArea[1] + 15, this.touchArea[2] - 15, this.closeR, 0, Math.PI * 2, true)
       .fillStyle('red')
       .fill()
       .beginPath()
@@ -117,6 +120,7 @@ class Wrong extends Shape {
     this.y = y
     this.size = size * .67
     this.touchArea = [x - this.size / 2 - 10, x + this.size / 2 + 10, y - this.size / 2 - 10, y + this.size / 2 + 10]
+    this.closeArea = [this.touchArea[1] + 15 - this.closeR, this.touchArea[1] + 15 + this.closeR, this.touchArea[2] - 15 - this.closeR, this.touchArea[2] - 15 + this.closeR]
   }
   draw() {
     this.beginPath()
@@ -143,7 +147,7 @@ class Wrong extends Shape {
       .strokeStyle('#68c15e')
       .stroke()
       .beginPath()
-      .arc(this.touchArea[1] + 15, this.touchArea[2] - 15, 22, 0, Math.PI * 2, true)
+      .arc(this.touchArea[1] + 15, this.touchArea[2] - 15, this.closeR, 0, Math.PI * 2, true)
       .fillStyle('red')
       .fill()
       .beginPath()
@@ -163,6 +167,7 @@ class Wrong extends Shape {
 class Tools {
   constructor() {
     this.group = []
+    this.currentIndex = -1
   }
   add(element) {
     // 在这里调用节点的 draw 方法，拿到 cmds
@@ -172,18 +177,26 @@ class Tools {
 
   getShapeIndex(touchX, touchY) {
     if (touchX == null || touchY == null) return
-    let _index = -1
+    this.currentIndex = -1
     this.group.forEach((item, index) => {
       if (touchX > item.touchArea[0] && touchX < item.touchArea[1] && touchY > item.touchArea[2] && touchY < item.touchArea[3]) {
-        _index = index
+        this.currentIndex = index
       }
     })
-    return _index
+    return this.currentIndex
   }
 
   touchShape(touchX, touchY) {
     if (touchX == null || touchY == null) return
-    let _index = -1
+    if (this.currentIndex > -1) {
+      if (touchX > this.group[this.currentIndex].closeArea[0] && touchX < this.group[this.currentIndex].closeArea[1] && touchY > this.group[this.currentIndex].closeArea[2] && touchY < this.group[this.currentIndex].closeArea[3]) {
+        this.distory(this.currentIndex)
+        return this.currentIndex = -1
+      }
+    }
+
+    // 需要再使用完上次的index后将其重置，以免重复触发元素点击事件或者错误触发点击事件        
+    this.currentIndex = -1
     this.group.forEach((item, index) => {
       // 在这里要做排他
       if (item.active) {
@@ -192,15 +205,17 @@ class Tools {
         item.draw()
       }
       if (touchX > item.touchArea[0] && touchX < item.touchArea[1] && touchY > item.touchArea[2] && touchY < item.touchArea[3]) {
-        _index = index
+        this.currentIndex = index
       }
     })
-    if (_index == -1) return
-    this.group[_index].handleTouch()
+    if (this.currentIndex == -1) return
+    this.group[this.currentIndex].handleTouch()
   }
 
   // 删除，用name？id？使用id
   distory(index) {
+    if (index == 'last') return this.group.splice(this.group.length - 1, 1)
+
     this.group.splice(index, 1)
   }
 }
@@ -210,6 +225,7 @@ class WorkSpace {
   constructor(ctx) {
     this.ctx = ctx
     this.renderList = []
+
   }
 
   add(index, obj) {

@@ -98,8 +98,8 @@ Page({
         this.tools.add(correct)
         this.tools.add(wrong)
         this.workSpace = new WorkSpace(this.ctx)
-        this.workSpace.add(0, this.tools)
-        this.workSpace.update(0)
+        this.workSpace.add(this.data.currentWork, this.tools)
+        this.workSpace.update(this.data.currentWork)
     },
 
     ontouchStart(e) {
@@ -113,15 +113,15 @@ Page({
             }, 100);
         }
         if (this.data.theTool == 'correct') {
-            let correct = new Correct(this.touchStartX * this.dpr, this.touchStartY * this.dpr, 100)
+            let correct = new Correct(this.touchStartX * this.dpr, this.touchStartY * this.dpr, 30 * this.dpr)
             this.tools.add(correct)
-            this.workSpace.update(0)
+            this.workSpace.update(this.data.currentWork)
             return
         }
         if (this.data.theTool == 'wrong') {
-            let wrong = new Wrong(this.touchStartX * this.dpr, this.touchStartY * this.dpr, 100)
+            let wrong = new Wrong(this.touchStartX * this.dpr, this.touchStartY * this.dpr, 30 * this.dpr)
             this.tools.add(wrong)
-            this.workSpace.update(0)
+            this.workSpace.update(this.data.currentWork)
             return
         }
 
@@ -132,7 +132,7 @@ Page({
         if (this.touchCenterX && this.touchCenterY) this.ctx.setTransform(this._scale * this.scale, 0, 0, this._scale * this.scale, this.touchCenterX, this.touchCenterY)
         // 根据当前原点绘制图像
         this.renderImage()
-        this.workSpace.update(0)
+        this.workSpace.update(this.data.currentWork)
         if (e.touches.length == 2) {
             // 如果是双指，那么就让这个参数值为真
             this.twoFinger = true
@@ -252,6 +252,18 @@ Page({
                     clearInterval(timer)
                 })
             }, 10);
+
+            // 再workspace中去掉renderlist中的相对应中的group中的最后一个
+            // this.workSpace.renderList[this.data.currentWork].group.pop()
+            // 因为对象浅拷贝，所以指针不变吗，直接操作pop即可
+            // this.tools.group.pop()
+            this.tools.distory('last')
+
+            this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            if (this.touchCenterX && this.touchCenterY) this.ctx.setTransform(this._scale * this.scale, 0, 0, this._scale * this.scale, this.touchCenterX, this.touchCenterY)
+            // 根据当前原点绘制图像
+            this.renderImage()
+            this.workSpace.update(this.data.currentWork)
             return
         }
         if (e.currentTarget.dataset.tool != this.data.theTool) {
