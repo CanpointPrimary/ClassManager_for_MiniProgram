@@ -16,16 +16,18 @@
         </view>
         <canvas type="2d" id="work" canvas-id="work" bindtouchstart="ontouchStart" bindtouchmove="onTouchMove"
             bindtouchend="onTouchEnd">
-            <view class="sizeBar" catchtouchstart="stopPop" catchtouchmove="stopPop" catchtouchend='stopPop'>
-                <movable-area class="area">
-                    <movable-view class="bar" direction='horizontal' catchchange='changeSize'
-                        x='{{(markSize -20)/80*271}}'></movable-view>
-                </movable-area>
-            </view>
+
         </canvas>
 
     </view>
     <view class="footer">
+        <view class="sizeBar" wx:if="{{theTool == 'correct'|| theTool=='wrong'}}" catchtouchstart="stopPop"
+            catchtouchmove="stopPop" catchtouchend='stopPop'>
+            <movable-area class="area">
+                <movable-view class="bar" direction='horizontal' catchchange='changeSize' x='{{(markSize -20)/80*271}}'>
+                </movable-view>
+            </movable-area>
+        </view>
         <view class="tools">
             <view class="btn" data-tool="withdraw" bindtap="chooseTool">
                 <image class="icon" src="../../static/checkIcon/withdraw{{theTool == 'withdraw'?'-sel':''}}.svg">
