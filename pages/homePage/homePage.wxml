@@ -128,7 +128,7 @@
                     </view>
                 </view>
             </block>
-            <image class="addToDo" mode="scaleToFill" src="/static/icon/add.svg"></image>
+            <image class="addToDo" mode="scaleToFill" src="/static/icon/add.svg" bindtap="showAdd"></image>
         </view>
 
         <!-- else -->
@@ -139,4 +139,16 @@
         </view>
         <!-- tabBar -->
     </view>
+    <van-popup show="{{ showAdd }}" position="bottom" bind:close="onClose" bind:click-overlay="closeAdd"
+        safe-area-inset-bottom round>
+        <view class="first">
+            <image src="/static/workpub.svg"></image>
+            <image src="/static/info.svg"></image>
+        </view>
+        <view class="second">
+            <image src="/static/sign.svg"></image>
+            <image src="/static/chain.svg"></image>
+        </view>
+        <view class="btn" bindtap="closeAdd">取消</view>
+    </van-popup>
 </view>

@@ -2,7 +2,6 @@
 .tag {
     width: 131rpx;
     height: 49rpx;
-    background: #9891e2;
     border-radius: 0 20rpx;
     box-sizing: border-box;
     position: absolute;
@@ -13,6 +12,26 @@
 .status {
     text-align: center;
     font-size: 22rpx;
-    color: #fff;
+
     line-height: 49rpx;
+}
+
+.noFeedback {
+    background: #999;
+    color: #fff;
+}
+
+.onAudit {
+    background: #9891e2;
+    color: #fff;
+}
+
+.unpass {
+    background: #FFB357;
+    color: #fff;
+}
+
+.sub_blue {
+    color: #1E50A2;
+    background: #DAE9FF;
 }

@@ -19,3 +19,13 @@
     background: #FFFFFF;
     border: 1rpx solid #1E50A2;
 }
+
+.shadow {
+    background: #FFFFFF;
+    box-shadow: 0 3rpx 6rpx #c0c0c0;
+}
+
+.shadow_blue {
+    background: #FFFFFF;
+    box-shadow: 0 3rpx 6rpx #89b0f0;
+}

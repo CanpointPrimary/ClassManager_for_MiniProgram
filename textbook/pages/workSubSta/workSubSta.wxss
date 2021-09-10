@@ -1,0 +1,146 @@
+.container {
+  width: 100%;
+  min-height: 100%;
+  background-color: #edf6fd;
+  padding-bottom: 100rpx;
+}
+.container .body {
+  padding: 0 30rpx;
+}
+.container .tabbar {
+  position: relative;
+  width: 530rpx;
+  height: 56rpx;
+  border-radius: 28rpx;
+  filter: drop-shadow(0 3rpx 6rpx #00000029);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+  margin-bottom: 50rpx;
+}
+.container .tabbar .tabItem {
+  font-size: 28rpx;
+  width: 265rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .tabbar .tabItem .value {
+  z-index: 1;
+}
+.container .tabbar .actBg {
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  width: 265rpx;
+  height: 56rpx;
+  border-radius: 28rpx;
+  background-color: #dce9fe;
+}
+.container .ring {
+  padding: 5rpx;
+  height: 370rpx;
+  background: #fff;
+  box-shadow: 0 0rpx 4rpx #00000040;
+  border-radius: 34rpx;
+  margin-bottom: 30rpx;
+}
+.container .ring #canvas_ring {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.container .title {
+  color: #1d1d1d;
+  font-size: 32rpx;
+  font-weight: bolder;
+  margin: 10rpx 0;
+}
+.container .list {
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 20rpx;
+}
+.container .list .name {
+  width: 20%;
+  text-align: center;
+  font-size: 28rpx;
+  color: #333;
+  line-height: 56rpx;
+}
+.container .bar {
+  background: #fff;
+  box-shadow: 0 0 4rpx #00000040;
+  border-radius: 34rpx;
+  padding: 30rpx 50rpx;
+  margin-bottom: 64rpx;
+}
+.container .bar .chartTitle {
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+}
+.container .bar #canvas_bar {
+  width: 100%;
+  height: 310rpx;
+}
+.container .btns {
+  display: flex;
+  justify-content: space-around;
+}
+.container .btns .btn {
+  width: 272rpx;
+  height: 68rpx;
+  border-radius: 34rpx;
+  text-align: center;
+  line-height: 68rpx;
+  font-size: 28rpx;
+  color: #1e50a2;
+}
+.container .btns .copy {
+  background-color: #fff;
+  box-shadow: 0 3rpx 6rpx #c0c0c0;
+}
+.container .btns .remind {
+  background-color: #dce9fe;
+  box-shadow: 0 3rpx 6rpx #89b0f0;
+}
+.container .table .header {
+  height: 68rpx;
+  display: flex;
+  font-size: 32rpx;
+  align-items: center;
+  font-weight: bolder;
+  background: #F8F8F8;
+}
+.container .table .tableItem {
+  display: flex;
+  align-items: center;
+  height: 68rpx;
+  background: #fff;
+  border-bottom: 1px solid #EEECEC;
+  font-size: 28rpx;
+}
+.container .table .student {
+  flex: 2;
+  text-align: center;
+}
+.container .table .count {
+  flex: 6;
+  text-align: center;
+}
+.container .table .score {
+  flex: 1;
+  text-align: center;
+  font-weight: bolder;
+}
+.container .table .arrow {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

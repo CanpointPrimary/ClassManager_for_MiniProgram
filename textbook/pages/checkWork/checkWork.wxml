@@ -1,0 +1,61 @@
+<!--textbook/pages/checkWork/checkWork.wxml-->
+<view class="container">
+    <view class="header">
+        <view class="sendBack">
+            <image class="icon" src="../../static/checkIcon/repulse.svg"></image>
+            <view class="value">打回重做</view>
+        </view>
+        <view class="next">
+            下一位
+        </view>
+    </view>
+    <view class="body">
+        <view class="top">
+            <view class="title">等级</view>
+            <view class="score" wx:for="{{score}}" wx:key="id">{{item}}</view>
+        </view>
+        <canvas type="2d" id="work" canvas-id="work" bindtouchstart="ontouchStart" bindtouchmove="onTouchMove"
+            bindtouchend="onTouchEnd">
+
+        </canvas>
+
+    </view>
+    <view class="footer">
+        <view class="sizeBar" wx:if="{{theTool == 'correct'|| theTool=='wrong'}}" catchtouchstart="stopPop"
+            catchtouchmove="stopPop" catchtouchend='stopPop'>
+            <movable-area class="area">
+                <movable-view class="bar" direction='horizontal' catchchange='changeSize' x='{{(markSize -20)/80*271}}'>
+                </movable-view>
+            </movable-area>
+        </view>
+        <view class="tools">
+            <view class="btn" data-tool="withdraw" bindtap="chooseTool">
+                <image class="icon" src="../../static/checkIcon/withdraw{{theTool == 'withdraw'?'-sel':''}}.svg">
+                </image>
+                <view class="title {{theTool == 'withdraw'?'.active':''}}">撤回</view>
+            </view>
+            <view class="bar"></view>
+            <view class="btn" data-tool="text" bindtap="chooseTool">
+                <image class="icon" src="../../static/checkIcon/text{{theTool == 'text'?'-sel':''}}.svg"></image>
+                <view class="title {{theTool == 'text'?'.active':''}}">文本</view>
+            </view>
+            <view class="bar"></view>
+            <view class="btn" data-tool="graffiti" bindtap="chooseTool">
+                <image class="icon" src="../../static/checkIcon/graffiti{{theTool == 'graffiti'?'-sel':''}}.svg">
+                </image>
+                <view class="title {{theTool == 'graffiti'?'.active':''}}">涂鸦</view>
+            </view>
+            <view class="bar"></view>
+            <view class="btn" data-tool="correct" bindtap="chooseTool">
+                <image class="icon" src="../../static/checkIcon/correct{{theTool == 'correct'?'-sel':''}}.svg"></image>
+                <view class="title {{theTool == 'correct'?'.active':''}}">打勾</view>
+            </view>
+            <view class="bar"></view>
+            <view class="btn" data-tool="wrong" bindtap="chooseTool">
+                <image class="icon" src="../../static/checkIcon/wrong{{theTool == 'wrong'?'-sel':''}}.svg"></image>
+                <view class="title {{theTool == 'wrong'?'.active':''}}">打叉</view>
+            </view>
+        </view>
+        <view class="finish">完成</view>
+    </view>
+</view>

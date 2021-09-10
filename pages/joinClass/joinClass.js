@@ -48,9 +48,7 @@ Page({
             current: data.index
         })
     },
-    getPhoneNumber(e) {
-        console.log(e);
-    },
+    getPhoneNumber(e) {},
     getCode() {
         let i = 60
         if (!this.data.getCodeDisable) {

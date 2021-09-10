@@ -47,3 +47,66 @@
   width: 48rpx;
   height: 48rpx;
 }
+.container .worklist {
+  padding: 0 30rpx;
+}
+.container .worklist .time {
+  text-align: center;
+  font-size: 20rpx;
+  line-height: 28rpx;
+  color: #999;
+  margin-bottom: 20rpx;
+}
+.container .worklist .workItem {
+  position: relative;
+  margin-bottom: 30rpx;
+  padding: 30rpx;
+  background: #edf6fd;
+  border-radius: 20rpx;
+  box-shadow: 0 0 6rpx #00000029;
+}
+.container .worklist .workItem .title {
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bolder;
+  margin-bottom: 15rpx;
+}
+.container .worklist .workItem .title .mark {
+  margin-left: 5rpx;
+  margin-right: 25rpx;
+  width: 10rpx;
+  height: 45rpx;
+  border-radius: 5rpx;
+  background: #dde5f1;
+}
+.container .worklist .workItem .inner {
+  display: flex;
+}
+.container .worklist .workItem .inner .left {
+  padding-left: 40rpx;
+}
+.container .worklist .workItem .inner .left .avatar {
+  width: 58rpx;
+  height: 58rpx;
+}
+.container .worklist .workItem .inner .right {
+  padding-left: 20rpx;
+}
+.container .worklist .workItem .inner .right .pub {
+  display: flex;
+  font-size: 28rpx;
+  align-items: center;
+  margin-bottom: 9rpx;
+}
+.container .worklist .workItem .inner .right .pub .pubtime {
+  padding-left: 10rpx;
+  color: #666;
+  font-size: 24rpx;
+}
+.container .worklist .workItem .inner .right .desc {
+  font-size: 24rpx;
+  color: #999;
+  line-height: 34rpx;
+}

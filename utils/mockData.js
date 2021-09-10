@@ -633,7 +633,359 @@ let infos = [{
     voice: "/static/river.mp3",
     value: ""
   }
+}]
+
+// 作业列表
+let workList = [{
+  date: "今天",
+  lists: [{
+    workTitle: "4.13（周二）读拼音",
+    publisher: '巫梅梅',
+    avatar: '/static/avatar.png',
+    pubTime: '2021.3.12 17:03',
+    general: '练习所有单韵母的发音以及其声调。',
+    status: 'onAudit'
+  }]
+}, {
+  date: "昨天",
+  lists: [{
+    workTitle: "4.13（周二）读拼音",
+    publisher: '巫梅梅',
+    avatar: '/static/avatar.png',
+    pubTime: '2021.3.12 17:03',
+    general: '练习所有单韵母的发音以及其声调。',
+    status: 'noFeedback'
+  }, {
+    workTitle: "4.13（周二）读拼音",
+    publisher: '巫梅梅',
+    avatar: '/static/avatar.png',
+    pubTime: '2021.3.12 17:03',
+    general: '练习所有单韵母的发音以及其声调。',
+    status: 'noFeedback'
+  }]
+}, {
+  date: "2021.4.12",
+  lists: [{
+    workTitle: "4.13（周二）读拼音",
+    publisher: '巫梅梅',
+    avatar: '/static/avatar2.png',
+    pubTime: '2021.4.12 17:03',
+    general: '练习所有单韵母的发音以及其声调。',
+    status: 'onAudit'
+  }, {
+    workTitle: "4.13（周二）读拼音",
+    publisher: '巫梅梅',
+    avatar: '/static/avatar2.png',
+    pubTime: '2021.4.12 17:03',
+    general: '练习所有单韵母的发音以及其声调。',
+    status: 'noFeedback'
+  }]
+}]
+let answersCount = [{
+  sName: '王小二',
+  count: 4,
+  score: 'A'
+}, {
+  sName: '张三丰',
+  count: 5,
+  score: 'A'
+}, {
+  sName: '王文龙',
+  count: 4,
+  score: 'A'
+}, {
+  sName: '刘十九',
+  count: 1,
+  score: 'A'
+}, {
+  sName: '胡八一',
+  count: 2,
+  score: 'A'
 }, ]
+
+let studentAnswer = [{
+  id: 0,
+  answer: [{
+    rname: '李雷',
+    avatar: '/static/avatar2.png',
+    ptime: '2021.3.12 17:03',
+    desc: '老师我已经做完了，其中第2页第3题不太确定',
+    picture: [{
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片1',
+      },
+      {
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片2',
+      }, {
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片4',
+      }, {
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片6',
+      }
+    ],
+    files: [{
+      type: 'voice',
+      url: ''
+    }, {
+      type: 'video',
+      url: ''
+    }],
+    comments: [{
+      id: 0,
+      publisher: '巫老师',
+      value: '字迹不清晰，希望及时更正！',
+      deal: '【作业需重做】'
+    }, {
+      id: 1,
+      publisher: '巫老师',
+      value: '很好！都改正了！',
+    }, ]
+  }]
+}, {
+  id: 1,
+  answer: [{
+    rname: '李雷',
+    avatar: '/static/avatar2.png',
+    ptime: '2021.3.12 17:03',
+    desc: '老师我已经做完了，其中第2页第3题不太确定',
+    picture: [{
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片1',
+      },
+      {
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片2',
+      }, {
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片4',
+      }, {
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片6',
+      }
+    ],
+    files: [{
+      type: 'voice',
+      url: ''
+    }, {
+      type: 'video',
+      url: ''
+    }],
+    comments: [{
+      id: 0,
+      publisher: '巫老师',
+      value: '字迹不清晰，希望及时更正！',
+      deal: '【作业需重做】'
+    }, ]
+  }, {
+    sub: '第一次提交',
+    rank: 'c',
+    ptime: '2021.3.12 17:03',
+    desc: '老师我已经做完了，其中第2页第3题不太确定',
+    picture: [{
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片1',
+      },
+      {
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片2',
+      }, {
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片4',
+      }, {
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片6',
+      }
+    ],
+    files: [{
+      type: 'voice',
+      url: '',
+      fileName: '视频'
+    }, {
+      type: 'video',
+      url: ''
+    }],
+    comments: [{
+      id: 0,
+      publisher: '巫老师',
+      value: '字迹不清晰，希望及时更正！',
+      deal: ' 【作业需重做】'
+    }, ]
+  }]
+}]
+let currentAnswer = [{
+  id: 0,
+  answer: [{
+    rname: '张三',
+    rank: 'd',
+    avatar: '/static/avatar2.png',
+    ptime: '2021.3.12 17:03',
+    desc: '老师我已经做完了，其中第2页第3题不太确定',
+    picture: [{
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片1',
+      },
+      {
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片2',
+      }, {
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片4',
+      }, {
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片6',
+      }
+    ],
+    files: [{
+      type: 'voice',
+      url: ''
+    }, {
+      type: 'video',
+      url: ''
+    }],
+    comments: [{
+      id: 0,
+      publisher: '巫老师',
+      value: '字迹不清晰，希望及时更正！',
+      deal: '【作业需重做】'
+    }, {
+      id: 1,
+      publisher: '巫老师',
+      value: '很好！都改正了！',
+    }, ]
+  }]
+}, {
+  id: 1,
+  answer: [{
+    rname: '薛冰',
+    rank: 'c',
+    avatar: '/static/avatar2.png',
+    ptime: '2021.3.12 17:03',
+    desc: '老师我已经做完了，其中第2页第3题不太确定',
+    picture: [{
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片1',
+      },
+      {
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片2',
+      }
+    ],
+    files: [{
+      type: 'voice',
+      url: ''
+    }, {
+      type: 'video',
+      url: ''
+    }],
+    comments: [{
+      id: 0,
+      publisher: '巫老师',
+      value: '字迹不清晰，希望及时更正！',
+      deal: '【作业需重做】'
+    }, ]
+  }, {
+    sub: '第二次提交',
+    ptime: '2021.3.12 17:03',
+    desc: '又改了一次',
+    rank: 'c',
+    picture: [{
+      url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+      name: '图片4',
+    }, {
+      url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+      name: '图片6',
+    }],
+    files: [{
+      type: 'voice',
+      url: '',
+      fileName: '视频'
+    }, {
+      type: 'video',
+      url: ''
+    }],
+    comments: [{
+      id: 0,
+      publisher: '巫老师',
+      value: '字迹不清晰，希望及时更正！',
+      deal: '【作业需重做】'
+    }, {
+      id: 1,
+      publisher: '巫老师',
+      value: '再改改',
+      deal: ''
+    }, ]
+  }, {
+    sub: '第一次提交',
+    rank: 'd',
+    ptime: '2021.3.12 17:03',
+    desc: '老师我已经做完了，其中第2页第3题不太确定',
+    picture: [{
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片1',
+      },
+      {
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片2',
+      }, {
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片4',
+      }, {
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片6',
+      }, {
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片6',
+      }
+    ],
+    files: [{
+      type: 'voice',
+      url: '',
+      fileName: '视频'
+    }, {
+      type: 'video',
+      url: ''
+    }],
+    comments: [{
+      id: 0,
+      publisher: '巫老师',
+      value: '字迹不清晰，希望及时更正！',
+      deal: '【作业需重做】'
+    }, ]
+  }]
+}, {
+  id: 1,
+  answer: [{
+    rname: '薛冰',
+    rank: 'd',
+    avatar: '/static/avatar2.png',
+    ptime: '2021.3.12 17:03',
+    desc: '老师我已经做完了，其中第2页第3题不太确定',
+    picture: [{
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片1',
+      },
+      {
+        url: 'https://img.yzcdn.cn/vant/leaf.jpg',
+        name: '图片2',
+      }
+    ],
+    files: [{
+      type: 'voice',
+      url: ''
+    }, {
+      type: 'video',
+      url: ''
+    }],
+    comments: [{
+      id: 0,
+      publisher: '巫老师',
+      value: '字迹不清晰，希望及时更正！',
+      deal: '【作业需重做】'
+    }, ]
+  }]
+}]
 module.exports = {
   answers,
   subStatusList,
@@ -641,5 +993,9 @@ module.exports = {
   groupList,
   joinBg,
   toDoList,
-  infos
+  infos,
+  workList,
+  answersCount,
+  studentAnswer,
+  currentAnswer
 }

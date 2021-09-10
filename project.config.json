@@ -38,7 +38,7 @@
         "showES6CompileOption": false
     },
     "compileType": "miniprogram",
-    "libVersion": "2.16.0",
+    "libVersion": "2.19.2",
     "appid": "wx622f774d3c506ab7",
     "projectname": "canpoint_hdzy",
     "debugOptions": {
