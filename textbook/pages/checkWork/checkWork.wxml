@@ -15,7 +15,14 @@
             <view class="score" wx:for="{{score}}" wx:key="id">{{item}}</view>
         </view>
         <canvas type="2d" id="work" canvas-id="work" bindtouchstart="ontouchStart" bindtouchmove="onTouchMove"
-            bindtouchend="onTouchEnd"></canvas>
+            bindtouchend="onTouchEnd">
+            <view class="sizeBar" catchtouchstart="stopPop" catchtouchmove="stopPop" catchtouchend='stopPop'>
+                <movable-area class="area">
+                    <movable-view class="bar" direction='horizontal' catchchange='changeSize'
+                        x='{{(markSize -20)/80*271}}'></movable-view>
+                </movable-area>
+            </view>
+        </canvas>
 
     </view>
     <view class="footer">

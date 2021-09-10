@@ -4,6 +4,7 @@ class Shape {
     this.cmds = []
     this.active = false
     this.closeR = 22
+    this.dpr = wx.getSystemInfoSync().pixelRatio
   }
   moveTo() {
     this.cmds.push(['moveTo', arguments])
@@ -81,7 +82,7 @@ class Correct extends Shape {
       .strokeStyle('#38a935')
       .lineCap('round')
       .lineJoin('round')
-      .lineWidth(this.size * .08)
+      .lineWidth(10)
       .stroke()
   }
   handleTouch() {
@@ -131,7 +132,7 @@ class Wrong extends Shape {
       .strokeStyle('#d72229')
       .lineCap('round')
       .lineJoin('round')
-      .lineWidth(this.size * .12)
+      .lineWidth(10)
       .stroke()
   }
   handleTouch() {

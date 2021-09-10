@@ -17,6 +17,7 @@ Page({
         score: ["已阅", "A", "B", "C", "D", 'E'],
         theTool: 'none',
         currentWork: 0,
+        markSize: 30,
         works: [
             'https://img1.baidu.com/it/u=4072960247,1216537019&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=1590',
             'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn17%2F424%2Fw1080h944%2F20180427%2Fef66-fztkpip3391150.jpg&refer=http%3A%2F%2Fn.sinaimg.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1633137528&t=2b66101908cff29e37f26ec9dbc0eb25',
@@ -63,6 +64,15 @@ Page({
             this.initPosition()
         }
     },
+
+    changeSize(e) {
+        this.setData({
+            markSize: e.detail.x / 271 * 80 + 20
+        })
+    },
+
+    // 阻止事件冒泡 
+    stopPop() {},
 
     // 初始化定位，使图片居中
     initPosition() {
@@ -115,13 +125,13 @@ Page({
             }
         }
         if (this.data.theTool == 'correct') {
-            let correct = new Correct(this.touchStartX * this.dpr, this.touchStartY * this.dpr, 30 * this.dpr)
+            let correct = new Correct(this.touchStartX * this.dpr, this.touchStartY * this.dpr, this.data.markSize * this.dpr)
             this.tools.add(correct)
             this.workSpace.update(this.data.currentWork)
             return
         }
         if (this.data.theTool == 'wrong') {
-            let wrong = new Wrong(this.touchStartX * this.dpr, this.touchStartY * this.dpr, 30 * this.dpr)
+            let wrong = new Wrong(this.touchStartX * this.dpr, this.touchStartY * this.dpr, this.data.markSize * this.dpr)
             this.tools.add(wrong)
             this.workSpace.update(this.data.currentWork)
             return
